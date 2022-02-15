@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Thank You!
+title: Like the beginning, now, always and forever!
 sitemap: false
 ---
 
