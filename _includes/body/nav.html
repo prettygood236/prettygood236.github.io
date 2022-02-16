@@ -18,7 +18,6 @@
     {% assign pages = site.html_pages | where: "menu", true %}
     {% assign documents = site.documents | where: "menu", true %}
     {% assign nodes = pages | concat: documents | sort: "order" %}
-
     {% for node in nodes %}
       {% unless node.redirect_to %}
         <li>

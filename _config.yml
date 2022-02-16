@@ -53,15 +53,15 @@ author:
   twitter: chann236
 
 # Add links to the sidebar.
-menu:
-  - title: About
-    url: /about/
-  - title: Study
-    url: /study/
-  - title: Coding Test
-    url: /coding-test/
-  - title: ETC
-    url: /etc/
+# menu:
+#   - title: About
+#     url: /about/
+#   - title: Study
+#     url: /study/
+#   - title: Coding Test
+#     url: /coding-test/
+#   - title: ETC
+#     url: /etc/
 
 # Add links to the footer.
 # Typically you'll want to link to your cookie- or privacy policy (if appliable), etc..
@@ -122,7 +122,7 @@ defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
   - scope:
-      path: hyde/
+      path: /
     values:
       accent_color: rgb(248,177,36) #orange
       theme_color: rgb(248,107,198) #pink
@@ -310,7 +310,7 @@ hydejack:
 
 collections:
   featured_categories:
-    permalink: /blog/:name/
+    permalink: /:name/
     output: true
 
   featured_tags:
