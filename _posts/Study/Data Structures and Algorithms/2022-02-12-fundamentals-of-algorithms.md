@@ -50,9 +50,44 @@ DFS uses a stack data structure (or recursive function)
 ![Breadth-First Search operation](/assets/img/data-structures-and-algorithms/graph_bfs.gif){:width="600"} <br>
 <br>
 
-<!--more-->
 
-### 3.3 Graph : Depth-First Search Implementation
+### 3.3 Tree : DFS Implementation
+
+~~~js
+// simple tree (no membership check)
+let Node = function (value) {
+  this.value = value;
+  this.children = [];
+};
+Node.prototype.addChild = function (child) {
+  this.children.push(child);
+  return child;
+};
+
+let dfs = function (node) {
+  let result = [node.value]
+  // console.log(result)
+  node.children.forEach(el=>{
+    result = result.concat(dfs(el))
+    // console.log(el)
+    // console.log(result)
+  })
+  return result  
+}
+let root = new Node(1);
+let rootChild1 = root.addChild(new Node(2));
+let rootChild2 = root.addChild(new Node(3));
+let leaf1 = rootChild1.addChild(new Node(4));
+let leaf2 = rootChild1.addChild(new Node(5));
+leaf1.addChild(new Node(6));
+rootChild2.addChild(new Node(7));
+output = dfs(root);
+console.log(output); // --> [1, 2, 4, 6, 5, 3, 7]
+~~~
+<br>
+
+
+### 3.4 Graph : DFS Implementation
 
 ~~~js
 function bfs(graph, root) {
@@ -97,7 +132,6 @@ let exBFSGraph = [
 console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infinity }
 ~~~
 <br>
-
 
 
 Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-structures.md){:.heading.flip-title}

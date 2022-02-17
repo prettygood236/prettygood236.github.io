@@ -31,8 +31,8 @@ description:           >
 
 # A shorter description for the sidebar.
 tagline:               >
-  If you can't explain it simply, <br> 
-  you don't understand it well enough.
+  <b>If you can't explain it simply, <br> 
+  you don't understand it well enough.</b>
 
 # A list of keywords for your blog
 keywords:              ["Blockchain", "Developer", "DataStructure", "Algorithm"]
