@@ -4,25 +4,22 @@ title:    '[React] 컴포넌트 디자인'
 subtitle: '[React] 컴포넌트 디자인'
 category: study
 tags:     react
+image: 
+  path: /assets/img/react/react-component-design/component-driven-development.png
 ---
+
+## Component Driven Development
+
+**레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발**<br>
+* CDD 방법을 활용하여 UI 를 구축하는 사이트 :　[BBC](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}　[UN](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}
+<br>
 
 * this undordered seed list will be replaced by the toc
 {:toc}
 
-## 1. Component Driven Development
+## 1. Design System
 
-![Component Driven Development](/assets/img/react/react-component-design/component-driven-development.png)
-
-**레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발**<br>
-* CDD 방법을 활용하여 UI 를 구축하는 사이트 :　[BBC](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}　[UN](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}
-<!--more-->
-<br>
-<br>
-<br>
-
-## 2. Design System
-
-### 2.1 Design System
+### 1.1 Design System
 
 **UI 컴포넌트들의 모음을 구조화 하는 방법**
 * 디자인 시스템이란 서비스를 만드는 데 사용한 공통 컬러, 서체, 인터랙션, 각종 정책 및 규정에 관한 모든 컴포넌트를 정리해놓은 것이며 불필요한 커뮤니케이션을 없애기 위해 체계적으로 정리한 시스템을 말한다.
@@ -39,7 +36,7 @@ tags:     react
 * ✨ [프리티어(Prettier)](https://prettier.io/){:.target="_blank"}: 자동화된 코드 포맷팅에 사용
 <br>
 
-### 2.2 Storybook
+### 1.2 Storybook
 
 UI 개발 즉, **Component Driven Development**를 하기 위한 도구
 * 각각의 컴포넌트들을 따로 볼 수 있게 구성해주어 한 번에 하나의 컴포넌트에서 작업할 수 있다.
@@ -48,7 +45,7 @@ UI 개발 즉, **Component Driven Development**를 하기 위한 도구
 * 테스트 및 개발 속도를 향상시키는 장점이 있으며, 애플리케이션 또한 의존성을 걱정하지 않고 빌드할 수 있다.
 
 
-### 2.3 Storybook 주요 기능
+### 1.3 Storybook 주요 기능
 
 * UI 컴포넌트들을 카탈로그 화하기
 * 컴포넌트 변화를 Stories로 저장하기
@@ -59,16 +56,16 @@ UI 개발 즉, **Component Driven Development**를 하기 위한 도구
 <br>
 <br>
 
-## 3. CSS 방법론
+## 2. CSS 방법론
 
-### 3.1 CSS 전처리기(CSS Preprocessor)
+### 2.1 CSS 전처리기(CSS Preprocessor)
 
 CSS가 구조적으로 작성될 수 있게 도움을 주는 도구
 * CSS의 문제점들을 프로그래밍 개념(변수, 함수, 상속 등)을 활용하여 해결할 수 있도록 한다.
 * CSS 전처리기(CSS Preprocessor) 자체만으로는 웹 서버가 인지하지 못하기 때문에 각 CSS 전처리기에 맞는 Compiler를 사용해야 하고 컴파일을 하게 되면 실제로 우리가 사용하는 CSS 문서로 변환이 된다.
 
 
-### 3.2 SASS(Syntactically Awesome Style Sheets)
+### 2.2 SASS(Syntactically Awesome Style Sheets)
 ![SASS](/assets/img/react/react-component-design/sass.png)
 
 CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스크립팅 언어
@@ -77,14 +74,14 @@ CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스�
 * 스타일이 겹치는 문제를 해결하기 위해 단순히 계층 구조를 만들어 내는 것에 의지하며, 그 결과 컴파일된 CSS의 용량은 어마어마하게 커지는 치명적인 단점이 있다.
 <br>
 
-### 3.3 CSS 방법론
+### 2.3 CSS 방법론
 방법론의 지향점은 다음과 같다. 
 * 코드의 재사용
 * 코드의 간결화(유지 보수 용이)
 * 코드의 확장성
 * 코드의 예측성(클래스 명으로 의미 예측)
 
-### 3.4 BEM
+### 2.4 BEM
 ![BEM](/assets/img/react/react-component-design/bem.png)
 
 대표적인 CSS 방법론인 BEM이란 Block, Element, Modifier로 구분하여 클래스명을 작성하는 방법
@@ -93,14 +90,14 @@ CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스�
 * 클래스명 선택자가 장황해지고, 이런 긴 클래스명 때문에 마크업이 불필요하게 커지며, 재사용하려고 할 때마다 모든 UI 컴포넌트를 명시적으로 확장해야는 단점이 있다.
 <br>
 
-### 3.5 각 CSS 방법론의 특징과 장, 단점
+### 2.5 각 CSS 방법론의 특징과 장, 단점
 ![CSS-Methlogy](/assets/img/react/react-component-design/css-methlogy.png)
 <br>
 <br>
 <br>
 <br>
 
-## 4. Styled-Component
+## 3. Styled-Component
 ![Styled-Component](/assets/img/react/react-component-design/styled-component.png)
 
 SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. <br><br>
@@ -121,7 +118,7 @@ const Button = styled.a`
 Styled Component 를 이용한 Button 생성
 {:.figcaption}
 
-### 4.1 Styled Component의 특징
+### 3.1 Styled Component의 특징
 
 **Automatic critical CSS**<br>
 * 화면에 어떤 컴포넌트가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입한다. 
@@ -143,7 +140,7 @@ Styled Component 를 이용한 Button 생성
 * 개별 컴포넌트마다 기존의 CSS 를 이용하여 스타일 속성을 정의하면 이외의 것들은 Styled Component 가 알아서 처리해 준다.
 <br>
 
-### 4.2 Getting Started
+### 3.2 Getting Started
 
 ~~~js
 import styled from "styled-components";
@@ -179,7 +176,7 @@ export default function App() {
 {:.figcaption}
 <br>
 
-### 4.3 Adapting based on props & Extending Styles
+### 3.3 Adapting based on props & Extending Styles
 
 Styled Component 는 **스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용**할 수도 있다. <br>
 또한 **같은 스타일 속성을 지닌 여러개의 컴포넌트들 중 몇 개의 컴포넌트에 약간의 변화를 주고 싶은 때**에는 상속받고자 하는 스타일 속성을 지닌 컴포넌트를 `styled()` 로 감싼 뒤, 변경하고 싶은 속성만 새로 정의해 주면 기존 속성을 확장하여 사용할 수 있다. 
@@ -229,7 +226,7 @@ export default function App() {
 {:.figcaption}
 <br>
 
-### 4.4 Passed props
+### 3.4 Passed props
 
 컴포넌트에 **props 로 스타일 속성이 전달**된다면 해당 컴포넌트는 **props 로 전달된 속성을 우선 적용**하며, 전달되는 속성이 없다면 기본으로 설정된 속성을 적용한다. 이는 Styled Component 가 개발자에 의해 설정된 속성과 기본 속성을 구분할 수 있기 때문이다.
 
@@ -266,9 +263,9 @@ props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이
 {:.figcaption}
 <br>
 
-## 5. DOM reference를 잘 활용할 수 있는 useRef
+## 4. DOM reference를 잘 활용할 수 있는 useRef
 
-### 5.1 useRef
+### 4.1 useRef
 
 React는 DOM 엘리먼트의 주소값을 활용(focus, text selection, media playback, 에니메이션 적용
 d3.js, greensock 및 DOM 기반 라이브러리 활용 등)해야 하는 예외적인 상황에서 **useRef**으로 DOM 노드, 엘리먼트, 그리고 리액트 컴포넌트 주소값을 참조할 수 있다. 
@@ -311,7 +308,7 @@ function TextInputWithFocusButton() {
 <br>
 
 
-### 5.2 useRef 활용 예시 
+### 4.2 useRef 활용 예시 
 
 [Action Item 1 : focus](https://codesandbox.io/s/patient-worker-3kzhd?from-embed=&file=/src/App.js){:.target="_blank"}
 <br>

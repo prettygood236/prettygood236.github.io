@@ -1,6 +1,15 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-17T22:56:11+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>If you can't explain it simply,  &lt;br&gt; you don't understand it well enough.
-</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-12T00:00:00+09:00</published><updated>2022-02-12T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">1. this ordered seed list will be replaced by the toc
-{:toc}
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-18T00:13:50+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>If you can't explain it simply,  &lt;br&gt; you don't understand it well enough.
+</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Algorithm</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Algorithm" /><published>2022-02-12T00:00:00+09:00</published><updated>2022-02-12T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of **well-defined instructions to solve a particular problem**. It takes a set of input and produces a desired output. 
+
+### Qualities of Good Algorithms
+- Input and output should be defined precisely.
+- Each step in the algorithm should be clear and unambiguous.
+- Algorithms should be most effective among many different ways to solve a problem.
+- An algorithm shouldn't include computer code. Instead, the algorithm should be written - in such a way that it can be used in different programming languages.
+
+* toc
+{:toc .large-only}
+
 
 ## 1. Greedy
 
@@ -85,8 +94,12 @@ Back to [Fundamentals of Data Structures](/study/fundamentals-of-data-structures
 &lt;br&gt;
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://www.programiz.com/](https://www.programiz.com/){:target=&quot;_blank&quot;}&lt;br&gt;
 이것이 코딩테스트다,2020,나동빈,한빛미디어
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html"></summary></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">* this unordered seed list will be replaced by the toc
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm.jpeg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm.jpeg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
+Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
+
+* this unordered seed list will be replaced by the toc
 {:toc}
 
 ## Introduction to Linux and shells
@@ -308,353 +321,349 @@ Another thing you might find very useful is to invert the result, excluding the 
 
 [The Most Popular Linux &amp; Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&amp;t=196s){:target=&quot;_blank&quot;}&lt;br&gt;
 [The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target=&quot;_blank&quot;}
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html"></summary></entry><entry><title type="html">[React] 상태 관리</title><link href="http://localhost:4000/study/react-state-management.html" rel="alternate" type="text/html" title="[React] 상태 관리" /><published>2022-02-07T00:00:00+09:00</published><updated>2022-02-07T00:00:00+09:00</updated><id>http://localhost:4000/study/react-state-management</id><content type="html" xml:base="http://localhost:4000/study/react-state-management.html">* this unordered seed list will be replaced by the toc
-{:toc}
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Component Driven Development</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="Component Driven Development" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">&lt;p&gt;&lt;strong&gt;레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-design-system&quot; id=&quot;markdown-toc-1-design-system&quot;&gt;1. Design System&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-design-system&quot; id=&quot;markdown-toc-11-design-system&quot;&gt;1.1 Design System&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-storybook&quot; id=&quot;markdown-toc-12-storybook&quot;&gt;1.2 Storybook&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#13-storybook-주요-기능&quot; id=&quot;markdown-toc-13-storybook-주요-기능&quot;&gt;1.3 Storybook 주요 기능&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-css-방법론&quot; id=&quot;markdown-toc-2-css-방법론&quot;&gt;2. CSS 방법론&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#21-css-전처리기css-preprocessor&quot; id=&quot;markdown-toc-21-css-전처리기css-preprocessor&quot;&gt;2.1 CSS 전처리기(CSS Preprocessor)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#22-sasssyntactically-awesome-style-sheets&quot; id=&quot;markdown-toc-22-sasssyntactically-awesome-style-sheets&quot;&gt;2.2 SASS(Syntactically Awesome Style Sheets)&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#23-css-방법론&quot; id=&quot;markdown-toc-23-css-방법론&quot;&gt;2.3 CSS 방법론&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#24-bem&quot; id=&quot;markdown-toc-24-bem&quot;&gt;2.4 BEM&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#25-각-css-방법론의-특징과-장-단점&quot; id=&quot;markdown-toc-25-각-css-방법론의-특징과-장-단점&quot;&gt;2.5 각 CSS 방법론의 특징과 장, 단점&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-styled-component&quot; id=&quot;markdown-toc-3-styled-component&quot;&gt;3. Styled-Component&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#31-styled-component의-특징&quot; id=&quot;markdown-toc-31-styled-component의-특징&quot;&gt;3.1 Styled Component의 특징&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#32-getting-started&quot; id=&quot;markdown-toc-32-getting-started&quot;&gt;3.2 Getting Started&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#33-adapting-based-on-props--extending-styles&quot; id=&quot;markdown-toc-33-adapting-based-on-props--extending-styles&quot;&gt;3.3 Adapting based on props &amp;amp; Extending Styles&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#34-passed-props&quot; id=&quot;markdown-toc-34-passed-props&quot;&gt;3.4 Passed props&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-dom-reference를-잘-활용할-수-있는-useref&quot; id=&quot;markdown-toc-4-dom-reference를-잘-활용할-수-있는-useref&quot;&gt;4. DOM reference를 잘 활용할 수 있는 useRef&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#41-useref&quot; id=&quot;markdown-toc-41-useref&quot;&gt;4.1 useRef&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#42-useref-활용-예시&quot; id=&quot;markdown-toc-42-useref-활용-예시&quot;&gt;4.2 useRef 활용 예시&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-## 1. State Management
+&lt;h2 id=&quot;1-design-system&quot;&gt;1. Design System&lt;/h2&gt;
 
-### 1.1 State
+&lt;h3 id=&quot;11-design-system&quot;&gt;1.1 Design System&lt;/h3&gt;
 
-**상태 : 변하는 데이터.** 특히 프론트엔드 개발에서는 **&lt;mark&gt;&quot;UI에 동적으로 표현될 데이터&quot;&lt;/mark&gt;.**
-&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;UI 컴포넌트들의 모음을 구조화 하는 방법&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;디자인 시스템이란 서비스를 만드는 데 사용한 공통 컬러, 서체, 인터랙션, 각종 정책 및 규정에 관한 모든 컴포넌트를 정리해놓은 것이며 불필요한 커뮤니케이션을 없애기 위해 체계적으로 정리한 시스템을 말한다.&lt;/li&gt;
+  &lt;li&gt;UI 컴포넌트는 사용자 인터페이스를 이루는 조각들의 시각적이고 기능적인 속성을 마치 레고(LEGO) 블록처럼 캡슐화한다.&lt;/li&gt;
+  &lt;li&gt;최근에 등장한 유저 인터페이스(UI)들은 다양한 사용자 경험을 제공하기 위해 수백 개의 모듈식 UI 컴포넌트가 재배열된 구조로 이루어져 있다.&lt;/li&gt;
+  &lt;li&gt;디자인 시스템은 재사용이 가능한 UI 컴포넌트들로 이루어져, 복잡하고 견고하며 사용자가 접근하기에 용이한 사용자 인터페이스를 구축할 수 있다.&lt;/li&gt;
+  &lt;li&gt;디자이너와 개발자 모두 UI 컴포넌트를 다루기 때문에, 디자인 시스템은 두 분야를 연결하는 다리이기도 하다. 또한 조직의 공용 컴포넌트에 대한 “진실의 근원(source of truth)”이기도 하다.&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/uber/baseweb&quot; target=&quot;_blank&quot;&gt;Uber&lt;/a&gt;, &lt;a href=&quot;https://github.com/airbnb/lunar&quot; target=&quot;_blank&quot;&gt;Airbnb&lt;/a&gt;, &lt;a href=&quot;https://www.carbondesignsystem.com/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;IBM&lt;/a&gt;, &lt;a href=&quot;https://primer.style/css/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;GitHub&lt;/a&gt;을 비롯한 수백 개가 넘는 기업의 디자인 시스템에서 스토리북이 사용되고 있다. 아래 목록은 그 중 가장 우수한 팀에서 사용되고 있는 Tool들이다.&lt;/li&gt;
+&lt;/ul&gt;
 
-### 1.2 UI에서 상태찾기 연습
+&lt;p&gt;&lt;strong&gt;빌드 컴포넌트&lt;/strong&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;📚 &lt;a href=&quot;https://storybook.js.org/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;스토리북(Storybook)&lt;/a&gt;: UI 컴포넌트 개발과 자동으로 문서를 생성할 때 사용&lt;/li&gt;
+  &lt;li&gt;⚛️ &lt;a href=&quot;https://reactjs.org/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;리액트(React)&lt;/a&gt;: 선언 중심 컴포넌트 UI(create-react-app)를 사용&lt;/li&gt;
+  &lt;li&gt;💅 &lt;a href=&quot;https://styled-components.com/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;스타일 컴포넌트(Styled-components)&lt;/a&gt;: 컴포넌트 단위의 스타일링에 사용&lt;/li&gt;
+  &lt;li&gt;✨ &lt;a href=&quot;https://prettier.io/&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;프리티어(Prettier)&lt;/a&gt;: 자동화된 코드 포맷팅에 사용
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-UI를 컴포넌트로 분리하고, state와 state의 영향을 받는 곳을 작성하여 작성 전 구조화한다. 
+&lt;h3 id=&quot;12-storybook&quot;&gt;1.2 Storybook&lt;/h3&gt;
 
-![UI에서상태찾기연습-1](/assets/img/react/react-state-management/ui에서상태찾기연습-1.png){:width=&quot;600&quot;}
+&lt;p&gt;UI 개발 즉, &lt;strong&gt;Component Driven Development&lt;/strong&gt;를 하기 위한 도구&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;각각의 컴포넌트들을 따로 볼 수 있게 구성해주어 한 번에 하나의 컴포넌트에서 작업할 수 있다.&lt;/li&gt;
+  &lt;li&gt;재사용성을 확대하기 위해 컴포넌트를 문서화하고, 자동으로 컴포넌트를 시각화하여 전체 UI를 한눈에 볼 수 있다.&lt;/li&gt;
+  &lt;li&gt;시뮬레이션할 수 있는 다양한 테스트 상태를 확인하고 이를 통해 버그를 사전에 방지할 수 있도록 도와준다.&lt;/li&gt;
+  &lt;li&gt;테스트 및 개발 속도를 향상시키는 장점이 있으며, 애플리케이션 또한 의존성을 걱정하지 않고 빌드할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
 
-![UI에서상태찾기연습-2](/assets/img/react/react-state-management/ui에서상태찾기연습-2.png){:height=&quot;600&quot;}
-&lt;br&gt;&lt;br&gt;
+&lt;h3 id=&quot;13-storybook-주요-기능&quot;&gt;1.3 Storybook 주요 기능&lt;/h3&gt;
 
-&lt;span style=&quot;color:#B266FF&quot;&gt;상태 : 현재 선택한 탭, 상품 선택 여부, 선택한 수량, 장바구니에 담긴 물품&lt;/span&gt;&lt;br&gt;
-&lt;span style=&quot;color:#FF3333&quot;&gt;--&gt; : 상태 변경이 일어나는 곳&lt;/span&gt;&lt;br&gt;
-&lt;span style=&quot;color:#66CC00&quot;&gt;--&gt; : 상태 변경의 영향을 받는 곳 &lt;/span&gt;&lt;br&gt;
-&lt;!--more--&gt;
-&lt;br&gt;
+&lt;ul&gt;
+  &lt;li&gt;UI 컴포넌트들을 카탈로그 화하기&lt;/li&gt;
+  &lt;li&gt;컴포넌트 변화를 Stories로 저장하기&lt;/li&gt;
+  &lt;li&gt;핫 모듈 재 로딩과 같은 개발 툴 경험을 제공하기&lt;/li&gt;
+  &lt;li&gt;리액트를 포함한 다양한 뷰 레이어 지원하기 
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-### 1.3 프론트엔드 개발에서의 Side Effect
+&lt;h2 id=&quot;2-css-방법론&quot;&gt;2. CSS 방법론&lt;/h2&gt;
 
-**Side Effect : &lt;mark&gt;함수의 입력 외에도 함수의 결과에 영향을 미치는 요인&lt;/mark&gt;** &lt;br&gt;
-ex) 네트워크 요청, API 호출</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">[React] 컴포넌트 디자인</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="[React] 컴포넌트 디자인" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">* this undordered seed list will be replaced by the toc
-{:toc}
+&lt;h3 id=&quot;21-css-전처리기css-preprocessor&quot;&gt;2.1 CSS 전처리기(CSS Preprocessor)&lt;/h3&gt;
 
-## 1. Component Driven Development
+&lt;p&gt;CSS가 구조적으로 작성될 수 있게 도움을 주는 도구&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;CSS의 문제점들을 프로그래밍 개념(변수, 함수, 상속 등)을 활용하여 해결할 수 있도록 한다.&lt;/li&gt;
+  &lt;li&gt;CSS 전처리기(CSS Preprocessor) 자체만으로는 웹 서버가 인지하지 못하기 때문에 각 CSS 전처리기에 맞는 Compiler를 사용해야 하고 컴파일을 하게 되면 실제로 우리가 사용하는 CSS 문서로 변환이 된다.&lt;/li&gt;
+&lt;/ul&gt;
 
-![Component Driven Development](/assets/img/react/react-component-design/component-driven-development.png)
+&lt;h3 id=&quot;22-sasssyntactically-awesome-style-sheets&quot;&gt;2.2 SASS(Syntactically Awesome Style Sheets)&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/react/react-component-design/sass.png&quot; alt=&quot;SASS&quot; /&gt;&lt;/p&gt;
 
-**레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발**&lt;br&gt;
-* CDD 방법을 활용하여 UI 를 구축하는 사이트 :　[BBC](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target=&quot;_blank&quot;}　[UN](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target=&quot;_blank&quot;}
-&lt;!--more--&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스크립팅 언어&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;즉, CSS를 만들어주는 언어로서 자바스크립트처럼 특정 속성(ex. color, margin, width 등)의 값(ex. #ffffff, 25rem, 100px 등)을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 반복되는 코드를 한 번의 선언으로 여러 곳에서 재사용할 수 있다.&lt;/li&gt;
+  &lt;li&gt;SCSS 코드를 읽어서 전처리한 다음 컴파일해서 전역 CSS 번들 파일을 만들어 주는 전처리기(preprocessor)&lt;/li&gt;
+  &lt;li&gt;스타일이 겹치는 문제를 해결하기 위해 단순히 계층 구조를 만들어 내는 것에 의지하며, 그 결과 컴파일된 CSS의 용량은 어마어마하게 커지는 치명적인 단점이 있다.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-## 2. Design System
+&lt;h3 id=&quot;23-css-방법론&quot;&gt;2.3 CSS 방법론&lt;/h3&gt;
+&lt;p&gt;방법론의 지향점은 다음과 같다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;코드의 재사용&lt;/li&gt;
+  &lt;li&gt;코드의 간결화(유지 보수 용이)&lt;/li&gt;
+  &lt;li&gt;코드의 확장성&lt;/li&gt;
+  &lt;li&gt;코드의 예측성(클래스 명으로 의미 예측)&lt;/li&gt;
+&lt;/ul&gt;
 
-### 2.1 Design System
+&lt;h3 id=&quot;24-bem&quot;&gt;2.4 BEM&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/react/react-component-design/bem.png&quot; alt=&quot;BEM&quot; /&gt;&lt;/p&gt;
 
-**UI 컴포넌트들의 모음을 구조화 하는 방법**
-* 디자인 시스템이란 서비스를 만드는 데 사용한 공통 컬러, 서체, 인터랙션, 각종 정책 및 규정에 관한 모든 컴포넌트를 정리해놓은 것이며 불필요한 커뮤니케이션을 없애기 위해 체계적으로 정리한 시스템을 말한다.
-* UI 컴포넌트는 사용자 인터페이스를 이루는 조각들의 시각적이고 기능적인 속성을 마치 레고(LEGO) 블록처럼 캡슐화한다.
-* 최근에 등장한 유저 인터페이스(UI)들은 다양한 사용자 경험을 제공하기 위해 수백 개의 모듈식 UI 컴포넌트가 재배열된 구조로 이루어져 있다.
-* 디자인 시스템은 재사용이 가능한 UI 컴포넌트들로 이루어져, 복잡하고 견고하며 사용자가 접근하기에 용이한 사용자 인터페이스를 구축할 수 있다. 
-* 디자이너와 개발자 모두 UI 컴포넌트를 다루기 때문에, 디자인 시스템은 두 분야를 연결하는 다리이기도 하다. 또한 조직의 공용 컴포넌트에 대한 &quot;진실의 근원(source of truth)&quot;이기도 하다.
-* [Uber](https://github.com/uber/baseweb){:target=&quot;_blank&quot;}, [Airbnb](https://github.com/airbnb/lunar){:target=&quot;_blank&quot;}, [IBM](https://www.carbondesignsystem.com/){:.target=&quot;_blank&quot;}, [GitHub](https://primer.style/css/){:.target=&quot;_blank&quot;}을 비롯한 수백 개가 넘는 기업의 디자인 시스템에서 스토리북이 사용되고 있다. 아래 목록은 그 중 가장 우수한 팀에서 사용되고 있는 Tool들이다.
+&lt;p&gt;대표적인 CSS 방법론인 BEM이란 Block, Element, Modifier로 구분하여 클래스명을 작성하는 방법&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;Block, Element, Modifier 각각은 —와 __로 구분&lt;/li&gt;
+  &lt;li&gt;클래스명은 BEM 방식의 이름을 여러 번 반복하여 재사용할 수 있도록 하며 HTML/CSS/SASS 파일에서도 더 일관된 코딩 구조를 만들어 준다.&lt;/li&gt;
+  &lt;li&gt;클래스명 선택자가 장황해지고, 이런 긴 클래스명 때문에 마크업이 불필요하게 커지며, 재사용하려고 할 때마다 모든 UI 컴포넌트를 명시적으로 확장해야는 단점이 있다.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-**빌드 컴포넌트**
-* 📚 [스토리북(Storybook)](https://storybook.js.org/){:.target=&quot;_blank&quot;}: UI 컴포넌트 개발과 자동으로 문서를 생성할 때 사용
-* ⚛️ [리액트(React)](https://reactjs.org/){:.target=&quot;_blank&quot;}: 선언 중심 컴포넌트 UI(create-react-app)를 사용
-* 💅 [스타일 컴포넌트(Styled-components)](https://styled-components.com/){:.target=&quot;_blank&quot;}: 컴포넌트 단위의 스타일링에 사용
-* ✨ [프리티어(Prettier)](https://prettier.io/){:.target=&quot;_blank&quot;}: 자동화된 코드 포맷팅에 사용
-&lt;br&gt;
+&lt;h3 id=&quot;25-각-css-방법론의-특징과-장-단점&quot;&gt;2.5 각 CSS 방법론의 특징과 장, 단점&lt;/h3&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/react/react-component-design/css-methlogy.png&quot; alt=&quot;CSS-Methlogy&quot; /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-### 2.2 Storybook
+&lt;h2 id=&quot;3-styled-component&quot;&gt;3. Styled-Component&lt;/h2&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/react/react-component-design/styled-component.png&quot; alt=&quot;Styled-Component&quot; /&gt;&lt;/p&gt;
 
-UI 개발 즉, **Component Driven Development**를 하기 위한 도구
-* 각각의 컴포넌트들을 따로 볼 수 있게 구성해주어 한 번에 하나의 컴포넌트에서 작업할 수 있다.
-* 재사용성을 확대하기 위해 컴포넌트를 문서화하고, 자동으로 컴포넌트를 시각화하여 전체 UI를 한눈에 볼 수 있다.
-* 시뮬레이션할 수 있는 다양한 테스트 상태를 확인하고 이를 통해 버그를 사전에 방지할 수 있도록 도와준다. 
-* 테스트 및 개발 속도를 향상시키는 장점이 있으며, 애플리케이션 또한 의존성을 걱정하지 않고 빌드할 수 있다.
+&lt;p&gt;SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. &lt;br /&gt;&lt;br /&gt;
+Styled-Component는 &lt;strong&gt;캡슐화(encapsulation : 객체의 속성과 행위를 하나로 묶고 실제 구현 내용 일부를 외부에 감추어 은닉하는 개념)&lt;/strong&gt;를 가능하게 한다.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;가장 인기있는 CSS-in-JS 관련 React 라이브러리&lt;/li&gt;
+  &lt;li&gt;기능적(Functional) 혹은 상태를 가진 컴포넌트들로부터 UI를 완전히 분리해 사용할 수 있는 아주 단순한 패턴을 제공&lt;/li&gt;
+  &lt;li&gt;기존 CSS 문법으로도 스타일 속성이 추가된 React 컴포넌트를 만들 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
 
-
-### 2.3 Storybook 주요 기능
-
-* UI 컴포넌트들을 카탈로그 화하기
-* 컴포넌트 변화를 Stories로 저장하기
-* 핫 모듈 재 로딩과 같은 개발 툴 경험을 제공하기
-* 리액트를 포함한 다양한 뷰 레이어 지원하기 
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-## 3. CSS 방법론
-
-### 3.1 CSS 전처리기(CSS Preprocessor)
-
-CSS가 구조적으로 작성될 수 있게 도움을 주는 도구
-* CSS의 문제점들을 프로그래밍 개념(변수, 함수, 상속 등)을 활용하여 해결할 수 있도록 한다.
-* CSS 전처리기(CSS Preprocessor) 자체만으로는 웹 서버가 인지하지 못하기 때문에 각 CSS 전처리기에 맞는 Compiler를 사용해야 하고 컴파일을 하게 되면 실제로 우리가 사용하는 CSS 문서로 변환이 된다.
-
-
-### 3.2 SASS(Syntactically Awesome Style Sheets)
-![SASS](/assets/img/react/react-component-design/sass.png)
-
-CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스크립팅 언어
-* 즉, CSS를 만들어주는 언어로서 자바스크립트처럼 특정 속성(ex. color, margin, width 등)의 값(ex. #ffffff, 25rem, 100px 등)을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 반복되는 코드를 한 번의 선언으로 여러 곳에서 재사용할 수 있다.
-* SCSS 코드를 읽어서 전처리한 다음 컴파일해서 전역 CSS 번들 파일을 만들어 주는 전처리기(preprocessor)
-* 스타일이 겹치는 문제를 해결하기 위해 단순히 계층 구조를 만들어 내는 것에 의지하며, 그 결과 컴파일된 CSS의 용량은 어마어마하게 커지는 치명적인 단점이 있다.
-&lt;br&gt;
-
-### 3.3 CSS 방법론
-방법론의 지향점은 다음과 같다. 
-* 코드의 재사용
-* 코드의 간결화(유지 보수 용이)
-* 코드의 확장성
-* 코드의 예측성(클래스 명으로 의미 예측)
-
-### 3.4 BEM
-![BEM](/assets/img/react/react-component-design/bem.png)
-
-대표적인 CSS 방법론인 BEM이란 Block, Element, Modifier로 구분하여 클래스명을 작성하는 방법
-* Block, Element, Modifier 각각은 —와 __로 구분
-* 클래스명은 BEM 방식의 이름을 여러 번 반복하여 재사용할 수 있도록 하며 HTML/CSS/SASS 파일에서도 더 일관된 코딩 구조를 만들어 준다.
-* 클래스명 선택자가 장황해지고, 이런 긴 클래스명 때문에 마크업이 불필요하게 커지며, 재사용하려고 할 때마다 모든 UI 컴포넌트를 명시적으로 확장해야는 단점이 있다.
-&lt;br&gt;
-
-### 3.5 각 CSS 방법론의 특징과 장, 단점
-![CSS-Methlogy](/assets/img/react/react-component-design/css-methlogy.png)
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-&lt;br&gt;
-
-## 4. Styled-Component
-![Styled-Component](/assets/img/react/react-component-design/styled-component.png)
-
-SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. &lt;br&gt;&lt;br&gt;
-Styled-Component는 **캡슐화(encapsulation : 객체의 속성과 행위를 하나로 묶고 실제 구현 내용 일부를 외부에 감추어 은닉하는 개념)**를 가능하게 한다.
-* 가장 인기있는 CSS-in-JS 관련 React 라이브러리
-* 기능적(Functional) 혹은 상태를 가진 컴포넌트들로부터 UI를 완전히 분리해 사용할 수 있는 아주 단순한 패턴을 제공 
-* 기존 CSS 문법으로도 스타일 속성이 추가된 React 컴포넌트를 만들 수 있다. 
-
-~~~js
-const Button = styled.a`
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;a&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   display: inline-block;
   border-radius: 3px;
   padding: 0.5rem 0;
   margin: 0.5rem 1rem;
   width: 11rem;
-`;
-~~~
-Styled Component 를 이용한 Button 생성
-{:.figcaption}
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;figcaption&quot;&gt;Styled Component 를 이용한 Button 생성&lt;/p&gt;
 
-### 4.1 Styled Component의 특징
+&lt;h3 id=&quot;31-styled-component의-특징&quot;&gt;3.1 Styled Component의 특징&lt;/h3&gt;
 
-**Automatic critical CSS**&lt;br&gt;
-* 화면에 어떤 컴포넌트가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입한다. 
-* 따라서 코드를 적절히 분배해 놓으면 사용자가 어플리케이션을 사용할 때 최소한의 코드만으로 화면이 띄워지도록 할 수 있다.
+&lt;p&gt;&lt;strong&gt;Automatic critical CSS&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;화면에 어떤 컴포넌트가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입한다.&lt;/li&gt;
+  &lt;li&gt;따라서 코드를 적절히 분배해 놓으면 사용자가 어플리케이션을 사용할 때 최소한의 코드만으로 화면이 띄워지도록 할 수 있다.&lt;/li&gt;
+&lt;/ul&gt;
 
-**No class name bugs**&lt;br&gt;
-* 스스로 유니크한 className 을 생성하여 className 의 중복이나 오타로 인한 버그를 줄여준다.
+&lt;p&gt;&lt;strong&gt;No class name bugs&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;스스로 유니크한 className 을 생성하여 className 의 중복이나 오타로 인한 버그를 줄여준다.&lt;/li&gt;
+&lt;/ul&gt;
 
-**Easier deletion of CSS**&lt;br&gt;
-* 모든 스타일 속성이 특정 컴포넌트와 연결되어 있기 때문에 만약 컴포넌트를 더 이상 사용하지 않아 삭제할 경우 이에 대한 스타일 속성도 함께 삭제된다.
+&lt;p&gt;&lt;strong&gt;Easier deletion of CSS&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;모든 스타일 속성이 특정 컴포넌트와 연결되어 있기 때문에 만약 컴포넌트를 더 이상 사용하지 않아 삭제할 경우 이에 대한 스타일 속성도 함께 삭제된다.&lt;/li&gt;
+&lt;/ul&gt;
 
-**Simple dynamic styling**&lt;br&gt;
-* className을 일일이 수동으로 관리할 필요 없이 React 의 props 나 전역 속성을 기반으로 컴포넌트에 스타일 속성을 부여하기 때문에 간단하고 직관적이다.
+&lt;p&gt;&lt;strong&gt;Simple dynamic styling&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;className을 일일이 수동으로 관리할 필요 없이 React 의 props 나 전역 속성을 기반으로 컴포넌트에 스타일 속성을 부여하기 때문에 간단하고 직관적이다.&lt;/li&gt;
+&lt;/ul&gt;
 
-**Painless maintenance**&lt;br&gt;
-* 컴포넌트에 스타일을 상속하는 속성을 찾아 다른 CSS 파일들을 검색하지 않아도 되기 때문에 코드의 크기가 커지더라도 유지보수가 어렵지 않다.
+&lt;p&gt;&lt;strong&gt;Painless maintenance&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;컴포넌트에 스타일을 상속하는 속성을 찾아 다른 CSS 파일들을 검색하지 않아도 되기 때문에 코드의 크기가 커지더라도 유지보수가 어렵지 않다.&lt;/li&gt;
+&lt;/ul&gt;
 
-**Automatic vendor prefixing**&lt;br&gt;
-* 개별 컴포넌트마다 기존의 CSS 를 이용하여 스타일 속성을 정의하면 이외의 것들은 Styled Component 가 알아서 처리해 준다.
-&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;Automatic vendor prefixing&lt;/strong&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;개별 컴포넌트마다 기존의 CSS 를 이용하여 스타일 속성을 정의하면 이외의 것들은 Styled Component 가 알아서 처리해 준다.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-### 4.2 Getting Started
+&lt;h3 id=&quot;32-getting-started&quot;&gt;3.2 Getting Started&lt;/h3&gt;
 
-~~~js
-import styled from &quot;styled-components&quot;;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;styled-components&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-// &lt;h1&gt; 태그를 렌더링 할 title component를 만든다.
-const Title = styled.h1`
+&lt;span class=&quot;c1&quot;&gt;// &amp;lt;h1&amp;gt; 태그를 렌더링 할 title component를 만든다.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Title&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;h1&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   font-size: 3em;
   text-align: center;
   color: MidnightBlue;
-`;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-// &lt;section&gt; 태그를 렌더링 할 Wrapper component를 만든다.
-const Wrapper = styled.section`
+&lt;span class=&quot;c1&quot;&gt;// &amp;lt;section&amp;gt; 태그를 렌더링 할 Wrapper component를 만든다.&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Wrapper&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;section&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   padding: 6em;
   background: LemonChiffon;
-`;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-export default function App() {
-  // 일반적으로 컴포넌트를 사용하는 것처럼 Title과 Wrapper를 사용하면 된다!
-  return (
-    &lt;Wrapper&gt;
-      &lt;Title&gt;Hello CHAN!&lt;/Title&gt;
-    &lt;/Wrapper&gt;
-  );
-}
-~~~
-`&lt;Title&gt;`과 `&lt;Wrapper&gt;` 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, `&lt;h1&gt;` tag 의 스타일 속성은 styled.h1 , `&lt;section&gt;` tag 의 스타일 속성은 styled.section 를 사용하고 있다. 
-{:.figcaption}
-&lt;br&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 일반적으로 컴포넌트를 사용하는 것처럼 Title과 Wrapper를 사용하면 된다!&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Wrapper&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Title&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Hello&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;CHAN&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;!&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Title&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Wrapper&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;figcaption&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Title&amp;gt;&lt;/code&gt;과 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Wrapper&amp;gt;&lt;/code&gt; 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;h1&amp;gt;&lt;/code&gt; tag 의 스타일 속성은 styled.h1 , &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;section&amp;gt;&lt;/code&gt; tag 의 스타일 속성은 styled.section 를 사용하고 있다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
-결과
-{:.figcaption}
-&lt;br&gt;
+&lt;p class=&quot;figcaption&quot;&gt;&lt;img src=&quot;/assets/img/react/react-component-design/getting-started.png&quot; alt=&quot;Getting Started&quot; width=&quot;600&quot; height=&quot;600&quot; /&gt; &lt;br /&gt;
+결과&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-### 4.3 Adapting based on props &amp; Extending Styles
+&lt;h3 id=&quot;33-adapting-based-on-props--extending-styles&quot;&gt;3.3 Adapting based on props &amp;amp; Extending Styles&lt;/h3&gt;
 
-Styled Component 는 **스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용**할 수도 있다. &lt;br&gt;
-또한 **같은 스타일 속성을 지닌 여러개의 컴포넌트들 중 몇 개의 컴포넌트에 약간의 변화를 주고 싶은 때**에는 상속받고자 하는 스타일 속성을 지닌 컴포넌트를 `styled()` 로 감싼 뒤, 변경하고 싶은 속성만 새로 정의해 주면 기존 속성을 확장하여 사용할 수 있다. 
+&lt;p&gt;Styled Component 는 &lt;strong&gt;스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용&lt;/strong&gt;할 수도 있다. &lt;br /&gt;
+또한 &lt;strong&gt;같은 스타일 속성을 지닌 여러개의 컴포넌트들 중 몇 개의 컴포넌트에 약간의 변화를 주고 싶은 때&lt;/strong&gt;에는 상속받고자 하는 스타일 속성을 지닌 컴포넌트를 &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;styled()&lt;/code&gt; 로 감싼 뒤, 변경하고 싶은 속성만 새로 정의해 주면 기존 속성을 확장하여 사용할 수 있다.&lt;/p&gt;
 
-~~~js
-import styled from &quot;styled-components&quot;;
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;styled-components&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-  // Button component
-const Button = styled.button`
+  &lt;span class=&quot;c1&quot;&gt;// Button component&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   /* Adapt the colors based on primary prop */
-  background: ${(props) =&gt; (props.primary ? &quot;palevioletred&quot; : &quot;white&quot;)};
-  color: ${(props) =&gt; (props.primary ? &quot;white&quot; : &quot;palevioletred&quot;)};
+  background: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;primary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;palevioletred&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
+  color: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;primary&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;?&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;white&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;palevioletred&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
 
   font-size: 1em;
   margin: 1em;
   padding: 0.25em 1em;
   border: 2px solid palevioletred;
   border-radius: 3px;
-`;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-const Tomato = styled(Button)`
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Tomato&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   color: tomato;
   border-color: tomato;
-`;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-// App component
-export default function App() {
-  return (
-    &lt;div className=&quot;App&quot;&gt;
-      &lt;Button&gt;Normal&lt;/Button&gt;
-      &lt;Button primary&gt;Primary&lt;/Button&gt;
-      &lt;Tomato&gt;Tomato&lt;/Tomato&gt;
-    &lt;/div&gt;
-  );
-}
-~~~
+&lt;span class=&quot;c1&quot;&gt;// App component&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;className&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Normal&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;primary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Primary&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tomato&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Tomato&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/Tomato&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-`&lt;Button&gt;` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. &lt;br&gt; 
-기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.
-{:.figcaption}
-&lt;br&gt;
+&lt;p class=&quot;figcaption&quot;&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;&amp;lt;Button&amp;gt;&lt;/code&gt; 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. &lt;br /&gt; 
+기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;p class=&quot;figcaption&quot;&gt;&lt;img src=&quot;/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png&quot; alt=&quot;Adapting based on props &amp;amp; Extending Styles&quot; width=&quot;600&quot; height=&quot;600&quot; /&gt; &lt;br /&gt;
+결과&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;34-passed-props&quot;&gt;3.4 Passed props&lt;/h3&gt;
 
-![Adapting based on props &amp; Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
-결과
-{:.figcaption}
-&lt;br&gt;
+&lt;p&gt;컴포넌트에 &lt;strong&gt;props 로 스타일 속성이 전달&lt;/strong&gt;된다면 해당 컴포넌트는 &lt;strong&gt;props 로 전달된 속성을 우선 적용&lt;/strong&gt;하며, 전달되는 속성이 없다면 기본으로 설정된 속성을 적용한다. 이는 Styled Component 가 개발자에 의해 설정된 속성과 기본 속성을 구분할 수 있기 때문이다.&lt;/p&gt;
 
-### 4.4 Passed props
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;k&quot;&gt;import&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;from&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;styled-components&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-컴포넌트에 **props 로 스타일 속성이 전달**된다면 해당 컴포넌트는 **props 로 전달된 속성을 우선 적용**하며, 전달되는 속성이 없다면 기본으로 설정된 속성을 적용한다. 이는 Styled Component 가 개발자에 의해 설정된 속성과 기본 속성을 구분할 수 있기 때문이다.
-
-~~~js
-import styled from &quot;styled-components&quot;;
-
-// Styled Component로 만들어진 Input 컴포넌트
-const Input = styled.input`
+&lt;span class=&quot;c1&quot;&gt;// Styled Component로 만들어진 Input 컴포넌트&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;styled&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;`
   padding: 0.5em;
   margin: 0.5em;
-  color: ${(props) =&gt; props.inputColor || &quot;red&quot;};
+  color: &lt;/span&gt;&lt;span class=&quot;p&quot;&gt;${(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;props&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputColor&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;red&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;;
   background: papayawhip;
   border: none;
   border-radius: 3px;
-`;
+`&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
 
-export default function App() {
-  return (
-    &lt;div&gt;
-      {/* 아래 Input 컴포넌트는 styled component인 Input 컴포넌트에 지정된 inputColor(red)가 적용되었다.  */}
-      &lt;Input defaultValue=&quot;김코딩&quot; type=&quot;text&quot; /&gt;
-      {/* 아래 Input 컴포넌트는 props로 전달된 커스텀 inputColor(blue)가 적용되었다. */}
-      &lt;Input defaultValue=&quot;박해커&quot; type=&quot;text&quot; inputColor=&quot;blue&quot; /&gt;
-    &lt;/div&gt;
-  );
-}
-~~~
-props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다. 
-{:.figcaption}
-&lt;br&gt;
-![Passed props](/assets/img/react/react-component-design/passed-props
-.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
-결과
-{:.figcaption}
-&lt;br&gt;
+&lt;span class=&quot;k&quot;&gt;export&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;default&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;App&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* 아래 Input 컴포넌트는 styled component인 Input 컴포넌트에 지정된 inputColor(red)가 적용되었다.  */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defaultValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;김코딩&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* 아래 Input 컴포넌트는 props로 전달된 커스텀 inputColor(blue)가 적용되었다. */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Input&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;defaultValue&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;박해커&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputColor&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;blue&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p class=&quot;figcaption&quot;&gt;props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다.&lt;/p&gt;
+&lt;p class=&quot;figcaption&quot;&gt;&lt;br /&gt;
+&lt;img src=&quot;/assets/img/react/react-component-design/passed-props
+.png&quot; alt=&quot;Passed props&quot; width=&quot;600&quot; height=&quot;600&quot; /&gt; &lt;br /&gt;
+결과&lt;/p&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-## 5. DOM reference를 잘 활용할 수 있는 useRef
+&lt;h2 id=&quot;4-dom-reference를-잘-활용할-수-있는-useref&quot;&gt;4. DOM reference를 잘 활용할 수 있는 useRef&lt;/h2&gt;
 
-### 5.1 useRef
+&lt;h3 id=&quot;41-useref&quot;&gt;4.1 useRef&lt;/h3&gt;
 
-React는 DOM 엘리먼트의 주소값을 활용(focus, text selection, media playback, 에니메이션 적용
-d3.js, greensock 및 DOM 기반 라이브러리 활용 등)해야 하는 예외적인 상황에서 **useRef**으로 DOM 노드, 엘리먼트, 그리고 리액트 컴포넌트 주소값을 참조할 수 있다. 
+&lt;p&gt;React는 DOM 엘리먼트의 주소값을 활용(focus, text selection, media playback, 에니메이션 적용
+d3.js, greensock 및 DOM 기반 라이브러리 활용 등)해야 하는 예외적인 상황에서 &lt;strong&gt;useRef&lt;/strong&gt;으로 DOM 노드, 엘리먼트, 그리고 리액트 컴포넌트 주소값을 참조할 수 있다.&lt;/p&gt;
 
-~~~js
-const 주소값을_담는_그릇 = useRef(참조자료형)
-// 이제 주소값을_담는_그릇 변수에 어떤 주소값이든 담을 수 있다.
-return (
-    &lt;div&gt;
-      &lt;input ref={주소값을_담는_그릇} type=&quot;text&quot; /&gt;
-        {/* React에서 사용 가능한 ref라는 속성에 주소값을_담는_그릇을 값으로 할당하면*/}
-        {/* 주소값을_담는_그릇 변수에는 input DOM 엘리먼트의 주소가 담긴다. */}
-        {/* 향후 다른 컴포넌트에서 input DOM 엘리먼트를 활용할 수 있다. */}
-    &lt;/div&gt;
-  );
-~~~
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;주소값을_담는_그릇&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;참조자료형&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// 이제 주소값을_담는_그릇 변수에 어떤 주소값이든 담을 수 있다.&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;div&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;주소값을_담는_그릇&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* React에서 사용 가능한 ref라는 속성에 주소값을_담는_그릇을 값으로 할당하면*/&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* 주소값을_담는_그릇 변수에는 input DOM 엘리먼트의 주소가 담긴다. */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+        &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;cm&quot;&gt;/* 향후 다른 컴포넌트에서 input DOM 엘리먼트를 활용할 수 있다. */&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/div&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-이 주소값은 컴포넌트가 re-render 되더라도 바뀌지 않는다. 
-{:.figcaption}
+&lt;p class=&quot;figcaption&quot;&gt;이 주소값은 컴포넌트가 re-render 되더라도 바뀌지 않는다.&lt;/p&gt;
 
-~~~js
-function TextInputWithFocusButton() {
-  const inputEl = useRef(null);
-  const onButtonClick = () =&gt; {
-    inputEl.current.focus();
-  };
-  return (
-    &lt;&gt;
-      &lt;input ref={inputEl} type=&quot;text&quot; /&gt;
-      &lt;button onClick={onButtonClick}&gt;Focus the input&lt;/button&gt;
-    &lt;/&gt;
-  );
-}
-~~~
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;TextInputWithFocusButton&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;inputEl&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;useRef&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kc&quot;&gt;null&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onButtonClick&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;inputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;focus&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;
+    &lt;span class=&quot;o&quot;&gt;&amp;lt;&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;ref&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;inputEl&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;type&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;text&lt;/span&gt;&lt;span class=&quot;dl&quot;&gt;&quot;&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&amp;gt;&lt;/span&gt;
+      &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;button&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;onClick&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;onButtonClick&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;Focus&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;the&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/button&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;    &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;sr&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&amp;gt;
+&lt;/span&gt;  &lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-컴포넌트가 re-render 되더라도 주소값이 바뀌지 않는 특성을 활용하여 위의 제한된 상황에서 useRef를 활용할 수 있다.
-{:.figcaption}
+&lt;p class=&quot;figcaption&quot;&gt;컴포넌트가 re-render 되더라도 주소값이 바뀌지 않는 특성을 활용하여 위의 제한된 상황에서 useRef를 활용할 수 있다.&lt;/p&gt;
 
-제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
-&lt;br&gt;
+&lt;p&gt;제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
+&lt;br /&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;42-useref-활용-예시&quot;&gt;4.2 useRef 활용 예시&lt;/h3&gt;
 
-### 5.2 useRef 활용 예시 
+&lt;p&gt;&lt;a href=&quot;https://codesandbox.io/s/patient-worker-3kzhd?from-embed=&amp;amp;file=/src/App.js&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;Action Item 1 : focus&lt;/a&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-[Action Item 1 : focus](https://codesandbox.io/s/patient-worker-3kzhd?from-embed=&amp;file=/src/App.js){:.target=&quot;_blank&quot;}
-&lt;br&gt;
+&lt;p&gt;&lt;a href=&quot;https://codesandbox.io/s/priceless-sanderson-kx77s?from-embed&quot; class=&quot;target=&amp;quot;_blank&amp;quot;&quot;&gt;Action Item 2 : media playback&lt;/a&gt;&lt;/p&gt;
 
-[Action Item 2 : media playback](https://codesandbox.io/s/priceless-sanderson-kx77s?from-embed){:.target=&quot;_blank&quot;}
+&lt;p class=&quot;read-more&quot;&gt;Next　&lt;a href=&quot;2022-02-04-react-sprint-custom-component.md&quot; class=&quot;heading flip-title&quot;&gt;[React] Sprint - React Custom Component&lt;/a&gt;&lt;/p&gt;
 
+&lt;p class=&quot;note&quot; title=&quot;reference&quot;&gt;&lt;a href=&quot;https://www.codestates.com/&quot; target=&quot;_blank&quot;&gt;https://www.codestates.com/&lt;/a&gt;&lt;br /&gt;&lt;/p&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html">레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발 CDD 방법을 활용하여 UI 를 구축하는 사이트 :　BBC　UN</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/react/react-component-design/component-driven-development.png" /><media:content medium="image" url="http://localhost:4000/assets/img/react/react-component-design/component-driven-development.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Immersive Toy Problem_sudoku</title><link href="http://localhost:4000/coding-test/sudoku.html" rel="alternate" type="text/html" title="Immersive Toy Problem_sudoku" /><published>2022-02-03T00:00:00+09:00</published><updated>2022-02-03T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/sudoku</id><content type="html" xml:base="http://localhost:4000/coding-test/sudoku.html">Back tracking을 이용한 스도쿠 문제풀이 (javascript)
 
-Next　[[React] Sprint - React Custom Component](2022-02-04-react-sprint-custom-component.md){:.heading.flip-title}
-{:.read-more} 
-
-
-[https://www.codestates.com/](https://www.codestates.com/){:target=&quot;_blank&quot;}&lt;br&gt;
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">Immersive Toy Problem_sudoku</title><link href="http://localhost:4000/coding-test/sudoku.html" rel="alternate" type="text/html" title="Immersive Toy Problem_sudoku" /><published>2022-02-03T00:00:00+09:00</published><updated>2022-02-03T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/sudoku</id><content type="html" xml:base="http://localhost:4000/coding-test/sudoku.html">* this unordered seed list will be replaced by the toc
+* this unordered seed list will be replaced by the toc
  {:toc}
 
 ## Problem
@@ -830,28 +839,22 @@ function boxesCheck(board){
     }
     return true
 }
-~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html"></summary></entry><entry><title type="html">Fundamentals of Data Structures</title><link href="http://localhost:4000/study/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Fundamentals of Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-data-structures.html">* this unordered seed list will be replaced by the toc
-{:toc}
-
-## 1. Data Structures 
-
-&gt; Data structure is a storage that is used to store and organize data. &lt;br&gt;
+~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html">Back tracking을 이용한 스도쿠 문제풀이 (javascript)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/coding-test/sudoku.png" /><media:content medium="image" url="http://localhost:4000/assets/img/coding-test/sudoku.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Data Structures</title><link href="http://localhost:4000/study/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-data-structures.html">&gt; Data structure is a storage that is used to store and organize data. &lt;br&gt;
  It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.&lt;br&gt;
 
-![Data-structures](/assets/img/data-structures-and-algorithms/data-structures.png){:width=&quot;650&quot;}{:.alignleft}
+* toc
+{:toc .large-only}
 
-Data structures can be classified as follows.
+## 1. Stack
 
-## 2. Stack
-
-### 2.1 What is Stack?
+### 1.1 What is Stack?
 
 &gt; If you make a stack of block, The last block stacks are of last in first out type of service.&lt;br&gt;
  The last block you put on top of a stack would be the first block.&lt;br&gt;
 
 ![Stack](/assets/img/data-structures-and-algorithms/stack.gif) &lt;br&gt;
 
-### 2.2 Using an array as a stack 
+### 1.2 Using an array as a stack 
 
 ```javascript
 let letters = []; // this is our stack
@@ -882,7 +885,7 @@ else {
 
 &lt;!--more--&gt;
 
-### 2.3 Stack Implementation
+### 1.3 Stack Implementation
 
 * push : for placing data onto a stack
 * pop : removing the top element of a stack
@@ -927,9 +930,9 @@ console.log(myStack.size()); // 1
 ```
 &lt;br &gt;
 
-## 3. Queue
+## 2. Queue
 
-### 3.1 What is Queue?
+### 2.1 What is Queue?
 
 &gt; Queue example is a print queue when a lot of people are printing documents at the same printer.&lt;br&gt;
  The documents are printed **in the order(first in first out)**. They were sent to the print queue.
@@ -937,7 +940,7 @@ console.log(myStack.size()); // 1
 ![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width=&quot;650&quot;}
 &lt;br&gt;
 
-### 3.2 Queue Implementation
+### 2.2 Queue Implementation
 
 ```js
 class Queue {
@@ -968,16 +971,16 @@ q.dequeue(); // q = [b,c];
 q.front(); // b
 ```
 
-### 3.3 Priority Queue
+### 2.3 Priority Queue
 
-#### 3.3.1 What is Priority Queue?
+#### 2.3.1 What is Priority Queue?
 
 &gt; In a priority queue not only pass the element into the queue but also pass the priority of the element. &lt;br&gt;
   So if all the priorities are the same number it's going to behave just like a normal queue. &lt;br&gt;&lt;br&gt;
   But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
 &lt;br&gt;
 
-#### 3.3.2 Priority Queue Implementation
+#### 2.3.2 Priority Queue Implementation
 
 ```js
 class PriorityQueue {
@@ -1031,19 +1034,19 @@ pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 &lt;br&gt;
 
 
-## 4. Set
+## 3. Set
 
-### 4.1 What is Set?
+### 3.1 What is Set?
 
 &gt; The set data structure is kind of like an array except there are &lt;mark&gt;no duplicate&lt;/mark&gt;
  items and the values are not in any particular order. &lt;br&gt;
 The typical use for set is to simply check for the presence of an item.
 &lt;br&gt;
 
-### 4.2 Set Implementation
+### 3.2 Set Implementation
 
 ```javascript
-// Why it's named this way is because we want to make it distinct from the es6.
+// Why it's named this way is because we want to make it distinct from the es5.
 class mySet {
   constructor() {
     // collection will hold the set
@@ -1151,16 +1154,16 @@ console.log(setD.add('d')) // {'b','c','d'}
 &lt;br&gt;
 &lt;br&gt;
 
-## 5. Tree
+## 4. Tree
 
-### 5.1 What is Tree?
+### 4.1 What is Tree?
 
 &gt;  A tree data structure is a way to hold data that when visualized looks like a tree. &lt;br&gt;
 This is actually what we visualized a tree data structure to look like all data points in the tree are called **nodes**.
 
 ![Tree](/assets/img/data-structures-and-algorithms/tree.png){:width=&quot;650&quot;} 
 
-### 5.2 Tree Implementation
+### 4.2 Tree Implementation
 
 ```js
 class Tree{
@@ -1190,9 +1193,9 @@ class Tree{
 }
 ```
 
-### 5.3 Binary Search Tree
+### 4.3 Binary Search Tree
 
-#### 5.3.1 What is Binary Search Tree?
+#### 4.3.1 What is Binary Search Tree?
   
 &gt; Binary Tree's each node can only has two branches. &lt;br&gt;&lt;br&gt;
 Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node. And each right subtree is greater than or equal to the parent node. &lt;br&gt;&lt;br&gt; Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. &lt;br&gt;&lt;br&gt;
@@ -1219,7 +1222,7 @@ This is much better than the linear time required to find items by key in an uns
 ![BST degeneration](/assets/img/data-structures-and-algorithms/bst_degeneration.gif){:width=&quot;600&quot;} &lt;br&gt;
 &lt;br&gt;
 
-#### 5.3.2 Binary Search Tree Traversal 
+#### 4.3.2 Binary Search Tree Traversal 
 
 **BST inorder operation**
 
@@ -1241,7 +1244,7 @@ This is much better than the linear time required to find items by key in an uns
 ![BST levelorder operation](/assets/img/data-structures-and-algorithms/bst_levelorder.png){:width=&quot;600&quot;} &lt;br&gt;
 &lt;br&gt;
 
-#### 5.3.3 Binary Search Tree Implementation
+#### 4.3.3 Binary Search Tree Implementation
 
 ~~~js
 // The node class represents each node in the tree.
@@ -1489,9 +1492,9 @@ console.log('levelOrder: ' + bst.levelOrder()); // levelOrder: 5,2,6,1,3,9,22,20
 ~~~
 
 
-## 6. Graph
+## 5. Graph
 
-### 6.1 What is Graph?
+### 5.1 What is Graph?
 
 &gt; Graphs are collections of things and **the relationships or connections** between them. &lt;br&gt;
 The data in a graph are called **nodes or vertices.**&lt;br&gt;
@@ -1500,7 +1503,7 @@ The connections between the nodes are called **edges.**
 ![Graph](/assets/img/data-structures-and-algorithms/graph-1.png){:width=&quot;650&quot;}
 &lt;br&gt;&lt;br&gt;
 
-### 6.2 Type of Graph
+### 5.2 Type of Graph
 
 **Undirected and Directed**
 
@@ -1513,20 +1516,20 @@ Directed graphs are graphs with a direction and its edges.
 * ex)  internet and web page links. The nodes are web pages and the directed edges are links to other pages.
 
 
-### 6.3 Graph Representation
+### 5.3 Graph Representation
 
-#### 6.3.1 Adjacency List 
+#### 5.3.1 Adjacency List 
 
 Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.
 
 ![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width=&quot;650&quot;}
 
-#### 6.3.2 Adjacency Matrix 
+#### 5.3.2 Adjacency Matrix 
 
 Adjacency Matrix is a two-dimensional array where each nested array has the same number of
 elements as the outer array. So it's basically a matrix of numbers where the numbers represent the edges.
 
-#### 6.3.3 Incidence Matrix 
+#### 5.3.3 Incidence Matrix 
 
 ![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width=&quot;650&quot;}
 
@@ -1535,16 +1538,16 @@ But Incidence Matrix uses roads to represent nodes and the columns to represent 
 This means that we can have an uneven number of rows and columns.
 Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
 
-## 7. Hash Table
+## 6. Hash Table
   
-### 7.1 What is Hash Table?
+### 6.1 What is Hash Table?
 
 &gt; 
 
 ![Hash Table](/assets/img/data-structures-and-algorithms/hashtable.png){:width=&quot;650&quot;}
 
 
-### 7.2 Hash Table Implementation
+### 6.2 Hash Table Implementation
 
 ~~~js
 const hash = function(string, max) {
@@ -1619,9 +1622,9 @@ ht.print();
 ~~~
 
 
-## 8. Linked List
+## 7. Linked List
   
-### 8.1 What is Linked List?
+### 7.1 What is Linked List?
 
 &gt; 
 
@@ -1638,7 +1641,7 @@ ht.print();
 &lt;br&gt;
 
 
-### 8.2 Linked List Implementation
+### 7.2 Linked List Implementation
 
 ~~~js
 class Node {
@@ -1769,16 +1772,16 @@ console.log(conga.size()); // 4
 ~~~
 &lt;br&gt;
 
-## 9. Trie
+## 8. Trie
   
-### 9.1 What is Trie?
+### 8.1 What is Trie?
 
 &gt; 
 
 ![Trie](/assets/img/data-structures-and-algorithms/trie.png){:width=&quot;600&quot;}
 
 
-### 9.2 Trie Implementation
+### 8.2 Trie Implementation
 
 ~~~js
 class Node {
@@ -1855,9 +1858,9 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
 ~~~
 &lt;br&gt;
 
-## 10. Heap
+## 9. Heap
 
-### 10.1 What is Heap?
+### 9.1 What is Heap?
   
 &gt; 
 
@@ -1871,7 +1874,7 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
 ![Maxheap](/assets/img/data-structures-and-algorithms/heap_maxheap.gif){:width=&quot;600&quot;}
 &lt;br&gt;
 
-### 10.2 Heap Implementation
+### 9.2 Heap Implementation
 
 ~~~js
 // left child: i * 2
@@ -2008,7 +2011,9 @@ Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.h
 [https://algorithmtutor.com/](https://algorithmtutor.com/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target=&quot;_blank&quot;}&lt;br&gt;
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html"></summary></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">* this unordered seed list will be replaced by the toc
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">It's hard to think of anything else, but think in React
+
+* this unordered seed list will be replaced by the toc
 {:toc}
 
 ## Step 1 : Break The UI Into A Component Hierarchy
@@ -2116,7 +2121,7 @@ Let’s think about what we want to happen. We want to make sure that whenever t
 
 
 [https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html){:target=&quot;_blank&quot;}&lt;br&gt;
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">Immersive Toy Problem_orderOfPresentation</title><link href="http://localhost:4000/coding-test/orderofpresentation.html" rel="alternate" type="text/html" title="Immersive Toy Problem_orderOfPresentation" /><published>2022-01-24T00:00:00+09:00</published><updated>2022-01-24T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/orderofpresentation</id><content type="html" xml:base="http://localhost:4000/coding-test/orderofpresentation.html">* this unordered seed list will be replaced by the toc
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html">It’s hard to think of anything else, but think in React</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/react/react-main.png" /><media:content medium="image" url="http://localhost:4000/assets/img/react/react-main.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Immersive Toy Problem_orderOfPresentation</title><link href="http://localhost:4000/coding-test/orderofpresentation.html" rel="alternate" type="text/html" title="Immersive Toy Problem_orderOfPresentation" /><published>2022-01-24T00:00:00+09:00</published><updated>2022-01-24T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/orderofpresentation</id><content type="html" xml:base="http://localhost:4000/coding-test/orderofpresentation.html">* this unordered seed list will be replaced by the toc
  {:toc}
 
 ## 문제
@@ -2140,7 +2145,9 @@ output = orderOfPresentation(5, [1, 3, 2, 4, 5]);
 console.log(output); // 6
 ```
 
-&lt;!--more--&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html"></summary></entry><entry><title type="html">Ubuntu tips for use</title><link href="http://localhost:4000/etc/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu tips for use" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/ubuntu</id><content type="html" xml:base="http://localhost:4000/etc/ubuntu.html">* this unordered seed list will be replaced by the toc
+&lt;!--more--&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html"></summary></entry><entry><title type="html">Ubuntu tips for use</title><link href="http://localhost:4000/etc/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu tips for use" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/ubuntu</id><content type="html" xml:base="http://localhost:4000/etc/ubuntu.html">How to screenshot and shortcut setting in ubuntu. 
+
+* this unordered seed list will be replaced by the toc
 {:toc}
 
 ## 스크린샷 단축키&lt;br&gt;
@@ -2159,14 +2166,11 @@ console.log(output); // 6
 
 ![ubuntu_screenshot](/assets/img/ubuntu/ubuntu_screenshot.png){:.alignleft}
 
-설정 -&gt; 키보드 단축키에서 편한대로 설정할 수 있다.</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="etc" /><category term="ubuntu" /><summary type="html"></summary></entry><entry><title type="html">Git</title><link href="http://localhost:4000/study/git.html" rel="alternate" type="text/html" title="Git" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/study/git</id><content type="html" xml:base="http://localhost:4000/study/git.html">* this unordered seed list will be replaced by the toc
+설정 -&gt; 키보드 단축키에서 편한대로 설정할 수 있다.</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="etc" /><category term="ubuntu" /><summary type="html">How to screenshot and shortcut setting in ubuntu.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/ubuntu/ubuntu_screenshot.png" /><media:content medium="image" url="http://localhost:4000/assets/img/ubuntu/ubuntu_screenshot.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">git workflow</title><link href="http://localhost:4000/study/git.html" rel="alternate" type="text/html" title="git workflow" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/study/git</id><content type="html" xml:base="http://localhost:4000/study/git.html">git의 한장 요약
+{:.lead}
+
+* this unordered seed list will be replaced by the toc
 {:toc}
-
-## git workflow
-
-![git_workflow_overview](/assets/img/git/git_workflow_overview.jpg)
-
-git의 한장 요약&lt;BR&gt;
 
 ## git 영역과 상태
 
@@ -2197,4 +2201,4 @@ git add -p : 변경사항을 일일이 확인하면서 넘길 수 있어 편리�
 &lt;Br&gt;
 
 [stackoverflow - Difference between &quot;git add -A&quot; and &quot;git add .&quot;](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add%20){:target=&quot;_blank&quot;}
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="git" /><summary type="html"></summary></entry></feed>
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="git" /><summary type="html">git의 한장 요약</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/git/git_workflow_overview.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/git/git_workflow_overview.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry></feed>

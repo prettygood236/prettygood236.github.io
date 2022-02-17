@@ -4,14 +4,23 @@ title:    'Fundamentals of Algorithms'
 subtitle: 'Fundamentals of Algorithms'
 category: study
 tags:     data-structures-and-algorithms
-hide_last_modified: true
-related_posts:
-  - _posts/Study/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
-  - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku/
+image: 
+  path: /assets/img/data-structures-and-algorithms/algorithm.jpeg
 ---
 
-1. this ordered seed list will be replaced by the toc
-{:toc}
+## Algorithm
+
+Algorithm is a set of **well-defined instructions to solve a particular problem**. It takes a set of input and produces a desired output. 
+
+### Qualities of Good Algorithms
+- Input and output should be defined precisely.
+- Each step in the algorithm should be clear and unambiguous.
+- Algorithms should be most effective among many different ways to solve a problem.
+- An algorithm shouldn't include computer code. Instead, the algorithm should be written - in such a way that it can be used in different programming languages.
+
+* toc
+{:toc .large-only}
+
 
 ## 1. Greedy
 
@@ -96,5 +105,6 @@ Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-struct
 <br>
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

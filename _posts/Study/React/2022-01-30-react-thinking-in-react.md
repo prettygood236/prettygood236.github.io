@@ -4,7 +4,11 @@ title:    '[React] Thinking in React'
 subtitle: '[React] Thinking in React'
 category: study
 tags:     react
+image: 
+  path: /assets/img/react/react-main.png
 ---
+
+It's hard to think of anything else, but think in React
 
 * this unordered seed list will be replaced by the toc
 {:toc}
