@@ -1,10 +1,5 @@
 <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
 <ul>
-  {% if site.menu %}
-    {% for node in site.menu %}
-      {% assign url = node.url | default: node.href %}
-    {% endfor %}
-  {% else %}
     {% assign pages = site.html_pages | where: "menu", true %}
     {% assign nodes = pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
   {% assign tag_nodes = nodes | where: "type", "tag" %}
@@ -40,5 +35,5 @@
         </li>
       {% endunless %}
     {% endfor %}
-  {% endif %}
+  
 </ul>
