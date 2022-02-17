@@ -4,6 +4,10 @@ title:    'Fundamentals of Algorithms'
 subtitle: 'Fundamentals of Algorithms'
 category: study
 tags:     data-structures-and-algorithms
+hide_last_modified: true
+related_posts:
+  - _posts/Study/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
+  - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku/
 ---
 
 1. this ordered seed list will be replaced by the toc

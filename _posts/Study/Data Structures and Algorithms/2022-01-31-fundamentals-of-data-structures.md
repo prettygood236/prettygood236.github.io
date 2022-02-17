@@ -4,7 +4,15 @@ title:    'Fundamentals of Data Structures'
 subtitle: 'Fundamentals of Data Structures'
 category: study
 tags:     data-structures-and-algorithms
+hide_last_modified: true
+image: 
+  path: /assets/img/data-structures-and-algorithms/data-structures.png
+related_posts:
+  - _posts/Study/Data Structures and Algorithms/2022-02-12-fundamentals-of-algorithms.md
+  - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku/
 ---
+
+Data Structures
 
 * this unordered seed list will be replaced by the toc
 {:toc}

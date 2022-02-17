@@ -41,14 +41,14 @@ keywords:              ["Blockchain", "Developer", "DataStructure", "Algorithm"]
 # A (square) logo for your site.
 # If provided, it will be shown at the top of the sidebar.
 # It also used by the `jekyll-seo-tag` plugin.
-logo:                   /assets/img/logo.png
+# logo:                   /assets/img/logo.png
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
   name:                Byungchan Park
   email:               prettygood236@gmail.com
-  picture:             /assets/img/id_pic.jpg
+  picture:             /assets/img/id_pic.png
   social:
     github:            prettygood236
     email:             prettygood236@gmail.com
@@ -101,7 +101,7 @@ paginate_path:         /page-:num/
 # ----------------------------------------------------------------------------------------
 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/music-cat.gif
+accent_image:          /assets/img/side-bar.png
 accent_color:          rgb(79,177,186)
 
 # This is used for the `theme-color` meta tag,
