@@ -8,7 +8,8 @@ image:
   path: /assets/img/data-structures-and-algorithms/algorithm-main.jpg
 ---
 
-Algorithm is a set of **well-defined instructions to solve a particular problem**. It takes a set of input and produces a desired output. 
+Algorithm is a set of **well-defined instructions to solve a particular problem**. <br>
+It takes a set of input and produces a desired output. 
 {:.lead}
 
 * toc

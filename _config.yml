@@ -224,7 +224,7 @@ comments:
 # https://giscus.vercel.app/
 giscus:
   repo:                  'prettygood236/prettygood236.github.io'
-  repo-id:               '448219571'
+  repo-id:               '459502150'
   category:              'Comments'
   category-id:           'DIC_kwDOEHDTNc4B-MIg'
   mapping:               'pathname'
