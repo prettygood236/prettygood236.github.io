@@ -121,14 +121,14 @@ font_code: Fira Code, Menlo, Monaco, Consolas, monospace;
 defaults:
   # You can use this to provide a default accent color and background for
   # all pages under a given path:
-  - scope:
-      path: /
-    values:
-      accent_color: rgb(248,177,36) #orange
-      theme_color: rgb(248,107,198) #pink
-      accent_image:
-        background: rgb(177,246,0) #green
-        overlay: false
+  # - scope:
+  #     path: /
+  #   values:
+  #     accent_color: rgb(248,177,36) #orange
+  #     theme_color: rgb(248,107,198) #pink
+  #     accent_image:
+  #       background: rgb(177,246,0) #green
+  #       overlay: false
 
   # Don't include documents in assets in the sitemap
   - scope:
@@ -237,7 +237,7 @@ hydejack:
 
   # Set to `true` if you don't intend on changing the accent color on a per-page basis.
   # This will increase site build speed!
-  no_page_style: false
+  no_page_style: true
 
   # Code blocks and tables "break" the layout by spanning the full available width.
   # Set this to true if you want them to be the same width as other content.
@@ -252,7 +252,7 @@ hydejack:
   no_third_column: false
 
   # Set to `true` if you don't like oversized headlines on large screens.
-  no_large_headings: false
+  no_large_headings: true
 
   # Set to `true` if you do not want to expose your resume and projects
   # in machine-readable formats.
@@ -266,7 +266,7 @@ hydejack:
   no_breadcrumbs: false
 
   # Set to `true` when building with the `--lsi` option
-  use_lsi: true
+  use_lsi: false
 
   # When using Google Analytics, set to `true` to display a cookie notice banner.
   # When enabled, no user-related data will be stored until the user gives consent.
