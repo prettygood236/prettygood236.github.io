@@ -1,9 +1,10 @@
 <span class="sr-only">{{ site.data.strings.navigation | default:"Navigation" }}{{ site.data.strings.colon | default:":" }}</span>
 <ul>
-    {% assign nodes = pages | concat: site.documents | where: "sidebar", true | sort: "order" %}
+  {% assign documents = site.documents | where: "menu", true %}
+  {% assign nodes = site.html_pages  | concat: documents | where: "sidebar", true | sort: "order" %}
   {% assign tag_nodes = nodes | where: "type", "tag" %}
-    {% for node in nodes %}
-      {% unless node.redirect_to %}
+  {% for node in nodes %}
+    {% unless node.redirect_to %}
       {% if node.type != "tag" %}
         {% assign subnodes = tag_nodes | where_exp: "item", "item.category == node.slug" %}
         {% assign count = count | plus: 1 %}
@@ -28,10 +29,10 @@
           {% endfor %}
         </li>
       {% endif %}
-      {% else %}
-        <li>
-          <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
-        </li>
-      {% endunless %}
-    {% endfor %}
+    {% else %}
+      <li>
+        <a href="{{ node.redirect_to }}" class="sidebar-nav-item external">{{ node.title }}</a>
+      </li>
+    {% endunless %}
+  {% endfor %}
 </ul>
