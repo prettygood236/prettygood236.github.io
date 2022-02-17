@@ -60,7 +60,7 @@ pre, table:not(.highlight), .katex-display, .break-layout, mjx-container[jax="CH
 }
 
 body:not(.no-break-layout) {
-  .katex-display > .katex, mjx-container[jax][display="true"] { 
+  .katex-display > .katex, mjx-container[jax][display="true"] {
     text-align: left!important;
   }
 }
@@ -77,4 +77,3 @@ body.no-toc:not(.no-break-layout) {
     }
   }
 }
-

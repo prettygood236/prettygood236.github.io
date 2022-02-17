@@ -79,12 +79,12 @@ hy-drawer {
 
   a {
     // <<< inline
-    color: #fff; 
-    border-bottom-color: rgba(255, 255, 255, 0.2); 
-    text-decoration-color: rgba(255, 255, 255, 0.2); 
+    color: #fff;
+    border-bottom-color: rgba(255, 255, 255, 0.2);
+    text-decoration-color: rgba(255, 255, 255, 0.2);
     // >>>
     // <<< link
-    &:hover { 
+    &:hover {
       border-bottom-color: #fff;
       text-decoration-color: #fff;
     }
@@ -94,11 +94,11 @@ hy-drawer {
   &.invert a {
     // <<< inline
     color: #222;
-    border-bottom-color: rgba(32, 32, 32, 0.2); 
-    text-decoration-color: rgba(32, 32, 32, 0.2); 
+    border-bottom-color: rgba(32, 32, 32, 0.2);
+    text-decoration-color: rgba(32, 32, 32, 0.2);
     // >>>
     // <<< link
-    &:hover { 
+    &:hover {
       border-bottom-color: #222;
       text-decoration-color: #222;
     }

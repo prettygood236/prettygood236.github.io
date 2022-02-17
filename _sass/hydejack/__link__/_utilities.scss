@@ -40,7 +40,7 @@
 .four-three { @include aspect-ratio(4, 3); }
 
 .sr-only {
-//   display: none; 
+//   display: none;
   display: unset;
   position: absolute;
   width: 1px;
@@ -50,7 +50,7 @@
   overflow: hidden;
   clip: rect(0,0,0,0);
   border: 0;
-  
+
 }
 
 .larger { font-size: larger; }
@@ -69,8 +69,8 @@
 }
 
 .border {
-//   border: 1px solid var(--border-color); 
-  transition: border-color 1s ease; 
+//   border: 1px solid var(--border-color);
+  transition: border-color 1s ease;
 }
 
 .border-radius {

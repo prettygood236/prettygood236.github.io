@@ -9,7 +9,7 @@
     display: inline-block;
     margin-bottom: .25rem;
 
-    // Fix avatar border overlapping name on small screens: 
+    // Fix avatar border overlapping name on small screens:
     position: relative;
     z-index: 2;
   }
@@ -18,12 +18,16 @@
     > p { margin-bottom: 0 }
   }
 
-  .page > header { 
+  .page > header {
     margin-bottom: 1.5rem
   }
 
   .subline {
     margin-top: 0;
+  }
+
+  .mt2 {
+    margin-top: 1rem;
   }
 
   ul {
@@ -145,7 +149,7 @@
     width: 100%;
   }
 
-  .fr { 
+  .fr {
     float: none;
     display: inline-block;
     margin-left: .25rem;
@@ -158,14 +162,14 @@
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    .columns-break { 
-      $helper: $content-width-5 / 2 - $content-margin-5;
+    .columns-break {
+      $helper: $content-width-5 / 2 - $content-margin-5 - 1rem;
       width: calc(50vw + #{$helper});
-      > .column-3-5 { 
+      > .column-3-5 {
         width: $content-width-5;
       }
-      > .column-2-5 { 
-        width: calc(50vw + #{$helper} - #{$content-width-5}); 
+      > .column-2-5 {
+        width: calc(50vw + #{$helper} - #{$content-width-5});
         max-width: $content-width-5 / 2 - $pad;
       }
     }

@@ -1,0 +1,2200 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-17T22:19:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>If you can't explain it simply,  &lt;br&gt; you don't understand it well enough.
+</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-12T00:00:00+09:00</published><updated>2022-02-12T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">1. this ordered seed list will be replaced by the toc
+{:toc}
+
+## 1. Greedy
+
+
+## 2. Implementation
+
+
+
+## 3. DFS &amp; BFS
+
+### 3.1 Depth-First Search
+
+&gt; DFS is literally an algorithm that searches the deep part first.&lt;br&gt;
+DFS uses a stack data structure (or recursive function)
+
+**DFS operation process**
+1. Insert the search start node into the stack and process the visit.
+2. If there is at least one unvisited adjacent node at the top node of the stack, the node is push into the stack and visited. If there are no unvisited adjacent nodes, pop the topmost node from the stack.
+3. Repeat until step 2 can no longer be performed.
+&lt;br&gt;
+
+![Depth-First Search operation](/assets/img/data-structures-and-algorithms/graph_dfs.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+### 3.2 Breadth-First Search
+
+![Breadth-First Search operation](/assets/img/data-structures-and-algorithms/graph_bfs.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+&lt;!--more--&gt;
+
+### 3.3 Graph : Depth-First Search Implementation
+
+~~~js
+function bfs(graph, root) {
+  let nodesLen = {};
+  
+  for (let i = 0; i &lt; graph.length; i++) {
+    nodesLen[i] = Infinity;
+  }
+  nodesLen[root] = 0; 
+  
+  let queue = [root]; 
+  let current; 
+
+  while (queue.length != 0) {
+    current = queue.shift();
+    
+    let curConnected = graph[current];
+    let neighborIdx = []; 
+    let idx = curConnected.indexOf(1); 
+    while (idx != -1) {
+      neighborIdx.push(idx); 
+      idx = curConnected.indexOf(1, idx + 1); 
+    }
+    
+    for (let j = 0; j &lt; neighborIdx.length; j++) {
+      if (nodesLen[neighborIdx[j]] == Infinity) {
+        nodesLen[neighborIdx[j]] = nodesLen[current] + 1;
+        queue.push(neighborIdx[j]); 
+      }
+    }
+  }
+  return nodesLen;
+};
+
+let exBFSGraph = [
+  [0, 1, 1, 1, 0],
+  [0, 0, 1, 0, 0],
+  [1, 1, 0, 0, 0],
+  [0, 0, 0, 1, 0],
+  [0, 1, 0, 0, 0]
+];
+console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infinity }
+~~~
+&lt;br&gt;
+
+
+
+Back to [Fundamentals of Data Structures](/study/fundamentals-of-data-structures.html){:.heading.flip-title}
+{:.read-more} 
+&lt;br&gt;
+
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
+이것이 코딩테스트다,2020,나동빈,한빛미디어
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html"></summary></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## Introduction to Linux and shells
+
+### Unix &lt;br&gt;
+
+![Operating Systems](/assets/img/cli/operating-systems-timeline-and-family-tree.png){:width=100%} &lt;br&gt;&lt;br&gt;
+Operating Systems: Timeline and Family Tree &lt;br&gt;
+[See the entire tree here.](https://eylenburg.github.io/os_familytree.htm){:target=&quot;_blank&quot;}
+{:.figcaption}
+
+Everything in red here is considered in some way related uh or indebted to **Unix**.&lt;br&gt;
+That includes things like linux, unbuntu, macOS.
+
+Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
+Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
+
+Unix is the &quot;grandfather&quot; of many modern operating systems that we frequently use today. 
+
+Even these days most operating systems can be grouped into two families:
+- The Microsoft NT descendants including Windows, Xbox OS, and Windows Phone/Mobile
+- Pretty much everything else has lineage going back to **Unix**, including Mac OS, Linux, Android, Chrome OS, and even the PS4 OS.
+&lt;br&gt;
+
+&lt;!--more--&gt;
+
+### Linux &lt;br&gt;
+
+**GNU**  &lt;br&gt;
+
+![Unix_history-simple](/assets/img/cli/Unix_history-simple.png){:width=100%} &lt;br&gt;&lt;br&gt;
+Unix_history going back to 1969 early unix versions
+{:.figcaption}
+
+(pink) is closed source and that means the code is completely closed off. You can't edit it, you can't view it, you're not allowed to even try to tweak it.
+
+(green) we have open source which you may be familiar with that term. The code is openly
+viewable. you can change it, tweak it, make your own versions try things out.
+
+(yellow) this is mixed/shared source type of operating system.
+
+Richard Stallman was a leader in the group of developers who aimed to create Free Software 
+alternatives to Unix.
+
+In 1984 he began work on the GNU Project, with the goal of creating an operating system that included &quot;everything useful that normally comes with a Unix system so that one could get along without any software that is not free&quot;.
+
+**The Linux Kernel**  &lt;br&gt;
+
+![Kernel_Layout](/assets/img/cli/Kernel_Layout.png){:width=&quot;600&quot;} &lt;br&gt;&lt;br&gt;
+Kernel Layout
+{:.figcaption}
+
+Another developer, Linus Torvalds, was working on creating his own kernel known as Linux. The kernel is the part of an OS that facilitates interactions between hardware and software. 
+
+At the time, many GNU &quot;pieces&quot; were complete, but it lacked a kernel. Torvalds combined his kernel with the existing GNU components to create a full operating system. This is called Linux
+
+**GNU/Linux** &lt;br&gt;
+
+Linux is an operating system, like macOS or Windows.
+
+It is also **the most popular Open Source operating system**, and it gives you the freedom to do whatever you want with your computer.
+
+Linux is also special because there's not just &quot;one Linux&quot;, like is the case with Windows or macOS. Instead, we have distributions. For example you have Debian, Red Hat, and Ubuntu, probably the most popular distributions.
+
+If you use a Mac, you just need to know that under the hood macOS is a UNIX Operating System. It shares a lot of the same ideas and software that a GNU/Linux system uses, because GNU/Linux is a free alternative to UNIX. 
+
+Microsoft has an official Windows Subsystem for Linux which you can (and should!) install on Windows. This will give you the ability to run Linux in a very easy way on your PC.
+
+UNIX is an umbrella term that groups many operating systems used in big corporations and institutions, starting from the 70's.
+{:.note}
+
+### Linux shell
+
+A shell is a **command interpreter** that exposes an interface to the user to work with the underlying operating system.
+
+It allows you to execute operations using text and commands, and it provides users advanced features like being able to create scripts.
+
+Shells let you perform things in a more optimized way than a GUI (Graphical User Interface) could ever possibly let you do. Command line tools can offer many different configuration options without being too complex to use.
+
+Many different kind of shells were created for those systems over time, and a few of them dominate the space: Bash, Csh, Zsh, Fish and many more!
+
+All shells originate from the Bourne Shell, called sh. &quot;Bourne&quot; because its creator was Steve Bourne. 
+
+Bash means Bourne-again shell. sh was proprietary and not open source, and Bash was created in 1989 to create a free alternative for the GNU project and the Free Software Foundation. Since projects had to pay to use the Bourne shell, Bash became very popular.
+
+If you use a Mac, try opening your Mac terminal. By default it runs ZSH (or, pre-Catalina, Bash).
+
+You can set up your system to run any kind of shell.
+
+Each single shell has its own unique features and advanced usage, but they all share a common functionality: they can let you execute programs, and they can be programmed.
+&lt;br&gt;
+
+## 1. `man` command
+
+![man](/assets/img/cli/man_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
+`man ls` result 
+{:.figcaption}
+
+Every time we don't know how to use a command, We can type `man &lt;command&gt;` to get the manual.&lt;br&gt;
+Then you can use the `man` page to explore all the different options and parameters you can use on a command.
+
+
+### tldr
+
+When need to learn a command quickly we can use this site called tldr pages: [https://tldr.sh](https://tldr.sh/) {:target=_&quot;blank&quot;} (Is tldr an abbreviation for Too Long Don't Read? lol)
+
+![man](/assets/img/cli/man_command-2.png){:width=&quot;600&quot;} &lt;br&gt;
+`tldr ls` result 
+{:.figcaption}
+
+It's a command you can install, which you then run like this: tldr &lt;command&gt;. It gives you a very quick overview of a command, with some handy examples of common usage scenarios. Korean language support is also available.
+
+## 2. `alias` command
+
+You can create a new command, for example I like to call it ls -al to ll, You can do it like this:
+
+```bash
+alias ll='ls -al'
+```
+![alias](/assets/img/cli/alias_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
+`alias ll` result 
+{:.figcaption}
+
+The alias will work until the terminal session is closed.
+
+To make it permanent, you need to add it to the shell configuration. This could be ~/.bashrc or ~/.profile or ~/.bash_profile if you use the Bash shell, depending on the use case.
+And apply the created file using the following command.
+
+```bash
+source ~/.bash_profile 
+```
+
+## 3. `less` command
+
+It shows you the content stored inside a file, in a nice and interactive UI.
+
+Usage: `less &lt;filename&gt;`
+
+![less](/assets/img/cli/less_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
+
+Once you are inside a `less` session, you can quit by pressing `q`.
+
+You can navigate the file contents using the `up` and `down` keys, or using the `space bar` and `b` to navigate page by page. You can also jump to the end of the file pressing `G` and jump back to the start by pressing `g`.
+
+You can search contents inside the file by pressing `/` and typing a word to search. This searches forward. You can search backwards using the `?` symbol and typing a word.
+
+This command just visualises the file's content. You can directly open an editor by pressing `v`. It will use the system editor, which in most cases is `vim`.
+
+Pressing the `F` key enters follow mode, or watch mode. When the file is changed by someone else, like from another program, you get to see the changes live.
+
+This doesn't happen by default, and you only see the file version at the time you opened it. You need to press `ctrl-C` to quit this mode. In this case the behaviour is similar to running the `tail -f &lt;filename&gt;` command.
+
+You can open multiple files, and navigate through them using `:n` (to go to the next file) and `:p` (to go to the previous).
+
+## 4. `tail` command
+
+The best use case of tail in my opinion is when called with the `-f` option. It opens the file at the end, and watches for file changes.
+
+Any time there is new content in the file, it is printed in the window. This is great for watching log files, for example:
+
+```bash
+tail -f /var/log/system.log
+```
+
+To exit, press `ctrl-C`.
+
+You can print the last 10 lines in a file:
+
+```bash
+tail -n 10 &lt;filename&gt;
+```
+
+You can print the whole file content starting from a specific line using `+` before the line number:
+
+```bash
+tail -n +10 &lt;filename&gt;
+```
+
+`tail` can do much more and as always my advice is to check `man tail`.
+
+## 5. `grep` command
+
+When you master `grep` command, it will help you tremendously in your day to day coding.
+You can use `grep` to search in files, or combine it with pipes to filter the output of another command.
+For example here's how we can find the occurences of the document.getElementById line in the index.md file:
+
+```bash
+grep -n document.getElementById index.md
+```
+![grep](/assets/img/cli/grep_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
+
+Using the `-n` option it will show the line numbers:
+
+```bash
+grep -n document.getElementById index.md
+```
+![grep](/assets/img/cli/grep_command-2.png){:width=&quot;600&quot;} &lt;br&gt;
+
+One very useful thing is to tell grep to print 2 lines before and 2 lines after the matched line to give you more context. That's done using the `-C` option, which accepts a number of lines:
+
+```bash
+grep -nC 2 document.getElementById index.md
+```
+![grep](/assets/img/cli/grep_command-3.png){:width=&quot;600&quot;} &lt;br&gt;
+
+Search is case sensitive by default. Use the `-i` flag to make it insensitive.
+
+As mentioned, you can use grep to filter the output of another command. We can replicate the same functionality as above using:
+
+```bash
+less index.md | grep -n document.getElementById
+```
+![grep](/assets/img/cli/grep_command-4.png){:width=&quot;600&quot;} &lt;br&gt;
+
+The search string can be a regular expression, and this makes `grep` very powerful.
+
+Another thing you might find very useful is to invert the result, excluding the lines that match a particular string, using the `-v` option:
+&lt;br&gt;&lt;br&gt;
+
+[The Most Popular Linux &amp; Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&amp;t=196s){:target=&quot;_blank&quot;}&lt;br&gt;
+[The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target=&quot;_blank&quot;}
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html"></summary></entry><entry><title type="html">[React] 상태 관리</title><link href="http://localhost:4000/study/react-state-management.html" rel="alternate" type="text/html" title="[React] 상태 관리" /><published>2022-02-07T00:00:00+09:00</published><updated>2022-02-07T00:00:00+09:00</updated><id>http://localhost:4000/study/react-state-management</id><content type="html" xml:base="http://localhost:4000/study/react-state-management.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## 1. State Management
+
+### 1.1 State
+
+**상태 : 변하는 데이터.** 특히 프론트엔드 개발에서는 **&lt;mark&gt;&quot;UI에 동적으로 표현될 데이터&quot;&lt;/mark&gt;.**
+&lt;br&gt;
+
+### 1.2 UI에서 상태찾기 연습
+
+UI를 컴포넌트로 분리하고, state와 state의 영향을 받는 곳을 작성하여 작성 전 구조화한다. 
+
+![UI에서상태찾기연습-1](/assets/img/react/react-state-management/ui에서상태찾기연습-1.png){:width=&quot;600&quot;}
+
+![UI에서상태찾기연습-2](/assets/img/react/react-state-management/ui에서상태찾기연습-2.png){:height=&quot;600&quot;}
+&lt;br&gt;&lt;br&gt;
+
+&lt;span style=&quot;color:#B266FF&quot;&gt;상태 : 현재 선택한 탭, 상품 선택 여부, 선택한 수량, 장바구니에 담긴 물품&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;color:#FF3333&quot;&gt;--&gt; : 상태 변경이 일어나는 곳&lt;/span&gt;&lt;br&gt;
+&lt;span style=&quot;color:#66CC00&quot;&gt;--&gt; : 상태 변경의 영향을 받는 곳 &lt;/span&gt;&lt;br&gt;
+&lt;!--more--&gt;
+&lt;br&gt;
+
+### 1.3 프론트엔드 개발에서의 Side Effect
+
+**Side Effect : &lt;mark&gt;함수의 입력 외에도 함수의 결과에 영향을 미치는 요인&lt;/mark&gt;** &lt;br&gt;
+ex) 네트워크 요청, API 호출</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">[React] 컴포넌트 디자인</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="[React] 컴포넌트 디자인" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">* this undordered seed list will be replaced by the toc
+{:toc}
+
+## 1. Component Driven Development
+
+![Component Driven Development](/assets/img/react/react-component-design/component-driven-development.png)
+
+**레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발**&lt;br&gt;
+* CDD 방법을 활용하여 UI 를 구축하는 사이트 :　[BBC](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target=&quot;_blank&quot;}　[UN](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target=&quot;_blank&quot;}
+&lt;!--more--&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## 2. Design System
+
+### 2.1 Design System
+
+**UI 컴포넌트들의 모음을 구조화 하는 방법**
+* 디자인 시스템이란 서비스를 만드는 데 사용한 공통 컬러, 서체, 인터랙션, 각종 정책 및 규정에 관한 모든 컴포넌트를 정리해놓은 것이며 불필요한 커뮤니케이션을 없애기 위해 체계적으로 정리한 시스템을 말한다.
+* UI 컴포넌트는 사용자 인터페이스를 이루는 조각들의 시각적이고 기능적인 속성을 마치 레고(LEGO) 블록처럼 캡슐화한다.
+* 최근에 등장한 유저 인터페이스(UI)들은 다양한 사용자 경험을 제공하기 위해 수백 개의 모듈식 UI 컴포넌트가 재배열된 구조로 이루어져 있다.
+* 디자인 시스템은 재사용이 가능한 UI 컴포넌트들로 이루어져, 복잡하고 견고하며 사용자가 접근하기에 용이한 사용자 인터페이스를 구축할 수 있다. 
+* 디자이너와 개발자 모두 UI 컴포넌트를 다루기 때문에, 디자인 시스템은 두 분야를 연결하는 다리이기도 하다. 또한 조직의 공용 컴포넌트에 대한 &quot;진실의 근원(source of truth)&quot;이기도 하다.
+* [Uber](https://github.com/uber/baseweb){:target=&quot;_blank&quot;}, [Airbnb](https://github.com/airbnb/lunar){:target=&quot;_blank&quot;}, [IBM](https://www.carbondesignsystem.com/){:.target=&quot;_blank&quot;}, [GitHub](https://primer.style/css/){:.target=&quot;_blank&quot;}을 비롯한 수백 개가 넘는 기업의 디자인 시스템에서 스토리북이 사용되고 있다. 아래 목록은 그 중 가장 우수한 팀에서 사용되고 있는 Tool들이다.
+
+**빌드 컴포넌트**
+* 📚 [스토리북(Storybook)](https://storybook.js.org/){:.target=&quot;_blank&quot;}: UI 컴포넌트 개발과 자동으로 문서를 생성할 때 사용
+* ⚛️ [리액트(React)](https://reactjs.org/){:.target=&quot;_blank&quot;}: 선언 중심 컴포넌트 UI(create-react-app)를 사용
+* 💅 [스타일 컴포넌트(Styled-components)](https://styled-components.com/){:.target=&quot;_blank&quot;}: 컴포넌트 단위의 스타일링에 사용
+* ✨ [프리티어(Prettier)](https://prettier.io/){:.target=&quot;_blank&quot;}: 자동화된 코드 포맷팅에 사용
+&lt;br&gt;
+
+### 2.2 Storybook
+
+UI 개발 즉, **Component Driven Development**를 하기 위한 도구
+* 각각의 컴포넌트들을 따로 볼 수 있게 구성해주어 한 번에 하나의 컴포넌트에서 작업할 수 있다.
+* 재사용성을 확대하기 위해 컴포넌트를 문서화하고, 자동으로 컴포넌트를 시각화하여 전체 UI를 한눈에 볼 수 있다.
+* 시뮬레이션할 수 있는 다양한 테스트 상태를 확인하고 이를 통해 버그를 사전에 방지할 수 있도록 도와준다. 
+* 테스트 및 개발 속도를 향상시키는 장점이 있으며, 애플리케이션 또한 의존성을 걱정하지 않고 빌드할 수 있다.
+
+
+### 2.3 Storybook 주요 기능
+
+* UI 컴포넌트들을 카탈로그 화하기
+* 컴포넌트 변화를 Stories로 저장하기
+* 핫 모듈 재 로딩과 같은 개발 툴 경험을 제공하기
+* 리액트를 포함한 다양한 뷰 레이어 지원하기 
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## 3. CSS 방법론
+
+### 3.1 CSS 전처리기(CSS Preprocessor)
+
+CSS가 구조적으로 작성될 수 있게 도움을 주는 도구
+* CSS의 문제점들을 프로그래밍 개념(변수, 함수, 상속 등)을 활용하여 해결할 수 있도록 한다.
+* CSS 전처리기(CSS Preprocessor) 자체만으로는 웹 서버가 인지하지 못하기 때문에 각 CSS 전처리기에 맞는 Compiler를 사용해야 하고 컴파일을 하게 되면 실제로 우리가 사용하는 CSS 문서로 변환이 된다.
+
+
+### 3.2 SASS(Syntactically Awesome Style Sheets)
+![SASS](/assets/img/react/react-component-design/sass.png)
+
+CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스크립팅 언어
+* 즉, CSS를 만들어주는 언어로서 자바스크립트처럼 특정 속성(ex. color, margin, width 등)의 값(ex. #ffffff, 25rem, 100px 등)을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 반복되는 코드를 한 번의 선언으로 여러 곳에서 재사용할 수 있다.
+* SCSS 코드를 읽어서 전처리한 다음 컴파일해서 전역 CSS 번들 파일을 만들어 주는 전처리기(preprocessor)
+* 스타일이 겹치는 문제를 해결하기 위해 단순히 계층 구조를 만들어 내는 것에 의지하며, 그 결과 컴파일된 CSS의 용량은 어마어마하게 커지는 치명적인 단점이 있다.
+&lt;br&gt;
+
+### 3.3 CSS 방법론
+방법론의 지향점은 다음과 같다. 
+* 코드의 재사용
+* 코드의 간결화(유지 보수 용이)
+* 코드의 확장성
+* 코드의 예측성(클래스 명으로 의미 예측)
+
+### 3.4 BEM
+![BEM](/assets/img/react/react-component-design/bem.png)
+
+대표적인 CSS 방법론인 BEM이란 Block, Element, Modifier로 구분하여 클래스명을 작성하는 방법
+* Block, Element, Modifier 각각은 —와 __로 구분
+* 클래스명은 BEM 방식의 이름을 여러 번 반복하여 재사용할 수 있도록 하며 HTML/CSS/SASS 파일에서도 더 일관된 코딩 구조를 만들어 준다.
+* 클래스명 선택자가 장황해지고, 이런 긴 클래스명 때문에 마크업이 불필요하게 커지며, 재사용하려고 할 때마다 모든 UI 컴포넌트를 명시적으로 확장해야는 단점이 있다.
+&lt;br&gt;
+
+### 3.5 각 CSS 방법론의 특징과 장, 단점
+![CSS-Methlogy](/assets/img/react/react-component-design/css-methlogy.png)
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+&lt;br&gt;
+
+## 4. Styled-Component
+![Styled-Component](/assets/img/react/react-component-design/styled-component.png)
+
+SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. &lt;br&gt;&lt;br&gt;
+Styled-Component는 **캡슐화(encapsulation : 객체의 속성과 행위를 하나로 묶고 실제 구현 내용 일부를 외부에 감추어 은닉하는 개념)**를 가능하게 한다.
+* 가장 인기있는 CSS-in-JS 관련 React 라이브러리
+* 기능적(Functional) 혹은 상태를 가진 컴포넌트들로부터 UI를 완전히 분리해 사용할 수 있는 아주 단순한 패턴을 제공 
+* 기존 CSS 문법으로도 스타일 속성이 추가된 React 컴포넌트를 만들 수 있다. 
+
+~~~js
+const Button = styled.a`
+  display: inline-block;
+  border-radius: 3px;
+  padding: 0.5rem 0;
+  margin: 0.5rem 1rem;
+  width: 11rem;
+`;
+~~~
+Styled Component 를 이용한 Button 생성
+{:.figcaption}
+
+### 4.1 Styled Component의 특징
+
+**Automatic critical CSS**&lt;br&gt;
+* 화면에 어떤 컴포넌트가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입한다. 
+* 따라서 코드를 적절히 분배해 놓으면 사용자가 어플리케이션을 사용할 때 최소한의 코드만으로 화면이 띄워지도록 할 수 있다.
+
+**No class name bugs**&lt;br&gt;
+* 스스로 유니크한 className 을 생성하여 className 의 중복이나 오타로 인한 버그를 줄여준다.
+
+**Easier deletion of CSS**&lt;br&gt;
+* 모든 스타일 속성이 특정 컴포넌트와 연결되어 있기 때문에 만약 컴포넌트를 더 이상 사용하지 않아 삭제할 경우 이에 대한 스타일 속성도 함께 삭제된다.
+
+**Simple dynamic styling**&lt;br&gt;
+* className을 일일이 수동으로 관리할 필요 없이 React 의 props 나 전역 속성을 기반으로 컴포넌트에 스타일 속성을 부여하기 때문에 간단하고 직관적이다.
+
+**Painless maintenance**&lt;br&gt;
+* 컴포넌트에 스타일을 상속하는 속성을 찾아 다른 CSS 파일들을 검색하지 않아도 되기 때문에 코드의 크기가 커지더라도 유지보수가 어렵지 않다.
+
+**Automatic vendor prefixing**&lt;br&gt;
+* 개별 컴포넌트마다 기존의 CSS 를 이용하여 스타일 속성을 정의하면 이외의 것들은 Styled Component 가 알아서 처리해 준다.
+&lt;br&gt;
+
+### 4.2 Getting Started
+
+~~~js
+import styled from &quot;styled-components&quot;;
+
+// &lt;h1&gt; 태그를 렌더링 할 title component를 만든다.
+const Title = styled.h1`
+  font-size: 3em;
+  text-align: center;
+  color: MidnightBlue;
+`;
+
+// &lt;section&gt; 태그를 렌더링 할 Wrapper component를 만든다.
+const Wrapper = styled.section`
+  padding: 6em;
+  background: LemonChiffon;
+`;
+
+export default function App() {
+  // 일반적으로 컴포넌트를 사용하는 것처럼 Title과 Wrapper를 사용하면 된다!
+  return (
+    &lt;Wrapper&gt;
+      &lt;Title&gt;Hello CHAN!&lt;/Title&gt;
+    &lt;/Wrapper&gt;
+  );
+}
+~~~
+`&lt;Title&gt;`과 `&lt;Wrapper&gt;` 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, `&lt;h1&gt;` tag 의 스타일 속성은 styled.h1 , `&lt;section&gt;` tag 의 스타일 속성은 styled.section 를 사용하고 있다. 
+{:.figcaption}
+&lt;br&gt;
+
+![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
+결과
+{:.figcaption}
+&lt;br&gt;
+
+### 4.3 Adapting based on props &amp; Extending Styles
+
+Styled Component 는 **스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용**할 수도 있다. &lt;br&gt;
+또한 **같은 스타일 속성을 지닌 여러개의 컴포넌트들 중 몇 개의 컴포넌트에 약간의 변화를 주고 싶은 때**에는 상속받고자 하는 스타일 속성을 지닌 컴포넌트를 `styled()` 로 감싼 뒤, 변경하고 싶은 속성만 새로 정의해 주면 기존 속성을 확장하여 사용할 수 있다. 
+
+~~~js
+import styled from &quot;styled-components&quot;;
+
+  // Button component
+const Button = styled.button`
+  /* Adapt the colors based on primary prop */
+  background: ${(props) =&gt; (props.primary ? &quot;palevioletred&quot; : &quot;white&quot;)};
+  color: ${(props) =&gt; (props.primary ? &quot;white&quot; : &quot;palevioletred&quot;)};
+
+  font-size: 1em;
+  margin: 1em;
+  padding: 0.25em 1em;
+  border: 2px solid palevioletred;
+  border-radius: 3px;
+`;
+
+const Tomato = styled(Button)`
+  color: tomato;
+  border-color: tomato;
+`;
+
+// App component
+export default function App() {
+  return (
+    &lt;div className=&quot;App&quot;&gt;
+      &lt;Button&gt;Normal&lt;/Button&gt;
+      &lt;Button primary&gt;Primary&lt;/Button&gt;
+      &lt;Tomato&gt;Tomato&lt;/Tomato&gt;
+    &lt;/div&gt;
+  );
+}
+~~~
+
+`&lt;Button&gt;` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. &lt;br&gt; 
+기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.
+{:.figcaption}
+&lt;br&gt;
+
+
+
+![Adapting based on props &amp; Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
+결과
+{:.figcaption}
+&lt;br&gt;
+
+### 4.4 Passed props
+
+컴포넌트에 **props 로 스타일 속성이 전달**된다면 해당 컴포넌트는 **props 로 전달된 속성을 우선 적용**하며, 전달되는 속성이 없다면 기본으로 설정된 속성을 적용한다. 이는 Styled Component 가 개발자에 의해 설정된 속성과 기본 속성을 구분할 수 있기 때문이다.
+
+~~~js
+import styled from &quot;styled-components&quot;;
+
+// Styled Component로 만들어진 Input 컴포넌트
+const Input = styled.input`
+  padding: 0.5em;
+  margin: 0.5em;
+  color: ${(props) =&gt; props.inputColor || &quot;red&quot;};
+  background: papayawhip;
+  border: none;
+  border-radius: 3px;
+`;
+
+export default function App() {
+  return (
+    &lt;div&gt;
+      {/* 아래 Input 컴포넌트는 styled component인 Input 컴포넌트에 지정된 inputColor(red)가 적용되었다.  */}
+      &lt;Input defaultValue=&quot;김코딩&quot; type=&quot;text&quot; /&gt;
+      {/* 아래 Input 컴포넌트는 props로 전달된 커스텀 inputColor(blue)가 적용되었다. */}
+      &lt;Input defaultValue=&quot;박해커&quot; type=&quot;text&quot; inputColor=&quot;blue&quot; /&gt;
+    &lt;/div&gt;
+  );
+}
+~~~
+props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다. 
+{:.figcaption}
+&lt;br&gt;
+![Passed props](/assets/img/react/react-component-design/passed-props
+.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
+결과
+{:.figcaption}
+&lt;br&gt;
+
+## 5. DOM reference를 잘 활용할 수 있는 useRef
+
+### 5.1 useRef
+
+React는 DOM 엘리먼트의 주소값을 활용(focus, text selection, media playback, 에니메이션 적용
+d3.js, greensock 및 DOM 기반 라이브러리 활용 등)해야 하는 예외적인 상황에서 **useRef**으로 DOM 노드, 엘리먼트, 그리고 리액트 컴포넌트 주소값을 참조할 수 있다. 
+
+~~~js
+const 주소값을_담는_그릇 = useRef(참조자료형)
+// 이제 주소값을_담는_그릇 변수에 어떤 주소값이든 담을 수 있다.
+return (
+    &lt;div&gt;
+      &lt;input ref={주소값을_담는_그릇} type=&quot;text&quot; /&gt;
+        {/* React에서 사용 가능한 ref라는 속성에 주소값을_담는_그릇을 값으로 할당하면*/}
+        {/* 주소값을_담는_그릇 변수에는 input DOM 엘리먼트의 주소가 담긴다. */}
+        {/* 향후 다른 컴포넌트에서 input DOM 엘리먼트를 활용할 수 있다. */}
+    &lt;/div&gt;
+  );
+~~~
+
+이 주소값은 컴포넌트가 re-render 되더라도 바뀌지 않는다. 
+{:.figcaption}
+
+~~~js
+function TextInputWithFocusButton() {
+  const inputEl = useRef(null);
+  const onButtonClick = () =&gt; {
+    inputEl.current.focus();
+  };
+  return (
+    &lt;&gt;
+      &lt;input ref={inputEl} type=&quot;text&quot; /&gt;
+      &lt;button onClick={onButtonClick}&gt;Focus the input&lt;/button&gt;
+    &lt;/&gt;
+  );
+}
+~~~
+
+컴포넌트가 re-render 되더라도 주소값이 바뀌지 않는 특성을 활용하여 위의 제한된 상황에서 useRef를 활용할 수 있다.
+{:.figcaption}
+
+제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
+&lt;br&gt;
+
+
+### 5.2 useRef 활용 예시 
+
+[Action Item 1 : focus](https://codesandbox.io/s/patient-worker-3kzhd?from-embed=&amp;file=/src/App.js){:.target=&quot;_blank&quot;}
+&lt;br&gt;
+
+[Action Item 2 : media playback](https://codesandbox.io/s/priceless-sanderson-kx77s?from-embed){:.target=&quot;_blank&quot;}
+
+
+Next　[[React] Sprint - React Custom Component](2022-02-04-react-sprint-custom-component.md){:.heading.flip-title}
+{:.read-more} 
+
+
+[https://www.codestates.com/](https://www.codestates.com/){:target=&quot;_blank&quot;}&lt;br&gt;
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">Immersive Toy Problem_sudoku</title><link href="http://localhost:4000/coding-test/sudoku.html" rel="alternate" type="text/html" title="Immersive Toy Problem_sudoku" /><published>2022-02-03T00:00:00+09:00</published><updated>2022-02-03T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/sudoku</id><content type="html" xml:base="http://localhost:4000/coding-test/sudoku.html">* this unordered seed list will be replaced by the toc
+ {:toc}
+
+## Problem
+
+-   가로 9칸, 세로 9칸으로 이루어져 있는 표에 1부터 9까지의 숫자를 &lt;br&gt; 
+가로줄, 세로줄, 3X3 칸에 중복되지 않게 한 번씩만 넣으면 해결
+-   주의사항 : 숫자가 입력되지 않은 칸은 편의상 0이 입력되어 있다.
+-   입출력 예시
+
+
+~~~js
+let board = [
+  [0, 3, 0, 2, 6, 0, 7, 0, 1],
+  [6, 8, 0, 0, 7, 0, 0, 9, 0],
+  [1, 9, 0, 0, 0, 4, 5, 0, 0],
+  [8, 2, 0, 1, 0, 0, 0, 4, 0],
+  [0, 0, 4, 6, 0, 2, 9, 0, 0],
+  [0, 5, 0, 0, 0, 3, 0, 2, 8],
+  [0, 0, 9, 3, 0, 0, 0, 7, 4],
+  [0, 4, 0, 0, 5, 0, 0, 3, 6],
+  [7, 0, 3, 0, 1, 8, 0, 0, 0],
+];
+let output = sudoku(board);
+console.log(output); // --&gt;
+/* 
+[
+  [4, 3, 5, 2, 6, 9, 7, 8, 1],
+  [6, 8, 2, 5, 7, 1, 4, 9, 3],
+  [1, 9, 7, 8, 3, 4, 5, 6, 2],
+  [8, 2, 6, 1, 9, 5, 3, 4, 7],
+  [3, 7, 4, 6, 8, 2, 9, 1, 5],
+  [9, 5, 1, 7, 4, 3, 6, 2, 8],
+  [5, 1, 9, 3, 2, 6, 8, 7, 4],
+  [2, 4, 8, 9, 5, 7, 1, 3, 6],
+  [7, 6, 3, 4, 1, 8, 2, 5, 9],
+];
+ */
+~~~
+&lt;!--more--&gt;
+
+&lt;br&gt;
+테스트케이스는 유효한 입력만 들어오는 스도쿠이나, 유효한지 (스도쿠 해결이 가능한 지) 판별하여 가능하면 해결하도록 작성.
+
+## Solution
+
+~~~c
+function solve(board) {
+    if (solved(board)) {   
+        return board  // 다 해결됐다면 현재 보드를 리턴
+    } else {
+        const possibilities = nextBoards(board)
+        const validBoards = keepOnlyValid(possibilities)
+        return searchForSolution(validBoards)
+    }
+}
+// 목록에서 잘못된 보드를 모두 필터링
+function keepOnlyValid(boards){
+    let res = []
+    for (let i = 0; i &lt; boards.length; i++){
+        if (validBoard(boards[i])){
+            res.push(boards[i])
+        }
+    }
+    return res
+}
+// 주어진 보드가 유효한지 확인
+function validBoard(board){
+    return rowsCheck(board) &amp;&amp; columnsCheck(board) &amp;&amp; boxesCheck(board)
+}
+// 다 해결된(모든 칸이 채워진) 스도쿠인지 검사
+function solved(board){
+    for (let i = 0; i &lt; 9; i++){
+        for (let j = 0; j &lt; 9; j++){
+            if (board[i][j] == 0){
+                return false
+            }
+        }
+    }
+    return true
+}
+// 해결이 안되었다면 백트래킹
+function searchForSolution(boards) {
+    if (boards.length &lt; 1) {
+        return false
+    } else { 
+        let first = boards.shift() 
+        const tryPath = solve(first)
+        if (tryPath != false) {
+           return tryPath
+        } else {
+           return searchForSolution(boards)
+        }
+    }
+}
+// 첫 번째 빈 자리를 찾고 해당 자리를 숫자 1...9로 채우는 9개의 다른 보드를 생성
+function nextBoards(board){ 
+    let res = []
+    const firstEmpty = findEmptySquare(board)
+    if (firstEmpty != undefined){
+        const y = firstEmpty[0]
+        const x = firstEmpty[1]
+        for (let i = 1; i &lt;= 9; i++){
+            let newBoard = [...board]
+            let row = [...newBoard[y]]
+            row[x] = i
+            newBoard[y] = row
+            res.push(newBoard)
+        }
+    }
+    return res
+}
+// 첫 번째 빈 자리에 대한 i j 좌표 가져오기)
+function findEmptySquare(board){
+    for (let i = 0; i &lt; 9; i++){
+        for (let j = 0; j &lt; 9; j++){
+            if (board[i][j] == 0) {
+                return [i, j]
+            }
+        }
+    }
+}
+// 각 행(가로줄)에 반복되는 숫자가 없는지 검사
+function rowsCheck(board){
+    for (let i = 0; i &lt; 9; i++){
+        let cur = []
+        for (let j = 0; j &lt; 9; j++){
+            if (cur.includes(board[i][j])){
+                return false
+            }
+            else if (board[i][j] != 0){
+                cur.push(board[i][j])
+            }
+        }
+    }
+    return true
+}
+// 각 열(세로줄)에 반복되는 숫자가 없는지 검사
+function columnsCheck(board){
+    for (let i = 0; i &lt; 9; i++){
+        let cur = []
+        for (let j = 0; j &lt; 9; j++){
+            if (cur.includes(board[j][i])){
+                return false
+            }
+            else if (board[j][i] != 0){
+                cur.push(board[j][i])
+            }
+        }
+    }
+    return true
+}
+// 각 박스(3x3)에 반복되는 숫자가 없는지 검사
+function boxesCheck(board){
+    const boxCoordinates = [[0, 0], [0, 1], [0, 2],
+                            [1, 0], [1, 1], [1, 2],
+                            [2, 0], [2, 1], [2, 2]]
+    for (let y = 0; y &lt; 9; y += 3){
+        for (let x = 0; x &lt; 9; x += 3){
+            // 순회는 각 상자를 검사해야 한다.
+            let cur = []
+            for (let i = 0; i &lt; 9; i++){
+                let coordinates = [...boxCoordinates[i]]
+                coordinates[0] += y
+                coordinates[1] += x
+                if (cur.includes(board[coordinates[0]][coordinates[1]])){
+                    return false
+                }
+                else if (board[coordinates[0]][coordinates[1]] != 0){
+                    cur.push(board[coordinates[0]][coordinates[1]])
+                }
+            }
+        }
+    }
+    return true
+}
+~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html"></summary></entry><entry><title type="html">Fundamentals of Data Structures</title><link href="http://localhost:4000/study/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Fundamentals of Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-data-structures.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## 1. Data Structures 
+
+&gt; Data structure is a storage that is used to store and organize data. &lt;br&gt;
+ It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.&lt;br&gt;
+
+![Data-structures](/assets/img/data-structures-and-algorithms/data-structures.png){:width=&quot;650&quot;}{:.alignleft}
+
+Data structures can be classified as follows.
+
+## 2. Stack
+
+### 2.1 What is Stack?
+
+&gt; If you make a stack of block, The last block stacks are of last in first out type of service.&lt;br&gt;
+ The last block you put on top of a stack would be the first block.&lt;br&gt;
+
+![Stack](/assets/img/data-structures-and-algorithms/stack.gif) &lt;br&gt;
+
+### 2.2 Using an array as a stack 
+
+```javascript
+let letters = []; // this is our stack
+
+let word = 'racecar'; 
+//let word = 'parkbyungchan';
+
+let rword = '';
+
+//put letters of word into stack
+for (let i = 0; i &lt;word.lenth; i++&gt;){
+  letters.push(word[i]);
+}
+............................................
+//put off the stack in reverse order 
+for (let i = 0; i &lt;word.lenth; i++&gt;){
+  rwords += letters.pop;
+}
+
+if (rword === word){
+  console.log(word + ' is a palindrome. ') // racecar is a palindrome
+}
+else {
+  console.log(word + ' is not a palindrome. ') // parkbyungchan is not a palindrome
+}
+```
+**-&gt; Arrays are already has all the functions we need in order to use it as a stack!**
+
+&lt;!--more--&gt;
+
+### 2.3 Stack Implementation
+
+* push : for placing data onto a stack
+* pop : removing the top element of a stack
+* length or size : determining how many elements are on a stack
+
+```javascript
+class Stack {
+  constructor() {
+    this.count = 0;
+    this.storage = {};
+  }
+  // Adds a value onto the end of the stack
+  push(value) {
+    this.storage[this.count] = value;
+    this.count++;
+  }
+  // Removes and returns the value at the end of the stack
+  pop() {
+    if (this.count === 0) {
+      return undefined;
+    }
+    this.count--;
+    let result = this.storage[this.count];
+    delete this.storage[this.count];
+    return result;
+  }
+  size() {
+    return this.count;
+  }
+  // Returns the value at the end of the stack
+  peek() {
+    return this.storage[this.count-1]
+  } 
+}
+let myStack = new Stack();
+myStack.push(1); 
+myStack.push(2);
+console.log(myStack.pop()); // 2
+myStack.push(&quot;chan&quot;);
+console.log(myStack.pop()); // chan
+console.log(myStack.size()); // 1
+```
+&lt;br &gt;
+
+## 3. Queue
+
+### 3.1 What is Queue?
+
+&gt; Queue example is a print queue when a lot of people are printing documents at the same printer.&lt;br&gt;
+ The documents are printed **in the order(first in first out)**. They were sent to the print queue.
+ 
+![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width=&quot;650&quot;}
+&lt;br&gt;
+
+### 3.2 Queue Implementation
+
+```js
+class Queue {
+  constructor() {
+    this.collection = [];
+  }
+  enqueue(element){
+    return this.collection.push(element);
+  }
+  dequeue(){
+    return this.collection.shift();
+  }
+  front(){
+    return this.collection[0];
+  }
+  size(){
+    return this.collection.length;  
+  }
+  isEmpty(){
+    return this.collection.length === 0;
+  }
+}
+let q = new Queue();
+q.enqueue('a'); // q = [a];
+q.enqueue('b'); // q = [a,b];
+q.enqueue('c'); // q = [a,b,c];
+q.dequeue(); // q = [b,c];
+q.front(); // b
+```
+
+### 3.3 Priority Queue
+
+#### 3.3.1 What is Priority Queue?
+
+&gt; In a priority queue not only pass the element into the queue but also pass the priority of the element. &lt;br&gt;
+  So if all the priorities are the same number it's going to behave just like a normal queue. &lt;br&gt;&lt;br&gt;
+  But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
+&lt;br&gt;
+
+#### 3.3.2 Priority Queue Implementation
+
+```js
+class PriorityQueue {
+  constructor() {
+    this.collection = [];
+  }
+  printCollection() {
+    (console.log(this.collection));
+  }
+  enqueue(element) {
+    if (this.isEmpty()){
+      this.collection.push(element);
+    } else {
+      let added = false;
+      for (let i=0; i&lt;this.collection.length; i++){
+        if (element[1] &lt; this.collection[i][1]) { //checking priorities
+          this.collection.splice(i,0,element);
+          added = true;
+          break;
+        }
+      }
+      if (!added){
+        this.collection.push(element);
+      }
+    }
+  }
+  dequeue() {
+    let value = this.collection.shift()
+    return value[0];
+  };
+  front() {
+    return this.collection[0];
+  };
+  size() {
+    return this.collection.length;
+  };
+  isEmpty() {
+    return this.collection.length === 0;
+  };
+};
+let pq = new PriorityQueue();
+pq.enqueue(['WannaBe', 2]); 
+pq.enqueue(['CodingMaster', 3]);
+pq.enqueue(['I', 1]); 
+pq.printCollection(); // [['I', 1], ['WannaBe', 2], ['CodingMaster', 3]]
+pq.dequeue(); // [['WannaBe', 2], ['CodingMaster', 3]]
+pq.front(); // ['WannaBe', 2]
+pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
+```
+&lt;br&gt;
+&lt;br&gt;
+
+
+## 4. Set
+
+### 4.1 What is Set?
+
+&gt; The set data structure is kind of like an array except there are &lt;mark&gt;no duplicate&lt;/mark&gt;
+ items and the values are not in any particular order. &lt;br&gt;
+The typical use for set is to simply check for the presence of an item.
+&lt;br&gt;
+
+### 4.2 Set Implementation
+
+```javascript
+// Why it's named this way is because we want to make it distinct from the es6.
+class mySet {
+  constructor() {
+    // collection will hold the set
+    this.collection = [];
+  }
+  // has method will check for the presence of an element and return true or false 
+  has(element) {
+    return (this.collection.indexOf(element) !== -1);
+  }
+  // values method will return all the values in the set
+  values(){
+    return this.collection;
+  }
+  // add method will add an element to the set
+  add(element) {
+    if(!this.has(element)){
+      this.collection.push(element);
+      return this.collection;
+    }
+    return this.collection;
+  }
+  // delete method will remove an element from a set
+  delete(element) {
+    if(this.has(element)){
+      index =  this.collection.indexOf(element);
+      this.collection.splice(index,1);
+      return true;
+    }
+    return false;
+  }
+  // size method will return the size of the collection
+  // In the es6 'size' is just property. (You're not going to put parenthesis at after the the method)
+  size() {
+    return this.collection.length;
+  }
+  // union method will return the union of two sets
+  union(otherSet) {
+    let unionSet = new mySet();
+    let firstSet = this.values();
+    let secondSet = otherSet.values();
+    firstSet.forEach(function(e){
+      unionSet.add(e)
+    })
+    secondSet.forEach(function(e){
+      unionSet.add(e)
+    })
+    return unionSet;
+  }
+  // intersection method will return the intersection of two sets as a new set
+  intersection(otherSet) {
+    let intersectionSet = new mySet();
+    let firstSet = this.values();
+    firstSet.forEach(function(e){
+      if(otherSet.has(e)){
+        intersectionSet.add(e)
+      }
+    })
+    return intersectionSet
+  }
+  // difference method will return the difference of two sets as a new set
+  difference(otherSet) {
+    let differenceSet = new mySet();
+    let firstSet = this.values();
+    firstSet.forEach(function(e){
+      if(!otherSet.has(e)){
+        differenceSet.add(e);
+      }
+    })
+    return differenceSet;
+  }
+  // isSuperset method will test if the set is a subset of a difference set
+  isSuperset(otherSet){
+    let firstSet = this.values();
+    return firstSet.every(function(value){
+      return otherSet.has(value);
+    })
+  }
+}
+//[[Prototype]]: Array
+let setA = new mySet();
+let setB = new mySet();
+setA.add('a');
+setB.add('b');
+setB.add('c');
+setB.add('a');
+setB.add('d');
+console.log(setA.add('d')) // ['a','d']
+console.log(setA.isSuperset(setB)) // true
+console.log(setA.intersection(setB).values()) // ['a','d']
+console.log(setB.difference(setA).values()) // ['b','c']
+
+// In es6 [[Prototype]]: Set
+let setC = new Set();
+let setD = new Set();
+setC.add('a');
+setD.add('b');
+setD.add('c');
+setD.add('a');
+setD.add('d');
+console.log(setD.values()) // {'b','c','a','d'}
+setD.delete('a') 
+console.log(setD.has('a')) // false
+console.log(setD.add('d')) // {'b','c','d'}
+```
+&lt;br&gt;
+&lt;br&gt;
+
+## 5. Tree
+
+### 5.1 What is Tree?
+
+&gt;  A tree data structure is a way to hold data that when visualized looks like a tree. &lt;br&gt;
+This is actually what we visualized a tree data structure to look like all data points in the tree are called **nodes**.
+
+![Tree](/assets/img/data-structures-and-algorithms/tree.png){:width=&quot;650&quot;} 
+
+### 5.2 Tree Implementation
+
+```js
+class Tree{
+  // The object created by the constructor becomes a Node in the tree.
+  constructor(value){
+    this.value = value;
+    this.children = [];
+  };
+  // It's important to remember what name the value is created with and where it is attached.
+  insertNode(value){
+    const childNode = new Tree(value);
+    this.children.push(childNode);
+  };
+  contains(value){
+    // Return true if it contains a value.
+    if(this.value === value){
+      return true
+    }
+    // Iterate through the childNodes, traversing the children array until a value is found.
+    for(i=0; i&lt;this.collection.length; i++){
+      if(this.children[i].contains(value))
+        return true
+    }
+    // Return false if it's not found despite traversing all over. 
+    return false
+  }
+}
+```
+
+### 5.3 Binary Search Tree
+
+#### 5.3.1 What is Binary Search Tree?
+  
+&gt; Binary Tree's each node can only has two branches. &lt;br&gt;&lt;br&gt;
+Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node. And each right subtree is greater than or equal to the parent node. &lt;br&gt;&lt;br&gt; Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. &lt;br&gt;&lt;br&gt;
+This is much better than the linear time required to find items by key in an unsorted array but slower than the corresponding o perations on a hash table.
+
+**BST add operation**
+&lt;br&gt;
+
+![BST add operation](/assets/img/data-structures-and-algorithms/bst_add_operation.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST find operation**
+
+![BST find operation](/assets/img/data-structures-and-algorithms/bst_find_operation.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST from ordered array**
+
+![BST from ordered array](/assets/img/data-structures-and-algorithms/bst_from_ordered_array.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST degeneration**
+
+![BST degeneration](/assets/img/data-structures-and-algorithms/bst_degeneration.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+#### 5.3.2 Binary Search Tree Traversal 
+
+**BST inorder operation**
+
+![BST inorder operation](/assets/img/data-structures-and-algorithms/bst_inorder.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST preorder operation (Depth-First Search)**
+
+![BST preorder operation](/assets/img/data-structures-and-algorithms/bst_preorder.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST postorder operation**
+
+![BST postorder operation](/assets/img/data-structures-and-algorithms/bst_postorder.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**BST levelorder operation (Breadth-First Search)**
+
+![BST levelorder operation](/assets/img/data-structures-and-algorithms/bst_levelorder.png){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+#### 5.3.3 Binary Search Tree Implementation
+
+~~~js
+// The node class represents each node in the tree.
+class Node {
+  constructor(data, left = null, right = null) {
+    this.data = data;
+    this.left = left;
+    this.right = right;
+  }
+}
+class BST {
+  //constructor which just creates the the root node which is the top of the tree.
+  constructor() {
+    this.root = null;
+  }
+  // This is how to add something to the tree. 
+  add(data) {  
+    const node = this.root;  // Get a reference to the root node.   
+    if(node === null) { // But if this is the first node, node will be null.
+      this.root = new Node(data); // Create node based on that data.
+      return;
+    } else {
+      const searchTree = function(node) { //Pass in the node which starts off as the root node.
+        if(data &lt; node.data) { // If the data we pass in is less than node.data, put the node on the left side of the tree.
+          if(node.left === null) { 
+            node.left = new Node(data);
+            return;
+          } else if (node.left !== null) {
+            return searchTree(node.left); // Continue working down the tree to find where to put the node.
+          }
+        } else if (data &gt; node.data) { // If the data is more than no data, put the node on the right side.
+          if(node.right === null) {
+            node.right = new Node(data);
+            return;
+          } else if (node.right !== null) {
+            return searchTree(node.right); // Keep searching.
+          }
+        } else { // If they're equal, not going to add the data to the tree.
+          return null;
+        }
+      }
+      return searchTree(node);
+    }
+  }
+  // The minimum is all the way on the left side. 
+  findMin() {
+    let current = this.root;
+    while (current.left !== null) {
+      current = current.left;
+    }
+    return current.data;
+  }
+  //The maximum is all the way on the right side.
+  findMax() {
+    let current = this.root;
+    while (current.right !== null) {
+      current = current.right;
+    }
+    return current.data;
+  }
+  find() {
+    let current = this.root;
+    while (current.data !== data) {
+      if (data &lt; current.data) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+      if (current === null) {
+        return null;
+      }
+    }
+    return current;
+  }
+  // isPresent is very similar to find but instead of returning the node, returning whether the data is in the tree (boolean).
+  isPresent(data) {
+    let current = this.root;
+    while (current) {
+      if (data === current.data) {
+        return true;
+      }
+      if (data &lt; current.data) {
+        current = current.left;
+      } else {
+        current = current.right;
+      }
+    }
+    return false;
+  }
+  remove(data) {
+    const removeNode = function(node, data) {
+      if (node === null) { // First of all we have to check if we have an empty tree.
+        return null;
+      }
+      if (data === node.data) { // Found the node with the data.
+        if (node.left === null &amp;&amp; node.right === null) { // node has no children.
+          return null; // Setting the reference to the node to null.
+        } 
+        if (node.left === null) { // node has no left child.
+          return node.right;
+        }
+        if (node.left === null) { // node has no right child.
+          return node.right;
+        }
+        let tempNode = node.right; // node has two child. 
+        // To remove and replace, first go to the right sub node and then go all the way down to the most left sub node.
+          while (tempNode.left !== null) { 
+            tempNode = tempNode.left
+          }
+        node.data = tempNode.data;
+        node.right = removeNode(node.right, tempNode.data);  
+        return node;
+      } else if (data &lt; node.data) { // We have to go to the left side of the tree.
+        node.left = removeNode(node.left, data);
+        return node;
+      } else { // We have to go to the right side of the tree.
+        node.right = removeNode(node.right, data);
+        return node;
+        }
+    }
+    this.root = removeNode(this.root, data); // We're gonna pass in the root node, because you always start with the root node, and then the data that we're searching for.
+  }
+  isBalanced() {
+    return (this.findMinHeight() &gt;= this.findMaxHeight() - 1)
+  }
+  findMinHeight(node = this.root) {
+      if (node == null) {
+          return -1;
+      };
+      let left = this.findMinHeight(node.left);
+      let right = this.findMinHeight(node.right);
+      if (left &lt; right) {
+          return left + 1;
+      } else {
+          return right + 1;
+      };
+  }
+  findMaxHeight(node = this.root) {
+      if (node == null) {
+          return -1;
+      };
+      let left = this.findMaxHeight(node.left);
+      let right = this.findMaxHeight(node.right);
+      if (left &gt; right) {
+          return left + 1;
+      } else {
+          return right + 1;
+      };
+  }
+  inOrder() {
+    if (this.root == null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traverseInOrder(node) {       
+        node.left &amp;&amp; traverseInOrder(node.left);
+        result.push(node.data);
+        node.right &amp;&amp; traverseInOrder(node.right);
+      }
+      traverseInOrder(this.root);
+      return result;
+    };
+  }
+  preOrder() {
+    if (this.root == null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traversePreOrder(node) {
+        result.push(node.data);
+        node.left &amp;&amp; traversePreOrder(node.left);
+        node.right &amp;&amp; traversePreOrder(node.right);
+      };
+      traversePreOrder(this.root);
+      return result;
+    };
+  }
+  postOrder() {
+    if (this.root == null) {
+      return null;
+    } else {
+      let result = new Array();
+      function traversePostOrder(node) {
+        node.left &amp;&amp; traversePostOrder(node.left);
+        node.right &amp;&amp; traversePostOrder(node.right);
+        result.push(node.data);
+      };
+      traversePostOrder(this.root);
+      return result;
+    }
+  }
+  levelOrder() {
+      let result = [];
+      let Q = []; 
+      if (this.root != null) {
+          Q.push(this.root);
+          while(Q.length &gt; 0) {
+              let node = Q.shift();
+              result.push(node.data);
+              if (node.left != null) {
+                  Q.push(node.left);
+              };
+              if (node.right != null) {
+                  Q.push(node.right);
+              };
+          };
+          return result;
+      } else {
+          return null;
+      };
+  };
+}
+const bst = new BST();
+
+bst.add(4);
+bst.add(2);
+bst.add(6);
+bst.add(3);
+bst.add(5);
+bst.add(7);
+console.log(bst)
+bst.remove(4);
+console.log(bst.findMin()) // 2
+console.log(bst.findMax()) // 7
+bst.remove(7);
+console.log(bst.findMax()) // 6
+console.log(bst.isPresent(4)) // false
+
+bst.add(9);
+bst.add(1);
+bst.add(22);
+bst.add(20);
+console.log(bst)
+console.log(bst.findMinHeight()); // 1
+console.log(bst.findMaxHeight()); // 4
+console.log(bst.isBalanced()); // false 
+bst.add(10);
+console.log(bst.findMinHeight()); // 1
+console.log(bst.findMaxHeight()); // 5
+console.log(bst.isBalanced()); // false 
+console.log('inOrder: ' + bst.inOrder()); // inOrder: 1,2,3,5,6,9,10,20,22
+console.log('preOrder: ' + bst.preOrder()); // preOrder: 5,2,1,3,6,9,22,20,10
+console.log('postOrder: ' + bst.postOrder()); // postOrder: 1,3,2,10,20,22,9,6,5
+console.log('levelOrder: ' + bst.levelOrder()); // levelOrder: 5,2,6,1,3,9,22,20,10
+~~~
+
+
+## 6. Graph
+
+### 6.1 What is Graph?
+
+&gt; Graphs are collections of things and **the relationships or connections** between them. &lt;br&gt;
+The data in a graph are called **nodes or vertices.**&lt;br&gt;
+The connections between the nodes are called **edges.**
+
+![Graph](/assets/img/data-structures-and-algorithms/graph-1.png){:width=&quot;650&quot;}
+&lt;br&gt;&lt;br&gt;
+
+### 6.2 Type of Graph
+
+**Undirected and Directed**
+
+![Graph_Undirected and Directed](/assets/img/data-structures-and-algorithms/graph-2.png){:width=&quot;650&quot;}
+
+Undirected graphs are graphs without any direction on the edges between nodes.
+* ex) social network
+
+Directed graphs are graphs with a direction and its edges.
+* ex)  internet and web page links. The nodes are web pages and the directed edges are links to other pages.
+
+
+### 6.3 Graph Representation
+
+#### 6.3.1 Adjacency List 
+
+Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.
+
+![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width=&quot;650&quot;}
+
+#### 6.3.2 Adjacency Matrix 
+
+Adjacency Matrix is a two-dimensional array where each nested array has the same number of
+elements as the outer array. So it's basically a matrix of numbers where the numbers represent the edges.
+
+#### 6.3.3 Incidence Matrix 
+
+![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width=&quot;650&quot;}
+
+Adjacency Matrix use both rows and columns to represent nodes.&lt;br&gt;
+But Incidence Matrix uses roads to represent nodes and the columns to represent edges.
+This means that we can have an uneven number of rows and columns.
+Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
+
+## 7. Hash Table
+  
+### 7.1 What is Hash Table?
+
+&gt; 
+
+![Hash Table](/assets/img/data-structures-and-algorithms/hashtable.png){:width=&quot;650&quot;}
+
+
+### 7.2 Hash Table Implementation
+
+~~~js
+const hash = function(string, max) {
+  let hash = 0;
+  for (let i = 0; i &lt; string.length; i++) {
+    hash += string.charCodeAt(i);
+  }
+  return hash % max;
+}
+class HashTable {
+  constructor() {
+    this.storage = [];
+    this.storageLimit = 14;
+  };
+  print() {
+    console.log(this.storage)
+  };
+  add(key, value) {
+    let index = hash(key, this.storageLimit);
+    if (this.storage[index] === undefined) {
+      this.storage[index] = [
+        [key, value]
+      ];
+    } else {
+      let inserted = false;
+      for (let i = 0; i &lt; this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          this.storage[index][i][1] = value;
+          inserted = true;
+        }
+      }
+      if (inserted === false) {
+        this.storage[index].push([key, value]);
+      }
+    }
+  };
+  remove(key) {
+    let index = hash(key, this.storageLimit);
+    if (this.storage[index].length === 1 &amp;&amp; this.storage[index][0][0] === key) {
+      delete this.storage[index];
+    } else {
+      for (let i = 0; i &lt; this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          delete this.storage[index][i];
+        }
+      }
+    }
+  };
+  lookup(key) {
+    let index = hash(key, this.storageLimit);
+    if (this.storage[index] === undefined) {
+      return undefined;
+    } else {
+      for (let i = 0; i &lt; this.storage[index].length; i++) {
+        if (this.storage[index][i][0] === key) {
+          return this.storage[index][i][1];
+        }
+      }
+    }
+  };
+}
+console.log(hash('quincy', 10)) //5
+
+let ht = new HashTable();
+
+ht.add('beau', 'person');
+ht.add('fido', 'dog');
+ht.add('rex', 'dinosour');
+ht.add('tux', 'penguin')
+console.log(ht.lookup('tux')) //penguin
+ht.print();
+~~~
+
+
+## 8. Linked List
+  
+### 8.1 What is Linked List?
+
+&gt; 
+
+![Linked List](/assets/img/data-structures-and-algorithms/linkedlist.jpeg){:width=&quot;600&quot;}
+
+**Linked List insert operation**
+
+![Linked List insering operation](/assets/img/data-structures-and-algorithms/linkedlist_inserting.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+**Linked List append operation**
+
+![Linked List appending operation](/assets/img/data-structures-and-algorithms/linkedlist_appending.gif){:width=&quot;600&quot;} &lt;br&gt;
+&lt;br&gt;
+
+
+### 8.2 Linked List Implementation
+
+~~~js
+class Node {
+  constructor(element) {
+    this.element = element; 
+    this.next = null; 
+  }; 
+}
+class LinkedList { 
+  constructor() {
+    this.length = 0; 
+    this.head = null; 
+  }
+  size(){
+    return this.length;   
+  };
+  head(){
+    return this.head;
+  };
+  add(element){
+    let node = new Node(element);
+    if(this.head === null){
+        this.head = node;
+    } else {
+        let currentNode = this.head;
+        while(currentNode.next){
+            currentNode  = currentNode.next;
+        }
+        currentNode.next = node;
+    }
+    this.length++;
+  }; 
+  remove(element){
+    let currentNode = this.head;
+    let previousNode;
+    if(currentNode.element === element){
+        this.head = currentNode.next;
+    } else {
+        while(currentNode.element !== element) {
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        previousNode.next = currentNode.next;
+    }
+    this.length --;
+  };
+  isEmpty() {
+    return this.length === 0;
+  };
+  indexOf(element) {
+    let currentNode = this.head;
+    let index = -1;
+    while(currentNode){
+        index++;
+        if(currentNode.element === element){
+            return index;
+        }
+        currentNode = currentNode.next;
+    }
+    return -1;
+  };
+  elementAt(index) {
+    let currentNode = this.head;
+    let count = 0;
+    while (count &lt; index){
+        count ++;
+        currentNode = currentNode.next
+    }
+    return currentNode.element;
+  };
+  addAt(index, element){
+    let node = new Node(element);
+
+    let currentNode = this.head;
+    let previousNode;
+    let currentIndex = 0;
+
+    if(index &gt; this.length){
+        return false;
+    }
+    if(index === 0){
+        node.next = currentNode;
+        this.head = node;
+    } else {
+        while(currentIndex &lt; index){
+            currentIndex++;
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        node.next = currentNode;
+        previousNode.next = node;
+    }
+    this.length++;
+  }
+  removeAt(index) {
+    let currentNode = this.head;
+    let previousNode;
+    let currentIndex = 0;
+    if (index &lt; 0 || index &gt;= this.length){
+        return null
+    }
+    if(index === 0){
+        this.head = currentNode.next;
+    } else {
+        while(currentIndex &lt; index) {
+            currentIndex ++;
+            previousNode = currentNode;
+            currentNode = currentNode.next;
+        }
+        previousNode.next = currentNode.next
+    }
+    this.length--;
+    return currentNode.element;
+  }
+} 
+
+let conga = new LinkedList();
+conga.add('Kitten');
+conga.add('Puppy');
+conga.add('Dog');
+conga.add('Cat');
+conga.add('Fish');
+console.log(conga.size()); // 5
+console.log(conga.removeAt(3)); // Cat
+console.log(conga.elementAt(3)); // Fish
+console.log(conga.indexOf('Puppy')); // 1
+console.log(conga.size()); // 4
+~~~
+&lt;br&gt;
+
+## 9. Trie
+  
+### 9.1 What is Trie?
+
+&gt; 
+
+![Trie](/assets/img/data-structures-and-algorithms/trie.png){:width=&quot;600&quot;}
+
+
+### 9.2 Trie Implementation
+
+~~~js
+class Node {
+  sconstructor() {
+    this.keys = new Map();
+    this.end = false;
+  }
+  setEnd() {
+    this.end = true;
+  };
+  isEnd() {
+    return this.end;
+  };
+}
+class Trie {
+  constructor() {
+    this.root = new Node();
+  }
+  add(input, node = this.root) {
+    if (input.length == 0) {
+      node.setEnd();
+      return;
+    } else if (!node.keys.has(input[0])) {
+        node.keys.set(input[0], new Node());
+        return this.add(input.substr(1), node.keys.get(input[0]));
+    } else {
+        return this.add(input.substr(1), node.keys.get(input[0]));
+    };
+  };
+  isWord(word) {
+    let node = this.root;
+      while (word.length &gt; 1) {
+        if (!node.keys.has(word[0])) {
+          return false;
+        } else {
+            node = node.keys.get(word[0]);
+            word = word.substr(1);
+        };
+      };
+      return (node.keys.has(word) &amp;&amp; node.keys.get(word).isEnd()) ? 
+    true : false;
+  };
+  print() {
+    let words = new Array();
+    let search = function(node, string) {
+    if (node.keys.size != 0) {
+      for (let letter of node.keys.keys()) {
+        search(node.keys.get(letter), string.concat(letter));
+    } if (node.isEnd()) {
+        words.push(string);
+      }
+    } else {
+        string.length &gt; 0 ? words.push(string) : undefined;
+        return;
+      };
+    };
+  search(this.root, new String());
+    return words.length &gt; 0 ? words : mo;
+  };
+};
+myTrie = new Trie()
+myTrie.add('ball'); 
+myTrie.add('bat'); 
+myTrie.add('doll'); 
+myTrie.add('dork'); 
+myTrie.add('do'); 
+myTrie.add('dorm')
+myTrie.add('send')
+myTrie.add('sense')
+console.log(myTrie.isWord('doll')) // true
+console.log(myTrie.isWord('dor')) // false
+console.log(myTrie.isWord('dorf')) // false
+console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','sense']
+~~~
+&lt;br&gt;
+
+## 10. Heap
+
+### 10.1 What is Heap?
+  
+&gt; 
+
+**  Min heap sort operation**
+
+![Minheap](/assets/img/data-structures-and-algorithms/heap_minheap.gif){:width=&quot;600&quot;}
+&lt;br&gt;
+
+**Max heap sort operation**
+
+![Maxheap](/assets/img/data-structures-and-algorithms/heap_maxheap.gif){:width=&quot;600&quot;}
+&lt;br&gt;
+
+### 10.2 Heap Implementation
+
+~~~js
+// left child: i * 2
+// right child: i * 2 + 1
+// parent: i / 2
+let heap = [null];
+
+class Minheap {
+  insert(num) {
+    heap.push(num);
+    if (heap.length &gt; 2) {
+      let idx = heap.length - 1;
+      while (heap[idx] &lt; heap[Math.floor(idx/2)]) {
+        if (idx &gt;= 1) {
+          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]]
+            if (Math.floor(idx/2) &gt; 1) {
+              idx = Math.floor(idx/2);
+            } else {
+                break;
+            };
+        };
+      };
+    };
+  };
+  remove() {
+    let smallest = heap[1];
+      if (heap.length &gt; 2) {
+        heap[1] = heap[heap.length - 1];
+        heap.splice(heap.length - 1);
+        if (heap.length == 3) {
+          if (heap[1] &gt; heap[2]) {
+          [heap[1], heap[2]] = [heap[2], heap[1]];
+          };
+          return smallest;
+        };
+        let i = 1;
+        let left = 2 * i;
+        let right = 2 * i + 1;
+        while (heap[i] &gt;= heap[left] || heap[i] &gt;= heap[right]) {
+          if (heap[left] &lt; heap[right]) {
+            [heap[i], heap[left]] = [heap[left], heap[i]];
+            i = 2 * i
+          } else {
+              [heap[i], heap[right]] = [heap[right], heap[i]];
+              i = 2 * i + 1;
+            };
+          left = 2 * i;
+          right = 2 * i + 1;
+          if (heap[left] == undefined || heap[right] == undefined) {
+            break;
+          };
+        };
+      } else if (heap.length == 2) {
+          heap.splice(1, 1);
+        } else {
+            return null;
+          };
+    return smallest;
+  };
+  sort() {
+    let result = new Array();
+    while (heap.length &gt; 1) {
+      result.push(this.remove());
+    };
+    return result;
+  };
+};
+class Maxheap{
+  print() {
+    console.log(heap);
+  }
+  insert(num) {
+    heap.push(num);
+    if (heap.length &gt; 2) {
+      let idx = heap.length - 1;
+      while (heap[idx] &gt; heap[Math.floor(idx/2)]) {
+        if (idx &gt;= 1) {
+          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];
+            if (Math.floor(idx/2) &gt; 1) {
+              idx = Math.floor(idx/2);
+            } else {
+                break;
+            };
+        };
+      };
+    };
+  };
+  remove() {
+    let smallest = heap[1];
+    if (heap.length &gt; 2) {
+      heap[1] = heap[heap.length - 1];
+      heap.splice(heap.length - 1);
+      if (heap.length == 3) {
+        if (heap[1] &lt; heap[2]) {
+          [heap[1], heap[2]] = [heap[2], heap[1]];
+        };
+        return smallest;
+      };
+      let i = 1;
+      let left = 2 * i;
+      let right = 2 * i + 1;
+      while (heap[i] &lt;= heap[left] || heap[i] &lt;= heap[right]) {
+        if (heap[left] &gt; heap[right]) {
+          [heap[i], heap[left]] = [heap[left], heap[i]];
+          i = 2 * i
+        } else {
+            [heap[i], heap[right]] = [heap[right], heap[i]];
+            i = 2 * i + 1;
+          };
+        left = 2 * i;
+        right = 2 * i + 1;
+        if (heap[left] == undefined || heap[right] == undefined) {
+          break;
+        };
+      };
+    } else if (heap.length == 2) {
+        heap.splice(1, 1);
+    } else {
+        return null;
+    };
+    return smallest;
+  };
+};
+~~~
+&lt;br&gt;
+
+
+Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.heading.flip-title}
+{:.read-more} 
+&lt;br&gt;
+
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://www.codesdope.com/](https://www.codesdope.com/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://algorithmtutor.com/](https://algorithmtutor.com/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target=&quot;_blank&quot;}&lt;br&gt;
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html"></summary></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## Step 1 : Break The UI Into A Component Hierarchy
+
+The first thing you’ll want to do is to draw boxes around every component (and subcomponent) in the mock and give them all names. If you’re working with a designer, they may have already done this, so go talk to them! Their Photoshop layer names may end up being the names of your React components!&lt;br&gt;&lt;br&gt;
+
+But how do you know what should be its own component? Use the same techniques for deciding if you should create a new function or object. One such technique is the single responsibility principle, that is, a component should ideally only do one thing. If it ends up growing, it should be decomposed into smaller subcomponents.&lt;br&gt;&lt;br&gt;
+
+Since you’re often displaying a JSON data model to a user, you’ll find that if your model was built correctly, your UI (and therefore your component structure) will map nicely. That’s because UI and data models tend to adhere to the same information architecture. Separate your UI into components, where each component matches one piece of your data model.&lt;br&gt;&lt;br&gt;
+
+You’ll see here that we have five components in our app. We’ve italicized the data each component represents. The numbers in the image correspond to the numbers below.&lt;br&gt;&lt;br&gt;
+
+1. FilterableProductTable (orange): contains the entirety of the example
+2. SearchBar (blue): receives all user input
+3. ProductTable (green): displays and filters the data collection based on user input
+4. ProductCategoryRow (turquoise): displays a heading for each category
+5. ProductRow (red): displays a row for each product
+
+If you look at ProductTable, you’ll see that the table header (containing the “Name” and “Price” labels) isn’t its own component. This is a matter of preference, and there’s an argument to be made either way. For this example, we left it as part of ProductTable because it is part of rendering the data collection which is ProductTable’s responsibility. However, if this header grows to be complex (e.g., if we were to add affordances for sorting), it would certainly make sense to make this its own ProductTableHeader component.&lt;br&gt;&lt;br&gt;
+
+Now that we’ve identified the components in our mock, let’s arrange them into a hierarchy. Components that appear within another component in the mock should appear as a child in the hierarchy:
+
+* FilterableProductTable
+  * SearchBar 
+  * ProductTable 
+    * ProductCategoryRow 
+    * ProductRow 
+
+&lt;!--more--&gt;
+## Step 2 : Build A Static Version in React
+
+Now that you have your component hierarchy, it’s time to implement your app. The easiest way is to build a version that takes your data model and renders the UI but has no interactivity. It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. We’ll see why.&lt;br&gt;&lt;br&gt;
+
+To build a static version of your app that renders your data model, you’ll want to build components that reuse other components and pass data using props. props are a way of passing data from parent to child. If you’re familiar with the concept of state, don’t use state at all to build this static version. State is reserved only for interactivity, that is, data that changes over time. Since this is a static version of the app, you don’t need it.&lt;br&gt;&lt;br&gt;
+
+You can build top-down or bottom-up. That is, you can either start with building the components higher up in the hierarchy (i.e. starting with FilterableProductTable) or with the ones lower in it (ProductRow). In simpler examples, it’s usually easier to go top-down, and on larger projects, it’s easier to go bottom-up and write tests as you build.&lt;br&gt;&lt;br&gt;
+
+At the end of this step, you’ll have a library of reusable components that render your data model. The components will only have render() methods since this is a static version of your app. The component at the top of the hierarchy (FilterableProductTable) will take your data model as a prop. If you make a change to your underlying data model and call ReactDOM.render() again, the UI will be updated. You can see how your UI is updated and where to make changes. React’s one-way data flow (also called one-way binding) keeps everything modular and fast.&lt;br&gt;&lt;br&gt;
+
+## Step 3 : Identify The Minimal (but complete) Representation Of UI State
+
+To make your UI interactive, you need to be able to trigger changes to your underlying data model. React achieves this with state.&lt;br&gt;&lt;br&gt;
+
+To build your app correctly, you first need to think of the minimal set of mutable state that your app needs. The key here is DRY: Don’t Repeat Yourself. Figure out the absolute minimal representation of the state your application needs and compute everything else you need on-demand. For example, if you’re building a TODO list, keep an array of the TODO items around; don’t keep a separate state variable for the count. Instead, when you want to render the TODO count, take the length of the TODO items array.&lt;br&gt;&lt;br&gt;
+
+Think of all the pieces of data in our example application. We have:
+* The original list of products
+* The search text the user has entered
+* The value of the checkbox
+* The filtered list of products
+
+Let’s go through each one and figure out which one is state. Ask three questions about each piece of data:
+1. Is it passed in from a parent via props? If so, it probably isn’t state.
+2. Does it remain unchanged over time? If so, it probably isn’t state.
+3. Can you compute it based on any other state or props in your component? If so, it isn’t state.
+
+The original list of products is passed in as props, so that’s not state. The search text and the checkbox seem to be state since they change over time and can’t be computed from anything. And finally, the filtered list of products isn’t state because it can be computed by combining the original list of products with the search text and value of the checkbox.&lt;br&gt;&lt;br&gt;
+
+So finally, our state is:
+* The search text the user has entered
+* The value of the checkbox
+
+## Step 4 : Identify Where Your State Should Live
+
+OK, so we’ve identified what the minimal set of app state is. Next, we need to identify which component mutates, or owns, this state.&lt;br&gt;&lt;br&gt;
+
+Remember: React is all about one-way data flow down the component hierarchy. It may not be immediately clear which component should own what state. This is often the most challenging part for newcomers to understand, so follow these steps to figure it out:
+
+For each piece of state in your application:
+
+Identify every component that renders something based on that state.
+Find a common owner component (a single component above all the components that need the state in the hierarchy).
+Either the common owner or another component higher up in the hierarchy should own the state.
+If you can’t find a component where it makes sense to own the state, create a new component solely for holding the state and add it somewhere in the hierarchy above the common owner component.
+Let’s run through this strategy for our application:
+
+ProductTable needs to filter the product list based on state and SearchBar needs to display the search text and checked state.
+The common owner component is FilterableProductTable.
+It conceptually makes sense for the filter text and checked value to live in FilterableProductTable
+Cool, so we’ve decided that our state lives in FilterableProductTable. First, add an instance property this.state = {filterText: '', inStockOnly: false} to FilterableProductTable’s constructor to reflect the initial state of your application. Then, pass filterText and inStockOnly to ProductTable and SearchBar as a prop. Finally, use these props to filter the rows in ProductTable and set the values of the form fields in SearchBar.
+
+You can start seeing how your application will behave: set filterText to &quot;ball&quot; and refresh your app. You’ll see that the data table is updated correctly.
+
+So far, we’ve built an app that renders correctly as a function of props and state flowing down the hierarchy. Now it’s time to support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable.
+
+React makes this data flow explicit to help you understand how your program works, but it does require a little more typing than traditional two-way data binding.
+
+If you try to type or check the box in the previous version of the example (step 4), you’ll see that React ignores your input. This is intentional, as we’ve set the value prop of the input to always be equal to the state passed in from FilterableProductTable.
+
+Let’s think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated. We can use the onChange event on the inputs to be notified of it. The callbacks passed by FilterableProductTable will call setState(), and the app will be updated.
+
+## Step 5 : Add Inverse Data Flow
+
+So far, we’ve built an app that renders correctly as a function of props and state flowing down the hierarchy. Now it’s time to support data flowing the other way: the form components deep in the hierarchy need to update the state in FilterableProductTable. &lt;br&gt;&lt;br&gt;
+
+React makes this data flow explicit to help you understand how your program works, but it does require a little more typing than traditional two-way data binding. &lt;br&gt;&lt;br&gt;
+
+If you try to type or check the box in the previous version of the example (step 4), you’ll see that React ignores your input. This is intentional, as we’ve set the value prop of the input to always be equal to the state passed in from FilterableProductTable. &lt;br&gt;&lt;br&gt;
+
+Let’s think about what we want to happen. We want to make sure that whenever the user changes the form, we update the state to reflect the user input. Since components should only update their own state, FilterableProductTable will pass callbacks to SearchBar that will fire whenever the state should be updated. We can use the onChange event on the inputs to be notified of it. The callbacks passed by FilterableProductTable will call setState(), and the app will be updated. &lt;br&gt;&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+
+
+
+[https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html){:target=&quot;_blank&quot;}&lt;br&gt;
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html"></summary></entry><entry><title type="html">Immersive Toy Problem_orderOfPresentation</title><link href="http://localhost:4000/coding-test/orderofpresentation.html" rel="alternate" type="text/html" title="Immersive Toy Problem_orderOfPresentation" /><published>2022-01-24T00:00:00+09:00</published><updated>2022-01-24T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/orderofpresentation</id><content type="html" xml:base="http://localhost:4000/coding-test/orderofpresentation.html">* this unordered seed list will be replaced by the toc
+ {:toc}
+
+## 문제
+
+-   총 조의 수 N과 발표 순서 k가 주어질 때, 올바른 리턴 값을 구하기
+-   모든 경우의 수가 담긴 배열은 번호가 작을수록 앞에 위치한다고 가정
+    ex) N = 3일경우, [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
+-   인자 1: N
+    Number 타입의 1 &lt;= N &lt;= 12인 조의 개수
+-   인자 2: K
+    Number타입의 Array (0 &lt;= index)
+-   주의사항
+    k내에 중복되는 요소는 없다고 가정
+-   입출력 예시
+
+```javascript
+let output = orderOfPresentation(3, [2, 3, 1]);
+console.log(output); // 3
+
+output = orderOfPresentation(5, [1, 3, 2, 4, 5]);
+console.log(output); // 6
+```
+
+&lt;!--more--&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html"></summary></entry><entry><title type="html">Ubuntu tips for use</title><link href="http://localhost:4000/etc/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu tips for use" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/ubuntu</id><content type="html" xml:base="http://localhost:4000/etc/ubuntu.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## 스크린샷 단축키&lt;br&gt;
+
+### 기본 단축키
+
+|                  | 전체 화면 스크린샷 | 활성화 창 스크린샷 | 선택 영역 스크린샷   |
+| ---------------- | ------------------ | ------------------ | -------------------- |
+| 그림 파일로 저장 | Print              | Alt + Print        | Shift + Print        |
+| 클립 보드로 복사 | Ctrl + Print       | Ctrl + ALt + Print | Ctrl + Shift + Print |
+
+우분투에서 기본적으로 제공하는 스크린샷 단축키는 위와 같다. 
+
+
+### 단축키 설정
+
+![ubuntu_screenshot](/assets/img/ubuntu/ubuntu_screenshot.png){:.alignleft}
+
+설정 -&gt; 키보드 단축키에서 편한대로 설정할 수 있다.</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="etc" /><category term="ubuntu" /><summary type="html"></summary></entry><entry><title type="html">Git</title><link href="http://localhost:4000/study/git.html" rel="alternate" type="text/html" title="Git" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/study/git</id><content type="html" xml:base="http://localhost:4000/study/git.html">* this unordered seed list will be replaced by the toc
+{:toc}
+
+## git workflow
+
+![git_workflow_overview](/assets/img/git/git_workflow_overview.jpg)
+
+git의 한장 요약&lt;BR&gt;
+
+## git 영역과 상태
+
+![git_committed,modified,staged](/assets/img/git/git_committed,modified,staged.jpg)
+ 
+
+
+## git add -A/./u 비교
+
+
+|명령어|새 파일　　|수정된 파일　　|삭제된 파일　　|설명|
+|:-----:|:-------:|:----------:|:----------:|:----:|
+|git add -A|	✔️|	✔️|	✔️	|깃의 관리하에 있는 디렉토리(상위 폴더 포함)에서 새, 수정된, 삭제된 파일을 모두 staging area에 추가|
+|git add .	|✔️	|✔️	|✔️	|현재 폴더에서 새, 수정된, 삭제된 파일을 &lt;br&gt; 모두 staging area에 추가|
+|git add --ignore-removal .|	✔️	|✔️|	❌|	새, 수정된 파일만 staging area에 추가|
+|git add -u	|❌	|✔️|	✔️	|수정된, 삭제된 파일만 staging area에 추가|
+
+Long-form flags:
+* git add -A is equivalent to git add --all
+* git add -u is equivalent to git add --update
+
+
+git add -p : 변경사항을 일일이 확인하면서 넘길 수 있어 편리하다. (하지만 모든 파일을 넘길 순 없는 듯 하다) 
+{:.note title=&quot;Plus&quot;}
+
+
+
+&lt;Br&gt;
+
+[stackoverflow - Difference between &quot;git add -A&quot; and &quot;git add .&quot;](https://stackoverflow.com/questions/572549/difference-between-git-add-a-and-git-add%20){:target=&quot;_blank&quot;}
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="git" /><summary type="html"></summary></entry></feed>

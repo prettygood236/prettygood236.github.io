@@ -42,7 +42,7 @@
 
 body:not(.no-third-column) {
   .page > header {
-    > .lead + .note-sm, 
+    > .lead + .note-sm,
     > a.no-hover + .note-sm {
       @media screen and (min-width: $break-point-dynamic) {
         position: absolute;
@@ -72,11 +72,9 @@ body:not(.no-third-column) {
     cursor: pointer;
   }
 
-  [class^="icon-"] { 
-    display: inline-block; 
+  [class^="icon-"] {
+    display: inline-block;
     font-size: smaller;
     margin-right: .25rem;
   }
 }
-
-

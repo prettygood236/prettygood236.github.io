@@ -68,8 +68,8 @@ html {
     text-transform: uppercase;
     width: 100%;
     list-style: none;
-    > li { 
-      display: inline; 
+    > li {
+      display: inline;
       a {
         color: var(--gray);
         text-decoration: none;
@@ -80,13 +80,13 @@ html {
 }
 // >>>
 // <<< LINK
-@media print { 
-  html { 
+@media print {
+  html {
     font-size: var(--root-font-size-print);
-  } 
+  }
 }
 
-@page { 
+@page {
   margin: 16mm;
-} 
+}
 // >>>

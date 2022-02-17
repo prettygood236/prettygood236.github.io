@@ -10,13 +10,13 @@ $namespace-prefix: 'tippy';
 .tippy-box {
   color: var(--body-color)!important;
   background-color: var(--body-bg)!important;
-} 
+}
 
 .tippy-content {
   font-family: $font-family!important;
   font-weight: normal!important;
-  a { 
-    @extend .heading; 
+  a {
+    @extend .heading;
     text-decoration: none;
     border: none;
     &:after  {
