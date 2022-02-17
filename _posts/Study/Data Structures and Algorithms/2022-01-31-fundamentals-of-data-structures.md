@@ -12,10 +12,9 @@ related_posts:
   - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku/
 ---
 
-## Data Structures 
-
-> Data structure is a storage that is used to store and organize data. <br>
- It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.<br>
+Data structure is a storage that is used to store and organize data. <br>
+It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.<br>
+{:.lead}
 
 * toc
 {:toc .large-only}

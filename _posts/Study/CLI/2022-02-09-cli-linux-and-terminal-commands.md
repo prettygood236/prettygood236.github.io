@@ -10,6 +10,7 @@ image:
 
 Unix was an operating system developed at Bell Labs in the mid 1960's. <br>
 Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**<br>
+{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc}
