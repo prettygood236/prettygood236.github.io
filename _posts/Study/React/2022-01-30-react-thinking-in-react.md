@@ -12,7 +12,7 @@ It's hard to think of anything else, but think in React
 {:.lead}
 
 * this unordered seed list will be replaced by the toc
-{:toc}
+{:toc .large-only}
 
 ## Step 1 : Break The UI Into A Component Hierarchy
 
@@ -40,7 +40,6 @@ Now that we’ve identified the components in our mock, let’s arrange them int
     * ProductCategoryRow 
     * ProductRow 
 
-<!--more-->
 ## Step 2 : Build A Static Version in React
 
 Now that you have your component hierarchy, it’s time to implement your app. The easiest way is to build a version that takes your data model and renders the UI but has no interactivity. It’s best to decouple these processes because building a static version requires a lot of typing and no thinking, and adding interactivity requires a lot of thinking and not a lot of typing. We’ll see why.<br><br>

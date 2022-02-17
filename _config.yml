@@ -27,14 +27,12 @@ timezone:              Asia/Seoul
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  If you can't explain it simply, 
-  <br> you don't understand it well enough.
+  DEV Blog by Chan | Like the beginning, now, always and forever!
 
 # A shorter description for the sidebar.
 tagline:               >
-  <h1>If you can't explain it simply, 
-  <br> you don't understand it well enough.</h1>
-  {:.lead}
+  <h5>**If you can't explain it simply, 
+  <br> you don't understand it well enough.**</h5>
 
 # A list of keywords for your blog
 keywords:              ["Blockchain", "Developer", "DataStructure", "Algorithm"]
