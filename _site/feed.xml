@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-19T03:28:10+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-19T04:02:04+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
 </subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-12T00:00:00+09:00</published><updated>2022-02-12T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of **well-defined instructions to solve a particular problem**. &lt;br&gt;
 It takes a set of input and produces a desired output. 
 {:.lead}
@@ -57,8 +57,7 @@ Until a certain number N becomes 1, one of the following two processes is repeat
 
 #### 1.2.2 Solution : Until it becomes 1
 
-{{ &quot;{% highlight python linenos &quot;}}%}
-
+~~~py
 # Get input with N, M, K separated by spaces
 n, m, k = map(int, input(). split())
 # Get input of N numbers separated by spaces
@@ -77,9 +76,7 @@ result += (count) * first # add the largest number
 result += (m - count) * second # Add the second largest number
 
 print(result) # print the final answer
-
-{{ &quot;{% endhighlight &quot;}}%}
-
+~~~
 
 ## 2. Implementation
 
