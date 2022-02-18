@@ -330,6 +330,8 @@ hydejack:
 
     # Set to `true` to use the dark theme based on visitors' preference (OS setting).
     dynamic:           true
+    sunrise:           6
+    sunset:            22
 
     # Set to `true` to allow visitors to switch between light and dark mode.
     icon:              true
