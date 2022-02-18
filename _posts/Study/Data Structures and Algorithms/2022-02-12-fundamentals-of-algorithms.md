@@ -70,6 +70,7 @@ Until a certain number N becomes 1, one of the following two processes is repeat
 #### 1.2.2 Solution : Until it becomes 1
 
 ~~~py
+# python
 # Get input with N, M, K separated by spaces
 n, m, k = map(int, input(). split())
 # Get input of N numbers separated by spaces

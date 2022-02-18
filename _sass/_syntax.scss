@@ -1,5 +1,4 @@
 @mixin lightmode-syntax() {
-  .highlight,
   pre.highlight {
     // background: #fafafa;
     color: #383a42;
@@ -13,12 +12,14 @@
   .highlight table pre {
     margin: 0;
   }
-  .highlight,
+  .highlight {
+    color: #272822;
+  }
   .highlight .w {
-    color: #49483e;
+    color: #f92672;
   }
   .highlight .err {
-    color: #272822;
+    color: #dcb2a3;
     background-color: #f92672;
   }
   .highlight .c,
@@ -28,21 +29,24 @@
   .highlight .cpf,
   .highlight .c1,
   .highlight .cs {
-    color: #75715e;
+    color: #80bc8f;
+    font-style: italic;
   }
   .highlight .cp {
-    color: #f4bf75;
+    color: #ff4500;
   }
   .highlight .nt {
     color: #f4bf75;
   }
+  // 연산자
   .highlight .o,
   .highlight .ow {
-    color: #272822;
+    color: #00e874;
   }
+  // 괄호
   .highlight .p,
   .highlight .pi {
-    color: #d3d31c;
+    color: #315a5a;
   }
   .highlight .gi {
     color: #a6e22e;
@@ -51,7 +55,7 @@
     color: #f92672;
   }
   .highlight .gh {
-    color: #66d9ef;
+    color: #f92672;
     background-color: #272822;
     font-weight: bold;
   }
@@ -69,7 +73,7 @@
     color: #fd971f;
   }
   .highlight .kd {
-    color: #fd971f;
+    color: #1e90ff;
   }
   .highlight .s,
   .highlight .sb,
@@ -89,7 +93,7 @@
     color: #a1efe4;
   }
   .highlight .si {
-    color: #cc6633;
+    color: #f92672;
   }
   .highlight .se {
     color: #cc6633;
@@ -98,7 +102,7 @@
     color: #f4bf75;
   }
   .highlight .nc {
-    color: #f4bf75;
+    color: #f92672;
   }
   .highlight .no {
     color: #f4bf75;
@@ -106,6 +110,7 @@
   .highlight .na {
     color: #66d9ef;
   }
+  // number?
   .highlight .m,
   .highlight .mb,
   .highlight .mf,
@@ -114,19 +119,42 @@
   .highlight .il,
   .highlight .mo,
   .highlight .mx {
-    color: #a6e22e;
+    color: #fd971f;
   }
   .highlight .ss {
     color: #a6e22e;
   }
-
-  body {
-    @include lightmode-syntax();
+  .highlight .lineno {
+    color: #9d9d9f;
+    user-select: none;
   }
-
-  @media screen {
-    body.light-mode {
-      @include lightmode-syntax();
-    }
+  .highlight .ln {
+    color: #9d9d9f;
+    user-select: none;
+  }
+  .highlight .ln:after {
+    content: ' ';
+  }
+  .highlight .hll {
+    color: #383a42;
+    background-color: #e5e5e6;
+  }
+  .highlight .hl {
+    color: #383a42;
+    background-color: #e5e5e6;
+  }
+  .highlight .language-json .w + .s2 {
+    color: #e45649;
+  }
+  .highlight .language-json .kc {
+    color: #0184bc;
+  }
+}
+body {
+  @include lightmode-syntax();
+}
+@media screen {
+  body.light-mode {
+    @include lightmode-syntax();
   }
 }
