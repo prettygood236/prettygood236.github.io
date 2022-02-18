@@ -6,6 +6,9 @@ category: study
 tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/algorithm-main.jpg
+related_posts: 
+  - _posts/Study/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
+  - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku.md
 ---
 
 Algorithm is a set of **well-defined instructions to solve a particular problem**. <br>
@@ -23,6 +26,71 @@ It takes a set of input and produces a desired output.
 - An algorithm shouldn't include computer code. Instead, the algorithm should be written - in such a way that it can be used in different programming languages.
 
 ## 1. Greedy
+
+### 1.1 What is Greedy algorithm?
+
+Greedy algorithm means a method to **choose only good things from the current situation.**
+
+- A typical greedy algorithm requires the ability to come up with minimal ideas to solve a problem.
+- It is important to analyze the legitimacy of the greedy solution.
+  - Examine whether an optimal solution can be obtained by iteratively selecting the one that looks the best.
+
+In a greedy algorithm problem,  it is **necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.**
+
+### 1.2 Greedy Example Problem  
+
+#### 1.2.1 Problem : Until it becomes 1 <br>
+
+Until a certain number N becomes 1, one of the following two processes is repeatedly selected and performed. However, the second operation can be selected only when N is divisible by K. 
+
+1. Subtract 1 from N. 
+2. Divide N by K. 
+
+- For example, if N = 17, K = 4 <br> 
+1) 17 - 1 = 16  <br> 
+2) 16 // 4 = 4 <br> 
+3) 4 // 4 = 1 
+
+- The number of times the entire process is executed becomes 3. This is the minimum number of times to make N equal to 1.
+
+**Difficulty: 1 \| 15 minutes to solve \| Time limit 2 seconds \| Memory limit 128 MB**
+
+**Input conditions**
+- In the first line N (2 <= N <= 100,000) and K (2 <= K <= 100,000) separated by spaces, each given as a natural number.
+
+**Output conditions**
+- In the first line, print the minimum value for the number of times that one or two processes must be performed until N becomes 1.
+
+**Example of input** <br>
+`25 5`
+
+**Example output** <br>
+`2`
+
+#### 1.2.2 Solution : Until it becomes 1
+
+{{ "{% highlight python linenos "}}%}
+
+# Get input with N, M, K separated by spaces
+n, m, k = map(int, input(). split())
+# Get input of N numbers separated by spaces
+data = list(map(int, input(). split()))
+
+data.sort() # Sort received numbers
+first = data[n - 1] # largest number
+second = data[n - 2] # second largest number
+
+# count the number of times the largest number is added
+count = int(m / (k + 1)) * k
+count += m % (k + 1)
+
+result = 0
+result += (count) * first # add the largest number
+result += (m - count) * second # Add the second largest number
+
+print(result) # print the final answer
+
+{{ "{% endhighlight "}}%}
 
 
 ## 2. Implementation
