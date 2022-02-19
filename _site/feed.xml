@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-19T23:41:51+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-20T00:15:20+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
 </subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
 It takes a set of input and produces a desired output. 
 
@@ -377,15 +377,16 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ### 4.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves &lt;span style='background-color: #FFF190'&gt;*already calculated results (small problems) in a separate memory area to avoid recalculation.*&lt;/span&gt; &lt;br&gt;
-- In general, it can be implemented in two ways: Top-down and Bottom-up.
+It saves &lt;span style='background-color: #FFF190'&gt;*already calculated results (small problems) in a separate memory area to avoid recalculation.*&lt;/span&gt; 
 
-Dynamic programming can be used when the problem satisfies the following conditions.
+In general, it can be implemented in two ways: Top-down and Bottom-up.
 
-&lt;span style='background-color: #E5FFCC'&gt;***1. Obtimal Substructure***&lt;/span&gt; &lt;br&gt;
-\: A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. &lt;br&gt;
-&lt;span style='background-color: #E5FFCC'&gt;***2. Overlapping Subproblem***&lt;/span&gt;  &lt;br&gt;
-\: You have to solve the same small problem over and over again.
+Dynamic programming can be used when the problem satisfies the following two conditions.
+
+*&lt;span style='background-color: #E5FFCC'&gt;**1. Obtimal Substructure :**&lt;/span&gt; &lt;br&gt;
+A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. &lt;br&gt;
+&lt;span style='background-color: #E5FFCC'&gt;**2. Overlapping Subproblem :**&lt;/span&gt;  &lt;br&gt;
+You have to solve the same small problem over and over again.*
 
 The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -401,17 +402,22 @@ a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
 $$
 
 Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. &lt;br&gt;
-You can see that f(2) is called multiple times as follows. -&gt; &lt;span style='background-color: #E5FFCC'&gt;***Overlapping Subproblem***&lt;/span&gt;
+You can see that f(2) is &lt;u&gt;called multiple times&lt;/u&gt; as follows. -&gt; &lt;span style='background-color: #E5FFCC'&gt;***Overlapping Subproblem***&lt;/span&gt;
 
 ![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png)
 {:.figure}
 
+### 4.2 What is Memoization?
+
+Memoization is one of the ways to implement dynamic programming.
+It is a technique of &lt;span style='background-color: #E5FFCC'&gt;*memoizing the result once calculated in the memory space.*&lt;/span&gt;
+If you call the same problem again, you get the result you noted.
+Also called caching in that it records a value.
 
 
 
 Back to [Fundamentals of Data Structures](/study/fundamentals-of-data-structures.html){:.heading.flip-title}
 {:.read-more} 
-&lt;br&gt;
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://www.programiz.com/](https://www.programiz.com/){:target=&quot;_blank&quot;}&lt;br&gt;

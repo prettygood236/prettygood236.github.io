@@ -389,15 +389,16 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ### 4.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves <span style='background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> <br>
-- In general, it can be implemented in two ways: Top-down and Bottom-up.
+It saves <span style='background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
 
-Dynamic programming can be used when the problem satisfies the following conditions.
+In general, it can be implemented in two ways: Top-down and Bottom-up.
 
-<span style='background-color: #E5FFCC'>***1. Obtimal Substructure***</span> <br>
-\: A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br>
-<span style='background-color: #E5FFCC'>***2. Overlapping Subproblem***</span>  <br>
-\: You have to solve the same small problem over and over again.
+Dynamic programming can be used when the problem satisfies the following two conditions.
+
+*<span style='background-color: #E5FFCC'>**1. Obtimal Substructure :**</span> <br>
+A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br>
+<span style='background-color: #E5FFCC'>**2. Overlapping Subproblem :**</span>  <br>
+You have to solve the same small problem over and over again.*
 
 The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -413,17 +414,22 @@ a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
 $$
 
 Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. <br>
-You can see that f(2) is called multiple times as follows. -> <span style='background-color: #E5FFCC'>***Overlapping Subproblem***</span>
+You can see that f(2) is <u>called multiple times</u> as follows. -> <span style='background-color: #E5FFCC'>***Overlapping Subproblem***</span>
 
 ![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png)
 {:.figure}
 
+### 4.2 What is Memoization?
+
+Memoization is one of the ways to implement dynamic programming.
+It is a technique of <span style='background-color: #E5FFCC'>*memoizing the result once calculated in the memory space.*</span>
+If you call the same problem again, you get the result you noted.
+Also called caching in that it records a value.
 
 
 
 Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-structures.md){:.heading.flip-title}
 {:.read-more} 
-<br>
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
 [https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
