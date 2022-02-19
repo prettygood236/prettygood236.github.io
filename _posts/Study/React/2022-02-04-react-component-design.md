@@ -118,7 +118,7 @@ const Button = styled.a`
 `;
 ~~~
 Styled Component 를 이용한 Button 생성
-{:.figcaption}
+{:.figure}
 
 ### 3.1 Styled Component의 특징
 
@@ -170,12 +170,12 @@ export default function App() {
 }
 ~~~
 `<Title>`과 `<Wrapper>` 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, `<h1>` tag 의 스타일 속성은 styled.h1 , `<section>` tag 의 스타일 속성은 styled.section 를 사용하고 있다. 
-{:.figcaption}
+{:.figure}
 <br>
 
 ![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width="600" height="600"} <br>
 결과
-{:.figcaption}
+{:.figure}
 <br>
 
 ### 3.3 Adapting based on props & Extending Styles
@@ -218,14 +218,14 @@ export default function App() {
 
 `<Button>` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. <br> 
 기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.
-{:.figcaption}
+{:.figure}
 <br>
 
 
 
 ![Adapting based on props & Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width="600" height="600"} <br>
 결과
-{:.figcaption}
+{:.figure}
 <br>
 
 ### 3.4 Passed props
@@ -257,12 +257,12 @@ export default function App() {
 }
 ~~~
 props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다. 
-{:.figcaption}
+{:.figure}
 <br>
 ![Passed props](/assets/img/react/react-component-design/passed-props
 .png){: width="600" height="600"} <br>
 결과
-{:.figcaption}
+{:.figure}
 <br>
 
 ## 4. DOM reference를 잘 활용할 수 있는 useRef
@@ -286,7 +286,7 @@ return (
 ~~~
 
 이 주소값은 컴포넌트가 re-render 되더라도 바뀌지 않는다. 
-{:.figcaption}
+{:.figure}
 
 ~~~js
 function TextInputWithFocusButton() {
@@ -304,7 +304,7 @@ function TextInputWithFocusButton() {
 ~~~
 
 컴포넌트가 re-render 되더라도 주소값이 바뀌지 않는 특성을 활용하여 위의 제한된 상황에서 useRef를 활용할 수 있다.
-{:.figcaption}
+{:.figure}
 
 제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
 <br>

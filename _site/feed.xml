@@ -1,23 +1,43 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-19T04:08:44+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
-</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-12T00:00:00+09:00</published><updated>2022-02-12T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">&lt;p class=&quot;lead&quot;&gt;Algorithm is a set of &lt;strong&gt;well-defined instructions to solve a particular problem&lt;/strong&gt;. &lt;br /&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-19T20:33:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
+</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">&lt;p&gt;Algorithm is a set of &lt;strong&gt;well-defined instructions to solve a particular problem&lt;/strong&gt;. &lt;br /&gt;
 It takes a set of input and produces a desired output.&lt;/p&gt;
 
 &lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
   &lt;li&gt;&lt;a href=&quot;#1-greedy&quot; id=&quot;markdown-toc-1-greedy&quot;&gt;1. Greedy&lt;/a&gt;    &lt;ul&gt;
       &lt;li&gt;&lt;a href=&quot;#11-what-is-greedy-algorithm&quot; id=&quot;markdown-toc-11-what-is-greedy-algorithm&quot;&gt;1.1 What is Greedy algorithm?&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#12-greedy-example-problem&quot; id=&quot;markdown-toc-12-greedy-example-problem&quot;&gt;1.2 Greedy Example Problem&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#121-problem--until-it-becomes-1-&quot; id=&quot;markdown-toc-121-problem--until-it-becomes-1-&quot;&gt;1.2.1 Problem : Until it becomes 1 &lt;br /&gt;&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#121-problem--until-it-becomes-1&quot; id=&quot;markdown-toc-121-problem--until-it-becomes-1&quot;&gt;1.2.1 Problem : Until it becomes 1&lt;/a&gt;&lt;/li&gt;
           &lt;li&gt;&lt;a href=&quot;#122-solution--until-it-becomes-1&quot; id=&quot;markdown-toc-122-solution--until-it-becomes-1&quot;&gt;1.2.2 Solution : Until it becomes 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#123-problom--multiply-or-add&quot; id=&quot;markdown-toc-123-problom--multiply-or-add&quot;&gt;1.2.3 Problom : Multiply or Add&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#124-solution--multiply-or-add&quot; id=&quot;markdown-toc-124-solution--multiply-or-add&quot;&gt;1.2.4 Solution : Multiply or Add&lt;/a&gt;&lt;/li&gt;
         &lt;/ul&gt;
       &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#2-implementation&quot; id=&quot;markdown-toc-2-implementation&quot;&gt;2. Implementation&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-implementation&quot; id=&quot;markdown-toc-2-implementation&quot;&gt;2. Implementation&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#21-what-is-implementation&quot; id=&quot;markdown-toc-21-what-is-implementation&quot;&gt;2.1 What is Implementation?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#22-implementation-example-problem&quot; id=&quot;markdown-toc-22-implementation-example-problem&quot;&gt;2.2 Implementation Example Problem&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#221-problem--left-right-up-down&quot; id=&quot;markdown-toc-221-problem--left-right-up-down&quot;&gt;2.2.1 Problem : Left, Right, Up, Down&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#222-solution--left-right-up-down&quot; id=&quot;markdown-toc-222-solution--left-right-up-down&quot;&gt;2.2.2 Solution : Left, Right, Up, Down&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#223-problem--royal-knight&quot; id=&quot;markdown-toc-223-problem--royal-knight&quot;&gt;2.2.3 Problem : Royal Knight&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#224-solution--royal-knight&quot; id=&quot;markdown-toc-224-solution--royal-knight&quot;&gt;2.2.4 Solution : Royal Knight&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
   &lt;li&gt;&lt;a href=&quot;#3-dfs--bfs&quot; id=&quot;markdown-toc-3-dfs--bfs&quot;&gt;3. DFS &amp;amp; BFS&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#31-depth-first-search&quot; id=&quot;markdown-toc-31-depth-first-search&quot;&gt;3.1 Depth-First Search&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#32-breadth-first-search&quot; id=&quot;markdown-toc-32-breadth-first-search&quot;&gt;3.2 Breadth-First Search&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#31-what-is-depth-first-search&quot; id=&quot;markdown-toc-31-what-is-depth-first-search&quot;&gt;3.1 What is Depth-First Search?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#32-what-is-breadth-first-search&quot; id=&quot;markdown-toc-32-what-is-breadth-first-search&quot;&gt;3.2 What is Breadth-First Search?&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#33-tree--dfs-implementation&quot; id=&quot;markdown-toc-33-tree--dfs-implementation&quot;&gt;3.3 Tree : DFS Implementation&lt;/a&gt;&lt;/li&gt;
       &lt;li&gt;&lt;a href=&quot;#34-graph--dfs-implementation&quot; id=&quot;markdown-toc-34-graph--dfs-implementation&quot;&gt;3.4 Graph : DFS Implementation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-dynamic-programming&quot; id=&quot;markdown-toc-4-dynamic-programming&quot;&gt;4. Dynamic Programming&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#41-what-is-dynamic-programming&quot; id=&quot;markdown-toc-41-what-is-dynamic-programming&quot;&gt;4.1 What is Dynamic Programming?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#42-dynamic-programming-example-problem&quot; id=&quot;markdown-toc-42-dynamic-programming-example-problem&quot;&gt;4.2 Dynamic Programming Example Problem&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#421-problem--the-fibonacci-sequence&quot; id=&quot;markdown-toc-421-problem--the-fibonacci-sequence&quot;&gt;4.2.1 Problem : The Fibonacci sequence&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
     &lt;/ul&gt;
   &lt;/li&gt;
 &lt;/ul&gt;
@@ -50,7 +70,7 @@ It takes a set of input and produces a desired output.&lt;/p&gt;
 
 &lt;h3 id=&quot;12-greedy-example-problem&quot;&gt;1.2 Greedy Example Problem&lt;/h3&gt;
 
-&lt;h4 id=&quot;121-problem--until-it-becomes-1-&quot;&gt;1.2.1 Problem : Until it becomes 1 &lt;br /&gt;&lt;/h4&gt;
+&lt;h4 id=&quot;121-problem--until-it-becomes-1&quot;&gt;1.2.1 Problem : Until it becomes 1&lt;/h4&gt;
 
 &lt;p&gt;Until a certain number N becomes 1, one of the following two processes is repeatedly selected and performed. However, the second operation can be selected only when N is divisible by K.&lt;/p&gt;
 
@@ -59,69 +79,294 @@ It takes a set of input and produces a desired output.&lt;/p&gt;
   &lt;li&gt;Divide N by K.&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;ul&gt;
-  &lt;li&gt;
-    &lt;p&gt;For example, if N = 17, K = 4 &lt;br /&gt; 
+&lt;p&gt;For example, if N = 17, K = 4 &lt;br /&gt; 
 1) 17 - 1 = 16  &lt;br /&gt; 
 2) 16 // 4 = 4 &lt;br /&gt; 
 3) 4 // 4 = 1&lt;/p&gt;
-  &lt;/li&gt;
-  &lt;li&gt;
-    &lt;p&gt;The number of times the entire process is executed becomes 3. This is the minimum number of times to make N equal to 1.&lt;/p&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
 
-&lt;p&gt;&lt;strong&gt;Difficulty: 1 | 15 minutes to solve | Time limit 2 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;The number of times the entire process is executed becomes 3. This is the minimum number of times to make N equal to 1.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In the first line N (2 &amp;lt;= N &amp;lt;= 100,000) and K (2 &amp;lt;= K &amp;lt;= 100,000) separated by spaces, each given as a natural number.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 15 minutes to solve | Time limit 2 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt;&lt;/p&gt;
-&lt;ul&gt;
-  &lt;li&gt;In the first line, print the minimum value for the number of times that one or two processes must be performed until N becomes 1.&lt;/li&gt;
-&lt;/ul&gt;
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line N (2 &amp;lt;= N &amp;lt;= 100,000) and K (2 &amp;lt;= K &amp;lt;= 100,000) separated by spaces, each given as a natural number.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example of input&lt;/strong&gt; &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;25 5&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the minimum value for the number of times that one or two processes must be performed until N becomes 1.&lt;/p&gt;
 
-&lt;p&gt;&lt;strong&gt;Example output&lt;/strong&gt; &lt;br /&gt;
-&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;&lt;/p&gt;
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;25 5&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
 &lt;h4 id=&quot;122-solution--until-it-becomes-1&quot;&gt;1.2.2 Solution : Until it becomes 1&lt;/h4&gt;
 
+&lt;p&gt;Since K is greater than 2, dividing by K will always reduce N faster than subtracting 1. &lt;br /&gt;
+Also, N will always becomes 1.&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;Dividing as many as possible guarantees an optimal solution!&lt;/em&gt;&lt;/p&gt;
+
 &lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
-# Get input with N, M, K separated by spaces
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# Get input of N numbers separated by spaces
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;list&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()))&lt;/span&gt;
-
-&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sort&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Sort received numbers
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# largest number
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# second largest number
-&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;# count the number of times the largest number is added
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;/&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-
+# get input with N, K separated by spaces
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
 &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
-&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;first&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# add the largest number
-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;m&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;count&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;second&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# Add the second largest number
-&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;# print the final answer
-&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# subtract until N is divisible by K
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# escape from loop when N is less than K (not more divisible)
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# divide by K
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;
+ 
+&lt;span class=&quot;c1&quot;&gt;# subtract 1 for the last remaining number
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reslut&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;123-problom--multiply-or-add&quot;&gt;1.2.3 Problom : Multiply or Add&lt;/h4&gt;
+
+&lt;p&gt;Given a string s where each digit consists of only numbers (0 to 9), check all numbers one by one from left to right, and insert the ‘x’ or ‘+’ operator between the numbers to find the largest number that can be made as a result. Write a program to retrieve it. 
+However, unlike the usual way of calculating x before +, it is assumed that all operations are performed in order from the left.&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 30 minutes to solve | Time limit 1 seconds | Memory limit 128 MB | Previous Facebook intervie&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+The first line is given a string S of several numbers. (1&amp;lt;=S.length&amp;lt;=20)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+Print the largest possible number in the first line.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example 1&lt;/td&gt;
+      &lt;td&gt;Output Example 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;02984&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;576&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example 2&lt;/td&gt;
+      &lt;td&gt;Output Example 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;567&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;210&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;124-solution--multiply-or-add&quot;&gt;1.2.4 Solution : Multiply or Add&lt;/h4&gt;
+
+&lt;p&gt;In most cases, ‘x’ makes the value larger than ‘+’. For example, 5+6=11 and 5X6=30.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;However, if any of the two numbers is ‘0’ or ‘1’, it is more efficient to perform ‘+’ rather than ‘x’&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;em&gt;Therefore, when performing an operation on two numbers, if one of the two numbers is less than 1, ‘+’ it, and if both numbers are 2 or more, ‘x’ is the correct answer.&lt;/em&gt;&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# replace the first character with a number
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# if either number is '0' or '1', '+' rather than 'x'.
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
 &lt;h2 id=&quot;2-implementation&quot;&gt;2. Implementation&lt;/h2&gt;
 
+&lt;h3 id=&quot;21-what-is-implementation&quot;&gt;2.1 What is Implementation?&lt;/h3&gt;
+
+&lt;p&gt;Implementation is &lt;strong&gt;the process of converting an algorithm in your head into source code.&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;Example of implementation type problem is:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The algorithm is simple, but the code becomes excessively long.&lt;/li&gt;
+  &lt;li&gt;Problems dealing with real numbers and outputting to a certain number of decimal places.&lt;/li&gt;
+  &lt;li&gt;Problems that have to be dealt with by breaking strings according to certain criteria.&lt;/li&gt;
+  &lt;li&gt;The problem of finding and using the appropriate library.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;There are many similarities between the type &lt;strong&gt;&lt;em&gt;Simulation&lt;/em&gt;&lt;/strong&gt; , &lt;strong&gt;&lt;em&gt;Implementation&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;em&gt;Brute-Force&lt;/em&gt;&lt;/strong&gt; in coding tests.&lt;/p&gt;
+
+&lt;h3 id=&quot;22-implementation-example-problem&quot;&gt;2.2 Implementation Example Problem&lt;/h3&gt;
+
+&lt;h4 id=&quot;221-problem--left-right-up-down&quot;&gt;2.2.1 Problem : Left, Right, Up, Down&lt;/h4&gt;
+
+&lt;p&gt;Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. &lt;br /&gt;
+The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). &lt;br /&gt;
+Traveler A can move up, down, left and right, and the starting coordinate is always (1, 1). In front of us is a plan with traveler A’s plans to move.&lt;/p&gt;
+
+&lt;p&gt;In the plan, one letter of L, R, U, and D is repeatedly written on one line based on space.
+The meaning of each character is as follows.&lt;/p&gt;
+
+&lt;p&gt;L: move one space to the left &lt;br /&gt;
+R: move one space to the right &lt;br /&gt;
+U: move up one space &lt;br /&gt;
+D: move down one space &lt;br /&gt;&lt;/p&gt;
+
+&lt;p&gt;In this case, the movement of traveler A outside the square space of size N × N is ignored. &lt;br /&gt;
+For example, if L or U is encountered at position (1, 1), it is ignored. &lt;br /&gt;&lt;/p&gt;
+
+&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/assets/img/coding-test/left-right-up-down_example.png&quot; alt=&quot;left-right-up-down_example&quot; /&gt;
+the map and plan for N = 5&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 15 minutes to solve | Time limit 2 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+The first line is given an N indicating the size of the space. (1&amp;lt;=N&amp;lt;=100)
+In the second line, the contents of the travel plan for traveler A are given. (1&amp;lt;=Number of moves&amp;lt;=100)&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the number written on the card selected according to the rules of the game.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3 4&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R R R U D D&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;222-solution--left-right-up-down&quot;&gt;2.2.2 Solution : Left, Right, Up, Down&lt;/h4&gt;
+
+&lt;p&gt;This is a problem that needs to implement faithfully according to the requirements.&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
+# get N input
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# direction of movement according to L, R, U, D
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'L'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'R'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'U'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# check the move plans one by one
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plan&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# get coordinates after moving
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# ignore if out of space
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# perform a move
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
+&lt;h4 id=&quot;223-problem--royal-knight&quot;&gt;2.2.3 Problem : Royal Knight&lt;/h4&gt;
+
+&lt;p&gt;When the position of the knight on the 8 × 8 coordinate plane is given, the number of cases in which the knight can move is output. A knight can move from a specific location in the following two cases:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;Move two spaces horizontally and then move one space vertically&lt;/li&gt;
+  &lt;li&gt;Move two spaces vertically and then move one space horizontally&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Write a program. In the royal garden, row positions are expressed as 1 to 8, and column positions are expressed as
+express from a to h.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/coding-test/royal-knight.png&quot; alt=&quot;Royal Knight&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;There are 6 possible moves when in c2.&lt;br /&gt;
+There are 2 possible moves when in a1.&lt;/p&gt;
+
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 20 minutes to solve | Time limit 1 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, a two-character string representing the coordinates of where the knight is currently located on the 8x8 coordinate plane is entered. Input characters consist of columns and rows, like a1.&lt;/p&gt;
+
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the number of times a knight can move.&lt;/p&gt;
+
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+
+&lt;h4 id=&quot;224-solution--royal-knight&quot;&gt;2.2.4 Solution : Royal Knight&lt;/h4&gt;
+
+&lt;p&gt;Check the 8 paths of the knight one by one and check if it is possible to move to each location. &lt;br /&gt;
+Using the list, define direction vectors for 8 directions.&lt;/p&gt;
+
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
+# get the current knight's location
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# define 8 directions a knight can move
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;steps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
+
+&lt;span class=&quot;c1&quot;&gt;# check if it is possible to move to each position in 8 directions
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# check the location you want to move
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# if it is possible to move to that location, the count is increased.
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+
 &lt;h2 id=&quot;3-dfs--bfs&quot;&gt;3. DFS &amp;amp; BFS&lt;/h2&gt;
 
-&lt;h3 id=&quot;31-depth-first-search&quot;&gt;3.1 Depth-First Search&lt;/h3&gt;
+&lt;h3 id=&quot;31-what-is-depth-first-search&quot;&gt;3.1 What is Depth-First Search?&lt;/h3&gt;
 
-&lt;blockquote&gt;
-  &lt;p&gt;DFS is literally an algorithm that searches the deep part first.&lt;br /&gt;
+&lt;p&gt;DFS is literally an algorithm that searches the deep part first.&lt;br /&gt;
 DFS uses a stack data structure (or recursive function)&lt;/p&gt;
-&lt;/blockquote&gt;
 
 &lt;p&gt;&lt;strong&gt;DFS operation process&lt;/strong&gt;&lt;/p&gt;
 &lt;ol&gt;
@@ -134,7 +379,7 @@ DFS uses a stack data structure (or recursive function)&lt;/p&gt;
 &lt;p&gt;&lt;img src=&quot;/assets/img/data-structures-and-algorithms/graph_dfs.gif&quot; alt=&quot;Depth-First Search operation&quot; width=&quot;600&quot; /&gt; &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
 
-&lt;h3 id=&quot;32-breadth-first-search&quot;&gt;3.2 Breadth-First Search&lt;/h3&gt;
+&lt;h3 id=&quot;32-what-is-breadth-first-search&quot;&gt;3.2 What is Breadth-First Search?&lt;/h3&gt;
 
 &lt;p&gt;&lt;img src=&quot;/assets/img/data-structures-and-algorithms/graph_bfs.gif&quot; alt=&quot;Breadth-First Search operation&quot; width=&quot;600&quot; /&gt; &lt;br /&gt;
 &lt;br /&gt;&lt;/p&gt;
@@ -197,7 +442,7 @@ DFS uses a stack data structure (or recursive function)&lt;/p&gt;
       &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;curConnected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
     &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     
-    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;b&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
       &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Infinity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
         &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; 
@@ -218,6 +463,34 @@ DFS uses a stack data structure (or recursive function)&lt;/p&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;4-dynamic-programming&quot;&gt;4. Dynamic Programming&lt;/h2&gt;
+
+&lt;h3 id=&quot;41-what-is-dynamic-programming&quot;&gt;4.1 What is Dynamic Programming?&lt;/h3&gt;
+
+&lt;p&gt;Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
+It saves &lt;strong&gt;already calculated results (small problems) in a separate memory area to avoid recalculation.&lt;/strong&gt; &lt;br /&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;In general, it can be implemented in two ways: Top-down and Bottom-up.&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Dynamic programming can be used when the problem satisfies the following conditions.&lt;/p&gt;
+
+&lt;p&gt;&lt;b&gt; 1. Obtimal Substructure &lt;/b&gt;&lt;br /&gt;
+: A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. &lt;br /&gt;
+&lt;b&gt; 2. Overlapping Subproblem: &lt;/b&gt;&lt;br /&gt;
+: You have to solve the same small problem over and over again.&lt;/p&gt;
+
+&lt;h3 id=&quot;42-dynamic-programming-example-problem&quot;&gt;4.2 Dynamic Programming Example Problem&lt;/h3&gt;
+
+&lt;h4 id=&quot;421-problem--the-fibonacci-sequence&quot;&gt;4.2.1 Problem : The Fibonacci sequence&lt;/h4&gt;
+
+&lt;p&gt;The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.&lt;/p&gt;
+
+\[1,1,2,3,5,8,13,21,34,55,89\]
+
+&lt;p&gt;The ignition expression means a relational expression between adjacent identities. &lt;br /&gt;
+The Fibonacci sequence can be expressed as an ignition formula as follows:&lt;/p&gt;
+
 &lt;p class=&quot;read-more&quot;&gt;Back to &lt;a href=&quot;/study/fundamentals-of-data-structures.html&quot; class=&quot;heading flip-title&quot;&gt;Fundamentals of Data Structures&lt;/a&gt;&lt;/p&gt;
 &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
@@ -225,7 +498,6 @@ DFS uses a stack data structure (or recursive function)&lt;/p&gt;
 &lt;a href=&quot;https://www.programiz.com/&quot; target=&quot;_blank&quot;&gt;https://www.programiz.com/&lt;/a&gt;&lt;br /&gt;
 이것이 코딩테스트다,2020,나동빈,한빛미디어&lt;/p&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
 Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc}
@@ -237,7 +509,7 @@ Many of the innovations and design choices the original Unix team have lived on 
 ![Operating Systems](/assets/img/cli/operating-systems-timeline-and-family-tree.png){:width=100%} &lt;br&gt;&lt;br&gt;
 Operating Systems: Timeline and Family Tree &lt;br&gt;
 [See the entire tree here.](https://eylenburg.github.io/os_familytree.htm){:target=&quot;_blank&quot;}
-{:.figcaption}
+{:.figure}
 
 Everything in red here is considered in some way related uh or indebted to **Unix**.&lt;br&gt;
 That includes things like linux, unbuntu, macOS.
@@ -260,7 +532,7 @@ Even these days most operating systems can be grouped into two families:
 
 ![Unix_history-simple](/assets/img/cli/Unix_history-simple.png){:width=100%} &lt;br&gt;&lt;br&gt;
 Unix_history going back to 1969 early unix versions
-{:.figcaption}
+{:.figure}
 
 (pink) is closed source and that means the code is completely closed off. You can't edit it, you can't view it, you're not allowed to even try to tweak it.
 
@@ -278,7 +550,7 @@ In 1984 he began work on the GNU Project, with the goal of creating an operating
 
 ![Kernel_Layout](/assets/img/cli/Kernel_Layout.png){:width=&quot;600&quot;} &lt;br&gt;&lt;br&gt;
 Kernel Layout
-{:.figcaption}
+{:.figure}
 
 Another developer, Linus Torvalds, was working on creating his own kernel known as Linux. The kernel is the part of an OS that facilitates interactions between hardware and software. 
 
@@ -324,7 +596,7 @@ Each single shell has its own unique features and advanced usage, but they all s
 
 ![man](/assets/img/cli/man_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
 `man ls` result 
-{:.figcaption}
+{:.figure}
 
 Every time we don't know how to use a command, We can type `man &lt;command&gt;` to get the manual.&lt;br&gt;
 Then you can use the `man` page to explore all the different options and parameters you can use on a command.
@@ -336,7 +608,7 @@ When need to learn a command quickly we can use this site called tldr pages: [ht
 
 ![man](/assets/img/cli/man_command-2.png){:width=&quot;600&quot;} &lt;br&gt;
 `tldr ls` result 
-{:.figcaption}
+{:.figure}
 
 It's a command you can install, which you then run like this: tldr &lt;command&gt;. It gives you a very quick overview of a command, with some handy examples of common usage scenarios. Korean language support is also available.
 
@@ -349,7 +621,7 @@ alias ll='ls -al'
 ```
 ![alias](/assets/img/cli/alias_command-1.png){:width=&quot;600&quot;} &lt;br&gt;
 `alias ll` result 
-{:.figcaption}
+{:.figure}
 
 The alias will work until the terminal session is closed.
 
@@ -450,7 +722,6 @@ Another thing you might find very useful is to invert the result, excluding the 
 [The Most Popular Linux &amp; Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&amp;t=196s){:target=&quot;_blank&quot;}&lt;br&gt;
 [The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target=&quot;_blank&quot;}
 {:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] 컴포넌트 디자인</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="[React] 컴포넌트 디자인" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발&lt;br&gt;
-{:.lead}
 
 * this undordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -560,7 +831,7 @@ const Button = styled.a`
 `;
 ~~~
 Styled Component 를 이용한 Button 생성
-{:.figcaption}
+{:.figure}
 
 ### 3.1 Styled Component의 특징
 
@@ -612,12 +883,12 @@ export default function App() {
 }
 ~~~
 `&lt;Title&gt;`과 `&lt;Wrapper&gt;` 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, `&lt;h1&gt;` tag 의 스타일 속성은 styled.h1 , `&lt;section&gt;` tag 의 스타일 속성은 styled.section 를 사용하고 있다. 
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 
 ![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
 결과
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 
 ### 3.3 Adapting based on props &amp; Extending Styles
@@ -660,14 +931,14 @@ export default function App() {
 
 `&lt;Button&gt;` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. &lt;br&gt; 
 기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 
 
 
 ![Adapting based on props &amp; Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
 결과
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 
 ### 3.4 Passed props
@@ -699,12 +970,12 @@ export default function App() {
 }
 ~~~
 props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다. 
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 ![Passed props](/assets/img/react/react-component-design/passed-props
 .png){: width=&quot;600&quot; height=&quot;600&quot;} &lt;br&gt;
 결과
-{:.figcaption}
+{:.figure}
 &lt;br&gt;
 
 ## 4. DOM reference를 잘 활용할 수 있는 useRef
@@ -728,7 +999,7 @@ return (
 ~~~
 
 이 주소값은 컴포넌트가 re-render 되더라도 바뀌지 않는다. 
-{:.figcaption}
+{:.figure}
 
 ~~~js
 function TextInputWithFocusButton() {
@@ -746,7 +1017,7 @@ function TextInputWithFocusButton() {
 ~~~
 
 컴포넌트가 re-render 되더라도 주소값이 바뀌지 않는 특성을 활용하여 위의 제한된 상황에서 useRef를 활용할 수 있다.
-{:.figcaption}
+{:.figure}
 
 제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
 &lt;br&gt;
@@ -766,7 +1037,6 @@ Next　[[React] Sprint - React Custom Component](2022-02-04-react-sprint-custom-
 
 [https://www.codestates.com/](https://www.codestates.com/){:target=&quot;_blank&quot;}&lt;br&gt;
 {:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html">레고처럼 조립해 나갈 수 있는 부품 단위로 UI 컴포넌트를 만들어 나가는 개발</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/react/react-component-design/react-component-design-main.png" /><media:content medium="image" url="http://localhost:4000/assets/img/react/react-component-design/react-component-design-main.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Immersive Toy Problem_sudoku</title><link href="http://localhost:4000/coding-test/sudoku.html" rel="alternate" type="text/html" title="Immersive Toy Problem_sudoku" /><published>2022-02-03T00:00:00+09:00</published><updated>2022-02-03T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/sudoku</id><content type="html" xml:base="http://localhost:4000/coding-test/sudoku.html">Back tracking을 이용한 스도쿠 문제풀이 (javascript)
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -946,7 +1216,6 @@ function boxesCheck(board){
 }
 ~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="immersive-toy-problem" /><summary type="html">Back tracking을 이용한 스도쿠 문제풀이 (javascript)</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/coding-test/sudoku.png" /><media:content medium="image" url="http://localhost:4000/assets/img/coding-test/sudoku.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fundamentals of Data Structures</title><link href="http://localhost:4000/study/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Fundamentals of Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-data-structures.html">Data structure is a storage that is used to store and organize data. &lt;br&gt;
 It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.&lt;br&gt;
-{:.lead}
 
 * toc
 {:toc .large-only}
@@ -2107,7 +2376,7 @@ class Maxheap{
 &lt;br&gt;
 
 
-Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.heading.flip-title}
+Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
 &lt;br&gt;
 
@@ -2117,7 +2386,6 @@ Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.h
 [https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target=&quot;_blank&quot;}&lt;br&gt;
 {:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">It's hard to think of anything else, but think in React
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -2227,7 +2495,6 @@ Let’s think about what we want to happen. We want to make sure that whenever t
 
 [https://reactjs.org/docs/thinking-in-react.html](https://reactjs.org/docs/thinking-in-react.html){:target=&quot;_blank&quot;}&lt;br&gt;
 {:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="react" /><summary type="html">It’s hard to think of anything else, but think in React</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/react/react-main.png" /><media:content medium="image" url="http://localhost:4000/assets/img/react/react-main.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Ubuntu tips for use</title><link href="http://localhost:4000/etc/ubuntu.html" rel="alternate" type="text/html" title="Ubuntu tips for use" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/etc/ubuntu</id><content type="html" xml:base="http://localhost:4000/etc/ubuntu.html">How to screenshot and shortcut setting in ubuntu. 
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc}
@@ -2249,7 +2516,6 @@ Let’s think about what we want to happen. We want to make sure that whenever t
 ![ubuntu_screenshot](/assets/img/ubuntu/ubuntu_screenshot.png){:.alignleft}
 
 설정 -&gt; 키보드 단축키에서 편한대로 설정할 수 있다.</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="etc" /><category term="ubuntu" /><summary type="html">How to screenshot and shortcut setting in ubuntu.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/ubuntu/ubuntu_screenshot.png" /><media:content medium="image" url="http://localhost:4000/assets/img/ubuntu/ubuntu_screenshot.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">git workflow</title><link href="http://localhost:4000/study/git.html" rel="alternate" type="text/html" title="git workflow" /><published>2022-01-14T00:00:00+09:00</published><updated>2022-01-14T00:00:00+09:00</updated><id>http://localhost:4000/study/git</id><content type="html" xml:base="http://localhost:4000/study/git.html">git의 한장 요약
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc}

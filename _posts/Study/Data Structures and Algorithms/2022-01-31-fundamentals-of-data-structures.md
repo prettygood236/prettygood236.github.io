@@ -8,7 +8,7 @@ hide_last_modified: true
 image: 
   path: /assets/img/data-structures-and-algorithms/data-structures.png
 related_posts:
-  - _posts/Study/Data Structures and Algorithms/2022-02-12-fundamentals-of-algorithms.md
+  - _posts/Study/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
   - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku.md
 ---
 
@@ -1174,7 +1174,7 @@ class Maxheap{
 <br>
 
 
-Next to [Fundamentals of Algorithms](2022-02-12-fundamentals-of-algorithms.md){:.heading.flip-title}
+Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
 <br>
 

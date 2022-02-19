@@ -21,7 +21,7 @@ Many of the innovations and design choices the original Unix team have lived on 
 ![Operating Systems](/assets/img/cli/operating-systems-timeline-and-family-tree.png){:width=100%} <br><br>
 Operating Systems: Timeline and Family Tree <br>
 [See the entire tree here.](https://eylenburg.github.io/os_familytree.htm){:target="_blank"}
-{:.figcaption}
+{:.figure}
 
 Everything in red here is considered in some way related uh or indebted to **Unix**.<br>
 That includes things like linux, unbuntu, macOS.
@@ -44,7 +44,7 @@ Even these days most operating systems can be grouped into two families:
 
 ![Unix_history-simple](/assets/img/cli/Unix_history-simple.png){:width=100%} <br><br>
 Unix_history going back to 1969 early unix versions
-{:.figcaption}
+{:.figure}
 
 (pink) is closed source and that means the code is completely closed off. You can't edit it, you can't view it, you're not allowed to even try to tweak it.
 
@@ -62,7 +62,7 @@ In 1984 he began work on the GNU Project, with the goal of creating an operating
 
 ![Kernel_Layout](/assets/img/cli/Kernel_Layout.png){:width="600"} <br><br>
 Kernel Layout
-{:.figcaption}
+{:.figure}
 
 Another developer, Linus Torvalds, was working on creating his own kernel known as Linux. The kernel is the part of an OS that facilitates interactions between hardware and software. 
 
@@ -108,7 +108,7 @@ Each single shell has its own unique features and advanced usage, but they all s
 
 ![man](/assets/img/cli/man_command-1.png){:width="600"} <br>
 `man ls` result 
-{:.figcaption}
+{:.figure}
 
 Every time we don't know how to use a command, We can type `man <command>` to get the manual.<br>
 Then you can use the `man` page to explore all the different options and parameters you can use on a command.
@@ -120,7 +120,7 @@ When need to learn a command quickly we can use this site called tldr pages: [ht
 
 ![man](/assets/img/cli/man_command-2.png){:width="600"} <br>
 `tldr ls` result 
-{:.figcaption}
+{:.figure}
 
 It's a command you can install, which you then run like this: tldr <command>. It gives you a very quick overview of a command, with some handy examples of common usage scenarios. Korean language support is also available.
 
@@ -133,7 +133,7 @@ alias ll='ls -al'
 ```
 ![alias](/assets/img/cli/alias_command-1.png){:width="600"} <br>
 `alias ll` result 
-{:.figcaption}
+{:.figure}
 
 The alias will work until the terminal session is closed.
 
