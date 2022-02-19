@@ -9,7 +9,6 @@ image:
 ---
 
 레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발<br>
-{:.lead}
 
 * this undordered seed list will be replaced by the toc
 {:toc .large-only}

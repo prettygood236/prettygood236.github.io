@@ -9,7 +9,6 @@ image:
 ---
 
 It's hard to think of anything else, but think in React
-{:.lead}
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}

@@ -14,7 +14,6 @@ related_posts:
 
 Data structure is a storage that is used to store and organize data. <br>
 It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.<br>
-{:.lead}
 
 * toc
 {:toc .large-only}
