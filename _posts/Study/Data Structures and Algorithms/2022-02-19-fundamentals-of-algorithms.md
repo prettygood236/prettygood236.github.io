@@ -11,7 +11,7 @@ related_posts:
   - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku.md
 ---
 
-Algorithm is a set of **well-defined instructions to solve a particular problem**. <br>
+Algorithm is a set of <span style='font-size:1em'>***well-defined instructions to solve a particular problem.***</span> <br>
 It takes a set of input and produces a desired output. 
 
 * toc
@@ -28,13 +28,13 @@ It takes a set of input and produces a desired output.
 
 ### 1.1 What is Greedy algorithm?
 
-Greedy algorithm means a method to **choose only good things from the current situation.**
+Greedy algorithm means a method to <span style='background-color: #FFF190;'>*choose only good things from the current situation.*</span>
 
 - A typical greedy algorithm requires the ability to come up with minimal ideas to solve a problem.
 - It is important to analyze the legitimacy of the greedy solution.
   - Examine whether an optimal solution can be obtained by iteratively selecting the one that looks the best.
 
-In a greedy algorithm problem,  it is **necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.**
+In a greedy algorithm problem,  it is <span style='background-color: #FFF190; font-size:1.1em'>*necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.*</span>
 
 ### 1.2 Greedy Example Problem  
 
@@ -144,7 +144,7 @@ print(result)
 
 ### 2.1 What is Implementation?
 
-Implementation is **the process of converting an algorithm in your head into source code.**
+Implementation is <span style='background-color: #FFF190; font-size:1.1em'>*the process of converting an algorithm in your head into source code.*</span>
 
 Example of implementation type problem is:
 - The algorithm is simple, but the code becomes excessively long.
@@ -362,7 +362,7 @@ function bfs(graph, root) {
       idx = curConnected.indexOf(1, idx + 1); 
     }
     
-    for (let j = 0; j <b neighborIdx.length; j++) {
+    for (let j = 0; j < neighborIdx.length; j++) {
       if (nodesLen[neighborIdx[j]] == Infinity) {
         nodesLen[neighborIdx[j]] = nodesLen[current] + 1;
         queue.push(neighborIdx[j]); 
@@ -389,26 +389,35 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ### 4.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves **already calculated results (small problems) in a separate memory area to avoid recalculation.** <br>
+It saves <span style='background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> <br>
 - In general, it can be implemented in two ways: Top-down and Bottom-up.
 
 Dynamic programming can be used when the problem satisfies the following conditions.
 
-<b> 1. Obtimal Substructure </b><br>
+<span style='background-color: #E5FFCC'>***1. Obtimal Substructure***</span> <br>
 \: A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br>
-<b> 2. Overlapping Subproblem: </b><br>
+<span style='background-color: #E5FFCC'>***2. Overlapping Subproblem***</span>  <br>
 \: You have to solve the same small problem over and over again.
-
-### 4.2 Dynamic Programming Example Problem  
-
-#### 4.2.1 Problem : The Fibonacci sequence
 
 The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
-$$1,1,2,3,5,8,13,21,34,55,89$$
+$$
+1,1,2,3,5,8,13,21,34,55,89,...
+$$
 
 The ignition expression means a relational expression between adjacent identities. <br>
 The Fibonacci sequence can be expressed as an ignition formula as follows:
+
+$$
+a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
+$$
+
+Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. <br>
+You can see that f(2) is called multiple times as follows. -> <span style='background-color: #E5FFCC'>***Overlapping Subproblem***</span>
+
+![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png)
+{:.figure}
+
 
 
 

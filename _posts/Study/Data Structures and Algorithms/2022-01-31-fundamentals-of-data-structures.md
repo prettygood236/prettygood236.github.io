@@ -13,7 +13,7 @@ related_posts:
 ---
 
 Data structure is a storage that is used to store and organize data. <br>
-It is **a way of arranging data** on a computer so that it can be accessed and updated efficiently.<br>
+It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br>
 
 * toc
 {:toc .large-only}
@@ -23,13 +23,14 @@ It is **a way of arranging data** on a computer so that it can be accessed and u
 ### 1.1 What is Stack?
 
 If you make a stack of block, The last block stacks are of last in first out type of service.<br>
- The last block you put on top of a stack would be the first block.<br>
+<span style='background-color: #FFF190;'>*The last block you put on top of a stack would be the first block.*</span><br>
 
 ![Stack](/assets/img/data-structures-and-algorithms/stack.gif) <br>
 
 ### 1.2 Using an array as a stack 
 
-```javascript
+```js
+//javascript
 let letters = []; // this is our stack
 
 let word = 'racecar'; 
@@ -54,7 +55,7 @@ else {
   console.log(word + ' is not a palindrome. ') // parkbyungchan is not a palindrome
 }
 ```
-**-Arrays are already has all the functions we need in order to use it as a stack!**
+*Arrays are already has all the functions we need in order to use it as a stack!*
 
 
 ### 1.3 Stack Implementation
@@ -63,7 +64,8 @@ else {
 * pop : removing the top element of a stack
 * length or size : determining how many elements are on a stack
 
-```javascript
+```js
+//javascript
 class Stack {
   constructor() {
     this.count = 0;
@@ -107,7 +109,7 @@ console.log(myStack.size()); // 1
 ### 2.1 What is Queue?
 
 Queue example is a print queue when a lot of people are printing documents at the same printer.<br>
- The documents are printed **in the order(first in first out)**. They were sent to the print queue.
+ The documents are printed <span style='background-color: #FFF190;'>*in the order(first in first out)*</span>. They were sent to the print queue.
  
 ![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width="650"}
 <br>
@@ -115,6 +117,7 @@ Queue example is a print queue when a lot of people are printing documents at th
 ### 2.2 Queue Implementation
 
 ```js
+//javascript
 class Queue {
   constructor() {
     this.collection = [];
@@ -147,14 +150,17 @@ q.front(); // b
 
 #### 2.3.1 What is Priority Queue?
 
-In a priority queue not only pass the element into the queue but also pass the priority of the element. <br>
-  So if all the priorities are the same number it's going to behave just like a normal queue. <br><br>
-  But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
+In a priority queue not only pass the element into the queue <span style='background-color: #FFF190;'>*but also pass the priority of the element.*</span><br>
+
+So if all the priorities are the same number it's going to behave just like a normal queue. 
+
+But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
 <br>
 
 #### 2.3.2 Priority Queue Implementation
 
 ```js
+//javascript
 class PriorityQueue {
   constructor() {
     this.collection = [];
@@ -210,14 +216,15 @@ pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 
 ### 3.1 What is Set?
 
-The set data structure is kind of like an array except there are <mark>no duplicate</mark>
+The set data structure is <span style='background-color: #FFF190'>*kind of like an array except there are no duplicate.*</span>
  items and the values are not in any particular order. <br>
 The typical use for set is to simply check for the presence of an item.
 <br>
 
 ### 3.2 Set Implementation
 
-```javascript
+```js
+//javascript
 // Why it's named this way is because we want to make it distinct from the es5.
 class mySet {
   constructor() {
@@ -330,14 +337,15 @@ console.log(setD.add('d')) // {'b','c','d'}
 
 ### 4.1 What is Tree?
 
- A tree data structure is a way to hold data that when visualized looks like a tree. <br>
-This is actually what we visualized a tree data structure to look like all data points in the tree are called **nodes**.
+ A tree data structure is <u>a way to hold data that when visualized looks like a tree.</u> <br>
+This is actually what we visualized a tree data structure to look like all data points in the tree are called ***nodes***.
 
 ![Tree](/assets/img/data-structures-and-algorithms/tree.png){:width="650"} 
 
 ### 4.2 Tree Implementation
 
 ```js
+//javascript
 class Tree{
   // The object created by the constructor becomes a Node in the tree.
   constructor(value){
@@ -369,8 +377,11 @@ class Tree{
 
 #### 4.3.1 What is Binary Search Tree?
   
-Binary Tree's each node can only has two branches. <br><br>
-Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node. And each right subtree is greater than or equal to the parent node. <br><br> Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree. <br><br>
+Binary Tree's each node can only has two branches. <br>
+<span style='background-color: #FFF190; font-size:1em'>*Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node.* And each right subtree is greater than or equal to the parent node. </span>
+
+Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree.
+
 This is much better than the linear time required to find items by key in an unsorted array but slower than the corresponding o perations on a hash table.
 
 **BST add operation**
@@ -419,6 +430,7 @@ This is much better than the linear time required to find items by key in an uns
 #### 4.3.3 Binary Search Tree Implementation
 
 ~~~js
+// javascript
 // The node class represents each node in the tree.
 class Node {
   constructor(data, left = null, right = null) {
@@ -668,9 +680,9 @@ console.log('levelOrder: ' + bst.levelOrder()); // levelOrder: 5,2,6,1,3,9,22,20
 
 ### 5.1 What is Graph?
 
-Graphs are collections of things and **the relationships or connections** between them. <br>
-The data in a graph are called **nodes or vertices.**<br>
-The connections between the nodes are called **edges.**
+Graphs are collections of things and <u>the relationships or connections</u> between them. <br>
+The data in a graph are called ***nodes or vertices.***<br>
+The connections between the nodes are called ***edges.***
 
 ![Graph](/assets/img/data-structures-and-algorithms/graph-1.png){:width="650"}
 <br><br>
@@ -692,21 +704,21 @@ Directed graphs are graphs with a direction and its edges.
 
 #### 5.3.1 Adjacency List 
 
-Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.
+<span style='background-color: #FFF190; font-size:1em'>*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*</span>
 
 ![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width="650"}
 
 #### 5.3.2 Adjacency Matrix 
 
-Adjacency Matrix is a two-dimensional array where each nested array has the same number of
-elements as the outer array. So it's basically a matrix of numbers where the numbers represent the edges.
+<span style='background-color: #FFF190; font-size:1em'>*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
+elements as the outer array.*</span> So it's basically a matrix of numbers where the numbers represent the edges.
 
 #### 5.3.3 Incidence Matrix 
 
 ![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width="650"}
 
 Adjacency Matrix use both rows and columns to represent nodes.<br>
-But Incidence Matrix uses roads to represent nodes and the columns to represent edges.
+But <span style='background-color: #FFF190; font-size:1em'>*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*</span>
 This means that we can have an uneven number of rows and columns.
 Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
 
@@ -722,6 +734,7 @@ Each column will represent a unique edge. Also, each edge connects two nodes to 
 ### 6.2 Hash Table Implementation
 
 ~~~js
+// javascript
 const hash = function(string, max) {
   let hash = 0;
   for (let i = 0; i < string.length; i++) {
@@ -816,6 +829,7 @@ ht.print();
 ### 7.2 Linked List Implementation
 
 ~~~js
+// javascript
 class Node {
   constructor(element) {
     this.element = element; 
@@ -956,6 +970,7 @@ console.log(conga.size()); // 4
 ### 8.2 Trie Implementation
 
 ~~~js
+// javascript
 class Node {
   sconstructor() {
     this.keys = new Map();
@@ -1036,7 +1051,7 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
   
 
 
-**  Min heap sort operation**
+**Min heap sort operation**
 
 ![Minheap](/assets/img/data-structures-and-algorithms/heap_minheap.gif){:width="600"}
 <br>
@@ -1049,6 +1064,7 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
 ### 9.2 Heap Implementation
 
 ~~~js
+//javascript
 // left child: i * 2
 // right child: i * 2 + 1
 // parent: i / 2
