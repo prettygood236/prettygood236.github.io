@@ -389,7 +389,7 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ### 4.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves <span style='background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
+It saves <span style='font-size:1.1em; background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
 
 In general, it can be implemented in two ways: Top-down and Bottom-up.
 
@@ -422,9 +422,9 @@ You can see that f(2) is <u>called multiple times</u> as follows. -> <span style
 ### 4.2 What is Memoization?
 
 Memoization is one of the ways to implement dynamic programming.
-It is a technique of <span style='background-color: #E5FFCC'>*memoizing the result once calculated in the memory space.*</span>
-If you call the same problem again, you get the result you noted.
-Also called caching in that it records a value.
+It is a technique of <span style='font-size:1.1em; background-color: #FFF190'>*memoizing the result once calculated in the memory space.*</span>
+- If you call the same problem again, you get the result you noted.
+- Also called <span style='background-color: #E5FFCC'>***Caching***</span> in that it records a value.
 
 
 
