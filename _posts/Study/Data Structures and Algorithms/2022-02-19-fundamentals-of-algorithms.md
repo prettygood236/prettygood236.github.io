@@ -28,13 +28,13 @@ It takes a set of input and produces a desired output.
 
 ### 1.1 What is Greedy algorithm?
 
-Greedy algorithm means a method to <span style='background-color: #FFF190;'>*choose only good things from the current situation.*</span>
+Greedy algorithm means a method to <span style='background-color: #FFF39B;'>*choose only good things from the current situation.*</span>
 
 - A typical greedy algorithm requires the ability to come up with minimal ideas to solve a problem.
 - It is important to analyze the legitimacy of the greedy solution.
   - Examine whether an optimal solution can be obtained by iteratively selecting the one that looks the best.
 
-In a greedy algorithm problem,  it is <span style='background-color: #FFF190; font-size:1.1em'>*necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.*</span>
+In a greedy algorithm problem,  it is <span style='background-color: #FFF39B; font-size:1.1em'>*necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.*</span>
 
 ### 1.2 Greedy Example Problem  
 
@@ -144,7 +144,7 @@ print(result)
 
 ### 2.1 What is Implementation?
 
-Implementation is <span style='background-color: #FFF190; font-size:1.1em'>*the process of converting an algorithm in your head into source code.*</span>
+Implementation is <span style='background-color: #FFF39B; font-size:1.1em'>*the process of converting an algorithm in your head into source code.*</span>
 
 Example of implementation type problem is:
 - The algorithm is simple, but the code becomes excessively long.
@@ -383,22 +383,34 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ~~~
 <br>
 
-
 ## 4. Dynamic Programming
 
 ### 4.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves <span style='font-size:1.1em; background-color: #FFF190'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
-
-In general, it can be implemented in two ways: Top-down and Bottom-up.
+It saves <span style='font-size:1.1em; background-color: #FFF39B'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
 
 Dynamic programming can be used when the problem satisfies the following two conditions.
 
-*<span style='background-color: #E5FFCC'>**1. Obtimal Substructure :**</span> <br>
+*<span style='background-color: #E0FFC4'>**1. Obtimal Substructure :**</span> <br>
 A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br>
-<span style='background-color: #E5FFCC'>**2. Overlapping Subproblem :**</span>  <br>
+<span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br>
 You have to solve the same small problem over and over again.*
+
+### 4.2 What is Memoization?
+
+Memoization is a technique of <span style='font-size:1.1em; background-color: #FFF39B'>*memoizing the result once calculated in the memory space.*</span>
+- If you call the same problem again, you get the result you noted.
+- Also called <span style='background-color: #E0FFC4'>***Caching***</span> in that it records a value.
+<br>
+<br>
+
+In general, Dynamic programming can be implemented in two ways:  <span style='background-color: #FFDFF6'>***Top-down***</span> and <span style='background-color: #FFDFF6'>***Bottom-up.***</span> 
+- <span style='background-color: #E0FFC4'>***Memoization***</span> enables *<u>Top-down</u>* dynamic programming.
+- A classic form of dynamic programming is the *<u>Bottom-up</u>* approach. 
+  - The list for storing the results is called the DP table.
+
+### 4.3 The Fibonacci sequence
 
 The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -414,17 +426,16 @@ a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
 $$
 
 Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. <br>
-You can see that f(2) is <u>called multiple times</u> as follows. -> <span style='background-color: #E5FFCC'>***Overlapping Subproblem***</span>
+You can see that f(2) is <u>called multiple times</u> as follows. -> <span style='background-color: #E0FFC4'>***Overlapping Subproblem***</span>
 
 ![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png)
 {:.figure}
 
-### 4.2 What is Memoization?
 
-Memoization is one of the ways to implement dynamic programming.
-It is a technique of <span style='font-size:1.1em; background-color: #FFF190'>*memoizing the result once calculated in the memory space.*</span>
-- If you call the same problem again, you get the result you noted.
-- Also called <span style='background-color: #E5FFCC'>***Caching***</span> in that it records a value.
+
+### 4.4 Dynamic Programming VS Divide and Conquer algorithm
+
+
 
 
 

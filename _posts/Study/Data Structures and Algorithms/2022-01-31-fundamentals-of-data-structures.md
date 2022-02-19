@@ -23,7 +23,7 @@ It is <span style='font-size:1em'>***a way of arranging data***</span> on a comp
 ### 1.1 What is Stack?
 
 If you make a stack of block, The last block stacks are of last in first out type of service.<br>
-<span style='background-color: #FFF190;'>*The last block you put on top of a stack would be the first block.*</span><br>
+<span style='background-color: #FFF39B;'>*The last block you put on top of a stack would be the first block.*</span><br>
 
 ![Stack](/assets/img/data-structures-and-algorithms/stack.gif) <br>
 
@@ -109,7 +109,7 @@ console.log(myStack.size()); // 1
 ### 2.1 What is Queue?
 
 Queue example is a print queue when a lot of people are printing documents at the same printer.<br>
- The documents are printed <span style='background-color: #FFF190;'>*in the order(first in first out)*</span>. They were sent to the print queue.
+ The documents are printed <span style='background-color: #FFF39B;'>*in the order(first in first out)*</span>. They were sent to the print queue.
  
 ![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width="650"}
 <br>
@@ -150,7 +150,7 @@ q.front(); // b
 
 #### 2.3.1 What is Priority Queue?
 
-In a priority queue not only pass the element into the queue <span style='background-color: #FFF190;'>*but also pass the priority of the element.*</span><br>
+In a priority queue not only pass the element into the queue <span style='background-color: #FFF39B;'>*but also pass the priority of the element.*</span><br>
 
 So if all the priorities are the same number it's going to behave just like a normal queue. 
 
@@ -216,7 +216,7 @@ pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 
 ### 3.1 What is Set?
 
-The set data structure is <span style='background-color: #FFF190'>*kind of like an array except there are no duplicate.*</span>
+The set data structure is <span style='background-color: #FFF39B'>*kind of like an array except there are no duplicate.*</span>
  items and the values are not in any particular order. <br>
 The typical use for set is to simply check for the presence of an item.
 <br>
@@ -378,7 +378,7 @@ class Tree{
 #### 4.3.1 What is Binary Search Tree?
   
 Binary Tree's each node can only has two branches. <br>
-<span style='background-color: #FFF190; font-size:1em'>*Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node.* And each right subtree is greater than or equal to the parent node. </span>
+<span style='background-color: #FFF39B; font-size:1em'>*Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node.* And each right subtree is greater than or equal to the parent node. </span>
 
 Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree.
 
@@ -704,13 +704,13 @@ Directed graphs are graphs with a direction and its edges.
 
 #### 5.3.1 Adjacency List 
 
-<span style='background-color: #FFF190; font-size:1em'>*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*</span>
+<span style='background-color: #FFF39B; font-size:1em'>*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*</span>
 
 ![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width="650"}
 
 #### 5.3.2 Adjacency Matrix 
 
-<span style='background-color: #FFF190; font-size:1em'>*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
+<span style='background-color: #FFF39B; font-size:1em'>*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
 elements as the outer array.*</span> So it's basically a matrix of numbers where the numbers represent the edges.
 
 #### 5.3.3 Incidence Matrix 
@@ -718,7 +718,7 @@ elements as the outer array.*</span> So it's basically a matrix of numbers where
 ![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width="650"}
 
 Adjacency Matrix use both rows and columns to represent nodes.<br>
-But <span style='background-color: #FFF190; font-size:1em'>*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*</span>
+But <span style='background-color: #FFF39B; font-size:1em'>*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*</span>
 This means that we can have an uneven number of rows and columns.
 Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
 

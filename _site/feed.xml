@@ -1,428 +1,524 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-20T00:23:35+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
-</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
-It takes a set of input and produces a desired output. 
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-20T01:30:15+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN | DEV</title><subtitle>DEV Blog by Chan | Like the beginning, now, always and forever!
+</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">&lt;p&gt;Algorithm is a set of &lt;span style=&quot;font-size:1em&quot;&gt;&lt;strong&gt;&lt;em&gt;well-defined instructions to solve a particular problem.&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; &lt;br /&gt;
+It takes a set of input and produces a desired output.&lt;/p&gt;
 
-* toc
-{:toc .large-only}
+&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#1-greedy&quot; id=&quot;markdown-toc-1-greedy&quot;&gt;1. Greedy&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#11-what-is-greedy-algorithm&quot; id=&quot;markdown-toc-11-what-is-greedy-algorithm&quot;&gt;1.1 What is Greedy algorithm?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#12-greedy-example-problem&quot; id=&quot;markdown-toc-12-greedy-example-problem&quot;&gt;1.2 Greedy Example Problem&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#121-problem--until-it-becomes-1&quot; id=&quot;markdown-toc-121-problem--until-it-becomes-1&quot;&gt;1.2.1 Problem : Until it becomes 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#122-solution--until-it-becomes-1&quot; id=&quot;markdown-toc-122-solution--until-it-becomes-1&quot;&gt;1.2.2 Solution : Until it becomes 1&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#123-problom--multiply-or-add&quot; id=&quot;markdown-toc-123-problom--multiply-or-add&quot;&gt;1.2.3 Problom : Multiply or Add&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#124-solution--multiply-or-add&quot; id=&quot;markdown-toc-124-solution--multiply-or-add&quot;&gt;1.2.4 Solution : Multiply or Add&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#2-implementation&quot; id=&quot;markdown-toc-2-implementation&quot;&gt;2. Implementation&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#21-what-is-implementation&quot; id=&quot;markdown-toc-21-what-is-implementation&quot;&gt;2.1 What is Implementation?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#22-implementation-example-problem&quot; id=&quot;markdown-toc-22-implementation-example-problem&quot;&gt;2.2 Implementation Example Problem&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#221-problem--left-right-up-down&quot; id=&quot;markdown-toc-221-problem--left-right-up-down&quot;&gt;2.2.1 Problem : Left, Right, Up, Down&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#222-solution--left-right-up-down&quot; id=&quot;markdown-toc-222-solution--left-right-up-down&quot;&gt;2.2.2 Solution : Left, Right, Up, Down&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#223-problem--royal-knight&quot; id=&quot;markdown-toc-223-problem--royal-knight&quot;&gt;2.2.3 Problem : Royal Knight&lt;/a&gt;&lt;/li&gt;
+          &lt;li&gt;&lt;a href=&quot;#224-solution--royal-knight&quot; id=&quot;markdown-toc-224-solution--royal-knight&quot;&gt;2.2.4 Solution : Royal Knight&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#3-dfs--bfs&quot; id=&quot;markdown-toc-3-dfs--bfs&quot;&gt;3. DFS &amp;amp; BFS&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#31-what-is-depth-first-search&quot; id=&quot;markdown-toc-31-what-is-depth-first-search&quot;&gt;3.1 What is Depth-First Search?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#32-what-is-breadth-first-search&quot; id=&quot;markdown-toc-32-what-is-breadth-first-search&quot;&gt;3.2 What is Breadth-First Search?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#33-tree--dfs-implementation&quot; id=&quot;markdown-toc-33-tree--dfs-implementation&quot;&gt;3.3 Tree : DFS Implementation&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#34-graph--dfs-implementation&quot; id=&quot;markdown-toc-34-graph--dfs-implementation&quot;&gt;3.4 Graph : DFS Implementation&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#4-dynamic-programming&quot; id=&quot;markdown-toc-4-dynamic-programming&quot;&gt;4. Dynamic Programming&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#41-what-is-dynamic-programming&quot; id=&quot;markdown-toc-41-what-is-dynamic-programming&quot;&gt;4.1 What is Dynamic Programming?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#42-what-is-memoization&quot; id=&quot;markdown-toc-42-what-is-memoization&quot;&gt;4.2 What is Memoization?&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#43-the-fibonacci-sequence&quot; id=&quot;markdown-toc-43-the-fibonacci-sequence&quot;&gt;4.3 The Fibonacci sequence&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#44-dynamic-programming-vs-divide-and-conquer-algorithm&quot; id=&quot;markdown-toc-44-dynamic-programming-vs-divide-and-conquer-algorithm&quot;&gt;4.4 Dynamic Programming VS Divide and Conquer algorithm&lt;/a&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-**Qualities of Good Algorithms**
+&lt;p&gt;&lt;strong&gt;Qualities of Good Algorithms&lt;/strong&gt;&lt;/p&gt;
 
-- Input and output should be defined precisely.
-- Each step in the algorithm should be clear and unambiguous.
-- Algorithms should be most effective among many different ways to solve a problem.
-- An algorithm shouldn't include computer code. Instead, the algorithm should be written - in such a way that it can be used in different programming languages.
+&lt;ul&gt;
+  &lt;li&gt;Input and output should be defined precisely.&lt;/li&gt;
+  &lt;li&gt;Each step in the algorithm should be clear and unambiguous.&lt;/li&gt;
+  &lt;li&gt;Algorithms should be most effective among many different ways to solve a problem.&lt;/li&gt;
+  &lt;li&gt;An algorithm shouldn’t include computer code. Instead, the algorithm should be written - in such a way that it can be used in different programming languages.&lt;/li&gt;
+&lt;/ul&gt;
 
-## 1. Greedy
+&lt;h2 id=&quot;1-greedy&quot;&gt;1. Greedy&lt;/h2&gt;
 
-### 1.1 What is Greedy algorithm?
+&lt;h3 id=&quot;11-what-is-greedy-algorithm&quot;&gt;1.1 What is Greedy algorithm?&lt;/h3&gt;
 
-Greedy algorithm means a method to &lt;span style='background-color: #FFF190;'&gt;*choose only good things from the current situation.*&lt;/span&gt;
+&lt;p&gt;Greedy algorithm means a method to &lt;span style=&quot;background-color: #FFF39B;&quot;&gt;&lt;em&gt;choose only good things from the current situation.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
 
-- A typical greedy algorithm requires the ability to come up with minimal ideas to solve a problem.
-- It is important to analyze the legitimacy of the greedy solution.
-  - Examine whether an optimal solution can be obtained by iteratively selecting the one that looks the best.
+&lt;ul&gt;
+  &lt;li&gt;A typical greedy algorithm requires the ability to come up with minimal ideas to solve a problem.&lt;/li&gt;
+  &lt;li&gt;It is important to analyze the legitimacy of the greedy solution.
+    &lt;ul&gt;
+      &lt;li&gt;Examine whether an optimal solution can be obtained by iteratively selecting the one that looks the best.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-In a greedy algorithm problem,  it is &lt;span style='background-color: #FFF190; font-size:1.1em'&gt;*necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.*&lt;/span&gt;
+&lt;p&gt;In a greedy algorithm problem,  it is &lt;span style=&quot;background-color: #FFF39B; font-size:1.1em&quot;&gt;&lt;em&gt;necessary to be able to come up with a minimal ideas for solving the problem and examine whether this is justified.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
 
-### 1.2 Greedy Example Problem  
+&lt;h3 id=&quot;12-greedy-example-problem&quot;&gt;1.2 Greedy Example Problem&lt;/h3&gt;
 
-#### 1.2.1 Problem : Until it becomes 1 
+&lt;h4 id=&quot;121-problem--until-it-becomes-1&quot;&gt;1.2.1 Problem : Until it becomes 1&lt;/h4&gt;
 
-Until a certain number N becomes 1, one of the following two processes is repeatedly selected and performed. However, the second operation can be selected only when N is divisible by K. 
+&lt;p&gt;Until a certain number N becomes 1, one of the following two processes is repeatedly selected and performed. However, the second operation can be selected only when N is divisible by K.&lt;/p&gt;
 
-1. Subtract 1 from N. 
-2. Divide N by K. 
+&lt;ol&gt;
+  &lt;li&gt;Subtract 1 from N.&lt;/li&gt;
+  &lt;li&gt;Divide N by K.&lt;/li&gt;
+&lt;/ol&gt;
 
-For example, if N = 17, K = 4 &lt;br&gt; 
-1) 17 - 1 = 16  &lt;br&gt; 
-2) 16 // 4 = 4 &lt;br&gt; 
-3) 4 // 4 = 1 
+&lt;p&gt;For example, if N = 17, K = 4 &lt;br /&gt; 
+1) 17 - 1 = 16  &lt;br /&gt; 
+2) 16 // 4 = 4 &lt;br /&gt; 
+3) 4 // 4 = 1&lt;/p&gt;
 
-The number of times the entire process is executed becomes 3. This is the minimum number of times to make N equal to 1.
+&lt;p&gt;The number of times the entire process is executed becomes 3. This is the minimum number of times to make N equal to 1.&lt;/p&gt;
 
-**Difficulty: 1 \| 15 minutes to solve \| Time limit 2 seconds \| Memory limit 128 MB**
-{:.message}
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 15 minutes to solve | Time limit 2 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
 
-**Input conditions** &lt;br&gt;
-In the first line N (2 &lt;= N &lt;= 100,000) and K (2 &lt;= K &lt;= 100,000) separated by spaces, each given as a natural number.
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line N (2 &amp;lt;= N &amp;lt;= 100,000) and K (2 &amp;lt;= K &amp;lt;= 100,000) separated by spaces, each given as a natural number.&lt;/p&gt;
 
-**Output conditions** &lt;br&gt;
-In the first line, print the minimum value for the number of times that one or two processes must be performed until N becomes 1.
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the minimum value for the number of times that one or two processes must be performed until N becomes 1.&lt;/p&gt;
 
-| Input Example | Output Example |
-|`25 5`|`2`|
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;25 5&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;2&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-#### 1.2.2 Solution : Until it becomes 1
+&lt;h4 id=&quot;122-solution--until-it-becomes-1&quot;&gt;1.2.2 Solution : Until it becomes 1&lt;/h4&gt;
 
-Since K is greater than 2, dividing by K will always reduce N faster than subtracting 1. &lt;br&gt;
-Also, N will always becomes 1. 
+&lt;p&gt;Since K is greater than 2, dividing by K will always reduce N faster than subtracting 1. &lt;br /&gt;
+Also, N will always becomes 1.&lt;/p&gt;
 
-*Dividing as many as possible guarantees an optimal solution!*
+&lt;p&gt;&lt;em&gt;Dividing as many as possible guarantees an optimal solution!&lt;/em&gt;&lt;/p&gt;
 
-~~~py
-# python
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
 # get input with N, K separated by spaces
-n, k = map(int, input(). split())
-result = 0
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;map&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
 
-while True:
-    # subtract until N is divisible by K
-     target = (n // k) * k
-     result += (n - target)
-     n = target
-    # escape from loop when N is less than K (not more divisible)
-     if n &lt; k:
-     break
-    # divide by K
-     result += 1
-     n //= k
+&lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;bp&quot;&gt;True&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# subtract until N is divisible by K
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;target&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# escape from loop when N is less than K (not more divisible)
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;break&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;# divide by K
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;//=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;k&lt;/span&gt;
  
-# subtract 1 for the last remaining number
-reslut += (n - 1)
-print(result)
-~~~
+&lt;span class=&quot;c1&quot;&gt;# subtract 1 for the last remaining number
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;reslut&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-#### 1.2.3 Problom : Multiply or Add 
+&lt;h4 id=&quot;123-problom--multiply-or-add&quot;&gt;1.2.3 Problom : Multiply or Add&lt;/h4&gt;
 
-Given a string s where each digit consists of only numbers (0 to 9), check all numbers one by one from left to right, and insert the 'x' or '+' operator between the numbers to find the largest number that can be made as a result. Write a program to retrieve it. 
-However, unlike the usual way of calculating x before +, it is assumed that all operations are performed in order from the left.
+&lt;p&gt;Given a string s where each digit consists of only numbers (0 to 9), check all numbers one by one from left to right, and insert the ‘x’ or ‘+’ operator between the numbers to find the largest number that can be made as a result. Write a program to retrieve it. 
+However, unlike the usual way of calculating x before +, it is assumed that all operations are performed in order from the left.&lt;/p&gt;
 
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 30 minutes to solve | Time limit 1 seconds | Memory limit 128 MB | Previous Facebook intervie&lt;/strong&gt;&lt;/p&gt;
 
-**Difficulty: 1 \| 30 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB \| Previous Facebook intervie**
-{:.message}
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+The first line is given a string S of several numbers. (1&amp;lt;=S.length&amp;lt;=20)&lt;/p&gt;
 
-**Input conditions** &lt;br&gt;
-The first line is given a string S of several numbers. (1&lt;=S.length&lt;=20)
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+Print the largest possible number in the first line.&lt;/p&gt;
 
-**Output conditions** &lt;br&gt;
-Print the largest possible number in the first line.
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example 1&lt;/td&gt;
+      &lt;td&gt;Output Example 1&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;02984&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;576&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-| Input Example 1 | Output Example 1|
-|`02984`|`576`|
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example 2&lt;/td&gt;
+      &lt;td&gt;Output Example 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;567&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;210&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-| Input Example 2 | Output Example 2|
-|`567`|`210`|
+&lt;h4 id=&quot;124-solution--multiply-or-add&quot;&gt;1.2.4 Solution : Multiply or Add&lt;/h4&gt;
 
-#### 1.2.4 Solution : Multiply or Add 
+&lt;p&gt;In most cases, ‘x’ makes the value larger than ‘+’. For example, 5+6=11 and 5X6=30.&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;However, if any of the two numbers is ‘0’ or ‘1’, it is more efficient to perform ‘+’ rather than ‘x’&lt;/li&gt;
+&lt;/ul&gt;
 
-In most cases, 'x' makes the value larger than '+'. For example, 5+6=11 and 5X6=30.
-- However, if any of the two numbers is '0' or '1', it is more efficient to perform '+' rather than 'x'
+&lt;p&gt;&lt;em&gt;Therefore, when performing an operation on two numbers, if one of the two numbers is less than 1, ‘+’ it, and if both numbers are 2 or more, ‘x’ is the correct answer.&lt;/em&gt;&lt;/p&gt;
 
-*Therefore, when performing an operation on two numbers, if one of the two numbers is less than 1, '+' it, and if both numbers are 2 or more, 'x' is the correct answer.*
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-~~~py
-# python
-data = input()
+&lt;span class=&quot;c1&quot;&gt;# replace the first character with a number
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
 
-# replace the first character with a number
-result = int(data[0])
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# if either number is '0' or '1', '+' rather than 'x'.
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
+     &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;num&lt;/span&gt;
 
-for i in range(1, len(data)):
-     # if either number is '0' or '1', '+' rather than 'x'.
-     num = int(data[i])
-     if num &lt;= 1 or result &lt;= 1:
-         result += num
-     else:
-         result *= num
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-print(result)
-~~~
+&lt;h2 id=&quot;2-implementation&quot;&gt;2. Implementation&lt;/h2&gt;
 
-## 2. Implementation
+&lt;h3 id=&quot;21-what-is-implementation&quot;&gt;2.1 What is Implementation?&lt;/h3&gt;
 
-### 2.1 What is Implementation?
+&lt;p&gt;Implementation is &lt;span style=&quot;background-color: #FFF39B; font-size:1.1em&quot;&gt;&lt;em&gt;the process of converting an algorithm in your head into source code.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
 
-Implementation is &lt;span style='background-color: #FFF190; font-size:1.1em'&gt;*the process of converting an algorithm in your head into source code.*&lt;/span&gt;
+&lt;p&gt;Example of implementation type problem is:&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;The algorithm is simple, but the code becomes excessively long.&lt;/li&gt;
+  &lt;li&gt;Problems dealing with real numbers and outputting to a certain number of decimal places.&lt;/li&gt;
+  &lt;li&gt;Problems that have to be dealt with by breaking strings according to certain criteria.&lt;/li&gt;
+  &lt;li&gt;The problem of finding and using the appropriate library.&lt;/li&gt;
+&lt;/ul&gt;
 
-Example of implementation type problem is:
-- The algorithm is simple, but the code becomes excessively long.
-- Problems dealing with real numbers and outputting to a certain number of decimal places.
-- Problems that have to be dealt with by breaking strings according to certain criteria.
-- The problem of finding and using the appropriate library.
+&lt;p&gt;There are many similarities between the type &lt;strong&gt;&lt;em&gt;Simulation&lt;/em&gt;&lt;/strong&gt; , &lt;strong&gt;&lt;em&gt;Implementation&lt;/em&gt;&lt;/strong&gt;, and &lt;strong&gt;&lt;em&gt;Brute-Force&lt;/em&gt;&lt;/strong&gt; in coding tests.&lt;/p&gt;
 
-There are many similarities between the type ***Simulation*** , ***Implementation***, and ***Brute-Force*** in coding tests.
+&lt;h3 id=&quot;22-implementation-example-problem&quot;&gt;2.2 Implementation Example Problem&lt;/h3&gt;
 
-### 2.2 Implementation Example Problem  
+&lt;h4 id=&quot;221-problem--left-right-up-down&quot;&gt;2.2.1 Problem : Left, Right, Up, Down&lt;/h4&gt;
 
+&lt;p&gt;Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. &lt;br /&gt;
+The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). &lt;br /&gt;
+Traveler A can move up, down, left and right, and the starting coordinate is always (1, 1). In front of us is a plan with traveler A’s plans to move.&lt;/p&gt;
 
-#### 2.2.1 Problem : Left, Right, Up, Down
+&lt;p&gt;In the plan, one letter of L, R, U, and D is repeatedly written on one line based on space.
+The meaning of each character is as follows.&lt;/p&gt;
 
-Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. &lt;br&gt;
-The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). &lt;br&gt;
-Traveler A can move up, down, left and right, and the starting coordinate is always (1, 1). In front of us is a plan with traveler A's plans to move.
+&lt;p&gt;L: move one space to the left &lt;br /&gt;
+R: move one space to the right &lt;br /&gt;
+U: move up one space &lt;br /&gt;
+D: move down one space &lt;br /&gt;&lt;/p&gt;
 
-In the plan, one letter of L, R, U, and D is repeatedly written on one line based on space.
-The meaning of each character is as follows.
+&lt;p&gt;In this case, the movement of traveler A outside the square space of size N × N is ignored. &lt;br /&gt;
+For example, if L or U is encountered at position (1, 1), it is ignored. &lt;br /&gt;&lt;/p&gt;
 
-L: move one space to the left &lt;br&gt;
-R: move one space to the right &lt;br&gt;
-U: move up one space &lt;br&gt;
-D: move down one space &lt;br&gt;
+&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/assets/img/coding-test/left-right-up-down_example.png&quot; alt=&quot;left-right-up-down_example&quot; /&gt;
+the map and plan for N = 5&lt;/p&gt;
 
-In this case, the movement of traveler A outside the square space of size N × N is ignored. &lt;br&gt;
-For example, if L or U is encountered at position (1, 1), it is ignored. &lt;br&gt;
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 15 minutes to solve | Time limit 2 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
 
-![left-right-up-down_example](/assets/img/coding-test/left-right-up-down_example.png)
-the map and plan for N = 5
-{:.figure}
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+The first line is given an N indicating the size of the space. (1&amp;lt;=N&amp;lt;=100)
+In the second line, the contents of the travel plan for traveler A are given. (1&amp;lt;=Number of moves&amp;lt;=100)&lt;/p&gt;
 
-**Difficulty: 1 \| 15 minutes to solve \| Time limit 2 seconds \| Memory limit 128 MB**
-{:.message}
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the number written on the card selected according to the rules of the game.&lt;/p&gt;
 
-**Input conditions** &lt;br&gt;
-The first line is given an N indicating the size of the space. (1&lt;=N&lt;=100)
-In the second line, the contents of the travel plan for traveler A are given. (1&lt;=Number of moves&lt;=100)
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;5&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;3 4&lt;/code&gt;&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;&lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;R R R U D D&lt;/code&gt;&lt;/td&gt;
+      &lt;td&gt; &lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-**Output conditions** &lt;br&gt;
-In the first line, print the number written on the card selected according to the rules of the game.
+&lt;h4 id=&quot;222-solution--left-right-up-down&quot;&gt;2.2.2 Solution : Left, Right, Up, Down&lt;/h4&gt;
 
-| Input Example | Output Example|
-|`5`|`3 4`|
-|`R R R U D D`|
+&lt;p&gt;This is a problem that needs to implement faithfully according to the requirements.&lt;/p&gt;
 
-#### 2.2.2 Solution : Left, Right, Up, Down
-
-This is a problem that needs to implement faithfully according to the requirements.
-
-~~~py
-# python
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
 # get N input
-n = int(input())
-x, y = 1, 1
-plans = input(). split()
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;())&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;plans&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;().&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;split&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
 
-# direction of movement according to L, R, U, D
-dx = [0, 0, -1, 1]
-dy = [-1, 1, 0, 0]
-move_types = ['L', 'R', 'U', 'D']
+&lt;span class=&quot;c1&quot;&gt;# direction of movement according to L, R, U, D
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'L'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'R'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'U'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;'D'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 
-# check the move plans one by one
-for plan in plans:
-     # get coordinates after moving
-     for i in range(len(move_types)):
-         if plan == move_types[i]:
-             nx = x + dx[i]
-             ny = y + dy[i]
-     # ignore if out of space
-     if nx &lt; 1 or ny &lt; 1 or nx &gt; n or ny &gt; n:
-         continue
-     # perform a move
-     x, y = nx, ny
+&lt;span class=&quot;c1&quot;&gt;# check the move plans one by one
+&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plan&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plans&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# get coordinates after moving
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;range&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;len&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)):&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;plan&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;move_types&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]:&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+             &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# ignore if out of space
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;or&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;k&quot;&gt;continue&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# perform a move
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;nx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;ny&lt;/span&gt;
 
-print(x, y)
-~~~
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;x&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;y&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-#### 2.2.3 Problem : Royal Knight
+&lt;h4 id=&quot;223-problem--royal-knight&quot;&gt;2.2.3 Problem : Royal Knight&lt;/h4&gt;
 
-When the position of the knight on the 8 × 8 coordinate plane is given, the number of cases in which the knight can move is output. A knight can move from a specific location in the following two cases:
+&lt;p&gt;When the position of the knight on the 8 × 8 coordinate plane is given, the number of cases in which the knight can move is output. A knight can move from a specific location in the following two cases:&lt;/p&gt;
 
-1. Move two spaces horizontally and then move one space vertically
-2. Move two spaces vertically and then move one space horizontally
+&lt;ol&gt;
+  &lt;li&gt;Move two spaces horizontally and then move one space vertically&lt;/li&gt;
+  &lt;li&gt;Move two spaces vertically and then move one space horizontally&lt;/li&gt;
+&lt;/ol&gt;
 
-Write a program. In the royal garden, row positions are expressed as 1 to 8, and column positions are expressed as
-express from a to h.
+&lt;p&gt;Write a program. In the royal garden, row positions are expressed as 1 to 8, and column positions are expressed as
+express from a to h.&lt;/p&gt;
 
-![Royal Knight](/assets/img/coding-test/royal-knight.png){:width=&quot;50%&quot;}
+&lt;p&gt;&lt;img src=&quot;/assets/img/coding-test/royal-knight.png&quot; alt=&quot;Royal Knight&quot; width=&quot;50%&quot; /&gt;&lt;/p&gt;
 
-There are 6 possible moves when in c2.&lt;br&gt;
-There are 2 possible moves when in a1.
+&lt;p&gt;There are 6 possible moves when in c2.&lt;br /&gt;
+There are 2 possible moves when in a1.&lt;/p&gt;
 
-**Difficulty: 1 \| 20 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB**
-{:.message}
+&lt;p class=&quot;message&quot;&gt;&lt;strong&gt;Difficulty: 1 | 20 minutes to solve | Time limit 1 seconds | Memory limit 128 MB&lt;/strong&gt;&lt;/p&gt;
 
-**Input conditions** &lt;br&gt;
-In the first line, a two-character string representing the coordinates of where the knight is currently located on the 8x8 coordinate plane is entered. Input characters consist of columns and rows, like a1.
+&lt;p&gt;&lt;strong&gt;Input conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, a two-character string representing the coordinates of where the knight is currently located on the 8x8 coordinate plane is entered. Input characters consist of columns and rows, like a1.&lt;/p&gt;
 
-**Output conditions** &lt;br&gt;
-In the first line, print the number of times a knight can move.
+&lt;p&gt;&lt;strong&gt;Output conditions&lt;/strong&gt; &lt;br /&gt;
+In the first line, print the number of times a knight can move.&lt;/p&gt;
 
-| Input Example | Output Example|
-|a1|2|
+&lt;table&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;Input Example&lt;/td&gt;
+      &lt;td&gt;Output Example&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;a1&lt;/td&gt;
+      &lt;td&gt;2&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
 
-#### 2.2.4 Solution : Royal Knight
+&lt;h4 id=&quot;224-solution--royal-knight&quot;&gt;2.2.4 Solution : Royal Knight&lt;/h4&gt;
 
-Check the 8 paths of the knight one by one and check if it is possible to move to each location. &lt;br&gt;
-Using the list, define direction vectors for 8 directions.
+&lt;p&gt;Check the 8 paths of the knight one by one and check if it is possible to move to each location. &lt;br /&gt;
+Using the list, define direction vectors for 8 directions.&lt;/p&gt;
 
-~~~py
-# python
+&lt;div class=&quot;language-py highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;# python
 # get the current knight's location
-input_data = input()
-row = int(input_data[1])
-column = int(ord(input_data[0])) - int(ord('a')) + 1
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;input&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;])&lt;/span&gt;
+&lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;input_data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;int&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nb&quot;&gt;ord&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;'a'&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 
-# define 8 directions a knight can move
-steps = [(-2, -1), (-1, -2), (1, -2), (2, -1), (2, 1), (1, 2), (-1, 2 ), (-2, 1)]
+&lt;span class=&quot;c1&quot;&gt;# define 8 directions a knight can move
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;steps&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)]&lt;/span&gt;
 
-# check if it is possible to move to each position in 8 directions
-result = 0
-for step in steps:
-     # check the location you want to move
-     next_row = row + step[0]
-     next_column = column + step[1]
-     # if it is possible to move to that location, the count is increased.
-     if next_row &gt;= 1 and next_row &lt;= 8 and next_column &gt;= 1 and next_column &lt;= 8:
-         result += 1
+&lt;span class=&quot;c1&quot;&gt;# check if it is possible to move to each position in 8 directions
+&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;in&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;steps&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# check the location you want to move
+&lt;/span&gt;     &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;step&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+     &lt;span class=&quot;c1&quot;&gt;# if it is possible to move to that location, the count is increased.
+&lt;/span&gt;     &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_row&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt; &lt;span class=&quot;ow&quot;&gt;and&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;next_column&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;8&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt;
+         &lt;span class=&quot;n&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
 
-print(result)
-~~~
+&lt;span class=&quot;k&quot;&gt;print&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-## 3. DFS &amp; BFS
+&lt;h2 id=&quot;3-dfs--bfs&quot;&gt;3. DFS &amp;amp; BFS&lt;/h2&gt;
 
-### 3.1 What is Depth-First Search?
+&lt;h3 id=&quot;31-what-is-depth-first-search&quot;&gt;3.1 What is Depth-First Search?&lt;/h3&gt;
 
-DFS is literally an algorithm that searches the deep part first.&lt;br&gt;
-DFS uses a stack data structure (or recursive function)
+&lt;p&gt;DFS is literally an algorithm that searches the deep part first.&lt;br /&gt;
+DFS uses a stack data structure (or recursive function)&lt;/p&gt;
 
-**DFS operation process**
-1. Insert the search start node into the stack and process the visit.
-2. If there is at least one unvisited adjacent node at the top node of the stack, the node is push into the stack and visited. If there are no unvisited adjacent nodes, pop the topmost node from the stack.
-3. Repeat until step 2 can no longer be performed.
-&lt;br&gt;
+&lt;p&gt;&lt;strong&gt;DFS operation process&lt;/strong&gt;&lt;/p&gt;
+&lt;ol&gt;
+  &lt;li&gt;Insert the search start node into the stack and process the visit.&lt;/li&gt;
+  &lt;li&gt;If there is at least one unvisited adjacent node at the top node of the stack, the node is push into the stack and visited. If there are no unvisited adjacent nodes, pop the topmost node from the stack.&lt;/li&gt;
+  &lt;li&gt;Repeat until step 2 can no longer be performed.
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ol&gt;
 
-![Depth-First Search operation](/assets/img/data-structures-and-algorithms/graph_dfs.gif){:width=&quot;600&quot;} &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/data-structures-and-algorithms/graph_dfs.gif&quot; alt=&quot;Depth-First Search operation&quot; width=&quot;600&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
-### 3.2 What is Breadth-First Search?
+&lt;h3 id=&quot;32-what-is-breadth-first-search&quot;&gt;3.2 What is Breadth-First Search?&lt;/h3&gt;
 
-![Breadth-First Search operation](/assets/img/data-structures-and-algorithms/graph_bfs.gif){:width=&quot;600&quot;} &lt;br&gt;
-&lt;br&gt;
+&lt;p&gt;&lt;img src=&quot;/assets/img/data-structures-and-algorithms/graph_bfs.gif&quot; alt=&quot;Breadth-First Search operation&quot; width=&quot;600&quot; /&gt; &lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;33-tree--dfs-implementation&quot;&gt;3.3 Tree : DFS Implementation&lt;/h3&gt;
 
-### 3.3 Tree : DFS Implementation
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// simple tree (no membership check)&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;prototype&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;this&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;child&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
-~~~js
-// simple tree (no membership check)
-let Node = function (value) {
-  this.value = value;
-  this.children = [];
-};
-Node.prototype.addChild = function (child) {
-  this.children.push(child);
-  return child;
-};
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dfs&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;value&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// console.log(result)&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;children&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;forEach&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&amp;gt;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;concat&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;el&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// console.log(el)&lt;/span&gt;
+    &lt;span class=&quot;c1&quot;&gt;// console.log(result)&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;})&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;result&lt;/span&gt;  
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rootChild1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rootChild2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;leaf1&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rootChild1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;4&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;leaf2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;rootChild1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;leaf1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;6&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;rootChild2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;addChild&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;k&quot;&gt;new&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Node&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;7&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;dfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// --&amp;gt; [1, 2, 4, 6, 5, 3, 7]&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
-let dfs = function (node) {
-  let result = [node.value]
-  // console.log(result)
-  node.children.forEach(el=&gt;{
-    result = result.concat(dfs(el))
-    // console.log(el)
-    // console.log(result)
-  })
-  return result  
-}
-let root = new Node(1);
-let rootChild1 = root.addChild(new Node(2));
-let rootChild2 = root.addChild(new Node(3));
-let leaf1 = rootChild1.addChild(new Node(4));
-let leaf2 = rootChild1.addChild(new Node(5));
-leaf1.addChild(new Node(6));
-rootChild2.addChild(new Node(7));
-output = dfs(root);
-console.log(output); // --&gt; [1, 2, 4, 6, 5, 3, 7]
-~~~
-&lt;br&gt;
+&lt;h3 id=&quot;34-graph--dfs-implementation&quot;&gt;3.4 Graph : DFS Implementation&lt;/h3&gt;
 
-
-### 3.4 Graph : DFS Implementation
-
-~~~js
-function bfs(graph, root) {
-  let nodesLen = {};
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;bfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{};&lt;/span&gt;
   
-  for (let i = 0; i &lt; graph.length; i++) {
-    nodesLen[i] = Infinity;
-  }
-  nodesLen[root] = 0; 
+  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Infinity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
   
-  let queue = [root]; 
-  let current; 
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;root&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; 
+  &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; 
 
-  while (queue.length != 0) {
-    current = queue.shift();
+  &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;shift&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;();&lt;/span&gt;
     
-    let curConnected = graph[current];
-    let neighborIdx = []; 
-    let idx = curConnected.indexOf(1); 
-    while (idx != -1) {
-      neighborIdx.push(idx); 
-      idx = curConnected.indexOf(1, idx + 1); 
-    }
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;curConnected&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;graph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt; 
+    &lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;curConnected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;k&quot;&gt;while&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+      &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;curConnected&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;indexOf&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;idx&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; 
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
     
-    for (let j = 0; j &lt; neighborIdx.length; j++) {
-      if (nodesLen[neighborIdx[j]] == Infinity) {
-        nodesLen[neighborIdx[j]] = nodesLen[current] + 1;
-        queue.push(neighborIdx[j]); 
-      }
-    }
-  }
-  return nodesLen;
-};
+    &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;length&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+      &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;Infinity&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;current&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;+&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+        &lt;span class=&quot;nx&quot;&gt;queue&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;neighborIdx&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;j&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]);&lt;/span&gt; 
+      &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+    &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;nodesLen&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;};&lt;/span&gt;
 
-let exBFSGraph = [
-  [0, 1, 1, 1, 0],
-  [0, 0, 1, 0, 0],
-  [1, 1, 0, 0, 0],
-  [0, 0, 0, 1, 0],
-  [0, 1, 0, 0, 0]
-];
-console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infinity }
-~~~
-&lt;br&gt;
+&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exBFSGraph&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;],&lt;/span&gt;
+  &lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;bfs&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exBFSGraph&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;//{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infinity }&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
 
+&lt;h2 id=&quot;4-dynamic-programming&quot;&gt;4. Dynamic Programming&lt;/h2&gt;
 
-## 4. Dynamic Programming
+&lt;h3 id=&quot;41-what-is-dynamic-programming&quot;&gt;4.1 What is Dynamic Programming?&lt;/h3&gt;
 
-### 4.1 What is Dynamic Programming?
+&lt;p&gt;Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
+It saves &lt;span style=&quot;font-size:1.1em; background-color: #FFF39B&quot;&gt;&lt;em&gt;already calculated results (small problems) in a separate memory area to avoid recalculation.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
 
-Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
-It saves &lt;span style='font-size:1.1em; background-color: #FFF190'&gt;*already calculated results (small problems) in a separate memory area to avoid recalculation.*&lt;/span&gt; 
+&lt;p&gt;Dynamic programming can be used when the problem satisfies the following two conditions.&lt;/p&gt;
 
-In general, it can be implemented in two ways: Top-down and Bottom-up.
+&lt;p&gt;&lt;em&gt;&lt;span style=&quot;background-color: #E0FFC4&quot;&gt;&lt;strong&gt;1. Obtimal Substructure :&lt;/strong&gt;&lt;/span&gt; &lt;br /&gt;
+A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. &lt;br /&gt;
+&lt;span style=&quot;background-color: #E0FFC4&quot;&gt;&lt;strong&gt;2. Overlapping Subproblem :&lt;/strong&gt;&lt;/span&gt;  &lt;br /&gt;
+You have to solve the same small problem over and over again.&lt;/em&gt;&lt;/p&gt;
 
-Dynamic programming can be used when the problem satisfies the following two conditions.
+&lt;h3 id=&quot;42-what-is-memoization&quot;&gt;4.2 What is Memoization?&lt;/h3&gt;
 
-*&lt;span style='background-color: #E5FFCC'&gt;**1. Obtimal Substructure :**&lt;/span&gt; &lt;br&gt;
-A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. &lt;br&gt;
-&lt;span style='background-color: #E5FFCC'&gt;**2. Overlapping Subproblem :**&lt;/span&gt;  &lt;br&gt;
-You have to solve the same small problem over and over again.*
+&lt;p&gt;Memoization is a technique of &lt;span style=&quot;font-size:1.1em; background-color: #FFF39B&quot;&gt;&lt;em&gt;memoizing the result once calculated in the memory space.&lt;/em&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;If you call the same problem again, you get the result you noted.&lt;/li&gt;
+  &lt;li&gt;Also called &lt;span style=&quot;background-color: #E0FFC4&quot;&gt;&lt;strong&gt;&lt;em&gt;Caching&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; in that it records a value.
+&lt;br /&gt;
+&lt;br /&gt;&lt;/li&gt;
+&lt;/ul&gt;
 
-The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
+&lt;p&gt;In general, Dynamic programming can be implemented in two ways:  &lt;span style=&quot;background-color: #FFDFF6&quot;&gt;&lt;strong&gt;&lt;em&gt;Top-down&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; and &lt;span style=&quot;background-color: #FFDFF6&quot;&gt;&lt;strong&gt;&lt;em&gt;Bottom-up.&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;span style=&quot;background-color: #E0FFC4&quot;&gt;&lt;strong&gt;&lt;em&gt;Memoization&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt; enables &lt;em&gt;&lt;u&gt;Top-down&lt;/u&gt;&lt;/em&gt; dynamic programming.&lt;/li&gt;
+  &lt;li&gt;A classic form of dynamic programming is the &lt;em&gt;&lt;u&gt;Bottom-up&lt;/u&gt;&lt;/em&gt; approach.
+    &lt;ul&gt;
+      &lt;li&gt;The list for storing the results is called the DP table.&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
 
-$$
-1,1,2,3,5,8,13,21,34,55,89,...
-$$
+&lt;h3 id=&quot;43-the-fibonacci-sequence&quot;&gt;4.3 The Fibonacci sequence&lt;/h3&gt;
 
-The ignition expression means a relational expression between adjacent identities. &lt;br&gt;
-The Fibonacci sequence can be expressed as an ignition formula as follows:
+&lt;p&gt;The Fibonacci sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.&lt;/p&gt;
 
-$$
-a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
-$$
+\[1,1,2,3,5,8,13,21,34,55,89,...\]
 
-Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. &lt;br&gt;
-You can see that f(2) is &lt;u&gt;called multiple times&lt;/u&gt; as follows. -&gt; &lt;span style='background-color: #E5FFCC'&gt;***Overlapping Subproblem***&lt;/span&gt;
+&lt;p&gt;The ignition expression means a relational expression between adjacent identities. &lt;br /&gt;
+The Fibonacci sequence can be expressed as an ignition formula as follows:&lt;/p&gt;
 
-![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png)
-{:.figure}
+\[a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1\]
 
-### 4.2 What is Memoization?
+&lt;p&gt;Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. &lt;br /&gt;
+You can see that f(2) is &lt;u&gt;called multiple times&lt;/u&gt; as follows. -&amp;gt; &lt;span style=&quot;background-color: #E0FFC4&quot;&gt;&lt;strong&gt;&lt;em&gt;Overlapping Subproblem&lt;/em&gt;&lt;/strong&gt;&lt;/span&gt;&lt;/p&gt;
 
-Memoization is one of the ways to implement dynamic programming.
-It is a technique of &lt;span style='font-size:1.1em; background-color: #FFF190'&gt;*memoizing the result once calculated in the memory space.*&lt;/span&gt;
-- If you call the same problem again, you get the result you noted.
-- Also called &lt;span style='background-color: #E5FFCC'&gt;***Caching***&lt;/span&gt; in that it records a value.
+&lt;p class=&quot;figure&quot;&gt;&lt;img src=&quot;/assets/img/coding-test/fibonacci_example.png&quot; alt=&quot;Fibonacci_example&quot; /&gt;&lt;/p&gt;
 
+&lt;h3 id=&quot;44-dynamic-programming-vs-divide-and-conquer-algorithm&quot;&gt;4.4 Dynamic Programming VS Divide and Conquer algorithm&lt;/h3&gt;
 
+&lt;p class=&quot;read-more&quot;&gt;Back to &lt;a href=&quot;/study/fundamentals-of-data-structures.html&quot; class=&quot;heading flip-title&quot;&gt;Fundamentals of Data Structures&lt;/a&gt;&lt;/p&gt;
 
-Back to [Fundamentals of Data Structures](/study/fundamentals-of-data-structures.html){:.heading.flip-title}
-{:.read-more} 
-
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
-[https://www.programiz.com/](https://www.programiz.com/){:target=&quot;_blank&quot;}&lt;br&gt;
-이것이 코딩테스트다,2020,나동빈,한빛미디어
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
+&lt;p class=&quot;note&quot; title=&quot;reference&quot;&gt;&lt;a href=&quot;https://www.freecodecamp.org/&quot; target=&quot;_blank&quot;&gt;https://www.freecodecamp.org/&lt;/a&gt;&lt;br /&gt;
+&lt;a href=&quot;https://www.programiz.com/&quot; target=&quot;_blank&quot;&gt;https://www.programiz.com/&lt;/a&gt;&lt;br /&gt;
+이것이 코딩테스트다,2020,나동빈,한빛미디어&lt;/p&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
 Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
 
 * this unordered seed list will be replaced by the toc
@@ -1151,7 +1247,7 @@ It is &lt;span style='font-size:1em'&gt;***a way of arranging data***&lt;/span&g
 ### 1.1 What is Stack?
 
 If you make a stack of block, The last block stacks are of last in first out type of service.&lt;br&gt;
-&lt;span style='background-color: #FFF190;'&gt;*The last block you put on top of a stack would be the first block.*&lt;/span&gt;&lt;br&gt;
+&lt;span style='background-color: #FFF39B;'&gt;*The last block you put on top of a stack would be the first block.*&lt;/span&gt;&lt;br&gt;
 
 ![Stack](/assets/img/data-structures-and-algorithms/stack.gif) &lt;br&gt;
 
@@ -1237,7 +1333,7 @@ console.log(myStack.size()); // 1
 ### 2.1 What is Queue?
 
 Queue example is a print queue when a lot of people are printing documents at the same printer.&lt;br&gt;
- The documents are printed &lt;span style='background-color: #FFF190;'&gt;*in the order(first in first out)*&lt;/span&gt;. They were sent to the print queue.
+ The documents are printed &lt;span style='background-color: #FFF39B;'&gt;*in the order(first in first out)*&lt;/span&gt;. They were sent to the print queue.
  
 ![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width=&quot;650&quot;}
 &lt;br&gt;
@@ -1278,7 +1374,7 @@ q.front(); // b
 
 #### 2.3.1 What is Priority Queue?
 
-In a priority queue not only pass the element into the queue &lt;span style='background-color: #FFF190;'&gt;*but also pass the priority of the element.*&lt;/span&gt;&lt;br&gt;
+In a priority queue not only pass the element into the queue &lt;span style='background-color: #FFF39B;'&gt;*but also pass the priority of the element.*&lt;/span&gt;&lt;br&gt;
 
 So if all the priorities are the same number it's going to behave just like a normal queue. 
 
@@ -1344,7 +1440,7 @@ pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 
 ### 3.1 What is Set?
 
-The set data structure is &lt;span style='background-color: #FFF190'&gt;*kind of like an array except there are no duplicate.*&lt;/span&gt;
+The set data structure is &lt;span style='background-color: #FFF39B'&gt;*kind of like an array except there are no duplicate.*&lt;/span&gt;
  items and the values are not in any particular order. &lt;br&gt;
 The typical use for set is to simply check for the presence of an item.
 &lt;br&gt;
@@ -1506,7 +1602,7 @@ class Tree{
 #### 4.3.1 What is Binary Search Tree?
   
 Binary Tree's each node can only has two branches. &lt;br&gt;
-&lt;span style='background-color: #FFF190; font-size:1em'&gt;*Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node.* And each right subtree is greater than or equal to the parent node. &lt;/span&gt;
+&lt;span style='background-color: #FFF39B; font-size:1em'&gt;*Binary Search Trees are ordered. Each left subtree is less than or equal to the painter node.* And each right subtree is greater than or equal to the parent node. &lt;/span&gt;
 
 Because they use the principle of binary search. On average operations are able to skip about half of the tree so that each lookup insertion or deletion takes time proportional to the logarithm of the number of items stored in the tree.
 
@@ -1832,13 +1928,13 @@ Directed graphs are graphs with a direction and its edges.
 
 #### 5.3.1 Adjacency List 
 
-&lt;span style='background-color: #FFF190; font-size:1em'&gt;*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*&lt;/span&gt;
+&lt;span style='background-color: #FFF39B; font-size:1em'&gt;*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*&lt;/span&gt;
 
 ![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width=&quot;650&quot;}
 
 #### 5.3.2 Adjacency Matrix 
 
-&lt;span style='background-color: #FFF190; font-size:1em'&gt;*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
+&lt;span style='background-color: #FFF39B; font-size:1em'&gt;*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
 elements as the outer array.*&lt;/span&gt; So it's basically a matrix of numbers where the numbers represent the edges.
 
 #### 5.3.3 Incidence Matrix 
@@ -1846,7 +1942,7 @@ elements as the outer array.*&lt;/span&gt; So it's basically a matrix of numbers
 ![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width=&quot;650&quot;}
 
 Adjacency Matrix use both rows and columns to represent nodes.&lt;br&gt;
-But &lt;span style='background-color: #FFF190; font-size:1em'&gt;*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*&lt;/span&gt;
+But &lt;span style='background-color: #FFF39B; font-size:1em'&gt;*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*&lt;/span&gt;
 This means that we can have an uneven number of rows and columns.
 Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
 
