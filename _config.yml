@@ -205,13 +205,13 @@ comments:
 
 # Setting a disqus shortname will enable the comment section on
 # pages with `comments: true` in the front matter.
-# disqus:                lazyrengithub
+# disqus:                prettygood236github
 
 # You must install utterances github app before use.(https://github.com/apps/utterances)
 # Make sure all variables are set properly. Check below link for detail.
 # https://utteranc.es/
 # utterances:
-#   repo:                "LazyRen/LazyRen.github.io"
+#   repo:                "prettygood236/prettygood236.github.io"
 #   issue-term:          "pathname"
 #   label:               "Comments"
 #   theme:               "photon-dark"
