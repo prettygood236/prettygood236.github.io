@@ -60,6 +60,7 @@
   white-space: nowrap;
   overflow: hidden;   
   color: rgba(255,255,255,.70);
+  text-align: left;
 }
 /* Animation */
 .typewriter_line1 {
@@ -71,7 +72,7 @@
 /* text animation */
 @keyframes animated-text{
   from{width: 0;}
-  to{width: 472px;}
+  to{width: 100%;}
 }
 
 
