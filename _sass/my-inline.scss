@@ -66,20 +66,17 @@
   white-space: nowrap; /* keep text in one line */
   overflow: hidden; /* hide text behind the cursor */
   margin: 0.5rem auto;
-  font-family: "Major Mono Display", monospace;
-  font-size: 2rem;
-  font-weight: bold;
 }
 
 .typewriter_line1 {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
+  border-right: 2px solid rgba(255, 255, 255, 0.9);
 
   /* define animation types for text + cursor */
   animation: animated-text__1 6s steps(30, end) 1s 1 normal both,
     animated-cursor__1 900ms steps(30, end) 8;
 }
 .typewriter_line2 {
-  border-right: 2px solid rgba(17, 17, 17, 0.9);
+  border-right: 2px solid rgba(255, 255, 255, 0.9);
 
   /* define animation types for text + cursor */
   animation: animated-text__2 5s steps(30, end) 1s 1 normal both,
@@ -89,7 +86,7 @@
 }
 @keyframes animated-cursor__1 {
   from {
-    border-right-color: rgba(17, 17, 17, 0.9);
+    border-right-color: rgba(255, 255, 255, 0.9);
   }
   to {
     border-right-color: rgba(255, 255, 255, 0.8);
@@ -97,7 +94,7 @@
 }
 @keyframes animated-cursor__2 {
   from {
-    border-right-color: rgba(17, 17, 17, 0.9);
+    border-right-color: rgba(255, 255, 255, 0.9);
   }
   to {
     border-right-color: rgba(255, 255, 255, 0.8);
