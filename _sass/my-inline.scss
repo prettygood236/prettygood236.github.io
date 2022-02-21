@@ -55,14 +55,18 @@
 }
 
 // Sidebar tagline typewriter effect testing now
-.typewriter {
+.typewriter_line1,
+.typewriter_line2 {
   white-space: nowrap;
   overflow: hidden;   
   color: rgba(255,255,255,.70);
 }
 /* Animation */
-.typewriter {
-  animation: animated-text 2s steps(30,end) 1s 1 normal both;
+.typewriter_line1 {
+  animation: animated-text 2s steps(100,end) 1s 1 normal both;
+}
+.typewriter_line2 {
+  animation: animated-text 2s steps(100,end) 3s 1 normal both;
 }
 /* text animation */
 @keyframes animated-text{

@@ -6,12 +6,15 @@
       </a>
     {% endif %}
     <a class="sidebar-title" href="{{ '/' | relative_url }}"><h2 class="h1">{{ site.short_title | default:site.title }}</h2></a>
-    {% assign text = site.tagline | split: ", " | default:site.description %}
+    {% assign text = site.tagline | split: "/ " | default:site.description %}
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <!-- Sidebar tagline typewriter effect testing now -->
-        <p class="typewriter">
+        <p class="typewriter_line1">
         {{ text.first | markdownify | replace:'<p>','' | replace:'</p>','' }}
+        </p>
+        <p class="typewriter_line2">
+          {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}
         </p>
       </p>
     {% endif %}
