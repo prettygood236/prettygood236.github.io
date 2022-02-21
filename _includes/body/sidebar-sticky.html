@@ -5,12 +5,14 @@
         <img src="{% include_cached smart-url url=site.logo %}" class="avatar" alt="{{ site.short_title | default:site.title }}" width="120" height="120" loading="lazy" />
       </a>
     {% endif %}
-    <div class="typewriter-wrapper">
+    < class="typewriter-wrapper">
     <a class="sidebar-title" href="{{ '/' | relative_url }}"><h2 class="h1">{{ site.short_title | default:site.title }}</h2></a>
-    <div class="typewriter-text line-1">{% assign text = site.tagline | default:site.description %}</div>
+    {% assign text = site.tagline | default:site.description %}
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
+        <a class="typewriter-text line-1">
         {{ text | markdownify | replace:'<p>','' | replace:'</p>','' }}
+        </a>
       </p>
     {% endif %}
   </div>
