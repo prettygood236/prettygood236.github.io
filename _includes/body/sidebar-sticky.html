@@ -12,10 +12,10 @@
         <!-- Sidebar tagline typewriter effect testing now -->
         <div class="typewriter_wrapper">
         <i class="typewriter_line1">
-        {{ text.first | markdownify | replace:'<i>','' | replace:'</i>','' }}
+        {{ text.first | markdownify | replace:'<p>','' | replace:'</p>','' }}
         </i>
         <i class="typewriter_line2">
-        {{ text.last | markdownify | replace:'<i>','' | replace:'</i>','' }}
+        {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}
         </i>
         </div>
       </p>
