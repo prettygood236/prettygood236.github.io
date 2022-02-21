@@ -1,54 +1,4 @@
 // You can add CSS rules here that will be inlined into each document.
-// testing now
-.typewriter-wrapper {
-  display: flex;
-  justify-content: center;
-}
-
-.typewriter-text {
-  position: relative;
-  margin: 2rem auto;
-  white-space: nowrap;
-  overflow: hidden;
-  width: 0;
-  border-right: 1px solid white;
-}
-
-.line-1 {
-  animation: type 3s 0.5s steps(30, end) forwards,
-  blink .5s step-end infinite;
-}
-
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    border-color: transparent
-  }
-  50% {
-    border-color: white
-  }
-}
-
-
-
-
-
-
-
-
-
-
-
-
 .sidebar a {
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
@@ -101,6 +51,37 @@
     &::after {
       width: 9rem;
     }
+  }
+}
+
+// Sidebar tagline typewriter effect testing now
+.typewriter{
+  animation: typewriter 4s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 24em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent
+  }
+  100% {
+    border-color: white
   }
 }
 

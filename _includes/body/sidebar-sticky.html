@@ -6,16 +6,15 @@
       </a>
     {% endif %}
     <a class="sidebar-title" href="{{ '/' | relative_url }}"><h2 class="h1">{{ site.short_title | default:site.title }}</h2></a>
-    <div class="typewriter-wrapper">
     {% assign text = site.tagline | default:site.description %}
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
-        <p class="typewriter-text line-1">
+        <!-- testing now -->
+        <p class="typewriter">
         {{ text | markdownify | replace:'<p>','' | replace:'</p>','' }}
         </p>
       </p>
     {% endif %}
-  </div>
   </div>
 
   <nav class="sidebar-nav heading" role="navigation">
