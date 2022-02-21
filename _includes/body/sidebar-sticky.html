@@ -10,12 +10,12 @@
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <!-- Sidebar tagline typewriter effect testing now -->
-        <p class="typewriter">
-        {{ text.first | markdownify | replace:'<p>','' | replace:'</p>','' }}
-        </p>
-        <p class="typewriter">
-        {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}
-        </p>
+        <span class="typewriter">
+        {{ text.first | markdownify | replace:'<span>','' | replace:'</span>','' }}
+        </span>
+        <span class="typewriter">
+        {{ text.last | markdownify | replace:'<span>','' | replace:'</span>','' }}
+        </span>
       </p>
     {% endif %}
   </div>
