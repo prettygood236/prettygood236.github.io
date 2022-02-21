@@ -54,7 +54,9 @@
   }
 }
 
+
 // Sidebar tagline typewriter effect
+
 .typewriter_line1,
 .typewriter_line2 {
   white-space: nowrap;
@@ -68,13 +70,14 @@
 }
 .typewriter_line2 {
   animation: animated-text 2s steps(100,end) 3s 1 normal both;
-  margin-bottom: 2em;
+  margin-bottom: 1em;
 }
 /* text animation */
 @keyframes animated-text{
   from{width: 0;}
   to{width: 100%;}
 }
+
 
 // Submenu Insertion
 
