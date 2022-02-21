@@ -10,7 +10,7 @@
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <!-- testing now -->
-        <p class="typewriter">
+        <p class="typewriter" style="--n:53">
         {{ text | markdownify | replace:'<p>','' | replace:'</p>','' }}
         </p>
       </p>
