@@ -12,9 +12,9 @@
         <div class="typewriter_line1"> 
           {{ text.first | markdownify | replace:'<p>','' | replace:'</p>','' }} 
         </div> 
-        <div class="typewriter_line2"> 
+        <p class="typewriter_line2"> 
           {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
-        </div>
+        </p>
       </p>
     {% endif %}
   </div>
