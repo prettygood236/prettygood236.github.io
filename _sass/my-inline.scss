@@ -55,34 +55,25 @@
 }
 
 // Sidebar tagline typewriter effect testing now
-.typewriter{
-  animation: typewriter 4s steps(44) 1s 1 normal both,
-             blinkTextCursor 500ms steps(44) infinite normal;
+.typewriter {
+  color:rgba(255, 255, 255, 0);
+  background:
+    linear-gradient(-90deg,#fafcfc 5px,#0000 0) 10px 0,
+    linear-gradient(#ffffff 0 0) 0 0;
+  background-size:calc(var(--n)*1ch) 200%;
+  -webkit-background-clip:padding-box,text;
+  background-clip:padding-box,text;
+  background-repeat:no-repeat;
+  animation: 
+   b .3s infinite steps(1),   
+   t calc(var(--n)*.3s) steps(var(--n)) forwards;
 }
-@keyframes typewriter{
-  from{width: 0;}
-  to{width: 24em;}
+
+@keyframes t{
+  from {background-size:0 200%}
 }
-@keyframes blinkTextCursor{
-  from{border-right-color: rgba(255,255,255,.75);}
-  to{border-right-color: transparent;}
-}
-@keyframes type {
-  0% {
-    width: 0;
-  }
-  100% {
-    width: 100%;
-  }
-}
-@keyframes blink {
-  0%,
-  100% {
-    border-color: transparent
-  }
-  100% {
-    border-color: white
-  }
+@keyframes b{
+  50% {background-position:0 -100%,0 0}
 }
 
 // Submenu Insertion
