@@ -534,16 +534,19 @@ Let's check an example. When N=4, the following cases may exist.
     The number of food choices is eight as follows.
     In the 7th case, you get 8 food, so the optimal solution is 8.
 ![Ant Warrior_1](/assets/img/coding-test/ant-warrior_1.png)
+
 ai = optimal solution to the ith food warehouse (maximum value of food obtainable)
     If defined in this way, dynamic programming can be applied.
 Assuming that you turn the food warehouse from left to right,
 If it is decided whether or not to rob the specific i-th food warehouse,
 You can choose the one that can steal more food from the two cases below.
 ![Ant Warrior_2](/assets/img/coding-test/ant-warrior_2.png)
+
  It is decided between the optimal solution up to i-1 and the optimal solution up to i -2 plus the present value.
 Choose the larger of the two cases.
 Use 2 small problems to solve the big problems.
 ![Ant Warrior_3](/assets/img/coding-test/ant-warrior_3.png)
+
 ai = optimal solution to the ith food warehouse (maximum value of food obtainable)
 ki = amount of food in the ith food pantry
 The ignition formula is as follows.

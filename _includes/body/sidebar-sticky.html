@@ -8,7 +8,7 @@
     <a class="sidebar-title" href="{{ '/' | relative_url }}"><h2 class="h1">{{ site.short_title | default:site.title }}</h2></a>
     {% assign text = site.tagline | default:site.description %}
     {% if text %}
-      <p class="{% if text.size > 100 %}typed-out{% endif %}">
+      <p class="{% if text.size > 100 %}fine{% endif %}">
         {{ text | markdownify | replace:'<p>','' | replace:'</p>','' }}
       </p>
     {% endif %}
