@@ -1,4 +1,63 @@
 // You can add CSS rules here that will be inlined into each document.
+// testing now
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+body {
+  background-color: #1a1a1a;
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Anonymous Pro', monospace;
+}
+
+.typewriter-wrapper {
+  display: flex;
+  justify-content: center;
+}
+
+.typewriter-text {
+  position: relative;
+  margin: 2rem auto;
+  white-space: nowrap;
+  overflow: hidden;
+  width: 0;
+  border-right: 1px solid white;
+}
+
+.line-1 {
+  animation: type 3s 0.5s steps(30, end) forwards,
+  blink .5s step-end infinite;
+}
+
+@keyframes type {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    border-color: transparent
+  }
+  50% {
+    border-color: white
+  }
+}
+
+
+
+
+
+
+
+
+
+
+
+
 .sidebar a {
   text-shadow: rgba(0, 0, 0, 0.25) 0.1rem 0.1rem 0.15rem;
 }
@@ -85,24 +144,6 @@ input[type=checkbox]:checked ~ ul{
   transform-origin: top;
   transform: scaleY(1);
   transition: transform .2s ease-out;
-}
-
-// testing now
-.typed-out{
-  overflow: hidden;
-  border-right: .15em solid orange;
-  white-space: nowrap;
-  animation: typing 3s steps(20, end) forwards, blinking .8s infinite;
-  font-size: 1.6rem;
-  width: 0;
-}
-@keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
-}
-@keyframes blinking {
-  from { border-color: transparent }
-  to { border-color: orange; }
 }
 
 // Prevent FOUC
