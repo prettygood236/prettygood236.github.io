@@ -8,7 +8,7 @@ image:
   path: /assets/img/data-structures-and-algorithms/algorithm-main.jpg
 related_posts: 
   - _posts/Study/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
-  - _posts/Coding Test/Immersive Toy Problem/2022-02-03-sudoku.md
+  - _posts/Coding Test/2022-02-03-sudoku.md
 ---
 
 Algorithm is a set of <span style='font-size:1em'>***well-defined instructions to solve a particular problem.***</span> <br>

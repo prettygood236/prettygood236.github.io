@@ -1,9 +1,9 @@
 ---
 layout: post
-title: 'Immersive Toy Problem_orderOfPresentation'
+title: 'orderOfPresentation'
 subtitle: '총 조의 수 N과 발표 순서 k에 따른 반환 값'
 category: coding-test
-tags: immersive-toy-problem 
+tags: coding-test
 ---
 
 * this unordered seed list will be replaced by the toc
