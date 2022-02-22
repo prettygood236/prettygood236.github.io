@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-23T03:59:22+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-23T04:23:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
 </subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
 It takes a set of input and produces a desired output. 
 
@@ -856,7 +856,7 @@ Math.pow, 거듭제곱 연산자 사용은 금지됩니다. &lt;br /&gt;
 
 &lt;p&gt;단순히 반복문으로 거듭제곱을 구하는 문제가 아니라, 시간복잡도O(logN) 충족을 위해 반복횟수를 줄일 아이디어가 필요하다.&lt;/p&gt;
 
-&lt;p&gt;\(2^{10}\)을 구하는 과정을 예로들어 생각해보자.&lt;/p&gt;
+&lt;p&gt;\(2^{10}\)을 구하는 과정을 예로들어 아이디어를 떠올리면,&lt;/p&gt;
 
 &lt;p class=&quot;message&quot;&gt;\(2^{10} = 2^5 *  2^5\) &lt;br /&gt;
 \(2^5 = 2^2 * 2^2 * 2\) &lt;br /&gt;
@@ -866,9 +866,9 @@ Math.pow, 거듭제곱 연산자 사용은 금지됩니다. &lt;br /&gt;
 
 &lt;p&gt;이를 &lt;strong&gt;점화식&lt;/strong&gt;으로 표현하면 다음과 같다.&lt;/p&gt;
 
-&lt;p class=&quot;message&quot;&gt;(지수가 짝수) &lt;br /&gt;
+&lt;p class=&quot;message&quot;&gt;지수가 짝수일 때, &lt;br /&gt;
 \(base^{exponent} = base^{exponent/2} * base^{exponent/2}\) &lt;br /&gt;
-(지수가 홀수) &lt;br /&gt;
+지수가 홀수일 때, &lt;br /&gt;
 \(base^{exponent} = base^{exponent/2의 몫} * base^{exponent/2의 몫} *base\) &lt;br /&gt;&lt;/p&gt;
 
 &lt;p&gt;또한, 이는 &lt;strong&gt;&lt;span style=&quot;background-color: #FFDFF6&quot;&gt;&lt;a href=&quot;https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming&quot;&gt;다이나믹 프로그래밍&lt;/a&gt;&lt;/span&gt;&lt;/strong&gt;의 두가지 요건&lt;/p&gt;
@@ -891,26 +891,49 @@ Math.pow, 거듭제곱 연산자 사용은 금지됩니다. &lt;br /&gt;
   &lt;span class=&quot;c1&quot;&gt;// console.log(`exponent = ${exponent}`)&lt;/span&gt;
   
   &lt;span class=&quot;c1&quot;&gt;// 종료 조건 &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponet&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;승은&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;이다&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// base의 0승은 1이다.&lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// base의 1승은 base이다.&lt;/span&gt;
   
   &lt;span class=&quot;c1&quot;&gt;// 결과 테이블에 값이 있다면 이미 계산된 것이므로 출력한다. &lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; 
 
-  &lt;span class=&quot;c1&quot;&gt;// 지수가 짝수일 때, 계산한 결과를 결과 테이블에 메모한다. &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 지수가 짝수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. &lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94906249&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 지수가 홀수일 때, 계산한 결과를 결과 테이블에 메모한다. &lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 지수가 홀수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. &lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
     &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94906249&lt;/span&gt;
   &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
   &lt;span class=&quot;c1&quot;&gt;// console.log(`d[${exponent}] = ${d[exponent]}`)&lt;/span&gt;
+  &lt;span class=&quot;c1&quot;&gt;// 결과 테이블의 값을 출력한다. &lt;/span&gt;
   &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
 &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
 &lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
 
-&lt;p&gt;또한 문제에 명시된 것 처럼, 컴퓨터가 나타낼 수 있는 수의 범위를 넘을 수 있기 때문에 계산 시마다 94906249의 나머지를 반환해주어야한다.&lt;/p&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">다이나믹 프로그래밍을 이용한 거듭제곱 구하기</summary></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
+&lt;p&gt;또한 문제에 명시된 것 처럼, 컴퓨터가 나타낼 수 있는 수의 범위를 넘을 수 있기 때문에 계산 시마다 94906249의 나머지를 반환해주어야한다.&lt;/p&gt;
+
+&lt;p&gt;3의 40승을 구할 때, 다음과 같이 호출되고 결과 테이블에 값이 저장되는 것을 확인할 수 있다.&lt;/p&gt;
+
+&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+&lt;span class=&quot;c1&quot;&gt;// console.log&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;243&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;59049&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70159437&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
+&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19334827&lt;/span&gt;
+&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">다이나믹 프로그래밍을 이용한 거듭제곱 구하기</summary></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
 Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
 
 * this unordered seed list will be replaced by the toc
