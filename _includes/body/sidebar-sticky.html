@@ -10,7 +10,7 @@
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <div class="typewriter_line1"> 
-          {{ text | split: ", "| first | join: "," | markdownify | replace:'<p>','' | replace:'</p>','' }} 
+          {{ text | split: "you don't"| first | markdownify | replace:'<p>','' | replace:'</p>','' }} 
         </div> 
         <div class="typewriter_line2"> 
           {{ text | split: ", "| last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
