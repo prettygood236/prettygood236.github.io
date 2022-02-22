@@ -10,11 +10,11 @@
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <div class="typewriter_line1"> 
-          {{ text.first | markdownify | replace:'<p>','' | replace:'</p>','' }} 
+          {{ text.first | markdownify | join:',' | replace:'<p>','' | replace:'</p>','' }} 
         </div> 
-        <p class="typewriter_line2"> 
+        <div class="typewriter_line2"> 
           {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
-        </p>
+        </div>
       </p>
     {% endif %}
   </div>
