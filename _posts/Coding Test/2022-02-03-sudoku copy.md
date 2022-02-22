@@ -3,12 +3,12 @@ layout: page
 title: 'Sudoku'
 subtitle: 'sudoku'
 category: coding-test
-tags: immersive-toy-problem 
+tags: coding-test
 image: 
   path: /assets/img/coding-test/sudoku.png
 ---
 
-Back tracking을 이용한 스도쿠 문제풀이 (javascript)
+Back tracking을 이용한 스도쿠 문제풀이 
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -47,7 +47,6 @@ console.log(output); // -->
 ];
  */
 ~~~
-<!--more-->
 
 <br>
 테스트케이스는 유효한 입력만 들어오는 스도쿠이나, 유효한지 (스도쿠 해결이 가능한 지) 판별하여 가능하면 해결하도록 작성.
