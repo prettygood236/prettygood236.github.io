@@ -487,7 +487,7 @@ If the already calculated result is memozied in memory, <u>only the colored node
 
 　| Dynamic programming | Divide-and-conquer algorithm
 --|:--:|:--:|
-<span style='background-color=#e0ffc4'>*1. Optimal Substructure*</span> | O | X
+<span style='background-color=#e0ffc4'>*1. Optimal Substructure*</span> | O | O
 --|:--:|:--:|
 <span style='background-color=#e0ffc4'>*2. Overlapping Subproblem*</span> | O | **X**
 

@@ -1,6 +1,6 @@
 ---
-layout: post
-title: 'Immersive Toy Problem_sudoku'
+layout: page
+title: 'Sudoku'
 subtitle: 'sudoku'
 category: coding-test
 tags: immersive-toy-problem 
@@ -15,11 +15,9 @@ Back tracking을 이용한 스도쿠 문제풀이 (javascript)
 
 ## Problem
 
--   가로 9칸, 세로 9칸으로 이루어져 있는 표에 1부터 9까지의 숫자를 <br> 
-가로줄, 세로줄, 3X3 칸에 중복되지 않게 한 번씩만 넣으면 해결
+가로 9칸, 세로 9칸으로 이루어져 있는 표에 1부터 9까지의 숫자를 가로줄, 세로줄, 3X3 칸에 중복되지 않게 한 번씩만 넣으면 해결
 -   주의사항 : 숫자가 입력되지 않은 칸은 편의상 0이 입력되어 있다.
 -   입출력 예시
-
 
 ~~~js
 let board = [
@@ -56,7 +54,8 @@ console.log(output); // -->
 
 ## Solution
 
-~~~c
+~~~js
+// javascript
 function solve(board) {
     if (solved(board)) {   
         return board  // 다 해결됐다면 현재 보드를 리턴
