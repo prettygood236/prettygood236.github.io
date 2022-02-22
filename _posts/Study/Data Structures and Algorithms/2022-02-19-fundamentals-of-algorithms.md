@@ -337,8 +337,49 @@ console.log(output); // --> [1, 2, 4, 6, 5, 3, 7]
 ~~~
 <br>
 
+### 3.4 Tree : BFS Implementation
 
-### 3.4 Graph : DFS Implementation
+~~~js
+// Javascript
+// Simple tree (no membership check)
+let bfs = function (node) {
+  let result = [node.value]
+  let queue = [node]
+  while(queue.length!==0){
+    let target = queue.shift()
+    target.children.forEach(children=>{
+      result.push(children.value)
+      queue.push(children)
+    })
+  }
+  return result  
+};
+
+
+let bfs = function (node) {
+  let result = [node.value]
+  // console.log(result)
+  node.children.forEach(el=>{
+    result = result.concat(bfs(el))
+    // console.log(el)
+    // console.log(result)
+  })
+  return result  
+}
+let root = new Node(1);
+let rootChild1 = root.addChild(new Node(2));
+let rootChild2 = root.addChild(new Node(3));
+let leaf1 = rootChild1.addChild(new Node(4));
+let leaf2 = rootChild1.addChild(new Node(5));
+leaf1.addChild(new Node(6));
+rootChild2.addChild(new Node(7));
+output = bfs(root);
+console.log(output); // --> [1, 2, 3, 4, 5, 7, 6]
+~~~
+<br>
+
+
+### 3.5 Graph : DFS Implementation
 
 ~~~js
 // Javascript
@@ -384,6 +425,7 @@ let exBFSGraph = [
 console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infinity }
 ~~~
 <br>
+
 
 ## 4. Dynamic Programming
 

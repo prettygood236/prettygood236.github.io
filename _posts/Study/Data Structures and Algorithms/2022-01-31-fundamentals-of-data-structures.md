@@ -30,7 +30,7 @@ If you make a stack of block, The last block stacks are of last in first out typ
 ### 1.2 Using an array as a stack 
 
 ```js
-//javascript
+// Javascript
 let letters = []; // this is our stack
 
 let word = 'racecar'; 
@@ -38,12 +38,12 @@ let word = 'racecar';
 
 let rword = '';
 
-//put letters of word into stack
+// put letters of word into stack
 for (let i = 0; i <word.lenth; i++>){
   letters.push(word[i]);
 }
 ............................................
-//put off the stack in reverse order 
+// put off the stack in reverse order 
 for (let i = 0; i <word.lenth; i++>){
   rwords += letters.pop;
 }
