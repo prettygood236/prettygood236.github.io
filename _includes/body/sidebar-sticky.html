@@ -6,14 +6,14 @@
       </a>
     {% endif %}
     <a class="sidebar-title" href="{{ '/' | relative_url }}"><h2 class="h1">{{ site.short_title | default:site.title }}</h2></a>
-    {% assign text = site.tagline | split: ", " | default:site.description %}
+    {% assign text = site.tagline  | default:site.description %}
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
         <div class="typewriter_line1"> 
-          {{ text.first | join:"," | markdownify | replace:'<p>','' | replace:'</p>','' }} 
+          {{ text | split: ", "| first | join: "," | markdownify | replace:'<p>','' | replace:'</p>','' }} 
         </div> 
         <div class="typewriter_line2"> 
-          {{ text.last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
+          {{ text | split: ", "| last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
         </div>
       </p>
     {% endif %}
