@@ -4,7 +4,7 @@ type: tag
 title: Coding Test
 slug: coding-test
 category: coding-test
-sidebar: true
+sidebar: false
 description: >
   Coding Test - Problem / Solution
 ---
