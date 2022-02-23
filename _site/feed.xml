@@ -1,5 +1,5 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-23T04:23:39+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
-</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/study/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-24T00:02:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
+</subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
 It takes a set of input and produces a desired output. 
 
 * toc
@@ -325,8 +325,49 @@ console.log(output); // --&gt; [1, 2, 4, 6, 5, 3, 7]
 ~~~
 &lt;br&gt;
 
+### 3.4 Tree : BFS Implementation
 
-### 3.4 Graph : DFS Implementation
+~~~js
+// Javascript
+// Simple tree (no membership check)
+let bfs = function (node) {
+  let result = [node.value]
+  let queue = [node]
+  while(queue.length!==0){
+    let target = queue.shift()
+    target.children.forEach(children=&gt;{
+      result.push(children.value)
+      queue.push(children)
+    })
+  }
+  return result  
+};
+
+
+let bfs = function (node) {
+  let result = [node.value]
+  // console.log(result)
+  node.children.forEach(el=&gt;{
+    result = result.concat(bfs(el))
+    // console.log(el)
+    // console.log(result)
+  })
+  return result  
+}
+let root = new Node(1);
+let rootChild1 = root.addChild(new Node(2));
+let rootChild2 = root.addChild(new Node(3));
+let leaf1 = rootChild1.addChild(new Node(4));
+let leaf2 = rootChild1.addChild(new Node(5));
+leaf1.addChild(new Node(6));
+rootChild2.addChild(new Node(7));
+output = bfs(root);
+console.log(output); // --&gt; [1, 2, 3, 4, 5, 7, 6]
+~~~
+&lt;br&gt;
+
+
+### 3.5 Graph : DFS Implementation
 
 ~~~js
 // Javascript
@@ -373,9 +414,60 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 ~~~
 &lt;br&gt;
 
-## 4. Dynamic Programming
 
-### 4.1 What is Dynamic Programming?
+## 4. Sort
+
+Sorting is *&lt;u&gt;arranging data in order according to a specific criterion.&lt;/u&gt;* &lt;br&gt;
+In general, an appropriate sorting algorithm is used as a formula according to the problem situation.
+
+### 4.1 Selection Sort
+
+It repeats selecting the smallest data among the unprocessed data and replacing it with the first data.
+
+[Step 0] Select the smallest 0 among unprocessed data and replace it with the leading 7
+
+[Step 1] Select the smallest 1 among unprocessed data and replace it with the leading 5.
+
+[Step 2] Select the smallest 2 among unprocessed data and replace it with the leading 9.
+
+[Step 3] Select the smallest 3 among the unprocessed data and replace it with the 7 at the front.
+
+If this process is repeated, the sorting is completed as follows.
+
+Operational process: The search range decreases with each iteration. Each time, the data is checked as far as the search range to find the smallest element. It is equivalent to doing a linear search every time. Implement a double iteration to create a selection sort algorithm.
+
+
+array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+for i in range(len (array) ); # i is the smallest data and the index to change position = the frontmost position each time
+    min_index = i #index of the smallest element, put the smallest element first
+    for j in range( i+1, len(array) ): # j starts a linear search (from the next index)
+        if array[ min_index ] &gt; array[j]: #if there is an index smaller than the current smallest element
+            min_index = j # Make the position index value come to the smallest index value
+    array[i], array[min_index] = array[min_index], array[i] # swap, swap the first and smallest elements
+print(array)
+
+(Print)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Time complexity of selection sort
+Selection sort must find the smallest number N times and send it to the front.
+There may be minor errors depending on the implementation method, but the total number of operations is as follows.
+      N + (N -1) + (N - 2) + ... + 2 (in arithmetic sequence form)
+This can be expressed as (N2 + N - 2) / 2 , which is written as O(N2) according to Big O notation. (time complexity)
+
+
+## 5. Binary Search
+
+### 5.1 What is Binary Search?
+
+***Sequential Search*** : A method of *&lt;span style='font-size:1.1em; background-color: #FFF39B'&gt;checking data one by one from the front &lt;/span&gt;*to find specific data in a list
+
+*&lt;span style='background-color: #E0FFC4'&gt;**Binary Search**&lt;/span&gt;* : A method of *&lt;span style='font-size:1.1em; background-color: #FFF39B'&gt;searching for data in a sorted list by halving the search range.&lt;/span&gt;*
+- Binary search sets the search range using the starting point, the ending point, and the midpoint.
+
+## 6. Dynamic Programming
+
+### 6.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
 It saves &lt;span style='font-size:1.1em; background-color: #FFF39B'&gt;*already calculated results (small problems) in a separate memory area to avoid recalculation.*&lt;/span&gt; 
@@ -387,7 +479,7 @@ A big problem can be divided into small problems, and the big problem can be sol
 &lt;span style='background-color: #E0FFC4'&gt;**2. Overlapping Subproblem :**&lt;/span&gt;  &lt;br&gt;
 You have to solve the same small problem over and over again.*
 
-### 4.2 What is Memoization?
+### 6.2 What is Memoization?
 
 Memoization is a technique of &lt;span style='font-size:1.1em; background-color: #FFF39B'&gt;*memoizing the result once calculated in the memory space.*&lt;/span&gt;
 - If you call the same problem again, you get the result you noted.
@@ -400,7 +492,7 @@ In general, Dynamic programming can be implemented in two ways:  &lt;span style=
 - A classic form of dynamic programming is the *&lt;u&gt;Bottom-up&lt;/u&gt;* approach. 
   - The list for storing the results is called the DP table.
 
-### 4.3 Fibonacci Sequence Implementation
+### 6.3 Fibonacci Sequence Implementation
 
 The Fibonacci Sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -471,7 +563,7 @@ If the already calculated result is memozied in memory, &lt;u&gt;only the colore
 {:.figure}
 
 
-### 4.4 Dynamic Programming VS Divide-and-Conquer algorithm
+### 6.4 Dynamic Programming VS Divide-and-Conquer algorithm
 
 　| Dynamic programming | Divide-and-conquer algorithm
 --|:--:|:--:|
@@ -487,9 +579,9 @@ The subproblem of re-processing the pivot after splitting is not called.
 
 
 
-### 4.5 Dynamic Programming Example Problem
+### 6.5 Dynamic Programming Example Problem
 
-#### 4.5.1 Problem : Ant warrior
+#### 6.5.1 Problem : Ant warrior
 
 The ant warrior secretly attacks the food warehouse of the grasshopper village to make up for the shortage of food. There are several food warehouses in grasshopper Village, which are connected in a straight line.&lt;br&gt;
 Each food warehouse stores a fixed number of food, and the ant warriors will selectively plunder the food warehouse to steal food. At this time, the grasshopper scouts can immediately detect when adjacent food warehouses are attacked among the food warehouses that exist in a straight line.&lt;br&gt;
@@ -516,7 +608,7 @@ In the first line, print the maximum amount of food an ant warrior can get.
 |4|8|
 |1 3 1 5|
 
-#### 4.5.2 Solution : Ant warrior
+#### 6.5.2 Solution : Ant warrior
 
 Let's check an example. When N=4, the following cases may exist.
     The number of food choices is eight as follows.
@@ -561,7 +653,7 @@ for i in range(2, n); #Optimal solution from position 3 to nth ?
 print(d[n-1])
 ~~~
 
-#### 4.5.3 Problem : Minimum number of currencies
+#### 6.5.3 Problem : Minimum number of currencies
 
 There are N types of money. We try to minimize the number of these currencies so that the sum of their values ​​is M won. In this case, any number of currencies of each type can be used.
 
@@ -591,7 +683,7 @@ If not possible, -1 is output.
 |5|
 |7|
 
-#### 4.5.4 Solution : Minimum number of currencies
+#### 6.5.4 Solution : Minimum number of currencies
 
 $$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) &lt;br&gt;
 k = unit of each currency &lt;br&gt;
@@ -649,7 +741,7 @@ else: # Print if exists
   print(d[m])
 ~~~
  
-#### 4.5.5 Problem : Gold Mine
+#### 6.5.5 Problem : Gold Mine
 
 There is a gold mine measuring n x m. The gold mine is divided into 1 x 1 squares, each of which contains a certain size of gold. &lt;br&gt;
 Miners start with the first row and start digging for gold. You can start from any row in the first column. &lt;br&gt;
@@ -677,7 +769,7 @@ For each test case, we print the maximum amount of gold that a miner can obtain.
 |4 4|
 |1 3 1 5 2 2 4 1 5 0 2 3 0 6 1 2|
  
-#### 4.5.6 Solution : Gold Mine
+#### 6.5.6 Solution : Gold Mine
 
 For all locations of gold mines, only the following three things need to be considered.
 
@@ -725,7 +817,7 @@ for tc in range(int( input( ))):
 
     #Dynamic programming progress (bottom up)
   for j in range(1, m): # By column, check each column while moving
-    for i in range(n):
+    for i in range(n):  
     # If it comes from the top left
       if i == 0: left_up = 0 #If out of index, corresponding value=0
       else: left_up = dp[ i-1 ][ j-1 ]
@@ -744,7 +836,7 @@ for tc in range(int( input( ))):
   print( result )
 ~~~
 
-#### 4.5.6 Problem : Deploying soldiers
+#### 6.5.6 Problem : Deploying soldiers
 
 N soldiers are randomly listed. Each soldier has a certain value of combat power. When deploying soldiers, we want to arrange them in descending order so that the soldiers with higher combat power are in the front.&lt;br&gt;
 In other words, the combat power of the soldier in the front must always be higher than that of the soldier in the back.&lt;Br&gt;
@@ -772,7 +864,7 @@ Each soldier's Combat Strength is a natural number less than or equal to 10,000,
 The number of soldiers remaining in the first row. &lt;br&gt;
 Outputs the number of soldiers that must be excluded to maximize.
 
-#### 4.5.7 Solution : Deploying soldiers
+#### 6.5.7 Solution : Deploying soldiers
 
 The basic idea of ​​this problem is the same as that of a classic dynamic programming problem known as &lt;span style='background-color:#e0ffc4'&gt;***Longest Increasing Subsequence (LIS)***&lt;span&gt;
 
@@ -815,125 +907,15 @@ print(n - max(dp)) # Subtract the value from all n
 
 
 
-Back to [Fundamentals of Data Structures](/study/fundamentals-of-data-structures.html){:.heading.flip-title}
+Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-structures.md){:.heading.flip-title}
 {:.read-more} 
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://www.programiz.com/](https://www.programiz.com/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target=&quot;_blank&quot;}&lt;br&gt;
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target=&quot;_blank&quot;}&lt;br&gt;
 이것이 코딩테스트다,2020,나동빈,한빛미디어
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Power</title><link href="http://localhost:4000/coding-test/power.html" rel="alternate" type="text/html" title="Power" /><published>2022-02-13T00:00:00+09:00</published><updated>2022-02-13T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/power</id><content type="html" xml:base="http://localhost:4000/coding-test/power.html">&lt;p&gt;&lt;strong&gt;&lt;a href=&quot;https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming&quot;&gt;다이나믹 프로그래밍&lt;/a&gt;&lt;/strong&gt;을 이용한 거듭제곱 구하기&lt;/p&gt;
-
-&lt;ul class=&quot;large-only&quot; id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#problem&quot; id=&quot;markdown-toc-problem&quot;&gt;Problem&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#solution&quot; id=&quot;markdown-toc-solution&quot;&gt;Solution&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;h2 id=&quot;problem&quot;&gt;Problem&lt;/h2&gt;
-
-&lt;p&gt;두 수를 입력받아 거듭제곱을 리턴해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;입력&lt;/strong&gt; &lt;br /&gt;
-인자 1: base &lt;br /&gt;
-- number 타입의 자연수 (base &amp;gt;= 2) &lt;br /&gt;
-인자 2: exponent &lt;br /&gt;
-- number 타입의 정수 (exponent &amp;gt;= 0)&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;출력&lt;/strong&gt; &lt;br /&gt;
-number 타입을 리턴해야 합니다.
-실제 계산 결과를 94,906,249로 나눈 나머지를 리턴해야 합니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;주의사항&lt;/strong&gt; &lt;br /&gt;
-Math.pow, 거듭제곱 연산자 사용은 금지됩니다. &lt;br /&gt;
-시간복잡도 O(logN)을 만족해야 합니다. &lt;br /&gt;
-나머지를 구하는 이유는 계산 결과가 컴퓨터로 나타낼 수 있는 수의 범위를 넘을 수 있기 때문입니다. 하지만 모든 연산이 끝난 뒤에 그 결과를 94,906,249로 나누려고 해서는 안 됩니다. 연산 중간에도 이 범위를 넘을 수 있기 때문에, 연산을 할 때마다 나머지를 구하고 그 결과에 연산을 이어가시기 바랍니다.&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;입출력 예시&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;console&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;log&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// --&amp;gt; 19334827&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;h2 id=&quot;solution&quot;&gt;Solution&lt;/h2&gt;
-
-&lt;p&gt;단순히 반복문으로 거듭제곱을 구하는 문제가 아니라, 시간복잡도O(logN) 충족을 위해 반복횟수를 줄일 아이디어가 필요하다.&lt;/p&gt;
-
-&lt;p&gt;\(2^{10}\)을 구하는 과정을 예로들어 아이디어를 떠올리면,&lt;/p&gt;
-
-&lt;p class=&quot;message&quot;&gt;\(2^{10} = 2^5 *  2^5\) &lt;br /&gt;
-\(2^5 = 2^2 * 2^2 * 2\) &lt;br /&gt;
-\(2^2 = 2^1 * 2^1\)&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;&lt;u&gt;단순히 지수만큼 곱하는 시간복잡도O(N)보다 적은 반복횟수로 계산하므로 시간복잡도 O(logN)이 충족된다.&lt;/u&gt;&lt;/em&gt;&lt;/p&gt;
-
-&lt;p&gt;이를 &lt;strong&gt;점화식&lt;/strong&gt;으로 표현하면 다음과 같다.&lt;/p&gt;
-
-&lt;p class=&quot;message&quot;&gt;지수가 짝수일 때, &lt;br /&gt;
-\(base^{exponent} = base^{exponent/2} * base^{exponent/2}\) &lt;br /&gt;
-지수가 홀수일 때, &lt;br /&gt;
-\(base^{exponent} = base^{exponent/2의 몫} * base^{exponent/2의 몫} *base\) &lt;br /&gt;&lt;/p&gt;
-
-&lt;p&gt;또한, 이는 &lt;strong&gt;&lt;span style=&quot;background-color: #FFDFF6&quot;&gt;&lt;a href=&quot;https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming&quot;&gt;다이나믹 프로그래밍&lt;/a&gt;&lt;/span&gt;&lt;/strong&gt;의 두가지 요건&lt;/p&gt;
-
-&lt;p&gt;&lt;strong&gt;&lt;em&gt;&lt;span style=&quot;background-color: #e0ffc4&quot;&gt;1. 최적 부분구조&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt; : 큰 문제는 작은문제로 나뉠수있으며 작은문제의 해답을 모으면 큰문제를 해결할 수 있다. &lt;br /&gt;
-&lt;strong&gt;&lt;em&gt;&lt;span style=&quot;background-color: #e0ffc4&quot;&gt;2. 중복 부분문제&lt;/span&gt;&lt;/em&gt;&lt;/strong&gt; : 구했던 작은문제의 해답을 또 구해야한다.&lt;/p&gt;
-
-&lt;p&gt;을 충족한다.&lt;/p&gt;
-
-&lt;p&gt;따라서 &lt;em&gt;&lt;span style=&quot;background-color: #fff39b&quot;&gt;&lt;a href=&quot;https://prettygood236.github.io/study/fundamentals-of-algorithms.html#42-what-is-memoization&quot;&gt;메모이제이션&lt;/a&gt;을 활용한 탑다운 &lt;/span&gt; 방식으로 구현할 수 있다.&lt;/em&gt;&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;c1&quot;&gt;// javascript&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;//결과 테이블 초기화&lt;/span&gt;
-&lt;span class=&quot;kd&quot;&gt;const&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;[];&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;for&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;100&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;i&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;++&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;){&lt;/span&gt; 
-    &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;push&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  
-&lt;span class=&quot;kd&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// console.log(`exponent = ${exponent}`)&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;// 종료 조건 &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;  &lt;span class=&quot;c1&quot;&gt;// base의 0승은 1이다.&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;===&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt; &lt;span class=&quot;c1&quot;&gt;// base의 1승은 base이다.&lt;/span&gt;
-  
-  &lt;span class=&quot;c1&quot;&gt;// 결과 테이블에 값이 있다면 이미 계산된 것이므로 출력한다. &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;!=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;];&lt;/span&gt; 
-
-  &lt;span class=&quot;c1&quot;&gt;// 지수가 짝수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;if&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;==&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94906249&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 지수가 홀수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;else&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;Math&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;floor&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;))&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;*&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;%&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;94906249&lt;/span&gt;
-  &lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// console.log(`d[${exponent}] = ${d[exponent]}`)&lt;/span&gt;
-  &lt;span class=&quot;c1&quot;&gt;// 결과 테이블의 값을 출력한다. &lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;
-
-&lt;p&gt;또한 문제에 명시된 것 처럼, 컴퓨터가 나타낼 수 있는 수의 범위를 넘을 수 있기 때문에 계산 시마다 94906249의 나머지를 반환해주어야한다.&lt;/p&gt;
-
-&lt;p&gt;3의 40승을 구할 때, 다음과 같이 호출되고 결과 테이블에 값이 저장되는 것을 확인할 수 있다.&lt;/p&gt;
-
-&lt;div class=&quot;language-js highlighter-rouge&quot;&gt;&lt;div class=&quot;highlight&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;&lt;span class=&quot;kd&quot;&gt;let&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;output&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;power&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;3&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-&lt;span class=&quot;c1&quot;&gt;// console.log&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;1&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;9&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;243&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;5&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;59049&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;10&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;70159437&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;exponent&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;20&lt;/span&gt;
-&lt;span class=&quot;nx&quot;&gt;d&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;mi&quot;&gt;40&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;19334827&lt;/span&gt;
-&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;&lt;/div&gt;</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">다이나믹 프로그래밍을 이용한 거듭제곱 구하기</summary></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="data-structures-and-algorithms" /><category term="data-structures-and-algorithms" /><summary type="html">Algorithm is a set of well-defined instructions to solve a particular problem. It takes a set of input and produces a desired output.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/algorithm-main.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Linux &amp;amp; Terminal Commands</title><link href="http://localhost:4000/study/cli-linux-and-terminal-commands.html" rel="alternate" type="text/html" title="Linux &amp;amp; Terminal Commands" /><published>2022-02-09T00:00:00+09:00</published><updated>2022-02-09T00:00:00+09:00</updated><id>http://localhost:4000/study/cli-linux-and-terminal-commands</id><content type="html" xml:base="http://localhost:4000/study/cli-linux-and-terminal-commands.html">Unix was an operating system developed at Bell Labs in the mid 1960's. &lt;br&gt;
 Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**&lt;br&gt;
 
 * this unordered seed list will be replaced by the toc
@@ -1158,7 +1140,122 @@ Another thing you might find very useful is to invert the result, excluding the 
 
 [The Most Popular Linux &amp; Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&amp;t=196s){:target=&quot;_blank&quot;}&lt;br&gt;
 [The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target=&quot;_blank&quot;}
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] 컴포넌트 디자인</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="[React] 컴포넌트 디자인" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발&lt;br&gt;
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Power</title><link href="http://localhost:4000/coding-test/power.html" rel="alternate" type="text/html" title="Power" /><published>2022-02-08T00:00:00+09:00</published><updated>2022-02-08T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/power</id><content type="html" xml:base="http://localhost:4000/coding-test/power.html">**[다이나믹 프로그래밍](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)**을 이용한 거듭제곱 구하기
+
+* this unordered seed list will be replaced by the toc
+{:toc .large-only}
+
+## Problem
+
+두 수를 입력받아 거듭제곱을 리턴해야 합니다.
+
+**입력** &lt;br&gt;
+인자 1: base &lt;br&gt;
+\- number 타입의 자연수 (base &gt;= 2) &lt;br&gt;
+인자 2: exponent &lt;br&gt;
+\- number 타입의 정수 (exponent &gt;= 0)
+
+**출력** &lt;br&gt;
+number 타입을 리턴해야 합니다.
+실제 계산 결과를 94,906,249로 나눈 나머지를 리턴해야 합니다.
+
+**주의사항** &lt;br&gt;
+Math.pow, 거듭제곱 연산자 사용은 금지됩니다. &lt;br&gt;
+시간복잡도 O(logN)을 만족해야 합니다. &lt;br&gt;
+나머지를 구하는 이유는 계산 결과가 컴퓨터로 나타낼 수 있는 수의 범위를 넘을 수 있기 때문입니다. 하지만 모든 연산이 끝난 뒤에 그 결과를 94,906,249로 나누려고 해서는 안 됩니다. 연산 중간에도 이 범위를 넘을 수 있기 때문에, 연산을 할 때마다 나머지를 구하고 그 결과에 연산을 이어가시기 바랍니다.
+
+**입출력 예시**
+~~~js
+let output = power(3, 40);
+console.log(output); // --&gt; 19334827
+~~~
+
+## Solution
+
+단순히 반복문으로 거듭제곱을 구하는 문제가 아니라, 시간복잡도O(logN) 충족을 위해 반복횟수를 줄일 아이디어가 필요하다.
+
+$$2^{10}$$을 구하는 과정을 예로들어 아이디어를 떠올리면,
+
+$$2^{10} = 2^5 *  2^5$$ &lt;br&gt;
+$$2^5 = 2^2 * 2^2 * 2$$ &lt;br&gt;
+$$2^2 = 2^1 * 2^1$$ 
+{:.message}
+
+*&lt;u&gt;단순히 지수만큼 곱하는 시간복잡도O(N)보다 적은 반복횟수로 계산하므로 시간복잡도 O(logN)이 충족된다.&lt;/u&gt;*
+
+이를 **점화식**으로 표현하면 다음과 같다.
+
+지수가 짝수일 때, &lt;br&gt;
+$$base^{exponent} = base^{exponent/2} * base^{exponent/2}$$ &lt;br&gt;
+지수가 홀수일 때, &lt;br&gt;
+$$base^{exponent} = base^{exponent/2의 몫} * base^{exponent/2의 몫} *base$$ &lt;br&gt;
+{:.message}
+
+또한, 이는 **&lt;span style='background-color: #FFDFF6'&gt;[다이나믹 프로그래밍](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)&lt;/span&gt;**의 두가지 요건 
+
+***&lt;span style='background-color: #e0ffc4'&gt;1. 최적 부분구조&lt;/span&gt;*** : 큰 문제는 작은문제로 나뉠수있으며 작은문제의 해답을 모으면 큰문제를 해결할 수 있다. &lt;br&gt;
+***&lt;span style='background-color: #e0ffc4'&gt;2. 중복 부분문제&lt;/span&gt;*** : 구했던 작은문제의 해답을 또 구해야한다. 
+ 
+을 충족한다. 
+
+따라서 *&lt;span style='background-color: #fff39b'&gt;[메모이제이션](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#42-what-is-memoization)을 활용한 탑다운 &lt;/span&gt; 방식으로 구현할 수 있다.*
+
+~~~js
+// Javascript
+// 결과 테이블 초기화
+const d = [];
+  for (i=0; i&lt;100; i++){ 
+    d.push(0)
+  }
+  
+function power(base, exponent) {
+  // console.log(`exponent = ${exponent}`)
+  
+  // 종료 조건 
+  if (exponent === 0) return 1;  // base의 0승은 1이다.
+  if (exponent === 1) return base; // base의 1승은 base이다.
+  
+  // 결과 테이블에 값이 있다면 이미 계산된 것이므로 출력한다. 
+  if (d[exponent] != 0) return d[exponent]; 
+
+  // 지수가 짝수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. 
+  if (exponent % 2 == 0) {
+    d[exponent] = (power(base, exponent/2) * power(base, exponent/2)) % 94906249
+  }
+  // 지수가 홀수일 때, 계산한 결과를 점화식에 따라 결과 테이블에 메모한다. 
+  else {
+    d[exponent] = (power(base, Math.floor(exponent/2)) * power(base, Math.floor(exponent/2)) * base) % 94906249
+  }
+  // console.log(`d[${exponent}] = ${d[exponent]}`)
+  // 결과 테이블의 값을 출력한다. 
+  return d[exponent]
+}
+~~~
+
+또한 문제에 명시된 것 처럼, 컴퓨터가 나타낼 수 있는 수의 범위를 넘을 수 있기 때문에 계산 시마다 94906249의 나머지를 반환해주어야한다.
+
+3의 40승을 구할 때, 다음과 같이 호출되고 결과 테이블에 값이 저장되는 것을 확인할 수 있다. 
+
+~~~js
+let output = power(3,40)
+// console.log
+exponent = 40
+exponent = 20
+exponent = 10
+exponent = 5
+exponent = 2
+exponent = 1
+exponent = 1
+d[2] = 9
+exponent = 2
+d[5] = 243
+exponent = 5
+d[10] = 59049
+exponent = 10
+d[20] = 70159437
+exponent = 20
+d[40] = 19334827
+~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">다이나믹 프로그래밍을 이용한 거듭제곱 구하기</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/coding-test/power.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/coding-test/power.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] 컴포넌트 디자인</title><link href="http://localhost:4000/study/react-component-design.html" rel="alternate" type="text/html" title="[React] 컴포넌트 디자인" /><published>2022-02-04T00:00:00+09:00</published><updated>2022-02-04T00:00:00+09:00</updated><id>http://localhost:4000/study/react-component-design</id><content type="html" xml:base="http://localhost:4000/study/react-component-design.html">레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발&lt;br&gt;
 
 * this undordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -1649,7 +1746,7 @@ function boxesCheck(board){
     }
     return true
 }
-~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">Back tracking을 이용한 스도쿠 문제풀이</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/coding-test/sudoku.png" /><media:content medium="image" url="http://localhost:4000/assets/img/coding-test/sudoku.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fundamentals of Data Structures</title><link href="http://localhost:4000/study/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Fundamentals of Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/study/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/study/fundamentals-of-data-structures.html">Data structure is a storage that is used to store and organize data. &lt;br&gt;
+~~~</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="coding-test" /><category term="coding-test" /><summary type="html">Back tracking을 이용한 스도쿠 문제풀이</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/coding-test/sudoku.png" /><media:content medium="image" url="http://localhost:4000/assets/img/coding-test/sudoku.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Fundamentals of Data Structures</title><link href="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-data-structures.html" rel="alternate" type="text/html" title="Fundamentals of Data Structures" /><published>2022-01-31T00:00:00+09:00</published><updated>2022-01-31T00:00:00+09:00</updated><id>http://localhost:4000/data-structures-and-algorithms/fundamentals-of-data-structures</id><content type="html" xml:base="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-data-structures.html">Data structure is a storage that is used to store and organize data. &lt;br&gt;
 It is &lt;span style='font-size:1em'&gt;***a way of arranging data***&lt;/span&gt; on a computer so that it can be accessed and updated efficiently.&lt;br&gt;
 
 * toc
@@ -1667,7 +1764,7 @@ If you make a stack of block, The last block stacks are of last in first out typ
 ### 1.2 Using an array as a stack 
 
 ```js
-//javascript
+// Javascript
 let letters = []; // this is our stack
 
 let word = 'racecar'; 
@@ -1675,12 +1772,12 @@ let word = 'racecar';
 
 let rword = '';
 
-//put letters of word into stack
+// put letters of word into stack
 for (let i = 0; i &lt;word.lenth; i++&gt;){
   letters.push(word[i]);
 }
 ............................................
-//put off the stack in reverse order 
+// put off the stack in reverse order 
 for (let i = 0; i &lt;word.lenth; i++&gt;){
   rwords += letters.pop;
 }
@@ -2827,7 +2924,7 @@ class Maxheap{
 &lt;br&gt;
 
 
-Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.heading.flip-title}
+Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
 &lt;br&gt;
 
@@ -2836,7 +2933,7 @@ Next to [Fundamentals of Algorithms](/study/fundamentals-of-algorithms.html){:.h
 [https://algorithmtutor.com/](https://algorithmtutor.com/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target=&quot;_blank&quot;}&lt;br&gt;
 [https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target=&quot;_blank&quot;}&lt;br&gt;
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="data-structures-and-algorithms" /><summary type="html">Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">It's hard to think of anything else, but think in React
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="data-structures-and-algorithms" /><category term="data-structures-and-algorithms" /><summary type="html">Data structure is a storage that is used to store and organize data. It is a way of arranging data on a computer so that it can be accessed and updated efficiently.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" /><media:content medium="image" url="http://localhost:4000/assets/img/data-structures-and-algorithms/data-structures.png" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">[React] Thinking in React</title><link href="http://localhost:4000/study/react-thinking-in-react.html" rel="alternate" type="text/html" title="[React] Thinking in React" /><published>2022-01-30T00:00:00+09:00</published><updated>2022-01-30T00:00:00+09:00</updated><id>http://localhost:4000/study/react-thinking-in-react</id><content type="html" xml:base="http://localhost:4000/study/react-thinking-in-react.html">It's hard to think of anything else, but think in React
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}

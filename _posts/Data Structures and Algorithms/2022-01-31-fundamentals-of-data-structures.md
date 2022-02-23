@@ -2,13 +2,13 @@
 layout:   post
 title:    'Fundamentals of Data Structures'
 subtitle: 'Fundamentals of Data Structures'
-category: study
+category: data-structures-and-algorithms
 tags:     data-structures-and-algorithms
 hide_last_modified: true
 image: 
   path: /assets/img/data-structures-and-algorithms/data-structures.png
 related_posts:
-  - _posts/Study/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
+  - _posts/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
   - _posts/Coding Test/2022-02-03-sudoku.md
 ---
 

@@ -1,9 +1,9 @@
 ---
 layout: tag-list
 type: tag
-title: Data Structures/Algorithms
+title: Data Structures & Algorithms
 slug: data-structures-and-algorithms
-category: study
+category: data-structures-and-algorithms
 sidebar: true
 description: >
     Study about Data Structures and Algorithms

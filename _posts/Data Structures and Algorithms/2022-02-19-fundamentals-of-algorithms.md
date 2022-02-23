@@ -2,12 +2,12 @@
 layout:   post
 title:    'Fundamentals of Algorithms'
 subtitle: 'Fundamentals of Algorithms'
-category: study
+category: data-structures-and-algorithms
 tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/algorithm-main.jpg
 related_posts: 
-  - _posts/Study/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
+  - _posts/Data Structures and Algorithms/2022-01-31-fundamentals-of-data-structures.md
   - _posts/Coding Test/2022-02-03-sudoku.md
 ---
 
@@ -427,9 +427,59 @@ console.log(bfs(exBFSGraph, 1)); //{ '0': 2, '1': 0, '2': 1, '3': 3, '4': Infini
 <br>
 
 
-## 4. Dynamic Programming
+## 4. Sort
 
-### 4.1 What is Dynamic Programming?
+Sorting is *<u>arranging data in order according to a specific criterion.</u>* <br>
+In general, an appropriate sorting algorithm is used as a formula according to the problem situation.
+
+### 4.1 Selection Sort
+
+It repeats selecting the smallest data among the unprocessed data and replacing it with the first data.
+
+[Step 0] Select the smallest 0 among unprocessed data and replace it with the leading 7
+
+[Step 1] Select the smallest 1 among unprocessed data and replace it with the leading 5.
+
+[Step 2] Select the smallest 2 among unprocessed data and replace it with the leading 9.
+
+[Step 3] Select the smallest 3 among the unprocessed data and replace it with the 7 at the front.
+
+If this process is repeated, the sorting is completed as follows.
+
+Operational process: The search range decreases with each iteration. Each time, the data is checked as far as the search range to find the smallest element. It is equivalent to doing a linear search every time. Implement a double iteration to create a selection sort algorithm.
+
+
+array = [7, 5, 9, 0, 3, 1, 6, 2, 4, 8]
+for i in range(len (array) ); # i is the smallest data and the index to change position = the frontmost position each time
+    min_index = i #index of the smallest element, put the smallest element first
+    for j in range( i+1, len(array) ): # j starts a linear search (from the next index)
+        if array[ min_index ] > array[j]: #if there is an index smaller than the current smallest element
+            min_index = j # Make the position index value come to the smallest index value
+    array[i], array[min_index] = array[min_index], array[i] # swap, swap the first and smallest elements
+print(array)
+
+(Print)
+[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+Time complexity of selection sort
+Selection sort must find the smallest number N times and send it to the front.
+There may be minor errors depending on the implementation method, but the total number of operations is as follows.
+      N + (N -1) + (N - 2) + ... + 2 (in arithmetic sequence form)
+This can be expressed as (N2 + N - 2) / 2 , which is written as O(N2) according to Big O notation. (time complexity)
+
+
+## 5. Binary Search
+
+### 5.1 What is Binary Search?
+
+***Sequential Search*** : A method of *<span style='font-size:1.1em; background-color: #FFF39B'>checking data one by one from the front </span>*to find specific data in a list
+
+*<span style='background-color: #E0FFC4'>**Binary Search**</span>* : A method of *<span style='font-size:1.1em; background-color: #FFF39B'>searching for data in a sorted list by halving the search range.</span>*
+- Binary search sets the search range using the starting point, the ending point, and the midpoint.
+
+## 6. Dynamic Programming
+
+### 6.1 What is Dynamic Programming?
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
 It saves <span style='font-size:1.1em; background-color: #FFF39B'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
@@ -441,7 +491,7 @@ A big problem can be divided into small problems, and the big problem can be sol
 <span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br>
 You have to solve the same small problem over and over again.*
 
-### 4.2 What is Memoization?
+### 6.2 What is Memoization?
 
 Memoization is a technique of <span style='font-size:1.1em; background-color: #FFF39B'>*memoizing the result once calculated in the memory space.*</span>
 - If you call the same problem again, you get the result you noted.
@@ -454,7 +504,7 @@ In general, Dynamic programming can be implemented in two ways:  <span style='ba
 - A classic form of dynamic programming is the *<u>Bottom-up</u>* approach. 
   - The list for storing the results is called the DP table.
 
-### 4.3 Fibonacci Sequence Implementation
+### 6.3 Fibonacci Sequence Implementation
 
 The Fibonacci Sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -525,7 +575,7 @@ If the already calculated result is memozied in memory, <u>only the colored node
 {:.figure}
 
 
-### 4.4 Dynamic Programming VS Divide-and-Conquer algorithm
+### 6.4 Dynamic Programming VS Divide-and-Conquer algorithm
 
 　| Dynamic programming | Divide-and-conquer algorithm
 --|:--:|:--:|
@@ -541,9 +591,9 @@ The subproblem of re-processing the pivot after splitting is not called.
 
 
 
-### 4.5 Dynamic Programming Example Problem
+### 6.5 Dynamic Programming Example Problem
 
-#### 4.5.1 Problem : Ant warrior
+#### 6.5.1 Problem : Ant warrior
 
 The ant warrior secretly attacks the food warehouse of the grasshopper village to make up for the shortage of food. There are several food warehouses in grasshopper Village, which are connected in a straight line.<br>
 Each food warehouse stores a fixed number of food, and the ant warriors will selectively plunder the food warehouse to steal food. At this time, the grasshopper scouts can immediately detect when adjacent food warehouses are attacked among the food warehouses that exist in a straight line.<br>
@@ -570,7 +620,7 @@ In the first line, print the maximum amount of food an ant warrior can get.
 |4|8|
 |1 3 1 5|
 
-#### 4.5.2 Solution : Ant warrior
+#### 6.5.2 Solution : Ant warrior
 
 Let's check an example. When N=4, the following cases may exist.
     The number of food choices is eight as follows.
@@ -615,7 +665,7 @@ for i in range(2, n); #Optimal solution from position 3 to nth ?
 print(d[n-1])
 ~~~
 
-#### 4.5.3 Problem : Minimum number of currencies
+#### 6.5.3 Problem : Minimum number of currencies
 
 There are N types of money. We try to minimize the number of these currencies so that the sum of their values ​​is M won. In this case, any number of currencies of each type can be used.
 
@@ -645,7 +695,7 @@ If not possible, -1 is output.
 |5|
 |7|
 
-#### 4.5.4 Solution : Minimum number of currencies
+#### 6.5.4 Solution : Minimum number of currencies
 
 $$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) <br>
 k = unit of each currency <br>
@@ -703,7 +753,7 @@ else: # Print if exists
   print(d[m])
 ~~~
  
-#### 4.5.5 Problem : Gold Mine
+#### 6.5.5 Problem : Gold Mine
 
 There is a gold mine measuring n x m. The gold mine is divided into 1 x 1 squares, each of which contains a certain size of gold. <br>
 Miners start with the first row and start digging for gold. You can start from any row in the first column. <br>
@@ -731,7 +781,7 @@ For each test case, we print the maximum amount of gold that a miner can obtain.
 |4 4|
 |1 3 1 5 2 2 4 1 5 0 2 3 0 6 1 2|
  
-#### 4.5.6 Solution : Gold Mine
+#### 6.5.6 Solution : Gold Mine
 
 For all locations of gold mines, only the following three things need to be considered.
 
@@ -779,7 +829,7 @@ for tc in range(int( input( ))):
 
     #Dynamic programming progress (bottom up)
   for j in range(1, m): # By column, check each column while moving
-    for i in range(n):
+    for i in range(n):  
     # If it comes from the top left
       if i == 0: left_up = 0 #If out of index, corresponding value=0
       else: left_up = dp[ i-1 ][ j-1 ]
@@ -798,7 +848,7 @@ for tc in range(int( input( ))):
   print( result )
 ~~~
 
-#### 4.5.6 Problem : Deploying soldiers
+#### 6.5.6 Problem : Deploying soldiers
 
 N soldiers are randomly listed. Each soldier has a certain value of combat power. When deploying soldiers, we want to arrange them in descending order so that the soldiers with higher combat power are in the front.<br>
 In other words, the combat power of the soldier in the front must always be higher than that of the soldier in the back.<Br>
@@ -826,7 +876,7 @@ Each soldier's Combat Strength is a natural number less than or equal to 10,000,
 The number of soldiers remaining in the first row. <br>
 Outputs the number of soldiers that must be excluded to maximize.
 
-#### 4.5.7 Solution : Deploying soldiers
+#### 6.5.7 Solution : Deploying soldiers
 
 The basic idea of ​​this problem is the same as that of a classic dynamic programming problem known as <span style='background-color:#e0ffc4'>***Longest Increasing Subsequence (LIS)***<span>
 
@@ -874,5 +924,7 @@ Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-struct
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
 [https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}
