@@ -6,5 +6,5 @@ slug: data-structures-and-algorithms
 sidebar: true
 order: 2
 description: >
-  Data Structures and Algorithms
+  Learning data structures and algorithms allow us to write efficient and optimized computer programs.
 ---
