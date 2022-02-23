@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-24T00:03:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-24T00:06:02+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
 </subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
 It takes a set of input and produces a desired output. 
 
@@ -1140,7 +1140,7 @@ Another thing you might find very useful is to invert the result, excluding the 
 
 [The Most Popular Linux &amp; Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&amp;t=196s){:target=&quot;_blank&quot;}&lt;br&gt;
 [The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target=&quot;_blank&quot;}
-{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Power</title><link href="http://localhost:4000/coding-test/power.html" rel="alternate" type="text/html" title="Power" /><published>2022-02-08T00:00:00+09:00</published><updated>2022-02-08T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/power</id><content type="html" xml:base="http://localhost:4000/coding-test/power.html">**[다이나믹 프로그래밍](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)**을 이용한 거듭제곱 구하기
+{:.note title=&quot;reference&quot;}</content><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><category term="study" /><category term="cli" /><summary type="html">Unix was an operating system developed at Bell Labs in the mid 1960’s. Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of multi-user operating systems and hierarchical file systems.</summary><media:thumbnail xmlns:media="http://search.yahoo.com/mrss/" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" /><media:content medium="image" url="http://localhost:4000/assets/img/cli/linux-command-line-ls-output.jpg" xmlns:media="http://search.yahoo.com/mrss/" /></entry><entry><title type="html">Power</title><link href="http://localhost:4000/coding-test/power.html" rel="alternate" type="text/html" title="Power" /><published>2022-02-08T00:00:00+09:00</published><updated>2022-02-08T00:00:00+09:00</updated><id>http://localhost:4000/coding-test/power</id><content type="html" xml:base="http://localhost:4000/coding-test/power.html">**[다이나믹 프로그래밍](https://prettygood236.github.io/data-structures-and-algorithms/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)**을 이용한 거듭제곱 구하기
 
 * this unordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -1191,14 +1191,14 @@ $$base^{exponent} = base^{exponent/2} * base^{exponent/2}$$ &lt;br&gt;
 $$base^{exponent} = base^{exponent/2의 몫} * base^{exponent/2의 몫} *base$$ &lt;br&gt;
 {:.message}
 
-또한, 이는 **&lt;span style='background-color: #FFDFF6'&gt;[다이나믹 프로그래밍](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)&lt;/span&gt;**의 두가지 요건 
+또한, 이는 **&lt;span style='background-color: #FFDFF6'&gt;[다이나믹 프로그래밍](https://prettygood236.github.io/data-structures-and-algorithms/fundamentals-of-algorithms.html#41-what-is-dynamic-programming)&lt;/span&gt;**의 두가지 요건 
 
 ***&lt;span style='background-color: #e0ffc4'&gt;1. 최적 부분구조&lt;/span&gt;*** : 큰 문제는 작은문제로 나뉠수있으며 작은문제의 해답을 모으면 큰문제를 해결할 수 있다. &lt;br&gt;
 ***&lt;span style='background-color: #e0ffc4'&gt;2. 중복 부분문제&lt;/span&gt;*** : 구했던 작은문제의 해답을 또 구해야한다. 
  
 을 충족한다. 
 
-따라서 *&lt;span style='background-color: #fff39b'&gt;[메모이제이션](https://prettygood236.github.io/study/fundamentals-of-algorithms.html#42-what-is-memoization)을 활용한 탑다운 &lt;/span&gt; 방식으로 구현할 수 있다.*
+따라서 *&lt;span style='background-color: #fff39b'&gt;[메모이제이션](https://prettygood236.github.io/data-structures-and-algorithms/fundamentals-of-algorithms.html#42-what-is-memoization)을 활용한 탑다운 &lt;/span&gt; 방식으로 구현할 수 있다.*
 
 ~~~js
 // Javascript

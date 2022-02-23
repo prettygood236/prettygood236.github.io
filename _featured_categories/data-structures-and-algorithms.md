@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: list
 type: category
 title: Data Structures & Algorithms
 slug: data-structures-and-algorithms
