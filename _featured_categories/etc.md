@@ -1,5 +1,5 @@
 ---
-layout: project
+layout: grid
 type: category
 title: ETC
 slug: etc

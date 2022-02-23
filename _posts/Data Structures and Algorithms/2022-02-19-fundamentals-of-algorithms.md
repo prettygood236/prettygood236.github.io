@@ -842,11 +842,11 @@ That is, as above, the width is N times and the height is log N times, which gua
 
 |Sort Algorithms|Average Time Complexity|Space Complexity|Feature|
 |:--:|:--:|:-:|:-:|
-|Selection Sort|$$O(N^2)$$|$$O(N)|The idea is very simple.
-|Insertion Sort|$$O(N^2)$$|$$O(N)|It is fastest when the data is almost sorted.
-|Quick Sort|$$O(NlogN)$$|$$O(N)|In most cases, it is the most joint, and it is fast enough|
-|Counting Sort|$$O(N+K)$$|$$O(N)|It can be used only when the size of the data is limited, but it works very quickly.|
-|Merge Sort|$$O(NlogN)$$|$$O(N)|Memory usage is inefficient.|
+|Selection Sort|$$O(N^2)$$|$$O(N)$$|The idea is very simple.
+|Insertion Sort|$$O(N^2)$$|$$O(N)$$|It is fastest when the data is almost sorted.
+|Quick Sort|$$O(NlogN)$$|$$O(N)$$|In most cases, it is the most joint, and it is fast enough|
+|Counting Sort|$$O(N+K)$$|$$O(N)$$|It can be used only when the size of the data is limited, but it works very quickly.|
+|Merge Sort|$$O(NlogN)$$|$$O(N)$$|Memory usage is inefficient.|
 
 For reference, the standard sort library supported by most programming 
 languages ​​is designed to guarantee O(NlogN) even in the worst case.
