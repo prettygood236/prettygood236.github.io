@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-24T00:02:00+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="ko-KR, en-US"><generator uri="https://jekyllrb.com/" version="3.9.0">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" hreflang="ko-KR, en-US" /><updated>2022-02-24T00:03:27+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">CHAN ㅣ DEV</title><subtitle>DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
 </subtitle><author><name>Byungchan Park</name><email>prettygood236@gmail.com</email></author><entry><title type="html">Fundamentals of Algorithms</title><link href="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html" rel="alternate" type="text/html" title="Fundamentals of Algorithms" /><published>2022-02-19T00:00:00+09:00</published><updated>2022-02-19T00:00:00+09:00</updated><id>http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms</id><content type="html" xml:base="http://localhost:4000/data-structures-and-algorithms/fundamentals-of-algorithms.html">Algorithm is a set of &lt;span style='font-size:1em'&gt;***well-defined instructions to solve a particular problem.***&lt;/span&gt; &lt;br&gt;
 It takes a set of input and produces a desired output. 
 
@@ -907,7 +907,7 @@ print(n - max(dp)) # Subtract the value from all n
 
 
 
-Back to [Fundamentals of Data Structures](2022-01-31-fundamentals-of-data-structures.md){:.heading.flip-title}
+Back to [Fundamentals of Data Structures](/data-structures-and-algorithms/fundamentals-of-data-structures.html){:.heading.flip-title}
 {:.read-more} 
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target=&quot;_blank&quot;}&lt;br&gt;
@@ -2924,7 +2924,7 @@ class Maxheap{
 &lt;br&gt;
 
 
-Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
+Next to [Fundamentals of Algorithms](/data-structures-and-algorithms/fundamentals-of-algorithms.html){:.heading.flip-title}
 {:.read-more} 
 &lt;br&gt;
 
