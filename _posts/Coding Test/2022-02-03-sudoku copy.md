@@ -1,9 +1,9 @@
 ---
-layout: page
-title: 'Sudoku'
-subtitle: 'sudoku'
-category: coding-test
-tags: coding-test
+layout:     post
+title:     'Sudoku'
+subtitle:  'sudoku'
+category:   coding-test
+tags:       coding-test
 image: 
   path: /assets/img/coding-test/sudoku.png
 ---

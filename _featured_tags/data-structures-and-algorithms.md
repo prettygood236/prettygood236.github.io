@@ -6,6 +6,6 @@ slug: data-structures-and-algorithms
 category: data-structures-and-algorithms
 sidebar: false
 description: >
-    Study about Data Structures and Algorithms
+    Data Structures and Algorithms
 ---
 

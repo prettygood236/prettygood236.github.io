@@ -6,5 +6,5 @@ slug: data-structures-and-algorithms
 sidebar: true
 order: 2
 description: >
-  Study about Data Structures and Algorithms
+  Data Structures and Algorithms
 ---
