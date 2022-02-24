@@ -12,7 +12,7 @@ related_posts:
 accent_color: '#ff0000'
 accent_image:
   background: '##F7B335'
-theme_color: '#ff0000'
+theme_color: '#F7B335'
 ---
 
 * toc
