@@ -5,6 +5,9 @@ sitemap: true
 cover: false
 ---
 
+## Featured Posts
 
-See [Posts](/posts/) for more
-{:.read-more}
+<!--posts-->
+
+<!-- See [Posts](/posts/) for more
+{:.read-more} -->
