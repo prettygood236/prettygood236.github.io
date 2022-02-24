@@ -1,15 +1,15 @@
 ---
 layout:   post
-title:    'Fundamentals of Data Structures'
-subtitle: 'Fundamentals of Data Structures'
+title:    'Fundamentals of Data structures'
+subtitle: 'Fundamentals of Data structures'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
-hide_last_modified: true
+tags:     data-structures
+# hide_last_modified: true
 image: 
   path: /assets/img/data-structures-and-algorithms/data-structures.png
-related_posts:
-  - _posts/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
-  - _posts/Coding Test/2022-02-03-sudoku.md
+# related_posts:
+#   - _posts/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
+#   - _posts/Coding Test/2022-02-03-sudoku.md
 ---
 
 Data structure is a storage that is used to store and organize data. <br>
@@ -1190,9 +1190,9 @@ class Maxheap{
 <br>
 
 
-Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
+<!-- Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
-<br>
+<br> -->
 
 [https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
 [https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br>
