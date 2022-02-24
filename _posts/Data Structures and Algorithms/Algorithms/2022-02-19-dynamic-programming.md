@@ -9,6 +9,10 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-15-binary-search.md
   - _posts/Coding Test/2022-02-03-sudoku.md
+accent_color: '#193747'
+accent_image:
+  background: '#ff0000'
+theme_color: '#ff0000'
 ---
 
 * toc

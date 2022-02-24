@@ -1,12 +1,11 @@
 ---
 layout: grid
 type: category
-title: <span style="letter-spacing:-0.9em">Data Structures & Algorithms</span>
+title: <span style="letter-spacing:-1px">Data Structures & Algorithms</span>
 slug: data-structures-and-algorithms
 sidebar: true
 order: 2
 description: >
   Algorithms + Data Structures = Programs.
   So, learning data structures and algorithms allow us to write efficient and optimized computer programs.
-theme_color: '#F7B335'
 ---
