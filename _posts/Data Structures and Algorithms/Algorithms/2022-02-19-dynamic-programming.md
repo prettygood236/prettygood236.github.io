@@ -1,7 +1,7 @@
 ---
 layout:   post
-title:    '6. Dynamic <br> Programming'
-subtitle: 'Fundamentals of Algorithms - 6. Dynamic Programming'
+title:    'Fundamentals of Algorithms <br> 6. Dynamic Programming'
+subtitle: '6. Dynamic Programming'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
