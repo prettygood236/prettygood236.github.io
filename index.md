@@ -2,10 +2,9 @@
 layout: home
 title: 👋
 sitemap: true
-cover: true
+cover: false
 ---
 
-<!--posts-->
 
 See [Posts](/posts/) for more
 {:.read-more}
