@@ -12,15 +12,5 @@ cover: false
 
 
 
-
-
-
-
-
-
-
-
-
-
 <!-- See [Posts](/posts/) for more
 {:.read-more} -->
