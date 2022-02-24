@@ -1,7 +1,7 @@
 ---
 layout: grid
 type: category
-title: <span style="letter-spacing:1em">Data Structures & Algorithms</span>
+title: Data Structures & Algorithms
 slug: data-structures-and-algorithms
 sidebar: true
 order: 2
