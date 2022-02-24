@@ -7,8 +7,7 @@ cover: false
 
 ## Featured Posts
 
-<!--_posts-->
-
+<!--posts-->
 
 
 
