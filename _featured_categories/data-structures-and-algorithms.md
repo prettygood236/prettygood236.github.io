@@ -1,7 +1,7 @@
 ---
 layout: grid
 type: category
-title: Data Structures & Algorithms
+title: Data Structures/Algorithms
 slug: data-structures-and-algorithms
 sidebar: true
 order: 2
