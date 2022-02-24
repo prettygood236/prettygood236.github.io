@@ -1,5 +1,5 @@
 ---
-layout: projects
+layout: grid
 type: category
 title: Coding Test
 slug: coding-test
