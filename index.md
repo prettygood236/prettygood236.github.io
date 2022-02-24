@@ -1,4 +1,4 @@
-<!-- ---
+---
 layout: home
 title: 👋
 sitemap: true
@@ -10,4 +10,4 @@ cover: false
 <!--posts-->
 
 <!-- See [Posts](/posts/) for more
-{:.read-more} --> -->
+{:.read-more} -->
