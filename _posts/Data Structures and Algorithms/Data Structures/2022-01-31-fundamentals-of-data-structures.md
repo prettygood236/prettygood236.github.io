@@ -6,14 +6,17 @@ category: data-structures-and-algorithms
 tags:     data-structures
 # hide_last_modified: true
 image: 
-  path: /assets/img/data-structures-and-algorithms/data-structures.png
-# related_posts:
-#   - _posts/Data Structures and Algorithms/2022-02-19-fundamentals-of-algorithms.md
-#   - _posts/Coding Test/2022-02-03-sudoku.md
+  path: /assets/img/data-structures-and-algorithms/data-structures_main.png
+related_posts:
+  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
+  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
 ---
 
 Data structure is a storage that is used to store and organize data. <br>
 It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br>
+
+![Data structures](/assets/img/data-structures-and-algorithms/data-structures.png)
+
 
 * toc
 {:toc .large-only}

@@ -1,7 +1,8 @@
 ---
 layout:   post
-title:    '5. Binary Search'
-subtitle: 'Fundamentals of Algorithms - 5. Binary Search'
+title:    'Fundamentals of Algorithms 
+- 5. Binary Search'
+subtitle: '5. Binary Search'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
