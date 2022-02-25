@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    'Fundamentals of Algorithms <br> 3. DFS & BFS'
+title:    '3. DFS & BFS'
 subtitle: '3. DFS & BFS'
 category: data-structures-and-algorithms
 tags:     algorithms

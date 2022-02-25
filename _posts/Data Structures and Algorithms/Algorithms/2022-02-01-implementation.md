@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    'Fundamentals of Algorithms <br> 2. Implementation'
+title:    '2. Implementation'
 subtitle: '2. Implementation'
 category: data-structures-and-algorithms
 tags:     algorithms
