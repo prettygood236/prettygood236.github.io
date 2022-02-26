@@ -486,8 +486,8 @@ jekyll_compose:
         - title: Project Link
           url: https://example.com
 
-# # jekyll-feed settings
-# feed:
-#   categories:
-#     - study
-#     - etc
+# jekyll-feed settings
+feed:
+  categories:
+    - study
+    - etc
