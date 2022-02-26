@@ -1,6 +1,6 @@
 ---
 layout: home
-title: 👋
+title: CHAN DEV BLOG
 sitemap: true
 cover: false
 ---

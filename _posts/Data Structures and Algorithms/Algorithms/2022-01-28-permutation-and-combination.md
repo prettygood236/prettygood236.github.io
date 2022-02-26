@@ -1,6 +1,6 @@
 ---
 layout:   post
-title:    'Permutation & Combinatin'
+title:    'Permutation & Combination'
 subtitle: 'Permutation & Combination'
 category: data-structures-and-algorithms
 tags:     algorithms
