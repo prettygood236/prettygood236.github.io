@@ -1,6 +1,6 @@
 ---
 layout: home
-title: <img src="/assets/img/logo.png" width="15%"> HOME
+title: WELCOME TO <img src="/assets/img/logo.png" width="15%">
 sitemap: true
 cover: false
 ---
