@@ -54,9 +54,9 @@ author:
     twitter:           chann236
 
 # Add links to the sidebar.
-# menu:
-#   - title: About
-#     url: /about/
+menu:
+  - title: About
+    url: /about/
 #   - title: Study
 #     url: /study/
 #   - title: Coding Test
