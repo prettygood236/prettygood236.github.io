@@ -1,6 +1,6 @@
 ---
 layout: about
-title: About
+title: About <img src="/assets/img/logo.png" width="10%">
 permalink: /about/
 more_posts: posts.md
 sidebar: true
