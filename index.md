@@ -1,6 +1,6 @@
 ---
 layout: home
-title: CHAN DEV BLOG
+title: ![](/assets/img/logo.png) DEV BLOG
 sitemap: true
 cover: false
 ---
