@@ -27,7 +27,7 @@ timezone:              Asia/Seoul
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  DEV Blog by Chan ㅣ Like the beginning, now, always and forever!
+  Like the beginning, now, always and forever!
 
 # A shorter description for the sidebar.
 tagline:               >
