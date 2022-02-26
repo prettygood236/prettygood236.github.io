@@ -1,6 +1,6 @@
 ---
 layout: home
-title: <img src="/assets/img/logo.png" width="10%"> DEV BLOG &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+title: <img src="/assets/img/logo.png" width="10%"> DEV BLOG <<br><br><br><br>
 sitemap: true
 cover: false
 ---
