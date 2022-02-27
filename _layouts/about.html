@@ -34,8 +34,9 @@ layout: base
     {% assign content = content | replace:"<!--author-->", author_x %}
   {% endif %}
 
+  <!-- about title testing -->
   <header>
-    <h1 class="page-title">{{ page.title }}</h1>
+    <h1 class="page-title">{{ page.title }| append: "<img src="/assets/img/logo.png" width="15%">"}</h1>
     {% include components/message.html text=page.description hide=page.hide_description %}
   </header>
 

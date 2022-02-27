@@ -9,7 +9,5 @@ cover: false
 
 <!--posts-->
 
-
-
-<!-- See [Posts](/posts/) for more
-{:.read-more} -->
+See [Posts](/posts/) for more
+{:.read-more}
