@@ -9,5 +9,5 @@ cover: false
 
 <!--posts-->
 
-See [Posts](/posts/) for more
+<span style="text-align: left">See [Posts](/posts/) for more</span>
 {:.read-more}

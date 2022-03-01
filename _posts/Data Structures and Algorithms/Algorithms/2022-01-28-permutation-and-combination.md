@@ -5,7 +5,7 @@ subtitle: 'Permutation & Combination'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/greedy_main.png
+  path: /assets/img/data-structures-and-algorithms/permutations-and-combinations_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/Data Structures/2022-01-31-fundamentals-of-data-structures.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
@@ -19,7 +19,7 @@ related_posts:
 
 ### 1.1 What is Permutation?
 
-In mathematics, a permutation of a set is, loosely speaking, an arrangement of its members into a sequence or linear order, or if the set is already ordered, a rearrangement of its elements. The word "permutation" also refers to the act or process of changing the linear order of an ordered set.
+A permutation is <span style='background-color: #FFF39B;'>the choice of <u>r</u> things from a set of <u>n</u> things without replacement and where</span> <span style='background-color: #FFDFF6;'>***the order matters.***</span>
 
 ### 1.2 Permutation Implementation
 
