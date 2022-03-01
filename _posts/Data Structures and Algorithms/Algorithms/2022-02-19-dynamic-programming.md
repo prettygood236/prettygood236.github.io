@@ -52,8 +52,8 @@ The Fibonacci Sequence is a sequence of the following form, and can be effective
 $$
 1,1,2,3,5,8,13,21,34,55,89,...
 $$
-The ignition expression means a relational expression between adjacent identities. <br>
-The Fibonacci sequence can be expressed as an ignition formula as follows:
+A recurrence relation means a relational expression between adjacent identities. <br>
+The Fibonacci sequence can be expressed as an recurrence relation as follows:
 
 $$
 a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
@@ -84,7 +84,7 @@ def fibo(x):
      # If the problem has already been calculated, return it as is.
      if d[x] != 0:
          return d[x]
-     # If it is a problem that has not been calculated yet, the Fibonacci result is returned according to the ignition formula.
+     # If it is a problem that has not been calculated yet, the Fibonacci result is returned according to the recurrence relation
      d[x] = fibo(x-1) + fibo(x-2) # Write the added value to the list.
      return d[x]
 
@@ -182,7 +182,7 @@ Use 2 small problems to solve the big problems.
 
 ai = optimal solution to the ith food warehouse (maximum value of food obtainable)
 ki = amount of food in the ith food pantry
-The ignition formula is as follows.
+The recurrence relation is as follows.
      ai = max(ai-1, ai-2+ki) Choose the larger of the two
 Food warehouses more than one square away can always be looted, so there is no need to consider (i-3) and lower.
 
@@ -200,7 +200,7 @@ d = [0] * 100 #because you can enter up to 100
 d[0] = array[0] #maximum value up to first position
 d[1] = max( array[0], array[1] ) # Choose the maximum value up to the second position, the larger value
 for i in range(2, n); #Optimal solution from position 3 to nth ?
-     d[i] = max(d[i-1], d[i-2] + array[i] ) #ignition expression
+     d[i] = max(d[i-1], d[i-2] + array[i] ) # recurrence relation
 
 # Print the calculated result
 print(d[n-1])
@@ -240,7 +240,7 @@ If not possible, -1 is output.
 
 $$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) <br>
 k = unit of each currency <br>
-Ignition type: Each currency unit, k, is checked one by one.
+Recurrence relation type: Each currency unit, k, is checked one by one.
 - If there is a way to make $$a_{i-k}$$, $$a_{i}$$ = min($$a_{i}$$, $$a_{i-k+1}$$) is updated with a smaller value.
 - If there is no way to create $$a_{i-k}$$, $$a_i$$ = INF.
 
@@ -254,17 +254,17 @@ In this problem, 10,001 can be used.
 
 [Step 1] <br>
 Check the first monetary unit, 2. (If you can make i-2, you can also make amount i.)
-According to the ignition formula, the list is updated as follows.
+According to the recurrence relation, the list is updated as follows.
 ![Minimum number of currencies_step1](/assets/img/coding-test/minimum-number-of-currencies_2.png){:width="80%"}
 
 [Step 2] <br>
 Check the second monetary unit, 3.
-According to the ignition formula, the list is updated as follows.
+According to the recurrence relation, the list is updated as follows.
 ![Minimum number of currencies_step2](/assets/img/coding-test/minimum-number-of-currencies_3.png){:width="80%"}
 
 [Step 3] <br>
 The third monetary unit, 5, is identified.
-According to the ignition formula, the list is finally updated as follows.
+According to the recurrence relation, the list is finally updated as follows.
 ![Minimum number of currencies_step3](/assets/img/coding-test/minimum-number-of-currencies_4.png){:width="80%"}
 
 ~~~py
@@ -282,7 +282,7 @@ d = [10001] * (m+1) # We want to find the minimum number of currencies for each 
 # Dynamic Programming (Bottom up)
 d[0] =0 # 0 won is the amount that can be made without using anything # i is each currency unit, j is each amount.
 
-for i in range(n): # Ignition expression #for each monetary unit →
+for i in range(n): # recurrence relation #for each monetary unit →
   for j in range(array[i], m+1): # Check all amounts →
     if d[j - array[i]] != 10001: # If there is a way to get the current amount minus the monetary unit = (i-k) won
         d[j] = min ( d[j], d[j - array[i] ]+1) # Update the optimal solution for the amount !#Update the smaller value
@@ -337,7 +337,7 @@ The problem is solved by updating the table with the case with the most gold amo
 - array[i][j] = amount of gold in row i and column j
 - dp[i][j] = best solution to row i and column j (maximum gold value)
 
-The ignition formula is as follows.
+The recurrence relation is as follows.
 
 $$
 dp[i][j] = array[i][j] + max(dp[i-1][j-1], dp[i][j-1], dp[i+1][j-1])
@@ -427,10 +427,10 @@ Since this problem can be replaced with the problem of finding the longest decre
 
 Let's check the longest increasing subsequence (LIS) algorithm. <br>
 *We define D[i] = the maximum length of a subsequence with array[i] as the last element.*<br>
-The ignition formula is as follows.
+The recurrence relation is as follows.
 
 For all 0 <= j < i , elements i, j <br>
-D[i] = max(D[i], D[j]+1 ) Update according to the ignition formula (the larger of the current value vs. the previous value+1)
+D[i] = max(D[i], D[j]+1 ) Update according to the recurrence relation (the larger of the current value vs. the previous value+1)
 
 if array[j] < array[i] if the preceding element (j) is less than the following element (i) (increasing form)
 ![Deploying Soldiers_3](/assets/img/coding-test/deploying_soldiers_3.png){:width="80%"}
@@ -452,7 +452,7 @@ dp = [1] * n
 for i in range(1, n): #from the second element to the last element
   for j in range(0, i): #All elements before (j) = from the first element to before i
     if array[ j ] < array[ i ]: #only if small
-      dp[ i ] = max( dp[ i ], dp[ j ]+1 ) #ignition expression
+      dp[ i ] = max( dp[ i ], dp[ j ]+1 ) # recurrence relation
 
 # Print the minimum number of soldiers to be excluded
 print(n - max(dp)) # Subtract the value from all n
