@@ -21,7 +21,17 @@ related_posts:
 
 A permutation is <span style='background-color: #FFF39B;'>the choice of <u>r</u> things from a set of <u>n</u> things without replacement and where</span> <span style='background-color: #FFDFF6;'>***the order matters.***</span>
 
+It is denoted by $$_nP_r$$. <br>
+
+$$_nP_r=\frac{n!}{(n-r)!}$$
+
 ### 1.2 Permutation Implementation
+
+A Permutation can be implemented using a recursive function in the manner shown in the figure below.
+
+![](/assets/img/data-structures-and-algorithms/permutations-and-combinations_1.png){:width="100%"}
+3-letter word permutations that can be made with X, Y, and Z
+{:.figure}
 
 ~~~js
 // Javascript
@@ -50,9 +60,19 @@ const getPermutations = function (arr, selectNumber) {
 
 ### 2.1 What is Combination?
 
-A combination is a mathematical technique that determines the number of possible arrangements in a collection of items where the order of the selection does not matter. In combinations, you can select the items in any order. Combinations can be confused with permutations.
+A Combination is <span style='background-color: #FFF39B;'>the choice of <u>r</u> things from a set of <u>n</u> things without replacement and where</span> <span style='background-color: #FFDFF6;'>***the order does not matter.***</span>
+
+It is denoted by $$_nC_r$$. <br>
+
+$$_nC_r=\frac{_nP_r}{r!}=\frac{n!}{r!(n-r)!}$$
 
 ### 2.2 Combination Implementation
+
+A Combination can be implemented using a recursive function in the manner shown in the figure below.
+
+![](/assets/img/data-structures-and-algorithms/permutations-and-combinations_2.png){:width="100%"}
+Combination to choose 3 out of ABCDE
+{:.figure}
 
 ~~~js
 // Javascript
