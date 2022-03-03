@@ -1,10 +1,10 @@
 ---
-layout: grid
-type: category
+layout: tag-list
+type: tag
 title: ETC
 slug: etc
+category: study
 sidebar: true
-order: 5
 description: >
-  Et ceteraa
+  Et cetera
 ---

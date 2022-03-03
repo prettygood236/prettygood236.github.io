@@ -3,8 +3,8 @@ layout: tag-list
 type: tag
 title: RegEx
 slug: regex
-category: etc
-sidebar: true
+category: study
+sidebar: false
 description: >
-  ETC / RegEx
+  Study about RegEx
 ---
