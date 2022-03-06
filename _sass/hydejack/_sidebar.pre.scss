@@ -24,7 +24,7 @@ hy-drawer {
     // <<< link
     --hy-drawer-width: 100%;
     --hy-drawer-peek-width: .5rem;
-    --hy-drawer-box-shadow: 0 0 1rem rgba(255, 255, 255, 0.25);
+    --hy-drawer-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
     // >>>
   }
 
@@ -49,10 +49,10 @@ hy-drawer {
   }
 
   @media screen and (min-width: $break-point-dynamic) {
-    width: calc(50% - #{$half-content});
+    width: calc(0% - #{$half-content});
 
     // <<< link
-    --hy-drawer-peek-width: calc(50% - #{$half-content});
+    --hy-drawer-peek-width: calc(0% - #{$half-content});
     // >>>
   }
 
