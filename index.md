@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: home
 title: <img src="/assets/img/logo.png" width="15%"> WELCOME
 sitemap: true
 cover: false
@@ -9,5 +9,5 @@ cover: false
 
 <!--posts-->
 
-<span style="text-align: left">See [Posts](/posts/) for more</span>
+<span style="text-align: left">See [Posts](/index/) for more</span>
 {:.read-more}
