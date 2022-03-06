@@ -1,5 +1,5 @@
 ---
-layout: home
+layout: blog
 title: <img src="/assets/img/logo.png" width="15%"> WELCOME
 sitemap: true
 cover: false

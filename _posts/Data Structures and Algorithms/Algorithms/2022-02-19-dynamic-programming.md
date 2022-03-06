@@ -5,7 +5,7 @@ subtitle: '6. Dynamic Programming'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/dynamic-programming_main.png
+  path: /assets/img/data-structures-and-algorithms/dynamic-programming/dynamic-programming_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-15-binary-search.md
   - _posts/Coding Test/2022-02-03-sudoku.md

@@ -5,7 +5,7 @@ subtitle: '3. DFS & BFS'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/dfs-and-bfs_main.png
+  path: /assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs-and-bfs_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-12-sort.md
@@ -27,12 +27,12 @@ DFS uses a stack data structure (or recursive function)
 3. Repeat until step 2 can no longer be performed.
 <br>
 
-![Depth-First Search operation](/assets/img/data-structures-and-algorithms/graph_dfs.gif){:width="600"} <br>
+![Depth-First Search operation](/assets/img/data-structures-and-algorithms/dfs-and-bfs/graph_dfs.gif){:width="600"} <br>
 <br>
 
 ### 3.2 What is Breadth-First Search?
 
-![Breadth-First Search operation](/assets/img/data-structures-and-algorithms/graph_bfs.gif){:width="600"} <br>
+![Breadth-First Search operation](/assets/img/data-structures-and-algorithms/dfs-and-bfs/graph_bfs.gif){:width="600"} <br>
 <br>
 
 

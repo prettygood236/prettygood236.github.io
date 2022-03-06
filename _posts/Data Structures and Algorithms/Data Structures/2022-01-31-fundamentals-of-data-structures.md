@@ -6,7 +6,7 @@ category: data-structures-and-algorithms
 tags:     data-structures
 # hide_last_modified: true
 image: 
-  path: /assets/img/data-structures-and-algorithms/data-structures_main.png
+  path: /assets/img/data-structures-and-algorithms/data-structures/data-structures_main.png
 related_posts:
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
@@ -15,7 +15,7 @@ related_posts:
 Data structure is a storage that is used to store and organize data. <br>
 It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br>
 
-![Data structures](/assets/img/data-structures-and-algorithms/data-structures.png)
+![Data structures](/assets/img/data-structures-and-algorithms/data-structures/data-structures.png)
 
 
 * toc
@@ -28,7 +28,7 @@ It is <span style='font-size:1em'>***a way of arranging data***</span> on a comp
 If you make a stack of block, The last block stacks are of last in first out type of service.<br>
 <span style='background-color: #FFF39B;'>*The last block you put on top of a stack would be the first block.*</span><br>
 
-![Stack](/assets/img/data-structures-and-algorithms/stack.gif) <br>
+![Stack](/assets/img/data-structures-and-algorithms/data-structures/stack.gif) <br>
 
 ### 1.2 Using an array as a stack 
 
@@ -114,7 +114,7 @@ console.log(myStack.size()); // 1
 Queue example is a print queue when a lot of people are printing documents at the same printer.<br>
  The documents are printed <span style='background-color: #FFF39B;'>*in the order(first in first out)*</span>. They were sent to the print queue.
  
-![Queue](/assets/img/data-structures-and-algorithms/queue.gif){: width="650"}
+![Queue](/assets/img/data-structures-and-algorithms/data-structures/queue.gif){: width="650"}
 <br>
 
 ### 2.2 Queue Implementation
@@ -343,7 +343,7 @@ console.log(setD.add('d')) // {'b','c','d'}
  A tree data structure is <u>a way to hold data that when visualized looks like a tree.</u> <br>
 This is actually what we visualized a tree data structure to look like all data points in the tree are called ***nodes***.
 
-![Tree](/assets/img/data-structures-and-algorithms/tree.png){:width="650"} 
+![Tree](/assets/img/data-structures-and-algorithms/data-structures/tree.png){:width="650"} 
 
 ### 4.2 Tree Implementation
 
@@ -390,44 +390,44 @@ This is much better than the linear time required to find items by key in an uns
 **BST add operation**
 <br>
 
-![BST add operation](/assets/img/data-structures-and-algorithms/bst_add_operation.gif){:width="600"} <br>
+![BST add operation](/assets/img/data-structures-and-algorithms/data-structures/bst_add_operation.gif){:width="600"} <br>
 <br>
 
 **BST find operation**
 
-![BST find operation](/assets/img/data-structures-and-algorithms/bst_find_operation.gif){:width="600"} <br>
+![BST find operation](/assets/img/data-structures-and-algorithms/data-structures/bst_find_operation.gif){:width="600"} <br>
 <br>
 
 **BST from ordered array**
 
-![BST from ordered array](/assets/img/data-structures-and-algorithms/bst_from_ordered_array.gif){:width="600"} <br>
+![BST from ordered array](/assets/img/data-structures-and-algorithms/data-structures/bst_from_ordered_array.gif){:width="600"} <br>
 <br>
 
 **BST degeneration**
 
-![BST degeneration](/assets/img/data-structures-and-algorithms/bst_degeneration.gif){:width="600"} <br>
+![BST degeneration](/assets/img/data-structures-and-algorithms/data-structures/bst_degeneration.gif){:width="600"} <br>
 <br>
 
 #### 4.3.2 Binary Search Tree Traversal 
 
 **BST inorder operation**
 
-![BST inorder operation](/assets/img/data-structures-and-algorithms/bst_inorder.gif){:width="600"} <br>
+![BST inorder operation](/assets/img/data-structures-and-algorithms/data-structures/bst_inorder.gif){:width="600"} <br>
 <br>
 
 **BST preorder operation (Depth-First Search)**
 
-![BST preorder operation](/assets/img/data-structures-and-algorithms/bst_preorder.gif){:width="600"} <br>
+![BST preorder operation](/assets/img/data-structures-and-algorithms/data-structures/bst_preorder.gif){:width="600"} <br>
 <br>
 
 **BST postorder operation**
 
-![BST postorder operation](/assets/img/data-structures-and-algorithms/bst_postorder.gif){:width="600"} <br>
+![BST postorder operation](/assets/img/data-structures-and-algorithms/data-structures/bst_postorder.gif){:width="600"} <br>
 <br>
 
 **BST levelorder operation (Breadth-First Search)**
 
-![BST levelorder operation](/assets/img/data-structures-and-algorithms/bst_levelorder.png){:width="600"} <br>
+![BST levelorder operation](/assets/img/data-structures-and-algorithms/data-structures/bst_levelorder.png){:width="600"} <br>
 <br>
 
 #### 4.3.3 Binary Search Tree Implementation
@@ -687,14 +687,14 @@ Graphs are collections of things and <u>the relationships or connections</u> bet
 The data in a graph are called ***nodes or vertices.***<br>
 The connections between the nodes are called ***edges.***
 
-![Graph](/assets/img/data-structures-and-algorithms/graph-1.png){:width="650"}
+![Graph](/assets/img/data-structures-and-algorithms/data-structures/graph-1.png){:width="650"}
 <br><br>
 
 ### 5.2 Type of Graph
 
 **Undirected and Directed**
 
-![Graph_Undirected and Directed](/assets/img/data-structures-and-algorithms/graph-2.png){:width="650"}
+![Graph_Undirected and Directed](/assets/img/data-structures-and-algorithms/data-structures/graph-2.png){:width="650"}
 
 Undirected graphs are graphs without any direction on the edges between nodes.
 * ex) social network
@@ -709,7 +709,7 @@ Directed graphs are graphs with a direction and its edges.
 
 <span style='background-color: #FFF39B; font-size:1em'>*Adjacency List associates each vertex in the graph with the collection of its neighboring vertices or edges.*</span>
 
-![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/graph_adjacency list and matrix.png){:width="650"}
+![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/data-structures/graph_adjacency list and matrix.png){:width="650"}
 
 #### 5.3.2 Adjacency Matrix 
 
@@ -718,7 +718,7 @@ elements as the outer array.*</span> So it's basically a matrix of numbers where
 
 #### 5.3.3 Incidence Matrix 
 
-![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/graph_incidence matrix.png){:width="650"}
+![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/data-structures/graph_incidence matrix.png){:width="650"}
 
 Adjacency Matrix use both rows and columns to represent nodes.<br>
 But <span style='background-color: #FFF39B; font-size:1em'>*Incidence Matrix uses roads to represent nodes and the columns to represent edges.*</span>
@@ -731,7 +731,7 @@ Each column will represent a unique edge. Also, each edge connects two nodes to 
 
 
 
-![Hash Table](/assets/img/data-structures-and-algorithms/hashtable.png){:width="650"}
+![Hash Table](/assets/img/data-structures-and-algorithms/data-structures/hashtable.png){:width="650"}
 
 
 ### 6.2 Hash Table Implementation
@@ -816,16 +816,16 @@ ht.print();
 
 
 
-![Linked List](/assets/img/data-structures-and-algorithms/linkedlist.jpeg){:width="600"}
+![Linked List](/assets/img/data-structures-and-algorithms/data-structures/linkedlist.jpeg){:width="600"}
 
 **Linked List insert operation**
 
-![Linked List insering operation](/assets/img/data-structures-and-algorithms/linkedlist_inserting.gif){:width="600"} <br>
+![Linked List insering operation](/assets/img/data-structures-and-algorithms/data-structures/linkedlist_inserting.gif){:width="600"} <br>
 <br>
 
 **Linked List append operation**
 
-![Linked List appending operation](/assets/img/data-structures-and-algorithms/linkedlist_appending.gif){:width="600"} <br>
+![Linked List appending operation](/assets/img/data-structures-and-algorithms/data-structures/linkedlist_appending.gif){:width="600"} <br>
 <br>
 
 
@@ -967,7 +967,7 @@ console.log(conga.size()); // 4
 
 
 
-![Trie](/assets/img/data-structures-and-algorithms/trie.png){:width="600"}
+![Trie](/assets/img/data-structures-and-algorithms/data-structures/trie.png){:width="600"}
 
 
 ### 8.2 Trie Implementation
@@ -1056,18 +1056,18 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
 
 **Min heap sort operation**
 
-![Minheap](/assets/img/data-structures-and-algorithms/heap_minheap.gif){:width="600"}
+![Minheap](/assets/img/data-structures-and-algorithms/data-structures/heap_minheap.gif){:width="600"}
 <br>
 
 **Max heap sort operation**
 
-![Maxheap](/assets/img/data-structures-and-algorithms/heap_maxheap.gif){:width="600"}
+![Maxheap](/assets/img/data-structures-and-algorithms/data-structures/heap_maxheap.gif){:width="600"}
 <br>
 
 ### 9.2 Heap Implementation
 
 ~~~js
-//javascript
+// Javascript
 // left child: i * 2
 // right child: i * 2 + 1
 // parent: i / 2

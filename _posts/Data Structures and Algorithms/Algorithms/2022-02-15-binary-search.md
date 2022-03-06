@@ -5,7 +5,7 @@ subtitle: '5. Binary Search'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/binary-search_main.png
+  path: /assets/img/data-structures-and-algorithms/binary-search/binary-search_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-12-sort.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-19-dynamic-programming.md
@@ -24,20 +24,20 @@ related_posts:
 - Binary search sets the search range using the starting point, the ending point, and the midpoint.
 
 **[Step 1]** Start point: 0, End point: 9, Mid point: 4 (remove decimal point)
-![Binery Search_1](/assets/img/data-structures-and-algorithms/binary-search_1.png)
+![Binery Search_1](/assets/img/data-structures-and-algorithms/binary-search/binary-search_1.png)
 
 Comparing the midpoint value with the value to be found, if the midpoint value is larger, there is no need to check the midpoint to the right end.
 Move the end point in front of the midpoint.
 
 **[Step 2]** Start point: 0, End point: 3, Mid point: 1 (remove decimal point)
-![Binery Search_2](/assets/img/data-structures-and-algorithms/binary-search_2.png)
+![Binery Search_2](/assets/img/data-structures-and-algorithms/binary-search/binary-search_2.png)
 
 If the midpoint value is smaller than the midpoint value and the value to be found, there is no need to check the midpoint to the left end.
 Move the starting point behind the midpoint.
 
  
 **[Step 3]** Start point:2, End point:3, Mid point: 2 (remove decimal point)
-![Binery Search_3](/assets/img/data-structures-and-algorithms/binary-search_3.png)
+![Binery Search_3](/assets/img/data-structures-and-algorithms/binary-search/binary-search_3.png)
 
 Since we found the value we are looking for at the starting point, we end our search.
 

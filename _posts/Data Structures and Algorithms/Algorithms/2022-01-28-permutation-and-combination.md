@@ -5,7 +5,7 @@ subtitle: 'Permutation & Combination'
 category: data-structures-and-algorithms
 tags:     algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/permutations-and-combinations_main.png
+  path: /assets/img/data-structures-and-algorithms/permutations-and-combinations/permutations-and-combinations_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/Data Structures/2022-01-31-fundamentals-of-data-structures.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
@@ -29,7 +29,7 @@ $$_nP_r=\frac{n!}{(n-r)!}$$
 
 A Permutation can be implemented using a recursive function in the manner shown in the figure below.
 
-![](/assets/img/data-structures-and-algorithms/permutations-and-combinations_1.png){:width="100%"}
+![](/assets/img/data-structures-and-algorithms/permutations-and-combinations/permutations-and-combinations_1.png){:width="100%"}
 3-letter word permutations that can be made with X, Y, and Z
 {:.figure}
 
@@ -70,7 +70,7 @@ $$_nC_r=\frac{_nP_r}{r!}=\frac{n!}{r!(n-r)!}$$
 
 A Combination can be implemented using a recursive function in the manner shown in the figure below.
 
-![](/assets/img/data-structures-and-algorithms/permutations-and-combinations_2.png){:width="100%"}
+![](/assets/img/data-structures-and-algorithms/permutations-and-combinations/permutations-and-combinations_2.png){:width="100%"}
 Combination to choose 3 out of ABCDE
 {:.figure}
 
