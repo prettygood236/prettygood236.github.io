@@ -8,7 +8,7 @@ image:
   path: /assets/img/blockchain/blockchain-technology_main.png
 accent_color: rgba(255, 129, 119, 1)
 accent_image:
-  background: linear-gradient(to right, rgba(255, 129, 119, 1) 0%, rgba(255, 134, 122, 1) 0%, rgba(255, 140, 127, 1) 21%, rgba(249, 145, 133, 1) 52%, rgba(207, 85, 108, 1) 78%, rgba(232, 45, 92, 1) 100%);
+  background: linear-gradient(to right, rgba(255, 129, 119, 1) 0%, rgba(255, 134, 122, 1) 5%, rgba(255, 140, 127, 1) 21%, rgba(249, 145, 133, 1) 42%, rgba(207, 85, 108, 1) 68%, rgba(232, 45, 92, 1) 100%);
   overlay: false
 theme_color: rgba(232, 45, 92, 1)
 ---
