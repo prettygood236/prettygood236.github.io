@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: grid
 title: Posts
 description: >
     All the posts in blog.
