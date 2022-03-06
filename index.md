@@ -9,5 +9,4 @@ cover: false
 
 <!--posts-->
 
-<span style="float:left">See [Posts](/posts/) more</span>
-{:.read-more}
+<span style="float:left">See [Posts](/posts/) more &nbsp;➡</span>
