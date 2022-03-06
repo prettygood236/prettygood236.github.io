@@ -6,6 +6,11 @@ category: study
 tags:     react
 image: 
   path: /assets/img/react/react-component-design/react-component-design-main.png
+accent_color: rgba(0,174,239,1)
+accent_image:
+  background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
+  overlay: false
+theme_color: rgba(27,10,58,1)
 ---
 
 레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발<br>

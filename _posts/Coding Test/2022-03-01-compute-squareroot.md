@@ -6,6 +6,11 @@ category:   coding-test
 tags:       coding-test
 image: 
   path: /assets/img/coding-test/computeSquareRoot_main.jpg
+accent_color: rgba(154, 132, 120, 1)
+accent_image:
+  background: linear-gradient(to right, rgba(30, 19, 12, 1), rgba(154, 132, 120, 1))
+  overlay: false
+theme_color: rgba(30, 19, 12, 1)
 ---
 
 * toc

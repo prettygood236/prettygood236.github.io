@@ -9,10 +9,11 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-15-binary-search.md
   - _posts/Coding Test/2022-02-03-sudoku.md
-# accent_color: '#F7B335'
-# accent_image:
-#   background: '##F7B335'
-# theme_color: '#F7B335'
+accent_color: rgba(0,174,239,1)
+accent_image:
+  background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
+  overlay: false
+theme_color: rgba(27,10,58,1)
 ---
 
 * toc
