@@ -9,11 +9,11 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-05-dfs-and-bfs.md
-accent_color: rgba(0,174,239,1)
+accent_color: rgba(107,187,255,1)
 accent_image:
-  background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
+  background: linear-gradient(-225deg, rgba(107,187,255,1) 0%, rgba(148,196,255,1) 52%, rgba(20,98,171,1) 100%);
   overlay: false
-theme_color: rgba(27,10,58,1)
+theme_color: rgba(20,98,171,1)
 ---
 
 * toc

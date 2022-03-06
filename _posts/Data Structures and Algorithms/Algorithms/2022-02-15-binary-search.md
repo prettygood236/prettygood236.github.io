@@ -9,11 +9,11 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-12-sort.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-19-dynamic-programming.md
-accent_color: rgba(0,174,239,1)
+accent_color: rgba(8,97,154,1)
 accent_image:
-  background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
+  background: radial-gradient(circle, rgba(8,97,154,1) 0%, rgba(5,46,92,1) 100%);
   overlay: false
-theme_color: rgba(27,10,58,1)
+theme_color: rgba(5,46,92,1)
 ---
 
 * toc

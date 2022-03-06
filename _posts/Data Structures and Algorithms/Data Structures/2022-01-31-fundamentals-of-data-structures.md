@@ -10,6 +10,11 @@ image:
 related_posts:
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
   - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
+accent_color: rgba(95,114,190,1)
+accent_image:
+  background: linear-gradient(315deg, rgba(153,33,232,1) 0%, rgba(95,114,190,1) 74%);
+  overlay: false
+theme_color: rgba(153,33,232,1)
 ---
 
 Data structure is a storage that is used to store and organize data. <br>
