@@ -1,14 +1,13 @@
 ---
-layout:   post
-title:    '채굴과 노드'
-subtitle: '채굴과 노드'
-category: blockchain
-tags:     blockchain
+layout:     post
+title:     '채굴과 노드'
+subtitle:  '채굴과 노드'
+category:   blockchain
+tags:       blockchain
 image: 
   path: /assets/img/blockchain/miners-and-nodes_main.jpeg
 ---
-
-reference : https://blog.unocoin.com/
+image from https://blog.unocoin.com/
 {:.figure}
 
 * toc

@@ -1,9 +1,9 @@
 ---
-layout:   post
-title:    '암호화폐 더 알아보기'
-subtitle: '암호화폐 심화'
-category: blockchain
-tags:     blockchain
+layout:     post
+title:     '암호화폐 더 알아보기'
+subtitle:  '암호화폐 심화'
+category:   blockchain
+tags:       blockchain
 image: 
   path: /assets/img/blockchain/about-cryptocurrency_main.jpg
 ---
