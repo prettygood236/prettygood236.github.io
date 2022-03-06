@@ -9,4 +9,4 @@ cover: false
 
 <!--posts-->
 
-<span style="float:left">See [Posts](/data-structures-and-algorithms/) more &nbsp;<span style ="font-color:➡</span>
+<span style="float:left">See [Posts](/data-structures-and-algorithms/) more &nbsp;➡</span>
