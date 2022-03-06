@@ -24,7 +24,7 @@ hy-drawer {
     // <<< link
     --hy-drawer-width: 100%;
     --hy-drawer-peek-width: .5rem;
-    --hy-drawer-box-shadow: 0 0 1rem rgba(0, 0, 0, 0.25);
+    --hy-drawer-box-shadow: 0 0 1rem rgba(255, 0, 0, 0.25);
     // >>>
   }
 
@@ -116,7 +116,7 @@ hy-drawer.loaded .sidebar {
   // <<< inline
   position: absolute;
   top: 0;
-  left: calc(100% - 100vw);
+  left: calc(50% - 50vw);
   width: 100vw;
   height: 100%;
   background: #202020 center / cover;
@@ -133,9 +133,9 @@ hy-drawer.loaded .sidebar {
   // >>>
 
   &.sidebar-overlay::after {
-    background: -moz-linear-gradient(top, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 100%, rgba(32,32,32,0) 100%); // link
-    background: -webkit-linear-gradient(top, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 100%, rgba(32,32,32,0) 100%); // link
-    background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 100%, rgba(32,32,32,0) 100%); // inline
+    background: -moz-linear-gradient(top, rgba(32,32,32,0) 0%, rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); // link
+    background: -webkit-linear-gradient(top, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); // link
+    background: linear-gradient(to bottom, rgba(32,32,32,0) 0%,rgba(32,32,32,0.5) 50%, rgba(32,32,32,0) 100%); // inline
   }
 }
 
