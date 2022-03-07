@@ -7,7 +7,7 @@ tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/dynamic-programming/dynamic-programming_main.png
 related_posts: 
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-15-binary-search.md
+  - _posts/Data Structures and Algorithms/2022-02-15-binary-search.md
   - _posts/Coding Test/2022-02-03-sudoku.md
 accent_color: rgba(247,179,53,1)
 accent_image:
