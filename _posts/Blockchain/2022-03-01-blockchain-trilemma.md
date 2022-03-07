@@ -7,7 +7,7 @@ tags:     blockchain
 image: 
   path: /assets/img/blockchain/blockchain-trilemma_main.jpeg
 accent_color: rgba(24,105,124,1)
-accent_image:
+accent_image: 
   background: linear-gradient(11deg, rgba(21,74,92,1) 0%, rgba(24,105,124,1) 100%);
   overlay: false
 theme_color: rgba(21,74,92,1)
