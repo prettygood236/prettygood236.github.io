@@ -3,7 +3,7 @@ layout:   post
 title:    '6. Dynamic Programming'
 subtitle: '6. Dynamic Programming'
 category: data-structures-and-algorithms
-tags:     algorithms
+tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/dynamic-programming/dynamic-programming_main.png
 related_posts: 

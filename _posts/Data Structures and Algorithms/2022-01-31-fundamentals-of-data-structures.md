@@ -3,7 +3,7 @@ layout:   post
 title:    'Fundamentals of Data structures'
 subtitle: 'Fundamentals of Data structures'
 category: data-structures-and-algorithms
-tags:     data-structures
+tags:     data-structures-and-algorithms
 # hide_last_modified: true
 image: 
   path: /assets/img/data-structures-and-algorithms/data-structures/data-structures_main.png

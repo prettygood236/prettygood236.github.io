@@ -3,7 +3,7 @@ layout:   post
 title:    '5. Binary Search'
 subtitle: '5. Binary Search'
 category: data-structures-and-algorithms
-tags:     algorithms
+tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/binary-search/binary-search_main.png
 related_posts: 

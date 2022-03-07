@@ -3,7 +3,7 @@ layout:   post
 title:    '3. DFS & BFS'
 subtitle: '3. DFS & BFS'
 category: data-structures-and-algorithms
-tags:     algorithms
+tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs-and-bfs_main.png
 related_posts: 

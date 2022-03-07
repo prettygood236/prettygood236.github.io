@@ -3,7 +3,7 @@ layout:   post
 title:    '2. Implementation'
 subtitle: '2. Implementation'
 category: data-structures-and-algorithms
-tags:     algorithms
+tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/algorithm_main.jpg
 related_posts: 
