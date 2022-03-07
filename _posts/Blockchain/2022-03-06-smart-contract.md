@@ -8,7 +8,7 @@ image:
   path: /assets/img/blockchain/smart-contract_main.png
 accent_color: rgba(22,27,49,1)
 accent_image:
-  background: linear-gradient(275deg, rgba(2,48,41,1) 0%, rgba(11,37,44,1) 51%, rgba(22,27,49,1) 100%);
+  background: linear-gradient(275deg, rgba(2,48,41,1) 0%, rgba(11,37,44,1) 71%, rgba(22,27,49,1) 100%);
   overlay: false
 theme_color: rgba(2,48,41,1)
 ---
