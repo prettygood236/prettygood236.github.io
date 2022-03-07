@@ -7,8 +7,8 @@ tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/algorithm_main.jpg
 related_posts: 
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-05-dfs-and-bfs.md
+  - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
+  - _posts/Data Structures and Algorithms/2022-02-05-dfs-and-bfs.md
 accent_color: rgba(107,187,255,1)
 accent_image:
   background: linear-gradient(to right, rgba(107,187,255,1) 0%, rgba(148,196,255,1) 22%, rgba(20,98,171,1) 100%);

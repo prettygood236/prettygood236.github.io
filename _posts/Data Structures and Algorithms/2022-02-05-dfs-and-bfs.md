@@ -7,8 +7,8 @@ tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs-and-bfs_main.png
 related_posts: 
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-12-sort.md
+  - _posts/Data Structures and Algorithms/2022-02-01-implementation.md
+  - _posts/Data Structures and Algorithms/2022-02-12-sort.md
 accent_color: rgba(250,113,205,1)
 accent_image:
   background: linear-gradient(to top, rgba(196,113,245,1) 0%, rgba(250,113,205,1) 100%);

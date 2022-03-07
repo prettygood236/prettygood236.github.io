@@ -7,8 +7,8 @@ tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/binary-search/binary-search_main.png
 related_posts: 
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-12-sort.md
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-19-dynamic-programming.md
+  - _posts/Data Structures and Algorithms/2022-02-12-sort.md
+  - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
 accent_color: rgba(8,97,154,1)
 accent_image:
   background: radial-gradient(circle, rgba(8,97,154,1) 0%, rgba(5,46,92,1) 100%);

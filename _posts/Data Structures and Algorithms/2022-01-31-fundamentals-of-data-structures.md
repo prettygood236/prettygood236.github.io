@@ -8,8 +8,8 @@ tags:     data-structures-and-algorithms
 image: 
   path: /assets/img/data-structures-and-algorithms/data-structures/data-structures_main.png
 related_posts:
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-greedy.md
-  - _posts/Data Structures and Algorithms/Algorithms/2022-02-01-implementation.md
+  - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
+  - _posts/Data Structures and Algorithms/2022-02-01-implementation.md
 accent_color: rgba(95,114,190,1)
 accent_image:
   background: linear-gradient(315deg, rgba(153,33,232,1) 0%, rgba(95,114,190,1) 74%);
