@@ -66,7 +66,7 @@ recursive_function(1)
 {:width="80%"}
 
 It is displayed that the 99th to the 1st are finished sequentially.
-If you use a recursive function, it comes out similar to putting data on the *<u>stack<u>* and then removing it.
+If you use a recursive function, it comes out similar to putting data on the *<u>stack</u>* and then removing it.
 
 
 ### Factorial Implementation 
