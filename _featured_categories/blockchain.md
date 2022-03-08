@@ -1,5 +1,5 @@
 ---
-layout: blog
+layout: grid
 type: category
 title: Blockchain
 slug: blockchain
