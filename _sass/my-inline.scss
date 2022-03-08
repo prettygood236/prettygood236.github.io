@@ -63,7 +63,7 @@
   overflow: hidden;   
   color: rgba(255,255,255,.70);
   text-align: left;
-  &.invert { color: rgba(52, 52, 52, .75) }
+  &.invert div { color: rgba(52, 52, 52, .75) }
 }
 /* Animation */
 .typewriter_line1 {
