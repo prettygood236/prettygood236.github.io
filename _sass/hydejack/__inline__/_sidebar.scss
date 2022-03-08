@@ -68,7 +68,7 @@ hy-drawer {
   color: rgba(255, 255, 255, .75);
   text-align: center;
   min-height: 100vh;
-  &.invert { color: rgba(32, 32, 32, .75) }
+  &.invert { color: rgba(52, 52, 52, .75) }
 
 
   a {
@@ -83,13 +83,12 @@ hy-drawer {
   &.invert a {
 
     color: #222;
-    border-bottom-color: rgba(32, 32, 32, 0.2);
-    text-decoration-color: rgba(32, 32, 32, 0.2);
+    border-bottom-color: rgba(52, 52, 52, 0.2);
+    text-decoration-color: rgba(52, 52, 52, 0.2);
 
 
   }
 }
-
 
 
 .sidebar-bg {
@@ -158,8 +157,8 @@ hy-drawer {
 }
 
 .sidebar.invert .sidebar-about > a.sidebar-title{
-  &::after { border-color: rgba(32, 32, 32, 0.2) }
-  &:hover::after { border-color: #222 }
+  &::after { border-color: rgba(52, 52, 52, 0.2) }
+  &:hover::after { border-color: rgb(39, 39, 39) }
 }
 
 .sidebar-nav > ul {
