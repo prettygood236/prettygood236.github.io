@@ -59,7 +59,7 @@ console.log(output); // --> 8,754 (9,786 - 1,032)
 이를 코드로 구현하면 다음과 같다.
 
 ~~~js
-// Javascript
+// file:'InequalityNumber.js'
 const inequalityNumber = function (signs) {
   // 공백을 기준으로 나누어 배열에 담기
   let sign = signs.split(" ")
@@ -114,7 +114,7 @@ console.log(output); // --> 8544077523
 재귀 함수를 이용한 탐색 풀이는 다음과 같다.
 
 ~~~js
-// Javascript
+// file:'InequalityNumber.js'
 const inequalityNumber = function (signs) {
   const aux = (idx, signs, nums, digits, isVisited) => {
     if (idx === signs.length) {

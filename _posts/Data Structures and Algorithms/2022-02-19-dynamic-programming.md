@@ -73,7 +73,7 @@ Also, You can see that f(2) is <u>called multiple times</u> -> <span style='back
 **Fibonacci Sequence: Top-Down Dynamic Programming**
 
 ~~~py
-# Python 
+# title : 'FibonacciTopDown.py'
 # Initialize the list to memoize the calculated result.
 d = [0] * 100 
 
@@ -95,7 +95,7 @@ print(fibo(99)) # 218922995834555169026
 **Fibonacci Sequence: Bottom-Up Dynamic Programming**
 
 ~~~py
-# Python
+# title : 'FibonacciBottomUp.py'
 # Initialize the DP table to save the previously calculated result.
 d = [0] * 100
 
@@ -148,7 +148,7 @@ At this time, the ant warrior can steal a total of 8 food, the maximum value whe
 The ant warrior wants to get as much food as possible when the food warehouse is in such a straight line.<br>
 Write a program to *find the maximum amount of food* that can be obtained for an ant warrior given information about N food warehouses.<br>
 
-**Difficulty: 2 \| 30 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB**
+**Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -188,7 +188,7 @@ The recurrence relation is as follows.
 Food warehouses more than one square away can always be looted, so there is no need to consider (i-3) and lower.
 
 ~~~py
-# Python
+# title : 'AntWarrior.py'
 # Get an integer N
 n = int(input( ))
 #Get all food information input
@@ -215,7 +215,7 @@ For example, if there are 2 won and 3 won units, using 5 3 won to make 15 won is
 
 Write a program that prints the minimum number of currencies to make M won.
 
-**Difficulty: 2 \| 30 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB**
+**Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -269,7 +269,7 @@ According to the recurrence relation, the list is finally updated as follows.
 ![Minimum number of currencies_step3](/assets/img/coding-test/minimum-number-of-currencies_4.png){:width="80%"}
 
 ~~~py
-# Python
+# title : 'MinimumNumberOfCurrencies.py'
 # Get score N, M input.
 n, m = map(int, input( ). split( ))
 # Get information on N currency units.
@@ -305,7 +305,7 @@ Write a program that outputs the maximum amount of gold that a miner can obtain 
 
 ![Gold Mine_1](/assets/img/coding-test/gold-mine_1.png){:width="80%"}
 
-**Difficulty: 2 \| 30 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB**
+**Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -357,7 +357,7 @@ Initialize the DP table → Put the initial value in the first column → Check 
 Iteration....the maximum value in the rightmost column is the correct answer required by the problem.
 
 ~~~py
-# Python
+# title : 'GoldMine.py'
 for tc in range(int( input( ))):
   #Enter gold mine information.
   n, m = map(int, input( ). split( ))
@@ -406,7 +406,7 @@ This is a way to maximize the number of remaining soldiers.
 
 Write a program that, given information about soldiers, prints the number of soldiers that must be excluded in order to maximize the number of remaining soldiers.
 
-**Difficulty: 1.5 \| 40 minutes to solve \| Time limit 1 seconds \| Memory limit 356 MB**
+**Difficulty: 1.5 \| Solving Time: 40 minutes \| Timeout: 1 second \| Memory limit: 356 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -440,7 +440,7 @@ Reverses the order of the soldier information input first.<br>
 The correct answer is derived by performing the longest increasing subsequence (LIS) algorithm.
 
 ~~~py
-# Python
+# title : 'DeployingSoldiers.py'
 n = int(input( ))
 array = list(map(int, input( ).split( )))
 # Reverse the order and transform it into a 'longest increasing subsequence' problem

@@ -57,7 +57,7 @@ For example, if L or U is encountered at position (1, 1), it is ignored. <br>
 the map and plan for N = 5
 {:.figure}
 
-**Difficulty: 1 \| 15 minutes to solve \| Time limit 2 seconds \| Memory limit 128 MB**
+**Difficulty: 1 \| Solving Time: 15 minutes \| Timeout: 2 seconds \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -76,7 +76,7 @@ In the first line, print the number written on the card selected according to th
 This is a problem that needs to implement faithfully according to the requirements.
 
 ~~~py
-# Python
+# title: 'LeftRightUpDown.py'
 # Get N input
 n = int(input())
 x, y = 1, 1
@@ -118,7 +118,7 @@ express from a to h.
 There are 6 possible moves when in c2.<br>
 There are 2 possible moves when in a1.
 
-**Difficulty: 1 \| 20 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB**
+**Difficulty: 1 \| Solving Time: 20 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -136,7 +136,7 @@ Check the 8 paths of the knight one by one and check if it is possible to move t
 Using the list, define direction vectors for 8 directions.
 
 ~~~py
-# Python
+# title: 'RoyalKnight.py'
 # Get the current knight's location
 input_data = input()
 row = int(input_data[1])

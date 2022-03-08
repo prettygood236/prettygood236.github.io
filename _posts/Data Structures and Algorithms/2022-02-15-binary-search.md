@@ -61,7 +61,7 @@ In other words, binary search cuts the search range by half, and the time comple
 
 **Recursive Implementation**
 ~~~py
-# Python
+# title : 'BinarySearchRecursive.py'
 def binary_search(array, target, start, end):
     if start > end:
         return None
@@ -89,9 +89,9 @@ else:
     print(result + 1)
 ~~~
 
-**Loop Implementation**
+**Iterative Implementation**
 ~~~py
-# Python
+# title : 'BinarySearchIterative.py'
 def binary_search(array, target, start, end):
     while start <= end:
         mid = (start + end) // 2
@@ -179,7 +179,7 @@ For example, if you have rice cakes with heights of 19, 14, 10, and 17 cm side b
 
 Write <u>a program to find the maximum value of the height that can be set in the cutter to obtain at least M rice cakes</u> when the total length requested by the customer is M.
 
-**Difficulty: 2 \| 40 minutes to solve \| Time limit 2 seconds \| Memory limit 128 MB**
+**Difficulty: 2 \| Solving Time: 40 minutes \| Timeout: 2 seconds \| Memory limit: 128 MB**
 {:.message}
 
 **Input conditions** <br>
@@ -232,7 +232,7 @@ By repeating this binary search process, an answer can be derived.
 Since the value of the midpoint becomes an optimized value over time, record the value of the midpoint whenever the sum of the lengths of rice cakes obtained by repeating the process is greater than or equal to the required length of rice cakes (=M). .
 
 ~~~py
-# Python
+# title : 'MakingTteokbokkiRiceCakes.py'
 #Enter the number of rice cakes (N) and the requested length of rice cakes (M)
 n, m = list( map( int, input() . split( ' ' ))))
 #Enter the individual height information of each rice cake
@@ -269,7 +269,7 @@ A sequence containing N elements is sorted in ascending order. <u>Count the numb
 
 However, if the algorithm is not designed with a time complexity of $$O(logN)$$, this problem is judged to be time-out.
 
-**Difficulty: 2 \| 30 minutes to solve \| Time limit 1 seconds \| Memory limit 128 MB \|Previous Zoho interview****
+**Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB \|Previous: Zoho interview****
 {:.message}
 
 **Input conditions** <br>
@@ -293,7 +293,7 @@ You can solve the problem by finding the first and last positions where a specif
 Binary search is performed twice over the entire search range. Makes you find the first location, the last location.
 
 ~~~py
-# Python
+# title : 'CountaSpecificNumberInaSortedArray.py'
 from bisect import bisect_left, bisect_right
 
 #Function that returns the number of data whose values ​​are [left_value, right_value]

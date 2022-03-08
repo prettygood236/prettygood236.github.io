@@ -76,7 +76,7 @@ If you use a recursive function, it comes out similar to putting data on the *<u
 
 **Iteratively implementation of n!**
 ~~~py
-# Python
+# title:'FactorialIterative.py'
 def factorial_iterative(n):
     result = 1
     # Multiply the numbers from 1 to n sequentially
@@ -87,7 +87,7 @@ def factorial_iterative(n):
 
 **Recursively implementation of n!**
 ~~~py
-# Python
+# title:'FactorialRecursive.py'
 def factorial_recursive(n):
     if n <= 1: # Returns 1 if n is 1 or less
         return 1
@@ -125,7 +125,7 @@ Example: GCD(192, 162)
 The form of changing the expression is repetitive and has the same structure. So, it can be made intuitively with a recursive function.
 
 ~~~py
-# Python
+# title:'GCD.py'
 def gcd(a, b):
     if a % b == 0:
         return b

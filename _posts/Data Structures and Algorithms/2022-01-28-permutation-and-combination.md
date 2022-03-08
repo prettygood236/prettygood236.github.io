@@ -39,7 +39,7 @@ A Permutation can be implemented using a recursive function in the manner shown 
 {:.figure}
 
 ~~~js
-// Javascript
+// title:'Permutation.js'
 const getPermutations = function (arr, selectNumber) {
      const results = [];
      if (selectNumber === 1) return arr.map((el) => [el]);
@@ -80,7 +80,7 @@ Combination to choose 3 out of ABCDE
 {:.figure}
 
 ~~~js
-// Javascript
+// title:'Combination.js'
 const getCombinations = function (arr, selectNumber) {
      const results = [];
      if (selectNumber === 1) return arr.map((el) => [el]);

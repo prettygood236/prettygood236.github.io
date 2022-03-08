@@ -73,7 +73,7 @@ else {
 * length or size : determining how many elements are on a stack
 
 ```js
-//javascript
+// title: 'Stack.js'
 class Stack {
   constructor() {
     this.count = 0;
@@ -125,7 +125,7 @@ Queue example is a print queue when a lot of people are printing documents at th
 ### 2.2 Queue Implementation
 
 ```js
-//javascript
+// title: 'Queue.js'
 class Queue {
   constructor() {
     this.collection = [];
@@ -168,7 +168,7 @@ But when you pass in elements at different priorities the elements that are pass
 #### 2.3.2 Priority Queue Implementation
 
 ```js
-//javascript
+// title: 'PriorityQueue.js'
 class PriorityQueue {
   constructor() {
     this.collection = [];
@@ -232,7 +232,7 @@ The typical use for set is to simply check for the presence of an item.
 ### 3.2 Set Implementation
 
 ```js
-//javascript
+// title: 'Set.js'
 // Why it's named this way is because we want to make it distinct from the es5.
 class mySet {
   constructor() {
@@ -353,7 +353,7 @@ This is actually what we visualized a tree data structure to look like all data 
 ### 4.2 Tree Implementation
 
 ```js
-//javascript
+// title: 'Tree.js'
 class Tree{
   // The object created by the constructor becomes a Node in the tree.
   constructor(value){
@@ -438,7 +438,7 @@ This is much better than the linear time required to find items by key in an uns
 #### 4.3.3 Binary Search Tree Implementation
 
 ~~~js
-// javascript
+// title: 'BinarySearchTree.js'
 // The node class represents each node in the tree.
 class Node {
   constructor(data, left = null, right = null) {
@@ -693,7 +693,6 @@ The data in a graph are called ***nodes or vertices.***<br>
 The connections between the nodes are called ***edges.***
 
 ![Graph](/assets/img/data-structures-and-algorithms/data-structures/graph-1.png){:width="650"}
-<br><br>
 
 ### 5.2 Type of Graph
 
@@ -742,7 +741,7 @@ Each column will represent a unique edge. Also, each edge connects two nodes to 
 ### 6.2 Hash Table Implementation
 
 ~~~js
-// javascript
+// title: 'HashTable.js'
 const hash = function(string, max) {
   let hash = 0;
   for (let i = 0; i < string.length; i++) {
@@ -837,7 +836,7 @@ ht.print();
 ### 7.2 Linked List Implementation
 
 ~~~js
-// javascript
+// title: 'LinkedList.js'
 class Node {
   constructor(element) {
     this.element = element; 
@@ -978,7 +977,7 @@ console.log(conga.size()); // 4
 ### 8.2 Trie Implementation
 
 ~~~js
-// javascript
+// title: 'Trie.js'
 class Node {
   sconstructor() {
     this.keys = new Map();
@@ -1072,7 +1071,7 @@ console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','s
 ### 9.2 Heap Implementation
 
 ~~~js
-// Javascript
+// title: 'Heap.js'
 // left child: i * 2
 // right child: i * 2 + 1
 // parent: i / 2

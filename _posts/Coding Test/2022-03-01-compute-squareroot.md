@@ -69,6 +69,7 @@ $$
 이를 구현하면 다음과 같다. (x의 초기값은 1로, 평균을 10번만 구하도록 하였다.)
 
 ~~~js
+// file:'ComputeSquareRoot.js'
 function computeSquareRoot(a) { 
   let x=1 , aDivx, avg; 
   for(let i=0; i<10; i++) { 
