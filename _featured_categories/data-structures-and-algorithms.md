@@ -1,5 +1,5 @@
 ---
-layout: grid
+layout: projects
 type: category
 title: Data Structures & Algorithms
 slug: data-structures-and-algorithms
