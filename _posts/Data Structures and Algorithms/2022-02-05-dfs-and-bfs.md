@@ -19,15 +19,19 @@ theme_color: rgba(196,113,245,1)
 * toc
 {:toc .large-only}
 
-Search: The process of finding the desired data among a large amount of data.
+Search is the process of *finding the desired data among a large amount of data.*
 
-Depth-First Search (DFS)
-DFS is a depth-first search algorithm that preferentially searches the deep part of a graph.
-DFS uses a stack data structure (or a recursive function), and the detailed operation process is as follows.
+## 3. DFS & BFS
+
+### 3.1 DFS (Depth-First Search)
+
+DFS is a ***depth-first search*** algorithm that <span style='background-color:#fff39b; font-size:1.1em'>*preferentially searches the deep part of a graph.*</span><br>
+DFS <span style='background-color:#fff39b;font-size:1.1em'>*uses a stack data structure(or a recursive function)*</span>, and the detailed operation process is as follows.
 1. Insert the search start node into the stack and visit it.
 2. If there is at least one unvisited adjacent node at the top node of the stack, the node is put into the stack and visited.
    If there are no unvisited adjacent nodes, the top node is popped off the stack.
 3. Repeat until step 2 can no longer be performed.
+{:.message}
 
 DFS Behavior Example
 [step 0] Prepare the graph. (visited by: lower-numbered neighboring nodes first)

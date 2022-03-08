@@ -63,6 +63,7 @@
   overflow: hidden;   
   color: rgba(255,255,255,.70);
   text-align: left;
+  // if inverted -> font-color black testing
   &.invert div { color: rgba(52, 52, 52, .75) }
 }
 /* Animation */
@@ -89,6 +90,8 @@
   cursor: pointer;
   text-align: right;
   width: 100%;
+    // if inverted -> font-color black testing
+  &.invert { color: rgba(52, 52, 52, .75) }
 }
 
 .spread-btn:hover{
