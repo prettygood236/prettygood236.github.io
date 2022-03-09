@@ -69,7 +69,7 @@ console.log(output); // --> 8
 
 ## Solution
 
-BFS는 시작 지점부터 가까운 노드까지 차례대로 그래프의 모든 노드를 탐색한다. <br>
+BFS는 시작 지점부터 가까운 노드까지 차례대로 그래프의 모든 노드를 탐색한다. <br/>
 상,하,좌,우로 연결된 모든 노드로의 거리가 1로 동일하므로 src(출발지)부터 BFS를 수행하여 모든 노드의 최단 거리 값을 기록하면 해결할 수 있다. 
 
 ~~~js
@@ -77,7 +77,7 @@ BFS는 시작 지점부터 가까운 노드까지 차례대로 그래프의 모�
 const robotPath = function (room, src, dst) {
   const n = room[0].length
   const m = room.length
-  // 편의상 x,y 좌표를 이용하기 위해 src를 reverse 해준다.
+  // 편의상 x,y 좌표를 이용한다.
   const x = [...src].reverse()[0]
   const y = [...src].reverse()[1]
   // 이동할 네 가지 방향을 정의한다. (상,하,좌,우)
@@ -115,7 +115,7 @@ const robotPath = function (room, src, dst) {
           queue.push([nx,ny])
          }
          // 목적지에 도달했다면 탐색을 멈추고 출력한다.
-         // JSON.strigify를 이용해 배열을 비교할 수 있다.
+         // JSON.strigify를 이용(JSON 문자열로 변환)하면 배열을 비교할 수 있다.
          if (JSON.stringify(room[ny][nx])===JSON.stringify(room[dst[0]][dst[1]])){
           return room[dst[0]][dst[1]]
          }
