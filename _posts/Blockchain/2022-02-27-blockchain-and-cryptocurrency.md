@@ -8,7 +8,7 @@ image:
   path: /assets/img/blockchain/blockchain-and-cryptocurrency_main.png
 accent_color: rgba(64,225,185,1)
 accent_image:
-  background: linear-gradient(49deg, rgba(117,27,147,1) 0%, rgba(62,104,176,1) 47%, rgba(64,225,185,1) 100%);
+  background: url('/assets/img/background/purple-green.jpg') center/cover
   overlay: false
 theme_color: rgba(117,27,147,1)
 ---
