@@ -280,8 +280,8 @@ print(result) #print the correct answer
 
 #### 3.3.3 Problem : Maze Escape
 
-chan was trapped in a maze in the shape of a rectangle of size N X M. There are several monsters in the maze, and you have to escape from them.<br>
-The position of chan is (1, 1) and the exit of the maze is at the position of (N, M), and it can move one space at a time.<br>
+Chan was trapped in a maze in the shape of a rectangle of size N X M. There are several monsters in the maze, and chan have to escape from them.<br>
+The position of chan is (1, 1) and the exit of the maze is at the position of (N, M), and it can move one space at a time.
 In this case, the area with monsters is marked with 0, and the area without monsters is marked with 1. The maze comes out in a form that must be escaped. <br>
 At this time, find the minimum number of squares that chan must move to escape. When counting cells, both the start cell and the end cell are counted.
 
@@ -322,20 +322,20 @@ Similarly, if BFS is continuously performed, as a result, the values ​​of th
 ~~~py
 # title: 'MazeEscape.py'
 def bfs(x, y):
-    #Use deque library to implement queue
+    # Use deque library to implement queue
     queue = deque()
-    queue .append((x, y)) Contains tuple data of #(x, y).
-    #repeat until queue is empty
+    queue.append((x, y)) # Contains tuple data of (x, y).
+    # Repeat until queue is empty
     while queue:
-        x, y = queue. popleft() # take an element from the queue on each iteration
-        #Check the location in 4 directions from the current location
+        x, y = queue. popleft() # Take an element from the queue on each iteration
+        # Check the location in 4 directions from the current location
         for i in range(4):
             nx = x+dx[i]
             ny = y+dy[i]
-           #Ignore if out of maze find space
+           # Ignore if out of maze find space
            if nx < 0 or nx >=n or ny < 0 or ny >= m:
                continue
-           #Ignore if it is a wall (monster)
+           # Ignore if it is a wall (monster)
            if graph[nx][ny] == 0:
                continue
            # Record the shortest distance only when the node is visited for the first time
@@ -346,14 +346,14 @@ def bfs(x, y):
     return graph[n-1][m-1]
 from collections import deque
 
-Get input by separating #N and M by a space
+# Get input by separating N and M by a space
 n, m = map(int, input(). split())
-#Get map information of 2D list
+# Get map information of 2D list
 graph = []
 for i in range(n):
     graph.append(list(map(int, input())))
 
-#Define four directions to move (up, down, left, right)
+# Define four directions to move (up, down, left, right).
 dx = [-1, 1, 0, 0]
 dy = [0, 0, -1, 1]
 
