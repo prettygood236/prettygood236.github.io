@@ -121,6 +121,7 @@ const robotPath = function (room, src, dst) {
          }
        }
      }
+    return room[dst[0]][dst[1]]
   }
   return bfs(x,y)
 }
