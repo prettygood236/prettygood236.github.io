@@ -75,7 +75,6 @@ BFS는 시작 지점부터 가까운 노드까지 차례대로 그래프의 모�
 ~~~js
 // file:'RobotPath.js'
 const robotPath = function (room, src, dst) {
-  // TODO: 여기에 코드를 작성합니다.
   const n = room[0].length
   const m = room.length
   // 편의상 x,y 좌표를 이용하기 위해 src를 reverse 해준다.
