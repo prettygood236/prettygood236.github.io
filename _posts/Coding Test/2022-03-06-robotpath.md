@@ -7,8 +7,8 @@ tags:       coding-test
 image: 
   path: /assets/img/coding-test/robotPath_main.jpg
 related_posts: 
-  - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
   - _posts/Data Structures and Algorithms/2022-02-05-dfs-and-bfs.md
+  - _posts/Coding Test/2022-03-01-compute-squareroot.md
 accent_color: rgba(0,174,239,1)
 accent_image:
   background: url('/assets/img/background/abstract.jpg') center/cover
