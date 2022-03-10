@@ -2,7 +2,7 @@
 layout: tag-list
 type: tag
 title: IT
-slug: it
+slug: IT
 category: study
 sidebar: false
 accent_color: rgba(0,174,239,1)
