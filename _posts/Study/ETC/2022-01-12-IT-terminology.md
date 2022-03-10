@@ -8,7 +8,7 @@ image:
   path: /assets/img/IT/IT-Terminology_main.jpg
 accent_color: rgba(104,192,189,1)
 accent_image:
-  background: radial-gradient(circle, rgba(147,255,252,1) 0%, rgba(111,203,200,1) 15%, rgba(56,122,119,1) 40%, rgba(4,44,41,1) 68%, rgba(3,9,4,1) 100%);
+  background: radial-gradient(circle, rgba(147,255,252,1) 0%, rgba(111,203,200,1) 16%, rgba(28,80,77,1) 50%, rgba(3,5,4,1) 100%);
   overlay: false
 theme_color: rgba(4,44,41,1)
 ---
