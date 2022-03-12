@@ -8,7 +8,7 @@ image:
   path: /assets/img/blockchain/miners-and-nodes_main.png
 accent_color: rgba(0,174,239,1)
 accent_image:
-  background: url('/assets/img/background/neon-circle.png') center/cover
+  background:  linear-gradient(315deg, rgba(43,65,98,1) 0%, rgba(18,16,14,1) 74%);
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
