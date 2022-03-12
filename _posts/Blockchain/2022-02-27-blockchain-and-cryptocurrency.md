@@ -5,10 +5,10 @@ subtitle: '블록체인과 암호화폐 개요'
 category: blockchain
 tags:     blockchain
 image: 
-  path: /assets/img/blockchain/blockchain-and-cryptocurrency_main.png
+  path: /assets/img/blockchain/blockchain-and-cryptocurrency_main.jpeg
 accent_color: rgba(0,174,239,1)
 accent_image:
-  background: linear-gradient(to top, '#0250c5' 0%, '#d43f8d' 100%);
+  background: linear-gradient(to top, rgba(2,80,197,1) 0%, rgba(212,63,141,1) 100%);
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---

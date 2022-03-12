@@ -6,11 +6,11 @@ category: blockchain
 tags:     blockchain
 image: 
   path: /assets/img/blockchain/blockchain-trilemma_main.jpeg
-accent_color: '#F79464'
+accent_color: rgba(247,148,100,1)
 accent_image: 
   background: url('/assets/img/background/neon-triangle.jpeg') center/cover
   overlay: false
-theme_color: '#330B6D'
+theme_color: rgba(51,11,109,1)
 ---
 
 * toc

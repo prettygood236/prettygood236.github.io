@@ -6,11 +6,11 @@ category:   blockchain
 tags:       blockchain
 image: 
   path: /assets/img/blockchain/miners-and-nodes_main.jpeg
-accent_color: rgba(249,180,56,1)
+accent_color: rgba(0,174,239,1)
 accent_image:
-  background: linear-gradient(45deg, rgba(50,32,28,1) 0%, rgba(87,59,18,1) 27%, rgba(249,180,56,1) 100%);
+  background: url('/assets/img/background/neon-circle.png') center/cover
   overlay: false
-theme_color: rgba(50,32,28,1)
+theme_color: rgba(27,10,58,1)
 ---
 image from https://blog.unocoin.com/
 {:.figure}
