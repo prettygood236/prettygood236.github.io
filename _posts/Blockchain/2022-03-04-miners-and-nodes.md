@@ -5,7 +5,7 @@ subtitle:  '채굴과 노드'
 category:   blockchain
 tags:       blockchain
 image: 
-  path: /assets/img/blockchain/miners-and-nodes_main.jpeg
+  path: /assets/img/blockchain/miners-and-nodes_main.png
 accent_color: rgba(0,174,239,1)
 accent_image:
   background: url('/assets/img/background/neon-circle.png') center/cover
