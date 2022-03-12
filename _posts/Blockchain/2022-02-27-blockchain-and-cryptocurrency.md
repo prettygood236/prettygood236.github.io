@@ -6,11 +6,11 @@ category: blockchain
 tags:     blockchain
 image: 
   path: /assets/img/blockchain/blockchain-and-cryptocurrency_main.png
-accent_color: rgba(64,225,185,1)
+accent_color: rgba(0,174,239,1)
 accent_image:
-  background: url('/assets/img/background/purple-green.jpg') center/cover
+  background: linear-gradient(to top, '#0250c5' 0%, '#d43f8d' 100%);
   overlay: false
-theme_color: rgba(117,27,147,1)
+theme_color: rgba(27,10,58,1)
 ---
 
 
