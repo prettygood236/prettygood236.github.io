@@ -98,8 +98,8 @@ const robotPath = function (room, src, dst) {
        y = temp[1]
        // 현재 위치에서 4가지 방향으로 한번씩 방문한다. 
        for (let i=0; i<4; i++){
-         nx = x+dx[i]
-         ny = y+dy[i]
+         const nx = x+dx[i]
+         const ny = y+dy[i]
          // 공간을 벗어난 경우 무시한다.
          if (nx < 0 || nx >= n || ny < 0 || ny >= m){
           continue;
@@ -115,13 +115,11 @@ const robotPath = function (room, src, dst) {
           queue.push([nx,ny])
          }
          // 목적지에 도달했다면 탐색을 멈추고 출력한다.
-         // JSON.strigify를 이용(JSON 문자열로 변환)하면 배열을 비교할 수 있다.
-         if (JSON.stringify(room[ny][nx])===JSON.stringify(room[dst[0]][dst[1]])){
+         if (ny===dst[0] && nx===dst[1]){
           return room[dst[0]][dst[1]]
          }
        }
      }
-    return room[dst[0]][dst[1]]
   }
   return bfs(x,y)
 }
