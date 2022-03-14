@@ -714,7 +714,7 @@ Min-Heap
 - The root node has the largest value.
 - Therefore, the data with the large value is removed first.
 
-![Maxheap](/assets/img/data-structures-and-algorithms/data-structures/minheap_0.png){:width="60%"} <br/> 
+![Maxheap](/assets/img/data-structures-and-algorithms/data-structures/maxheap_0.png){:width="60%"} <br/> 
 Max-Heap 
 {:.figure}  
 
