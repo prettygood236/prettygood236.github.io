@@ -64,7 +64,11 @@
   color: rgba(255,255,255,.70);
   text-align: left;
   // if inverted -> font-color black testing
+  &.invert a {
+    color: rgb(23, 23, 71);
+  }
 }
+
 /* Animation */
 .typewriter_line1 {
   animation: animated-text 2s steps(100,end) 1s 1 normal both;
@@ -90,6 +94,9 @@
   text-align: right;
   width: 100%;
     // if inverted -> font-color black testing
+  &.invert a {
+    color: rgb(23, 23, 71);
+}
 }
 
 .spread-btn:hover{
