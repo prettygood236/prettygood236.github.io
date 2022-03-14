@@ -6,11 +6,10 @@ category: blockchain
 tags:     blockchain
 image: 
   path: /assets/img/blockchain/blockchain-trilemma_main.jpeg
-accent_color: rgba(0,174,239,1)
+accent_color: rgba(37,122,245,1) 
 accent_image:
-  background: url('/assets/img/background/neon-triangle.jpg') center/cover
-  overlay: false
-theme_color: rgba(27,10,58,1) 
+  background: linear-gradient(117deg, rgba(34,14,117,1), rgba(69,24,139,1), rgba(101,35,162,1), rgba(133,46,184,1), rgba(167,57,205,1), rgba(172,57,203,1) , rgba(176,58,200,1), rgba(180,58,198,1), rgba(156,48,172,1), rgba(132,39,147,1), rgba(109,29,123,1), rgba(0,0,0,1));
+theme_color: rgba(180,58,198,1)
 ---
 
 * toc

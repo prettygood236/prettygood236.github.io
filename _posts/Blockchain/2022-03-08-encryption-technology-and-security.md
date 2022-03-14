@@ -8,7 +8,7 @@ image:
   path: /assets/img/blockchain/encryption-technology-and-security_main.jpg
 accent_color: rgba(67,67,67,1)
 accent_image:
-  background: url('/assets/img/background/dark-blue-star.jpg') center/cover
+  background: rgba(78,112,150,1)
   overlay: false
 theme_color: rgba(52,52,52,1)
 ---

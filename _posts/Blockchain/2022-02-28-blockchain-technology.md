@@ -6,11 +6,11 @@ category: blockchain
 tags:     blockchain
 image: 
   path: /assets/img/blockchain/blockchain-technology_main.jpeg
-accent_color: rgba(48,207,208,1)
+accent_color: rgba(0,174,239,1)
 accent_image:
-  background:  linear-gradient(to bottom, rgba(4,50,73,1) 0%, rgba(48,207,208,1) 100%);
+  background:  rgba(34,80,185,1)
   overlay: false
-theme_color: rgba(51,8,103,1)
+theme_color: rgba(34,80,185,1)
 ---
 
 * toc
