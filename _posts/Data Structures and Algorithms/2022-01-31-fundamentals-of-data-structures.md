@@ -693,8 +693,14 @@ console.log('levelOrder: ' + bst.levelOrder()); // levelOrder: 5,2,6,1,3,9,22,20
 
 #### 4.4.1 What is Heap?
 
-The heap is a type of <u>full binary tree data structure</u>.<br/>
-The heap always <span style='background-color:#fff39b; font-size:1.1em'>*removes the root note.*</span>
+A complete binary tree is a binary tree in which all the levels are completely filled except possibly the lowest one, which is filled from the left.
+
+Heap data structure is <span style='background-color:#fff39b; font-size:1.1em'>*a complete binary tree that satisfies* </span>***<span style='background-color: #E0FFC4 ;font-size:1.1em'>the heap property</span>***, where any given node is 
+
+always smaller than the child node/s and the key of the root node is the smallest among all other nodes. This property is also called ***min heap property***.<br>
+always greater than its child node/s and the key of the root node is the largest among all other nodes. This property is also called ***max heap property***. 
+
+The heap always <span style='background-color:#fff39b; font-size:1.1em'>*removes the root note first.*</span>
 
 **Min Heap**
 - The root note has the smallest value.
