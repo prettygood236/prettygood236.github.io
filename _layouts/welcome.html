@@ -160,7 +160,7 @@ layout: about
     {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
     {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
     <p class="read-more">
-      {{ text | replace:"<!--posts_title-->", posts_title }}
+      {{ text | replace:"   ", posts_title }}
     </p>
   {% else %}
     Page with path <code>{{ page.more_posts }}</code> not found.
@@ -213,7 +213,7 @@ layout: about
     {% unless more_posts %}{% assign more_posts = nodes | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
   {% endif %}
   {% if more_posts %}
-    {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
+    {% capture posts_title %}<a class="heading flip-title" href="{{ blockchain | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
     {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
     <p class="read-more mt1">
       {{ text | replace:"<!--posts_title-->", posts_title }}
@@ -223,5 +223,5 @@ layout: about
   {% endif  %}
 {% endif %}
 {% endcapture %}
-{% assign content = content | replace:"<!--posts-->", posts_x %}
+{% assign content = content | replace:"<!--blockchain-->", posts_x %}
 {% endif %}
