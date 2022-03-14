@@ -92,7 +92,7 @@ layout: about
   </div>
 {% elsif site.posts.size > 1 %}
   <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
-    {% for post in site.posts limit:6 %}
+    {% for post in site.posts limit:30 %}
       <div class="column column-1-2">
         {% include_cached pro/post-card.html post=post %}
       </div>
@@ -171,56 +171,3 @@ layout: about
 {% endif %}
 
 {{ content }}
-
-
-{% if content contains "<!--blockchain-->" %}
-{% capture posts_x %}
-{% if page.selected_posts %}
-  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
-    {% for post_path in page.selected_posts %}
-      {% if major >= 4 and minor >= 1 %}
-        {% assign post = site.posts | find_exp:"post", "post_path == post.path or post_path == post.url" %}
-      {% else %}
-                         {% assign post = site.posts | where_exp:"post", "post_path == post.path" | first %}
-        {% unless post %}{% assign post = site.posts | where_exp:"post", "post_path == post.url"  | first %}{% endunless %}
-      {% endif %}
-      <div class="column column-1-2">
-        {% if post %}
-          {% include_cached pro/post-card.html post=post %}
-        {% else %}
-          Post with path <code>{{ post_path }}</code> not found.
-        {% endif %}
-      </div>
-    {% endfor %}
-  </div>
-{% elsif site.posts.size > 1 %}
-  <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
-    {% for post in site.posts limit:6 %}
-      <div class="column column-1-2">
-        {% include_cached blockchain post=post %}
-      </div>
-    {% endfor %}
-  </div>
-{% endif %}
-
-{% assign posts_page = page.posts_page | default:page.more_posts %}
-{% if posts_page %}
-  {% if major >= 4 and minor >= 1 %}
-    {% assign more_posts = nodes | find_exp:"page", "posts_page == page.path or posts_page == page.url" %}
-  {% else %}
-                           {% assign more_posts = nodes | where_exp:"page", "posts_page == page.path" | first %}
-    {% unless more_posts %}{% assign more_posts = nodes | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
-  {% endif %}
-  {% if more_posts %}
-    {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
-    {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
-    <p class="read-more mt1">
-      {{ text | replace:"<!--posts_title-->", posts_title }}
-    </p>
-  {% else %}
-    Page with path <code>{{ posts_page }}</code> not found.
-  {% endif  %}
-{% endif %}
-{% endcapture %}
-{% assign content = content | replace:"<!--blockchain-->", posts_x %}
-{% endif %}
