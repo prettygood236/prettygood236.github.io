@@ -5,7 +5,7 @@ subtitle:  '암호화 기술과 보안'
 category:   blockchain
 tags:       blockchain
 image: 
-  path: /assets/img/blockchain/encryption-technology-and-security_main.jpg
+  path: /assets/img/blockchain/encryption-technology-and-security_main.png
 accent_color: rgba(67,67,67,1)
 accent_image:
   background: rgba(78,112,150,1)
