@@ -5,10 +5,13 @@ sitemap: true
 cover: false
 ---
 
-## Featured Posts
+## Recent Posts
 
 <!--posts-->
 
 <span style="float:left">See [Posts](/data-structures-and-algorithms/) more &nbsp;➡</span>
+
+<!--blockchain-->
+
 
 <!--posts_list-->
