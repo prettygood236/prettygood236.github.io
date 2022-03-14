@@ -6,11 +6,11 @@ category:   blockchain
 tags:       blockchain
 image: 
   path: /assets/img/blockchain/data-and-infra-architecture_main.jpeg
-accent_color: rgba(59,105,126,1)
+accent_color: rgba(66,81,107,1)
 accent_image:
-  background: linear-gradient(105deg, rgba(66,134,244,1) 0%, rgba(59,105,126,1) 60%, rgba(55,59,68,1) 100%);
+  background: linear-gradient(65deg, rgba(196,88,119,1), rgba(188,90,142,1), rgba(173,97,163,1), rgba(150,106,181,1), rgba(119,115,195,1), rgba(99,115,189,1), rgba(80,114,181,1), rgba(63,112,172,1), rgba(66,101,150,1), rgba(67,91,128,1), rgba(66,81,107,1));
   overlay: false
-theme_color: rgba(66,134,244,1)
+theme_color: rgba(63,112,172,1)
 ---
 
 * toc

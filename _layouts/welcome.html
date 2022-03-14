@@ -173,7 +173,6 @@ layout: about
 {{ content }}
 
 
-<!-- blockchain testing -->
 {% if content contains "<!--blockchain-->" %}
 {% capture posts_x %}
 {% if page.selected_posts %}
@@ -198,7 +197,7 @@ layout: about
   <div class="columns mt2 {% unless no_third_column %}columns-break{% endunless %}">
     {% for post in site.posts limit:6 %}
       <div class="column column-1-2">
-        {% include_cached pro/post-card.html post=post %}
+        {% include_cached blockchain post=post %}
       </div>
     {% endfor %}
   </div>
@@ -213,7 +212,7 @@ layout: about
     {% unless more_posts %}{% assign more_posts = nodes | where_exp:"page", "posts_page == page.url"  | first %}{% endunless %}
   {% endif %}
   {% if more_posts %}
-    {% capture posts_title %}<a class="heading flip-title" href="{{ blockchain | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
+    {% capture posts_title %}<a class="heading flip-title" href="{{ more_posts.url | relative_url }}">{{ more_posts.title }}</a>{% endcapture %}
     {% assign text = strings.welcome.more_posts | default:"See <!--posts_title--> for more" %}
     <p class="read-more mt1">
       {{ text | replace:"<!--posts_title-->", posts_title }}

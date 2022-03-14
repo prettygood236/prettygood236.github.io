@@ -93,9 +93,9 @@ hy-drawer {
 
   &.invert a {
     // <<< inline
-    color: #222;
+    color: rgb(255, 0, 0);
     border-bottom-color: rgba(52, 52, 52, 0.2);
-    text-decoration-color: rgba(255, 0, 0, 0.2);
+    text-decoration-color: rgba(52, 52, 52, 0.2);
     // >>>
     // <<< link
     &:hover {
