@@ -12,8 +12,6 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-image from https://blog.unocoin.com/
-{:.figure}
 
 * toc
 {:toc .large-only}
