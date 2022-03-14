@@ -35,6 +35,7 @@ If you make a stack of block, The last block stacks are of last in first out typ
 
 ![Stack](/assets/img/data-structures-and-algorithms/data-structures/stack.gif) <br>
 
+---
 ### 1.2 Using an array as a stack 
 
 ```js
@@ -65,7 +66,7 @@ else {
 ```
 *Arrays are already has all the functions we need in order to use it as a stack!*
 
-
+---
 ### 1.3 Stack Implementation
 
 * push : for placing data onto a stack
@@ -110,8 +111,8 @@ myStack.push("chan");
 console.log(myStack.pop()); // chan
 console.log(myStack.size()); // 1
 ```
-<br >
 
+---
 ## 2. Queue
 
 ### 2.1 What is Queue?
@@ -122,6 +123,7 @@ Queue example is a print queue when a lot of people are printing documents at th
 ![Queue](/assets/img/data-structures-and-algorithms/data-structures/queue.gif){: width="650"}
 <br>
 
+---
 ### 2.2 Queue Implementation
 
 ```js
@@ -154,6 +156,7 @@ q.dequeue(); // q = [b,c];
 q.front(); // b
 ```
 
+---
 ### 2.3 Priority Queue
 
 #### 2.3.1 What is Priority Queue?
@@ -165,6 +168,7 @@ So if all the priorities are the same number it's going to behave just like a no
 But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
 <br>
 
+---
 #### 2.3.2 Priority Queue Implementation
 
 ```js
@@ -216,10 +220,8 @@ pq.dequeue(); // [['WannaBe', 2], ['CodingMaster', 3]]
 pq.front(); // ['WannaBe', 2]
 pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 ```
-<br>
-<br>
 
-
+---
 ## 3. Set
 
 ### 3.1 What is Set?
@@ -229,6 +231,7 @@ The set data structure is <span style='background-color: #FFF39B'>*kind of like 
 The typical use for set is to simply check for the presence of an item.
 <br>
 
+---
 ### 3.2 Set Implementation
 
 ```js
@@ -338,9 +341,7 @@ setD.delete('a')
 console.log(setD.has('a')) // false
 console.log(setD.add('d')) // {'b','c','d'}
 ```
-<br>
-<br>
-
+---
 ## 4. Tree
 
 ### 4.1 What is Tree?
@@ -350,6 +351,7 @@ This is actually what we visualized a tree data structure to look like all data 
 
 ![Tree](/assets/img/data-structures-and-algorithms/data-structures/tree.png){:width="650"} 
 
+---
 ### 4.2 Tree Implementation
 
 ```js
@@ -381,6 +383,7 @@ class Tree{
 }
 ```
 
+---
 ### 4.3 Binary Search Tree
 
 #### 4.3.1 What is Binary Search Tree?
@@ -413,6 +416,7 @@ This is much better than the linear time required to find items by key in an uns
 ![BST degeneration](/assets/img/data-structures-and-algorithms/data-structures/bst_degeneration.gif){:width="600"} <br>
 <br>
 
+---
 #### 4.3.2 Binary Search Tree Traversal 
 
 **BST inorder operation**
@@ -435,6 +439,7 @@ This is much better than the linear time required to find items by key in an uns
 ![BST levelorder operation](/assets/img/data-structures-and-algorithms/data-structures/bst_levelorder.png){:width="600"} <br>
 <br>
 
+---
 #### 4.3.3 Binary Search Tree Implementation
 
 ~~~js
@@ -568,7 +573,7 @@ class BST {
       };
       let left = this.findMinHeight(node.left);
       let right = this.findMinHeight(node.right);
-      if (left < right) {
+      if (left <br right) {
           return left + 1;
       } else {
           return right + 1;
@@ -683,7 +688,462 @@ console.log('postOrder: ' + bst.postOrder()); // postOrder: 1,3,2,10,20,22,9,6,5
 console.log('levelOrder: ' + bst.levelOrder()); // levelOrder: 5,2,6,1,3,9,22,20,10
 ~~~
 
+---
+### 4.4 Heap
 
+#### 4.4.1 What is Heap?
+
+The heap is a type of <u>full binary tree data structure</u>.<br/>
+The heap always <span style='background-color:#fff39b; font-size:1.1em'>*removes the root note.*</span>
+
+**Min Heap**
+- The root note has the smallest value.
+- Therefore, the data with the smallest value is removed first.
+
+![Minheap](/assets/img/data-structures-and-algorithms/data-structures/minheap_0.png){:width="60%"} <br/> 
+Min-Heap 
+{:.figure}  
+
+**Max Heap**
+- The root node has the largest value.
+- Therefore, the data with the large value is removed first.
+
+![Maxheap](/assets/img/data-structures-and-algorithms/data-structures/minheap_0.png){:width="60%"} <br/> 
+Max-Heap 
+{:.figure}  
+
+---
+#### 4.4.2 Heap Operations
+
+**Heapify** 
+
+Heapify is the process of <u>creating a heap data structure</u> from a binary tree. It is used to create a Min-Heap or a Max-Heap.
+
+1\. Let the input array be
+
+![Initial Array](/assets/img/data-structures-and-algorithms/data-structures/heap_1.png){:width="60%"} <br/> 
+Initial Array
+{:.figure}  
+
+2\. Create a complete binary tree from the array
+
+![Complete binary tree](/assets/img/data-structures-and-algorithms/data-structures/heap_2.png){:width="60%"} <br/> 
+Complete binary tree
+{:.figure}  
+
+3\. Start from the first index of non-leaf node whose index is given by `n/2 - 1`.
+
+![Start from the first on leaf node](/assets/img/data-structures-and-algorithms/data-structures/heap_3.png){:width="60%"} <br/> 
+Start from the first on leaf node
+{:.figure}  
+
+4\. Set current element `i` as `largest`. <br>
+5\. The index of left child is given by `2i + 1` and the right child is given by `2i + 2`.<br>
+If `leftChild` is greater than `currentElement` (i.e. element at `ith` index), set `leftChildIndex` as largest. <br>
+If `rightChild` is greater than element in `largest`, set `rightChildIndex` as `largest`. <br>
+6\. Swap `largest` with `currentElement`.
+
+![Swap if necessary](/assets/img/data-structures-and-algorithms/data-structures/heap_4.png){:width="60%"} <br/> 
+Swap if necessary
+{:.figure}  
+
+7\. Repeat steps 3-7 until the subtrees are also heapified.
+
+**Algorithm**
+
+~~~py
+Heapify(array, size, i)
+  set i as largest
+  leftChild = 2i + 1
+  rightChild = 2i + 2
+  
+  if leftChild > array[largest]
+    set leftChildIndex as largest
+  if rightChild > array[largest]
+    set rightChildIndex as largest
+
+  swap array[i] and array[largest]
+~~~
+
+To create a Max-Heap:
+
+~~~py
+MaxHeap(array, size)
+  loop from the first index of non-leaf node down to zero
+    call heapify
+~~~
+
+For Min-Heap, both `leftChild` and `rightChild` must be larger than the parent for all nodes.
+<br/>
+<br/>
+
+---
+**Insert** 
+
+Algorithm for insertion in Max Heap
+~~~py
+If there is no node, 
+  create a newNode.
+else (a node is already present)
+  insert the newNode at the end (last node from left to right.)
+  
+heapify the array
+~~~
+
+1\. Insert the new element at the end of the tree.
+
+![Insert at the end](/assets/img/data-structures-and-algorithms/data-structures/heap_5.png){:width="60%"} <br/> 
+Insert at the end
+{:.figure}  
+
+2\. Heapify the tree.
+
+![Heapify the array](/assets/img/data-structures-and-algorithms/data-structures/heap_6.png){:width="60%"} <br/> 
+Heapify the array
+{:.figure}  
+
+For Min Heap, the above algorithm is modified so that parentNode is always smaller than `newNode`.
+<br/>
+<br/>
+
+---
+**Delete** 
+
+Algorithm for deletion in Max Heap
+~~~py
+If nodeToBeDeleted is the leafNode
+  remove the node
+Else swap nodeToBeDeleted with the lastLeafNode
+  remove noteToBeDeleted
+   
+heapify the array
+~~~
+
+1\.Select the element to be deleted.
+
+![Select the element to be deleted](/assets/img/data-structures-and-algorithms/data-structures/heap_7.png){:width="60%"} <br/> 
+Select the element to be deleted
+{:.figure}  
+
+2\.Swap it with the last element.
+
+![Swap with the last element](/assets/img/data-structures-and-algorithms/data-structures/heap_8.png){:width="60%"} <br/> 
+Swap with the last element
+{:.figure}  
+
+3\.Remove the last element.
+
+![Remove the last element](/assets/img/data-structures-and-algorithms/data-structures/heap_9.png){:width="60%"} <br/> 
+Remove the last element
+{:.figure}  
+
+4\.Heapify the tree.
+
+![Heapify the array](/assets/img/data-structures-and-algorithms/data-structures/heap_10.png){:width="60%"} <br/> 
+Heapify the array
+{:.figure}  
+
+For Min Heap, above algorithm is modified so that both `childNodes` are greater smaller than `currentNode`.
+<br/>
+<br/>
+
+---
+**Peek (Find max/min)**
+
+Peek operation returns the maximum element from Max Heap or minimum element from Min Heap without deleting the node.
+
+For both Max heap and Min Heap
+~~~py
+return rootNode
+~~~
+
+---
+**Extract Max/Min**
+
+Extract-Max returns the node with maximum value after removing it from a Max Heap whereas Extract-Min returns the node with minimum after removing it from Min Heap.
+<br/>
+<br/>
+
+---
+#### 4.4.3 Heap Implementation
+
+Max-Heap data structure in Python
+
+~~~py
+# title: 'Max-Heap.py'
+def heapify(arr, n, i):
+    largest = i
+    l = 2 * i + 1
+    r = 2 * i + 2 
+    
+    if l < n and arr[i] < arr[l]:
+        largest = l
+    
+    if r < n and arr[largest] < arr[r]:
+        largest = r
+    
+    if largest != i:
+        arr[i],arr[largest] = arr[largest],arr[i]
+        heapify(arr, n, largest)
+
+def insert(array, newNum):
+    size = len(array)
+    if size == 0:
+        array.append(newNum)
+    else:
+        array.append(newNum);
+        for i in range((size//2)-1, -1, -1):
+            heapify(array, size, i)
+
+def deleteNode(array, num):
+    size = len(array)
+    i = 0
+    for i in range(0, size):
+        if num == array[i]:
+            break
+        
+    array[i], array[size-1] = array[size-1], array[i]
+
+    array.remove(num)
+    
+    for i in range((len(array)//2)-1, -1, -1):
+        heapify(array, len(array), i)
+    
+arr = []
+
+insert(arr, 3)
+insert(arr, 4)
+insert(arr, 9)
+insert(arr, 5)
+insert(arr, 2)
+
+print ("Max-Heap array: " + str(arr))
+
+deleteNode(arr, 4)
+print("After deleting an element: " + str(arr))
+~~~
+
+Min-Heap and Max-Heap data structure in Javascript
+
+~~~js
+// title: 'Heap.js'
+// left child: i * 2
+// right child: i * 2 + 1
+// parent: i / 2
+let heap = [null];
+
+class Minheap {
+  insert(num) {
+    heap.push(num);
+    if (heap.length > 2) {
+      let idx = heap.length - 1;
+      while (heap[idx] < heap[Math.floor(idx/2)]) {
+        if (idx >= 1) {
+          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]]
+            if (Math.floor(idx/2) > 1) {
+              idx = Math.floor(idx/2);
+            } else {
+                break;
+            };
+        };
+      };
+    };
+  };
+  remove() {
+    let smallest = heap[1];
+      if (heap.length > 2) {
+        heap[1] = heap[heap.length - 1];
+        heap.splice(heap.length - 1);
+        if (heap.length == 3) {
+          if (heap[1] > heap[2]) {
+          [heap[1], heap[2]] = [heap[2], heap[1]];
+          };
+          return smallest;
+        };
+        let i = 1;
+        let left = 2 * i;
+        let right = 2 * i + 1;
+        while (heap[i] >= heap[left] || heap[i] >= heap[right]) {
+          if (heap[left] < heap[right]) {
+            [heap[i], heap[left]] = [heap[left], heap[i]];
+            i = 2 * i
+          } else {
+              [heap[i], heap[right]] = [heap[right], heap[i]];
+              i = 2 * i + 1;
+            };
+          left = 2 * i;
+          right = 2 * i + 1;
+          if (heap[left] == undefined || heap[right] == undefined) {
+            break;
+          };
+        };
+      } else if (heap.length == 2) {
+          heap.splice(1, 1);
+        } else {
+            return null;
+          };
+    return smallest;
+  };
+  sort() {
+    let result = new Array();
+    while (heap.length > 1) {
+      result.push(this.remove());
+    };
+    return result;
+  };
+};
+class Maxheap{
+  print() {
+    console.log(heap);
+  }
+  insert(num) {
+    heap.push(num);
+    if (heap.length > 2) {
+      let idx = heap.length - 1;
+      while (heap[idx] > heap[Math.floor(idx/2)]) {
+        if (idx >= 1) {
+          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];
+            if (Math.floor(idx/2) > 1) {
+              idx = Math.floor(idx/2);
+            } else {
+                break;
+            };
+        };
+      };
+    };
+  };
+  remove() {
+    let smallest = heap[1];
+    if (heap.length > 2) {
+      heap[1] = heap[heap.length - 1];
+      heap.splice(heap.length - 1);
+      if (heap.length == 3) {
+        if (heap[1] < heap[2]) {
+          [heap[1], heap[2]] = [heap[2], heap[1]];
+        };
+        return smallest;
+      };
+      let i = 1;
+      let left = 2 * i;
+      let right = 2 * i + 1;
+      while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
+        if (heap[left] > heap[right]) {
+          [heap[i], heap[left]] = [heap[left], heap[i]];
+          i = 2 * i
+        } else {
+            [heap[i], heap[right]] = [heap[right], heap[i]];
+            i = 2 * i + 1;
+          };
+        left = 2 * i;
+        right = 2 * i + 1;
+        if (heap[left] == undefined || heap[right] == undefined) {
+          break;
+        };
+      };
+    } else if (heap.length == 2) {
+        heap.splice(1, 1);
+    } else {
+        return null;
+    };
+    return smallest;
+  };
+};
+~~~
+
+---
+#### 4.4.4 Heap Data Structure Applications
+
+***<span style='background-color: #FFDFF6; font-size: 1em; line-height:2em;'>1. Implementing a priority queue.</span>***<br>
+***<span style='background-color: #FFDFF6; font-size: 1em;line-height:2.5em;'>2. Dijkstra's Algorithm</span>***<br>
+***<span style='background-color: #FFDFF6; font-size: 1em;line-height:1em;'>3. Heap Sort</span>***<br>
+
+---
+### 4.5 Trie
+  
+#### 4.5.1 What is Trie?
+
+
+![Trie](/assets/img/data-structures-and-algorithms/data-structures/trie.png){:width="600"}
+
+
+---
+#### 4.5.2 Trie Implementation
+
+~~~js
+// title: 'Trie.js'
+class Node {
+  sconstructor() {
+    this.keys = new Map();
+    this.end = false;
+  }
+  setEnd() {
+    this.end = true;
+  };
+  isEnd() {
+    return this.end;
+  };
+}
+class Trie {
+  constructor() {
+    this.root = new Node();
+  }
+  add(input, node = this.root) {
+    if (input.length == 0) {
+      node.setEnd();
+      return;
+    } else if (!node.keys.has(input[0])) {
+        node.keys.set(input[0], new Node());
+        return this.add(input.substr(1), node.keys.get(input[0]));
+    } else {
+        return this.add(input.substr(1), node.keys.get(input[0]));
+    };
+  };
+  isWord(word) {
+    let node = this.root;
+      while (word.length > 1) {
+        if (!node.keys.has(word[0])) {
+          return false;
+        } else {
+            node = node.keys.get(word[0]);
+            word = word.substr(1);
+        };
+      };
+      return (node.keys.has(word) && node.keys.get(word).isEnd()) ? 
+    true : false;
+  };
+  print() {
+    let words = new Array();
+    let search = function(node, string) {
+    if (node.keys.size != 0) {
+      for (let letter of node.keys.keys()) {
+        search(node.keys.get(letter), string.concat(letter));
+    } if (node.isEnd()) {
+        words.push(string);
+      }
+    } else {
+        string.length > 0 ? words.push(string) : undefined;
+        return;
+      };
+    };
+  search(this.root, new String());
+    return words.length > 0 ? words : mo;
+  };
+};
+myTrie = new Trie()
+myTrie.add('ball'); 
+myTrie.add('bat'); 
+myTrie.add('doll'); 
+myTrie.add('dork'); 
+myTrie.add('do'); 
+myTrie.add('dorm')
+myTrie.add('send')
+myTrie.add('sense')
+console.log(myTrie.isWord('doll')) // true
+console.log(myTrie.isWord('dor')) // false
+console.log(myTrie.isWord('dorf')) // false
+console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','sense']
+~~~
+---
 ## 5. Graph
 
 ### 5.1 What is Graph?
@@ -694,6 +1154,7 @@ The connections between the nodes are called ***edges.***
 
 ![Graph](/assets/img/data-structures-and-algorithms/data-structures/graph-1.png){:width="650"}
 
+---
 ### 5.2 Type of Graph
 
 **Undirected and Directed**
@@ -707,6 +1168,7 @@ Directed graphs are graphs with a direction and its edges.
 * ex)  internet and web page links. The nodes are web pages and the directed edges are links to other pages.
 
 
+---
 ### 5.3 Graph Representation
 
 #### 5.3.1 Adjacency List 
@@ -715,11 +1177,13 @@ Directed graphs are graphs with a direction and its edges.
 
 ![Graph_Adjacency list and Matrix](/assets/img/data-structures-and-algorithms/data-structures/graph_adjacency list and matrix.png){:width="650"}
 
+---
 #### 5.3.2 Adjacency Matrix 
 
 <span style='background-color: #FFF39B; font-size:1em'>*Adjacency Matrix is a two-dimensional array where each nested array has the same number of
 elements as the outer array.*</span> So it's basically a matrix of numbers where the numbers represent the edges.
 
+---
 #### 5.3.3 Incidence Matrix 
 
 ![Graph_Incidence Matrix](/assets/img/data-structures-and-algorithms/data-structures/graph_incidence matrix.png){:width="650"}
@@ -729,6 +1193,7 @@ But <span style='background-color: #FFF39B; font-size:1em'>*Incidence Matrix use
 This means that we can have an uneven number of rows and columns.
 Each column will represent a unique edge. Also, each edge connects two nodes to show that there is edge between two nodes.
 
+---
 ## 6. Hash Table
   
 ### 6.1 What is Hash Table?
@@ -738,6 +1203,7 @@ Each column will represent a unique edge. Also, each edge connects two nodes to 
 ![Hash Table](/assets/img/data-structures-and-algorithms/data-structures/hashtable.png){:width="650"}
 
 
+---
 ### 6.2 Hash Table Implementation
 
 ~~~js
@@ -812,8 +1278,7 @@ ht.add('tux', 'penguin')
 console.log(ht.lookup('tux')) //penguin
 ht.print();
 ~~~
-
-
+---
 ## 7. Linked List
   
 ### 7.1 What is Linked List?
@@ -833,6 +1298,7 @@ ht.print();
 <br>
 
 
+---
 ### 7.2 Linked List Implementation
 
 ~~~js
@@ -963,238 +1429,10 @@ console.log(conga.elementAt(3)); // Fish
 console.log(conga.indexOf('Puppy')); // 1
 console.log(conga.size()); // 4
 ~~~
-<br>
+<br/>
+<br/>
+<br/>
 
-## 8. Trie
-  
-### 8.1 What is Trie?
-
-
-
-![Trie](/assets/img/data-structures-and-algorithms/data-structures/trie.png){:width="600"}
-
-
-### 8.2 Trie Implementation
-
-~~~js
-// title: 'Trie.js'
-class Node {
-  sconstructor() {
-    this.keys = new Map();
-    this.end = false;
-  }
-  setEnd() {
-    this.end = true;
-  };
-  isEnd() {
-    return this.end;
-  };
-}
-class Trie {
-  constructor() {
-    this.root = new Node();
-  }
-  add(input, node = this.root) {
-    if (input.length == 0) {
-      node.setEnd();
-      return;
-    } else if (!node.keys.has(input[0])) {
-        node.keys.set(input[0], new Node());
-        return this.add(input.substr(1), node.keys.get(input[0]));
-    } else {
-        return this.add(input.substr(1), node.keys.get(input[0]));
-    };
-  };
-  isWord(word) {
-    let node = this.root;
-      while (word.length > 1) {
-        if (!node.keys.has(word[0])) {
-          return false;
-        } else {
-            node = node.keys.get(word[0]);
-            word = word.substr(1);
-        };
-      };
-      return (node.keys.has(word) && node.keys.get(word).isEnd()) ? 
-    true : false;
-  };
-  print() {
-    let words = new Array();
-    let search = function(node, string) {
-    if (node.keys.size != 0) {
-      for (let letter of node.keys.keys()) {
-        search(node.keys.get(letter), string.concat(letter));
-    } if (node.isEnd()) {
-        words.push(string);
-      }
-    } else {
-        string.length > 0 ? words.push(string) : undefined;
-        return;
-      };
-    };
-  search(this.root, new String());
-    return words.length > 0 ? words : mo;
-  };
-};
-myTrie = new Trie()
-myTrie.add('ball'); 
-myTrie.add('bat'); 
-myTrie.add('doll'); 
-myTrie.add('dork'); 
-myTrie.add('do'); 
-myTrie.add('dorm')
-myTrie.add('send')
-myTrie.add('sense')
-console.log(myTrie.isWord('doll')) // true
-console.log(myTrie.isWord('dor')) // false
-console.log(myTrie.isWord('dorf')) // false
-console.log(myTrie.print()) // ['ball','bat','doll','dork','dorm','do','send','sense']
-~~~
-<br>
-
-## 9. Heap
-
-### 9.1 What is Heap?
-  
-
-
-**Min heap sort operation**
-
-![Minheap](/assets/img/data-structures-and-algorithms/data-structures/heap_minheap.gif){:width="600"}
-<br>
-
-**Max heap sort operation**
-
-![Maxheap](/assets/img/data-structures-and-algorithms/data-structures/heap_maxheap.gif){:width="600"}
-<br>
-
-### 9.2 Heap Implementation
-
-~~~js
-// title: 'Heap.js'
-// left child: i * 2
-// right child: i * 2 + 1
-// parent: i / 2
-let heap = [null];
-
-class Minheap {
-  insert(num) {
-    heap.push(num);
-    if (heap.length > 2) {
-      let idx = heap.length - 1;
-      while (heap[idx] < heap[Math.floor(idx/2)]) {
-        if (idx >= 1) {
-          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]]
-            if (Math.floor(idx/2) > 1) {
-              idx = Math.floor(idx/2);
-            } else {
-                break;
-            };
-        };
-      };
-    };
-  };
-  remove() {
-    let smallest = heap[1];
-      if (heap.length > 2) {
-        heap[1] = heap[heap.length - 1];
-        heap.splice(heap.length - 1);
-        if (heap.length == 3) {
-          if (heap[1] > heap[2]) {
-          [heap[1], heap[2]] = [heap[2], heap[1]];
-          };
-          return smallest;
-        };
-        let i = 1;
-        let left = 2 * i;
-        let right = 2 * i + 1;
-        while (heap[i] >= heap[left] || heap[i] >= heap[right]) {
-          if (heap[left] < heap[right]) {
-            [heap[i], heap[left]] = [heap[left], heap[i]];
-            i = 2 * i
-          } else {
-              [heap[i], heap[right]] = [heap[right], heap[i]];
-              i = 2 * i + 1;
-            };
-          left = 2 * i;
-          right = 2 * i + 1;
-          if (heap[left] == undefined || heap[right] == undefined) {
-            break;
-          };
-        };
-      } else if (heap.length == 2) {
-          heap.splice(1, 1);
-        } else {
-            return null;
-          };
-    return smallest;
-  };
-  sort() {
-    let result = new Array();
-    while (heap.length > 1) {
-      result.push(this.remove());
-    };
-    return result;
-  };
-};
-class Maxheap{
-  print() {
-    console.log(heap);
-  }
-  insert(num) {
-    heap.push(num);
-    if (heap.length > 2) {
-      let idx = heap.length - 1;
-      while (heap[idx] > heap[Math.floor(idx/2)]) {
-        if (idx >= 1) {
-          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];
-            if (Math.floor(idx/2) > 1) {
-              idx = Math.floor(idx/2);
-            } else {
-                break;
-            };
-        };
-      };
-    };
-  };
-  remove() {
-    let smallest = heap[1];
-    if (heap.length > 2) {
-      heap[1] = heap[heap.length - 1];
-      heap.splice(heap.length - 1);
-      if (heap.length == 3) {
-        if (heap[1] < heap[2]) {
-          [heap[1], heap[2]] = [heap[2], heap[1]];
-        };
-        return smallest;
-      };
-      let i = 1;
-      let left = 2 * i;
-      let right = 2 * i + 1;
-      while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
-        if (heap[left] > heap[right]) {
-          [heap[i], heap[left]] = [heap[left], heap[i]];
-          i = 2 * i
-        } else {
-            [heap[i], heap[right]] = [heap[right], heap[i]];
-            i = 2 * i + 1;
-          };
-        left = 2 * i;
-        right = 2 * i + 1;
-        if (heap[left] == undefined || heap[right] == undefined) {
-          break;
-        };
-      };
-    } else if (heap.length == 2) {
-        heap.splice(1, 1);
-    } else {
-        return null;
-    };
-    return smallest;
-  };
-};
-~~~
-<br>
 
 
 <!-- Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
@@ -1206,4 +1444,5 @@ class Maxheap{
 [https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br>
 [https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br>
 [https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
 {:.note title="reference"}

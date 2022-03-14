@@ -14,6 +14,7 @@
           <div class="list-wrapper">
             <a {% if forloop.first %}id="_navigation"{% endif %} href="{{ node.url | relative_url }}" class="sidebar-nav-item" {% if node.rel %}rel="{{ node.rel }}"{% endif %} >{{ node.title }}</a>
             {% if subnodes != empty %}
+            <!-- if inverted -> font-color black testing -->
               <button class="spread-btn{% if include.invert %} invert{% endif %}" onclick="javascript:spread({{ count }})">
                 <label id="spread-icon-{{ count }}" class="material-icons">arrow_right</label>
               </button>

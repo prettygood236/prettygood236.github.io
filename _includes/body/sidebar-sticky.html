@@ -9,9 +9,11 @@
     {% assign text = site.tagline  | default:site.description %}
     {% if text %}
       <p class="{% if text.size > 100 %}fine{% endif %}">
+        <!-- if inverted -> font-color black testing -->
         <div class="typewriter_line1{% if include.invert %} invert{% endif %}"> 
           {{ text | split: "you don't"| first | markdownify | replace:'<p>','' | replace:'</p>','' }} 
         </div> 
+        <!-- if inverted -> font-color black testing -->
         <div class="typewriter_line2{% if include.invert %} invert{% endif %}"> 
           {{ text | split: ", "| last | markdownify | replace:'<p>','' | replace:'</p>','' }}     
         </div>

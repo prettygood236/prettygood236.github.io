@@ -64,9 +64,7 @@
   color: rgba(255,255,255,.70);
   text-align: left;
   // if inverted -> font-color black testing
-  &.invert {
-    color: rgb(47, 47, 75);
-  }
+  &.invert { color: rgba(47, 47, 75, .70) }
 }
 
 /* Animation */
@@ -96,7 +94,7 @@
     // if inverted -> font-color black testing
   &.invert {
     color: rgb(47, 47, 75);
-}
+  }
 }
 
 .spread-btn:hover{
