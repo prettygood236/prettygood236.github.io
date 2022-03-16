@@ -879,7 +879,7 @@ Min-Heap and Max-Heap data structure in Javascript
 // title: 'MinHeap.js'
 class MinHeap {
   constructor () {
-    /* Initialing the array heap and adding a dummy element at index 0 */
+    /* Initialing the array heap */
     this.heap = []
   }    
   getMin() {
@@ -896,7 +896,7 @@ class MinHeap {
     if (this.heap.length > 1) {
       let idx = this.heap.length - 1
       let parentIdx = this.getParentIdx(idx)
-      /* Traversing up the parent node until the current node (current) is greater than the parent (current/2)*/
+      /* Traversing up the parent node until the current node (current) is greater than the parent */
       while (parentIdx >= 0 && this.heap[idx] < this.heap[parentIdx]) {
       /* Swapping the two nodes by using the ES6 destructuring syntax*/
         [this.heap[parentIdx], this.heap[idx]] = [this.heap[idx], this.heap[parentIdx]]
@@ -915,8 +915,8 @@ class MinHeap {
     let minIdx = 0;
     while (idx !== minIdx) {
       idx = minIdx;
-      let leftIdx = idx * 2 + 1;
-      let rightIdx = idx * 2 + 2;
+      let leftIdx = 2 * idx + 1;
+      let rightIdx = 2 * idx + 2;
       if (leftIdx < this.heap.length && this.heap[leftIdx] < this.heap[minIdx]) {
         minIdx = leftIdx;
       }
@@ -975,8 +975,8 @@ class MaxHeap {
     let maxIdx = 0;
     while (idx !== maxIdx) {
       idx = maxIdx;
-      let leftIdx = idx * 2 + 1;
-      let rightIdx = idx * 2 + 2;
+      let leftIdx = 2 * idx + 1;
+      let rightIdx = 2 * idx + 2;
       if (leftIdx < this.heap.length && this.heap[maxIdx] < this.heap[leftIdx]) {
         maxIdx = leftIdx;
       }
