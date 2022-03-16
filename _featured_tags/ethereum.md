@@ -1,9 +1,9 @@
 ---
 layout: tag-list
 type: tag
-title: Blockchain
-slug: blockchain
-category: blockchain
+title: Ethereum
+slug: ethereum
+category: ethereum
 sidebar: false
 accent_color: rgba(0,174,239,1)
 accent_image:
@@ -11,5 +11,5 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-  About Blockchain
+  About Ethereum
 ---

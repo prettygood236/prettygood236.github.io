@@ -873,10 +873,138 @@ Extract-Max returns the node with maximum value after removing it from a Max Hea
 ---
 #### 4.4.3 Heap Implementation
 
+Min-Heap and Max-Heap data structure in Javascript
+
+~~~js
+// title: 'MinHeap.js'
+class MinHeap {
+  constructor () {
+    /* Initialing the array heap and adding a dummy element at index 0 */
+    this.heap = []
+  }    
+  getMin() {
+    /* Accessing the min element at index 1 in the heap array */
+    return this.heap[1]
+  }
+  getParentIdx(idx) {
+    return Math.floor((idx-1)/2)
+  }
+  insert(node) {
+    /* Inserting the new node at the end of the heap array */
+    this.heap.push(node)
+    /* Finding the correct position for the new node */
+    if (this.heap.length > 1) {
+      let idx = this.heap.length - 1
+      let parentIdx = this.getParentIdx(idx)
+      /* Traversing up the parent node until the current node (current) is greater than the parent (current/2)*/
+      while (parentIdx >= 0 && this.heap[idx] < this.heap[parentIdx]) {
+      /* Swapping the two nodes by using the ES6 destructuring syntax*/
+        [this.heap[parentIdx], this.heap[idx]] = [this.heap[idx], this.heap[parentIdx]]
+        idx = parentIdx
+        parentIdx = this.getParentIdx(idx);
+      }
+    }
+    return this.heap;
+  }    
+  remove() {
+    [this.heap[0], this.heap[this.heap.length-1]] = [this.heap[this.heap.length-1], this.heap[0]]
+    this.heap.pop();
+    if (this.heap.length === 0) return [];
+
+    let idx;
+    let minIdx = 0;
+    while (idx !== minIdx) {
+      idx = minIdx;
+      let leftIdx = idx * 2 + 1;
+      let rightIdx = idx * 2 + 2;
+      if (leftIdx < this.heap.length && this.heap[leftIdx] < this.heap[minIdx]) {
+        minIdx = leftIdx;
+      }
+      if (rightIdx < this.heap.length && this.heap[rightIdx] < this.heap[minIdx]) {
+        minIdx = rightIdx;
+      }
+     [this.heap[idx], this.heap[minIdx]] = [this.heap[minIdx], this.heap[idx]]
+    }
+    return this.heap;
+  }
+  heapSort(arr) {
+    let minHeap = arr.reduce((heap, node) => {return this.insert(node)}, []);
+    let sorted = [];
+    while (minHeap.length>0) {
+      sorted.push(minHeap[0]);
+      minHeap = this.remove();
+    }
+    return sorted
+  };
+};
+let output = new MaxHeap()
+console.log(output.heapSort([4, 10, 3, 5, 1])); // --> [1, 3, 4, 5, 10]
+~~~
+
+~~~js
+// title: 'MaxHeap.js'
+class MaxHeap {
+  constructor () {
+    this.heap = []
+  }    
+  getMax() {
+    return this.heap[1]
+  }
+  getParentIdx(idx) {
+    return Math.floor((idx-1)/2)
+  }
+  insert(node) {
+    this.heap.push(node)
+    if (this.heap.length > 1) {
+      let idx = this.heap.length - 1
+      let parentIdx = this.getParentIdx(idx)
+      while (parentIdx >= 0 && this.heap[parentIdx] < this.heap[idx]) {
+        [this.heap[parentIdx], this.heap[idx]] = [this.heap[idx], this.heap[parentIdx]]
+        idx = parentIdx
+        parentIdx = this.getParentIdx(idx);
+      }
+    }
+    return this.heap;
+  }    
+  remove() {
+    [this.heap[0], this.heap[this.heap.length-1]] = [this.heap[this.heap.length-1], this.heap[0]]
+    this.heap.pop();
+    if (this.heap.length === 0) return [];
+
+    let idx;
+    let maxIdx = 0;
+    while (idx !== maxIdx) {
+      idx = maxIdx;
+      let leftIdx = idx * 2 + 1;
+      let rightIdx = idx * 2 + 2;
+      if (leftIdx < this.heap.length && this.heap[maxIdx] < this.heap[leftIdx]) {
+        maxIdx = leftIdx;
+      }
+      if (rightIdx < this.heap.length && this.heap[maxIdx] < this.heap[rightIdx]) {
+        maxIdx = rightIdx;
+      }
+     [this.heap[idx], this.heap[maxIdx]] = [this.heap[maxIdx], this.heap[idx]]
+    }
+    return this.heap;
+  }
+  heapSort(arr) {
+    let maxHeap = arr.reduce((heap, node) => {return this.insert(node)}, []);
+    let sorted = [];
+    while (maxHeap.length>0) {
+      sorted.push(maxHeap[0]);
+      maxHeap = this.remove();
+    }
+    return sorted
+  };
+};
+let output = new MaxHeap()
+console.log(output.heapSort([4, 10, 3, 5, 1])); // --> [10, 5, 4, 3, 1]
+~~~
+
 Max-Heap data structure in Python
 
 ~~~py
-# title: 'Max-Heap.py'
+# title: 'MaxHeap.py'
 def heapify(arr, n, i):
     largest = i
     l = 2 * i + 1
@@ -929,132 +1057,6 @@ deleteNode(arr, 4)
 print("After deleting an element: " + str(arr))
 ~~~
 
-Min-Heap and Max-Heap data structure in Javascript
-
-~~~js
-// title: 'Heap.js'
-// left child: i * 2
-// right child: i * 2 + 1
-// parent: i / 2
-let heap = [null];
-
-class Minheap {
-  insert(num) {
-    heap.push(num);
-    if (heap.length > 2) {
-      let idx = heap.length - 1;
-      while (heap[idx] < heap[Math.floor(idx/2)]) {
-        if (idx >= 1) {
-          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]]
-            if (Math.floor(idx/2) > 1) {
-              idx = Math.floor(idx/2);
-            } else {
-                break;
-            };
-        };
-      };
-    };
-  };
-  remove() {
-    let smallest = heap[1];
-      if (heap.length > 2) {
-        heap[1] = heap[heap.length - 1];
-        heap.splice(heap.length - 1);
-        if (heap.length == 3) {
-          if (heap[1] > heap[2]) {
-          [heap[1], heap[2]] = [heap[2], heap[1]];
-          };
-          return smallest;
-        };
-        let i = 1;
-        let left = 2 * i;
-        let right = 2 * i + 1;
-        while (heap[i] >= heap[left] || heap[i] >= heap[right]) {
-          if (heap[left] < heap[right]) {
-            [heap[i], heap[left]] = [heap[left], heap[i]];
-            i = 2 * i
-          } else {
-              [heap[i], heap[right]] = [heap[right], heap[i]];
-              i = 2 * i + 1;
-            };
-          left = 2 * i;
-          right = 2 * i + 1;
-          if (heap[left] == undefined || heap[right] == undefined) {
-            break;
-          };
-        };
-      } else if (heap.length == 2) {
-          heap.splice(1, 1);
-        } else {
-            return null;
-          };
-    return smallest;
-  };
-  sort() {
-    let result = new Array();
-    while (heap.length > 1) {
-      result.push(this.remove());
-    };
-    return result;
-  };
-};
-class Maxheap{
-  print() {
-    console.log(heap);
-  }
-  insert(num) {
-    heap.push(num);
-    if (heap.length > 2) {
-      let idx = heap.length - 1;
-      while (heap[idx] > heap[Math.floor(idx/2)]) {
-        if (idx >= 1) {
-          [heap[Math.floor(idx/2)], heap[idx]] = [heap[idx], heap[Math.floor(idx/2)]];
-            if (Math.floor(idx/2) > 1) {
-              idx = Math.floor(idx/2);
-            } else {
-                break;
-            };
-        };
-      };
-    };
-  };
-  remove() {
-    let smallest = heap[1];
-    if (heap.length > 2) {
-      heap[1] = heap[heap.length - 1];
-      heap.splice(heap.length - 1);
-      if (heap.length == 3) {
-        if (heap[1] < heap[2]) {
-          [heap[1], heap[2]] = [heap[2], heap[1]];
-        };
-        return smallest;
-      };
-      let i = 1;
-      let left = 2 * i;
-      let right = 2 * i + 1;
-      while (heap[i] <= heap[left] || heap[i] <= heap[right]) {
-        if (heap[left] > heap[right]) {
-          [heap[i], heap[left]] = [heap[left], heap[i]];
-          i = 2 * i
-        } else {
-            [heap[i], heap[right]] = [heap[right], heap[i]];
-            i = 2 * i + 1;
-          };
-        left = 2 * i;
-        right = 2 * i + 1;
-        if (heap[left] == undefined || heap[right] == undefined) {
-          break;
-        };
-      };
-    } else if (heap.length == 2) {
-        heap.splice(1, 1);
-    } else {
-        return null;
-    };
-    return smallest;
-  };
-};
-~~~
 
 ---
 #### 4.4.4 Heap Data Structure Applications
@@ -1078,7 +1080,7 @@ class Maxheap{
 ~~~js
 // title: 'Trie.js'
 class Node {
-  sconstructor() {
+  constructor() {
     this.keys = new Map();
     this.end = false;
   }
