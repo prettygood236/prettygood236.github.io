@@ -5,7 +5,7 @@ subtitle: 'Hash Table'
 category: data-structures-and-algorithms
 tags:     data-structures-and-algorithms
 image: 
-  path: /assets/img/data-structures-and-algorithms/data-structures/data-structures_main.png
+  path: /assets/img/data-structures-and-algorithms/hash-table/data-structures_main.png
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
   - _posts/Data Structures and Algorithms/2022-02-25-linked-list.md
@@ -19,17 +19,14 @@ theme_color: rgba(52,52,52,1)
 * toc
 {:toc .large-only}
 
-## 6. Hash Table
-  
-### 6.1 What is Hash Table?
-
-
-
-![Hash Table](/assets/img/data-structures-and-algorithms/data-structures/hashtable.png){:width="650"}
-
-
+## 1. What is Hash Table?
 ---
-### 6.2 Hash Table Implementation
+
+![Hash Table](/assets/img/data-structures-and-algorithms/hash-table/hashtable.png){:width="650"}
+
+
+## 2. Hash Table Implementation
+---
 
 ~~~js
 // title: 'HashTable.js'

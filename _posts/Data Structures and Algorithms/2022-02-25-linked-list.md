@@ -19,11 +19,8 @@ theme_color: rgba(52,52,52,1)
 * toc
 {:toc .large-only}
 
-## 1. Linked List
-  
-### 1.1 What is Linked List?
-
-
+## 1. What is Linked List?
+---
 
 ![Linked List](/assets/img/data-structures-and-algorithms/linked-list/linkedlist.jpeg){:width="600"}
 
@@ -38,8 +35,8 @@ theme_color: rgba(52,52,52,1)
 <br>
 
 
+## 2. Linked List Implementation
 ---
-### 1.2 Linked List Implementation
 
 ~~~js
 // title: 'LinkedList.js'

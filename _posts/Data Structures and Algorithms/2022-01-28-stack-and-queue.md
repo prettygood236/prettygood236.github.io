@@ -3,7 +3,7 @@ layout:   post
 title:    'Stack & Queue'
 subtitle: 'Stack & Queue'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     stack-and-queue
 image: 
   path: /assets/img/data-structures-and-algorithms/stack-and-queue/data-structures_main.png
 related_posts:
@@ -28,14 +28,15 @@ It is <span style='font-size:1em'>***a way of arranging data***</span> on a comp
 ## 1. Stack
 
 ### 1.1 What is Stack?
+---
 
 If you make a stack of block, The last block stacks are of last in first out type of service.<br>
 <span style='background-color: #FFF39B;'>*The last block you put on top of a stack would be the first block.*</span><br>
 
 ![Stack](/assets/img/data-structures-and-algorithms/stack-and-queue/stack.gif) <br>
 
----
 ### 1.2 Using an array as a stack 
+---
 
 ```js
 // Javascript
@@ -65,8 +66,8 @@ else {
 ```
 *Arrays are already has all the functions we need in order to use it as a stack!*
 
----
 ### 1.3 Stack Implementation
+---
 
 * push : for placing data onto a stack
 * pop : removing the top element of a stack
@@ -111,10 +112,10 @@ console.log(myStack.pop()); // chan
 console.log(myStack.size()); // 1
 ```
 
----
 ## 2. Queue
 
 ### 2.1 What is Queue?
+---
 
 Queue example is a print queue when a lot of people are printing documents at the same printer.<br>
  The documents are printed <span style='background-color: #FFF39B;'>*in the order(first in first out)*</span>. They were sent to the print queue.
@@ -122,8 +123,8 @@ Queue example is a print queue when a lot of people are printing documents at th
 ![Queue](/assets/img/data-structures-and-algorithms/stack-and-queue/queue.gif){: width="650"}
 <br>
 
----
 ### 2.2 Queue Implementation
+---
 
 ```js
 // title: 'Queue.js'
@@ -155,10 +156,10 @@ q.dequeue(); // q = [b,c];
 q.front(); // b
 ```
 
----
 ### 2.3 Priority Queue
 
 #### 2.3.1 What is Priority Queue?
+---
 
 In a priority queue not only pass the element into the queue <span style='background-color: #FFF39B;'>*but also pass the priority of the element.*</span><br>
 
@@ -167,8 +168,8 @@ So if all the priorities are the same number it's going to behave just like a no
 But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
 <br>
 
----
 #### 2.3.2 Priority Queue Implementation
+---
 
 ```js
 // title: 'PriorityQueue.js'
@@ -220,7 +221,6 @@ pq.front(); // ['WannaBe', 2]
 pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 ```
 
----
 <br/>
 <br/>
 <br/>
