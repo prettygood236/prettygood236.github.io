@@ -21,9 +21,9 @@ image from https://realpython.com/
 * toc
 {:toc .large-only}
 
-## Recursive Function
+## 1. Recursive Function
 
-### What is Recursive Function?
+### 1.1 What is Recursive Function?
 
 A recursive function is a function that <span style='background-color:#fff39b; font-size:1.1em'>*calls itself directly or indirectly.*</span>
 
@@ -43,7 +43,7 @@ recursive_function()
 
 When a function is called recursively, the function is repeatedly stacked on the computer system *<u>stack frame</u>*. That is, after the last function called is processed, the function that called the function is executed.
 
-### Exit condition for Recursive Function
+### 1.2 Exit condition for Recursive Function
 
 In problem solving, <span style='background-color:#fff39b; font-size:1.1em'>***the exit condition(base case)** of the recursive function must be specified.*</span><br>
 If the exit condition is not properly specified, it is called indefinitely.
@@ -69,7 +69,7 @@ It is displayed that the 99th to the 1st are finished sequentially.
 If you use a recursive function, it comes out similar to putting data on the *<u>stack</u>* and then removing it.
 
 
-### Factorial Implementation 
+### 1.3 Factorial Implementation 
 
 * n! = 1 x 2 x 3 x ... x (n-1) x n
 * Mathematically 0! = 1! = 1
@@ -105,7 +105,7 @@ print('Implemented recursively: ', factorial_recursive(5))
 
 Implementing it recursively makes the code more concise and intuitive.
 
-### Computing the greatest common divisor (Euclidean Algorithm)
+### 1.4 Computing the greatest common divisor (Euclidean Algorithm)
 
 Euclidean Algorithm
 - For two natural numbers A and B (A > B), the remainder of dividing A by B is called R.

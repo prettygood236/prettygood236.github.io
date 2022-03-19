@@ -1,7 +1,7 @@
 ---
 layout:   post
-title:    '5. Binary Search'
-subtitle: '5. Binary Search'
+title:    'Binary Search'
+subtitle: 'Binary Search'
 category: data-structures-and-algorithms
 tags:     data-structures-and-algorithms
 image: 
@@ -19,9 +19,9 @@ theme_color: rgba(5,46,92,1)
 * toc
 {:toc .large-only}
 
-## 5. Binary Search
+## 1. Binary Search
 
-### 5.1 What is Binary Search?
+### 1.1 What is Binary Search?
 
 ***Sequential Search*** : A method of *<span style='font-size:1.1em; background-color: #FFF39B'>checking data one by one from the front </span>*to find specific data in a list
 
@@ -46,7 +46,7 @@ Move the starting point behind the midpoint.
 
 Since we found the value we are looking for at the starting point, we end our search.
 
-### 5.2 Time complexity of Binary Search
+### 1.2 Time complexity of Binary Search
 
 Since each step is equivalent to dividing the search range by 2, **the number of operations is proportional to $$\bf{log_2N}$$.**
 
@@ -57,7 +57,7 @@ For example, when the initial number of data is 32,
 
 In other words, binary search cuts the search range by half, and the time complexity is guaranteed to be $$\underline{O(logN)}$$.
 
-### 5.3 Binary Search Implementation
+### 1.3 Binary Search Implementation
 
 **Recursive Implementation**
 ~~~py
@@ -119,7 +119,7 @@ else:
     print(result + 1)
 ~~~
  
-### 5.4 Python Binary Search Library
+### 1.4 Python Binary Search Library
 
 **bisect_left( a, x )**: returns the leftmost index at which to insert x into array a while maintaining sorted order <br>
 **bisect_right( a, x )**: returns the rightmost index at which to insert x into array a while maintaining sorted order
@@ -156,7 +156,7 @@ print( count_by_range(a, 4, 4) ) (output) 2
 print( count_by_range( a, -1, 3) ) (output) 6
 ~~~
 
-### 5.5 What is Parametric Search?
+### 1.5 What is Parametric Search?
 
 <span style='background-color: #E0FFC4'>***Optimization problem***</span> is a problem of reducing the value of a function as low as possible or increasing it as much as possible.
 
@@ -167,9 +167,9 @@ Example: An optimization problem that quickly finds the most appropriate value t
 In general, the parametric search problem in coding tests **can be solved using binary search**.
 
 
-### 5.6 Binery Search Example Problem
+### 1.6 Binery Search Example Problem
 
-#### 5.6.1 Problem : Making tteokbokki rice cakes
+#### 1.6.1 Problem : Making tteokbokki rice cakes
 
 Today, Chan decided to work in a rice cake shop on behalf of her parents who were traveling. Today is the day to make tteokbokki rice cakes. Interestingly, the length of the tteokbokki rice cake is not uniform. Instead, the total length of the rice cakes in one bag is cut with a cutter and adjusted.
 
@@ -191,7 +191,7 @@ The height is a positive integer less than or equal to one billion, or zero.
 Prints the maximum value of the height that can be set on the cutter to take home at least M rice cakes.
 
 
-#### 5.6.2 Solution : Making tteokbokki rice cakes
+#### 1.6.2 Solution : Making tteokbokki rice cakes
 
 Just adjust the height H iteratively by performing a binary search until a suitable height is found. (The higher the H, the smaller the truncated value.)
 
@@ -263,7 +263,7 @@ while( start <=end ):
 print( result )
 ~~~
 
-#### 5.6.3 Problem : Count a specific number in a sorted array
+#### 1.6.3 Problem : Count a specific number in a sorted array
 
 A sequence containing N elements is sorted in ascending order. <u>Count the number of times x appears in this sequence</u>. For example, if there is a sequence {1, 1, 2, 2, 2, 2, 3} and x=2, 4 is output because there are 4 elements with a value of 2 in the current sequence.
 
@@ -280,7 +280,7 @@ In the second line, N elements are entered in the form of integers separated by 
 **Output conditions** <br>
 Outputs the number of elements whose value is x among the elements of a sequence. However, if there is no element with the value x, -1 is output.
 
-#### 5.6.4 Solution : Count a specific number in a sorted array
+#### 1.6.4 Solution : Count a specific number in a sorted array
 
 An algorithm that operates with a time complexity of $$O(logN)$$ is required.
 - In general linear search, it is judged as timeout.

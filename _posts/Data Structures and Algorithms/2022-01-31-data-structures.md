@@ -1,7 +1,7 @@
 ---
 layout:   post
-title:    'Fundamentals of Data structures'
-subtitle: 'Fundamentals of Data structures'
+title:    'Data structures'
+subtitle: 'Data structures'
 category: data-structures-and-algorithms
 tags:     data-structures-and-algorithms
 # hide_last_modified: true
