@@ -9,12 +9,14 @@ image:
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
   - _posts/Data Structures and Algorithms/2022-02-25-linked-list.md
-accent_color: rgba(67,67,67,1)
-accent_image:
-  background: url('/assets/img/background/brightness.jpg') center/cover 
+accent_color: rgba(0,174,239,1)
+accent_image: 
+  background: url('/assets/img/background/Claude-Monet/Claude Monet, Railway Bridge at Argenteuil.png') center/cover 
   overlay: false
-theme_color: rgba(52,52,52,1)
+theme_color: rgba(27,10,58,1)
 ---
+Claude Monet, Railway Bridge at Argenteuil
+{:.figure}
 
 * toc
 {:toc .large-only}

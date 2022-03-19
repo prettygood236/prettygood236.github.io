@@ -9,12 +9,14 @@ image:
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-30-tree.md
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
-accent_color: rgba(220,240,246,1)
+accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/gd90ba083b') center/cover 
+  background: url('/assets/img/background/Claude-Monet/Claude Monet, Shadows on the Sea The Cliffs at Pourville, 1882, oil on canvas,NY Carlsberg Glyptotek.png') center/cover 
   overlay: false
-theme_color: rgba(208,121,229,1)
+theme_color: rgba(27,10,58,1)
 ---
+Claude Monet, Shadows on the Sea The Cliffs at Pourville, 1882, oil on canvas, NY Carlsberg Glyptotek
+{:.figure}
 
 Data structure is a storage that is used to store and organize data. <br>
 It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br>
