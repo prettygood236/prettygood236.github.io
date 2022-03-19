@@ -3,7 +3,7 @@ layout:   post
 title:    'Dynamic Programming'
 subtitle: 'Dynamic Programming'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     dynamic-programming
 image: 
   path: /assets/img/data-structures-and-algorithms/dynamic-programming/dynamic-programming_main.png
 related_posts: 
@@ -19,9 +19,8 @@ theme_color: rgba(247,179,53,1)
 * toc
 {:toc .large-only}
 
-## 1. Dynamic Programming
-
-### 1.1 What is Dynamic Programming?
+## 1. What is Dynamic Programming?
+---
 
 Dynamic programming is a method to dramatically improve execution time efficiency by properly using memory.
 It saves <span style='font-size:1.1em; background-color: #FFF39B'>*already calculated results (small problems) in a separate memory area to avoid recalculation.*</span> 
@@ -33,7 +32,8 @@ A big problem can be divided into small problems, and the big problem can be sol
 <span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br>
 You have to solve the same small problem over and over again.*
 
-### 1.2 What is Memoization?
+## 2 What is Memoization?
+---
 
 Memoization is a technique of <span style='font-size:1.1em; background-color: #FFF39B'>*memoizing the result once calculated in the memory space.*</span>
 - If you call the same problem again, you get the result you noted.
@@ -46,7 +46,8 @@ In general, Dynamic programming can be implemented in two ways:  <span style='ba
 - A classic form of dynamic programming is the *<u>Bottom-up</u>* approach. 
   - The list for storing the results is called the DP table.
 
-### 1.3 Fibonacci Sequence Implementation
+## 3 Fibonacci Sequence Implementation
+---
 
 The Fibonacci Sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
@@ -117,7 +118,8 @@ If the already calculated result is memozied in memory, <u>only the colored node
 {:.figure}
 
 
-### 1.4 Dynamic Programming VS Divide-and-Conquer algorithm
+## 4 Dynamic Programming VS Divide-and-Conquer algorithm
+---
 
 　| Dynamic programming | Divide-and-conquer algorithm
 --|:--:|:--:|
@@ -133,9 +135,10 @@ The subproblem of re-processing the pivot after splitting is not called.
 
 
 
-### 1.5 Dynamic Programming Example Problem
+## 5 Dynamic Programming Example Problem
 
-#### 1.5.1 Problem : Ant warrior
+### 5.1 Problem : Ant warrior
+---
 
 The ant warrior secretly attacks the food warehouse of the grasshopper village to make up for the shortage of food. There are several food warehouses in grasshopper Village, which are connected in a straight line.<br>
 Each food warehouse stores a fixed number of food, and the ant warriors will selectively plunder the food warehouse to steal food. At this time, the grasshopper scouts can immediately detect when adjacent food warehouses are attacked among the food warehouses that exist in a straight line.<br>
@@ -162,7 +165,8 @@ In the first line, print the maximum amount of food an ant warrior can get.
 |4|8|
 |1 3 1 5|
 
-#### 1.5.2 Solution : Ant warrior
+### 5.2 Solution : Ant warrior
+---
 
 Let's check an example. When N=4, the following cases may exist.
     The number of food choices is eight as follows.
@@ -207,7 +211,8 @@ for i in range(2, n); #Optimal solution from position 3 to nth ?
 print(d[n-1])
 ~~~
 
-#### 1.5.3 Problem : Minimum number of currencies
+### 5.3 Problem : Minimum number of currencies
+---
 
 There are N types of money. We try to minimize the number of these currencies so that the sum of their values ​​is M won. In this case, any number of currencies of each type can be used.
 
@@ -237,7 +242,8 @@ If not possible, -1 is output.
 |5|
 |7|
 
-#### 1.5.4 Solution : Minimum number of currencies
+### 5.4 Solution : Minimum number of currencies
+---
 
 $$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) <br>
 k = unit of each currency <br>
@@ -295,7 +301,8 @@ else: # Print if exists
   print(d[m])
 ~~~
  
-#### 1.5.5 Problem : Gold Mine
+### 5.5 Problem : Gold Mine
+---
 
 There is a gold mine measuring n x m. The gold mine is divided into 1 x 1 squares, each of which contains a certain size of gold. <br>
 Miners start with the first row and start digging for gold. You can start from any row in the first column. <br>
@@ -323,7 +330,8 @@ For each test case, we print the maximum amount of gold that a miner can obtain.
 |4 4|
 |1 3 1 5 2 2 4 1 5 0 2 3 0 6 1 2|
  
-#### 1.5.6 Solution : Gold Mine
+### 5.6 Solution : Gold Mine
+---
 
 For all locations of gold mines, only the following three things need to be considered.
 
@@ -390,7 +398,8 @@ for tc in range(int( input( ))):
   print( result )
 ~~~
 
-#### 1.5.6 Problem : Deploying soldiers
+### 5.7 Problem : Deploying soldiers
+---
 
 N soldiers are randomly listed. Each soldier has a certain value of combat power. When deploying soldiers, we want to arrange them in descending order so that the soldiers with higher combat power are in the front.<br>
 In other words, the combat power of the soldier in the front must always be higher than that of the soldier in the back.<Br>
@@ -418,7 +427,8 @@ Each soldier's Combat Strength is a natural number less than or equal to 10,000,
 The number of soldiers remaining in the first row. <br>
 Outputs the number of soldiers that must be excluded to maximize.
 
-#### 1.5.7 Solution : Deploying soldiers
+### 5.8 Solution : Deploying soldiers
+---
 
 The basic idea of ​​this problem is the same as that of a classic dynamic programming problem known as <span style='background-color:#e0ffc4'>***Longest Increasing Subsequence (LIS)***<span>
 

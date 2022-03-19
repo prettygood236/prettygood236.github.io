@@ -5,15 +5,15 @@ subtitle: 'Stack & Queue'
 category: data-structures-and-algorithms
 tags:     stack-and-queue
 image: 
-  path: /assets/img/data-structures-and-algorithms/stack-and-queue/data-structures_main.png
+  path: /assets/img/data-structures-and-algorithms/stack-and-queue/stack-and-queue_main.png
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-30-tree.md
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
-accent_color: rgba(67,67,67,1)
-accent_image:
-  background: url('/assets/img/background/brightness.jpg') center/cover 
+accent_color: rgba(220,240,246,1)
+accent_image: 
+  background: url('/assets/img/background/gd90ba083b') center/cover 
   overlay: false
-theme_color: rgba(52,52,52,1)
+theme_color: rgba(208,121,229,1)
 ---
 
 Data structure is a storage that is used to store and organize data. <br>

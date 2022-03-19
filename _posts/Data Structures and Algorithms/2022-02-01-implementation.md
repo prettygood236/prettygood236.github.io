@@ -3,7 +3,7 @@ layout:   post
 title:    'Implementation'
 subtitle: 'Implementation'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     implementation
 image: 
   path: /assets/img/data-structures-and-algorithms/algorithm_main.jpg
 related_posts: 
@@ -19,9 +19,8 @@ theme_color: rgba(20,98,171,1)
 * toc
 {:toc .large-only}
 
-## 1. Implementation
-
-### 1.1 What is Implementation?
+## 1. What is Implementation?
+---
 
 Implementation is <span style='background-color: #FFF39B; font-size:1.1em'>*the process of converting an algorithm in your head into source code.*</span>
 
@@ -33,10 +32,10 @@ Example of implementation type problem is:
 
 There are many similarities between the type ***Simulation*** , ***Implementation***, and ***Brute-Force*** in coding tests.
 
-### 1.2 Implementation Example Problem  
+## 2. Implementation Example Problem  
 
-
-#### 1.2.1 Problem : Left, Right, Up, Down
+### 2.1 Problem : Left, Right, Up, Down
+---
 
 Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. <br>
 The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). <br>
@@ -71,7 +70,8 @@ In the first line, print the number written on the card selected according to th
 |`5`|`3 4`|
 |`R R R U D D`|
 
-#### 1.2.2 Solution : Left, Right, Up, Down
+### 2.2 Solution : Left, Right, Up, Down
+---
 
 This is a problem that needs to implement faithfully according to the requirements.
 
@@ -103,7 +103,8 @@ for plan in plans:
 print(x, y)
 ~~~
 
-#### 1.2.3 Problem : Royal Knight
+### 2.3 Problem : Royal Knight
+---
 
 When the position of the knight on the 8 × 8 coordinate plane is given, the number of cases in which the knight can move is output. A knight can move from a specific location in the following two cases:
 
@@ -130,7 +131,8 @@ In the first line, print the number of times a knight can move.
 | Input Example | Output Example|
 |a1|2|
 
-#### 1.2.4 Solution : Royal Knight
+### 2.4 Solution : Royal Knight
+---
 
 Check the 8 paths of the knight one by one and check if it is possible to move to each location. <br>
 Using the list, define direction vectors for 8 directions.

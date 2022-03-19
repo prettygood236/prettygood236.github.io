@@ -3,9 +3,9 @@ layout:   post
 title:    'Hash Table'
 subtitle: 'Hash Table'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     hash-table
 image: 
-  path: /assets/img/data-structures-and-algorithms/hash-table/data-structures_main.png
+  path: /assets/img/data-structures-and-algorithms/hash-table/hash-table_main.png
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
   - _posts/Data Structures and Algorithms/2022-02-25-linked-list.md

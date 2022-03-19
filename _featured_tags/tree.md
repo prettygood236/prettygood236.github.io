@@ -11,7 +11,7 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-     A tree data structure is <u>a way to hold data that when visualized looks like a tree.
-     This is actually what we visualized a tree data structure to look like all data points in the tree are called nodes.
+    A tree data structure is <u>a way to hold data that when visualized looks like a tree.
+    This is actually what we visualized a tree data structure to look like all data points in the tree are called nodes.
 ---
 

@@ -3,7 +3,7 @@ layout:   post
 title:    'Range Query'
 subtitle: 'RMQ / RSQ'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     range-query
 image: 
   path: /assets/img/data-structures-and-algorithms/range-query/range-query_main.png
 related_posts: 

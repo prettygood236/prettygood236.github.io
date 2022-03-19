@@ -3,9 +3,9 @@ layout:   post
 title:    'Linked List'
 subtitle: 'Linked List'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     linked-list
 image: 
-  path: /assets/img/data-structures-and-algorithms/linked-list/data-structures_main.png
+  path: /assets/img/data-structures-and-algorithms/linked-list/linked-list_main.png
 related_posts:
   - _posts/Data Structures and Algorithms/2022-01-31-graph.md
   - _posts/Data Structures and Algorithms/2022-02-25-linked-list.md

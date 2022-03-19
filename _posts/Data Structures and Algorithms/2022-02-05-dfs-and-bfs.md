@@ -3,7 +3,7 @@ layout:   post
 title:    'DFS & BFS'
 subtitle: 'DFS & BFS'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     dfs-and-bfs
 image: 
   path: /assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs-and-bfs_main.png
 related_posts: 
@@ -21,11 +21,10 @@ theme_color: rgba(196,113,245,1)
 
 Search is the process of *finding the desired data among a large amount of data.*
 
-## 1. DFS & BFS
+## 1. DFS (Depth-First Search)
 
-### 1.1 DFS (Depth-First Search)
-
-#### 1.1.1 What is DFS?
+### 1.1 What is DFS?
+---
 
 DFS is a ***depth-first search*** algorithm that <span style='background-color:#fff39b; font-size:1.1em'>*preferentially searches the deep part of a graph.*</span><br/>
 DFS <span style='background-color:#fff39b;font-size:1.1em'>*uses a **stack** data structure(or a recursive function)*</span>, and the detailed operation process is as follows.
@@ -75,7 +74,8 @@ The top node of the stack, '7', has an unvisited neighbor '8'. Therefore, we put
 
 Navigation order: 1 -> 2 -> 7 -> 6 -> 8 -> 3 -> 4 -> 5
 
-#### 1.1.2 DFS Implementation
+### 1.2 DFS Implementation
+---
 
 ~~~py
 # file:'DFS.py'
@@ -112,9 +112,10 @@ dfs(graph, 1, visited)
 # 1 2 7 6 8 3 4 5
 ~~~
 
-### 1.2 BFS (Breadth-First Search)
+## 2. BFS (Breadth-First Search)
 
-#### 1.2.1 What is BFS?
+### 2.1 What is BFS?
+---
 
 BFS is a ***breadth-first search*** algorithm that <span style='background-color:#fff39b; font-size:1.1em'>*searches first from the nearest node in the graph.*</span><br/>
 BFS  <span style='background-color:#fff39b;font-size:1.1em'>*uses a **queue** data structure*</span>, and the detailed operation process is as follows.
@@ -159,7 +160,8 @@ Navigation order: 1 -> 2 -> 3 -> 8 -> 7 -> 4 -> 5 -> 6
 
 It can be used to solve the shortest distance problem in a situation where the cost of each edge is the same.
 
-#### 1.2.2 BFS Implementation
+### 2.2 BFS Implementation
+---
 
 ~~~py
 # file:'BFS.py'
@@ -205,9 +207,10 @@ bfs(graph, 1, visited)
 # 1 2 3 8 7 4 5 6
 ~~~
 
-### 1.3 DFS & BFS Example Problem
+## 3. DFS & BFS Example Problem
 
-#### 1.3.1 Problem : Freezing drinks
+### 3.1 Problem : Freezing drinks
+---
 
 There is an ice frame of size N X M. Areas with holes are marked with 0, and areas with partitions are marked with 1.<br>
 If the parts with holes are attached to each other in the top, bottom, left, and right directions, it is considered to be connected to each other.<br>
@@ -228,7 +231,8 @@ In this case, the open part is 0, and the closed part is 1.
 **Output conditions** <br>
 Prints the number of ice creams that can be made at one time.
 
-#### 1.3.2 Solution : Freezing drinks
+### 3.2 Solution : Freezing drinks
+---
 
 This problem can be solved with DFS or BFS.
 It is modeled in the form of a graph because it expresses that the ice space is connected to the top, bottom, left, and right.
@@ -278,7 +282,8 @@ for i in range(n):
 print(result) #print the correct answer
 ~~~
 
-#### 1.3.3 Problem : Maze Escape
+### 3.3 Problem : Maze Escape
+---
 
 Chan was trapped in a maze in the shape of a rectangle of size N X M. There are several monsters in the maze, and chan have to escape from them.<br>
 The position of chan is (1, 1) and the exit of the maze is at the position of (N, M), and it can move one space at a time.
@@ -295,7 +300,8 @@ In each of the next N lines, M number of integers (0 or 1) are given the informa
 **Output conditions** <br>
 Print the minimum number of moving cells on the first line.
 
-#### 1.3.3 Solution : Maze Escape
+### 3.4 Solution : Maze Escape
+---
 
 BFS searches all the nodes in the graph in order, starting with the node closest to the starting point.<br>
 The distance to all nodes connected to the top, bottom, left, and right is equal to 1.<br>
