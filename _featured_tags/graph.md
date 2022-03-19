@@ -11,7 +11,7 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-    Graphs are collections of things and <u>the relationships or connections</u> between them. <br> The data in a graph are called ***nodes or vertices.***<br>
-    The connections between the nodes are called ***edges.***
+    Graphs are collections of things and the relationships or connections between them. The data in a graph are called nodes or vertices.
+    The connections between the nodes are called edges.
 ---
 

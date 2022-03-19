@@ -11,6 +11,7 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-    Simply put, a data structure is a container that stores data in a specific layout. This "placement" allows a data structure to be efficient in some operations but inefficient in others. Your goal is to understand data structures so that you can choose the data structures that are best for the problem at hand. 
+    If you make a stack of block, The last block stacks are of last in first out type of service.The last block you put on top of a stack would be the first block.<br/>
+    Queue example is a print queue when a lot of people are printing documents at the same printer. The documents are printed in the order(first in first out). They were sent to the print queue.
 ---
 

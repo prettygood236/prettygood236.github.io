@@ -11,6 +11,8 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-    Simply put, a data structure is a container that stores data in a specific layout. This "placement" allows a data structure to be efficient in some operations but inefficient in others. Your goal is to understand data structures so that you can choose the data structures that are best for the problem at hand. 
+    The set data structure is kind of like an array except there are no duplicate.
+    Items and the values are not in any particular order. 
+    The typical use for set is to simply check for the presence of an item.
 ---
 

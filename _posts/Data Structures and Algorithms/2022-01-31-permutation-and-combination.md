@@ -3,7 +3,7 @@ layout:   post
 title:    'Permutation & Combination'
 subtitle: 'Permutation & Combination'
 category: data-structures-and-algorithms
-tags:     data-structures-and-algorithms
+tags:     permutation-and-combination
 image: 
   path: /assets/img/data-structures-and-algorithms/permutations-and-combinations/permutations-and-combinations_main.png
 related_posts: 
