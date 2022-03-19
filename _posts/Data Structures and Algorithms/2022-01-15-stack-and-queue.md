@@ -7,8 +7,8 @@ tags:     stack-and-queue
 image: 
   path: /assets/img/data-structures-and-algorithms/stack-and-queue/stack-and-queue_main.png
 related_posts:
-  - _posts/Data Structures and Algorithms/2022-01-30-tree.md
-  - _posts/Data Structures and Algorithms/2022-01-31-graph.md
+  - _posts/Data Structures and Algorithms/2022-01-22-tree.md
+  - _posts/Data Structures and Algorithms/2022-01-25-graph.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
   background: url('/assets/img/background/Claude-Monet/Claude Monet, Shadows on the Sea The Cliffs at Pourville, 1882, oil on canvas,NY Carlsberg Glyptotek.png') center/cover 

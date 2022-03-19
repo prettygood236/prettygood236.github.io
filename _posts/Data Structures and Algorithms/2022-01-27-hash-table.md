@@ -7,8 +7,8 @@ tags:     hash-table
 image: 
   path: /assets/img/data-structures-and-algorithms/hash-table/hash-table_main.png
 related_posts:
-  - _posts/Data Structures and Algorithms/2022-01-31-graph.md
-  - _posts/Data Structures and Algorithms/2022-02-25-linked-list.md
+  - _posts/Data Structures and Algorithms/2022-01-25-graph.md
+  - _posts/Data Structures and Algorithms/2022-02-28-linked-list.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
   background: url('/assets/img/background/Claude-Monet/Claude Monet, Railway Bridge at Argenteuil.png') center/cover 
