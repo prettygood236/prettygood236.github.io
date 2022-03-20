@@ -122,6 +122,31 @@ If the already calculated result is memozied in memory, <u>only the colored node
 
 ## 4 Dynamic Programming VS Divide-and-Conquer algorithm
 ---
+The [divide and conquer](data-structures-and-algorithms/divide-and-conquer.html) approach divides a problem into smaller subproblems; these subproblems are further solved recursively. The result of each subproblem is not stored for future reference, whereas, in a dynamic approach, the result of each subproblem is stored for future reference.
+
+Use the divide and conquer approach when the same subproblem is not solved multiple times. Use the dynamic approach when the result of a subproblem is to be used multiple times in the future.
+
+Let us understand this with an example. Suppose we are trying to find the Fibonacci series. Then,
+
+**Divide and Conquer approach:**
+~~~
+fib(n)
+  If n < 2, return 1
+  Else , return f(n - 1) + f(n -2)
+~~~
+
+**Dynamic approach:**
+~~~
+mem = []
+fib(n)
+  If n in mem: return mem[n] 
+  else,     
+    If n < 2, f = 1
+    else , f = f(n - 1) + f(n -2)
+    mem[n] = f
+    return f
+~~~
+In a dynamic approach, `mem` stores the result of each subproblem.
 
 　| Dynamic programming | Divide-and-conquer algorithm
 --|:--:|:--:|
