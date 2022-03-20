@@ -120,7 +120,7 @@ If the already calculated result is memozied in memory, <u>only the colored node
 {:.figure}
 
 
-## 4 Dynamic Programming VS Divide-and-Conquer algorithm
+## 4 Dynamic Programming VS Divide and Conquer 
 ---
 The [divide and conquer](data-structures-and-algorithms/divide-and-conquer.html) approach divides a problem into smaller subproblems; these subproblems are further solved recursively. The result of each subproblem is not stored for future reference, whereas, in a dynamic approach, the result of each subproblem is stored for future reference.
 

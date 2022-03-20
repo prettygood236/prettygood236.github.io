@@ -253,7 +253,7 @@ Change the value of a specified element of the array to a new value x. We need t
 A simple solution is to run a loop from l to r and calculate the sum of elements in the given range. To update a value, simply do arr[i] = x. The first operation takes O(n) time and the second operation takes O(1) time.
 
 Another solution is to create another array and store the sum from start to i at the ith index in this array. The sum of a given range can now be calculated in O(1) time, but the update operation takes O(n) time now. This works well if the number of query operations is large and there are very few updates. <br/>
-What if the number of queries and updates are equal? Can we perform both the operations in O(log n) time once given the array? We can use a Segment Tree to do both operations in O(Logn) time. We have discussed the complete implementation of segment trees in our previous post. In this post, we will discuss the easier and yet efficient implementation of segment trees than in the previous post.  <br/>
+What if the number of queries and updates are equal? Can we perform both the operations in O(log n) time once given the array? We can use a Segment Tree to do both operations in O(logn) time. We have discussed the complete implementation of segment trees in our previous post. In this post, we will discuss the easier and yet efficient implementation of segment trees than in the previous post.  <br/>
 Consider the array and segment tree as shown below:  
 ![Segment Tree](/assets/img/data-structures-and-algorithms/range-query/segment-tree_2.png){:width="100%"} <br/> 
 {:.figure}  
@@ -366,7 +366,7 @@ A simple solution is to run a loop from qs to qe and find minimum element in giv
 
 Another solution is to create a 2D array where an entry [i, j] stores the minimum value in range arr[i..j]. Minimum of a given range can now be calculated in O(1) time, but preprocessing takes O(n^2) time. Also, this approach needs O(n^2) extra space which may become huge for large input arrays.
 
-Segment tree can be used to do preprocessing and query in moderate time. With a segment tree, preprocessing time is O(n) and  the time complexity for a range minimum query is O(Logn). The extra space required is O(n) to store the segment tree.
+Segment tree can be used to do preprocessing and query in moderate time. With a segment tree, preprocessing time is O(n) and  the time complexity for a range minimum query is O(logn). The extra space required is O(n) to store the segment tree.
 
 Representation of Segment trees 
 1. Leaf Nodes are the elements of the input array. 
@@ -714,6 +714,8 @@ Updating an element : $$O(logn)$$.
 
 
 ## 2. Sparse Table
+
+### COMING SOON,,,
 
 <br/>
 <br/>
