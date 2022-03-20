@@ -11,11 +11,11 @@ related_posts:
   - _posts/Data Structures and Algorithms/2022-02-12-sort.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Paul-Signac/Venise. La Salute. Vert, 1908, Paul Signac.jpg') center/cover 
+  background: url('/assets/img/background/Paul-Signac/The Pine Tree at Saint-Tropez, 1909, Paul Signac.png') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-Venise. La Salute. Vert, 1908, Paul Signac
+The Pine Tree at Saint-Tropez, 1909, Paul Signac
 {:.figure}
   
 * toc

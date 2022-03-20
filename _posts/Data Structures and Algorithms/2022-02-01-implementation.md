@@ -8,14 +8,14 @@ image:
   path: /assets/img/data-structures-and-algorithms/implementation/implementation_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
-  - _posts/Data Structures and Algorithms/2022-02-05-dfs-and-bfs.md
+  - _posts/Data Structures and Algorithms/2022-02-03-divide-and-conquer.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Paul-Signac/Les Andelys. Matin. Été, 1923, Paul Signac.jpg') center/cover 
+  background: url('/assets/img/background/Paul-Signac/The Pink Cloud Antibes, 1916, Paul Signac.png') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-Les Andelys. Matin. Été, 1923, Paul Signac.jpg
+The Pink Cloud Antibes, 1916, Paul Signac
 {:.figure}
 
 * toc

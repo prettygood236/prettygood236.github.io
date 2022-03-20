@@ -21,17 +21,18 @@ Terrasse De Meudon, 1899, Paul Signac
 * toc
 {:toc .large-only}
 
+Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars.
+
 ## 1. Divide and Conquer based solution
-
 ---
-
-Find the largest rectangular area possible in a given histogram where the largest rectangle can be made of a number of contiguous bars. For simplicity, assume that all bars have same width and the width is 1 unit. <br/>
-For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest possible rectangle possible is 12 (see the below figure, the max area rectangle is highlighted in red) <br/>
+ For simplicity, assume that all bars have same width and the width is 1 unit. <br/>
+For example, consider the following histogram with 7 bars of heights {6, 2, 5, 4, 5, 1, 6}. The largest rectangle possible is 12 (see the below figure). <br/>
 <br/>
 
 ![histogram_0](/assets/img/data-structures-and-algorithms/largest-rectangular-area-in-a-histogram/histogram_0.png){:width='50%'}
 {:.figure}
-A simple solution is to one by one consider all bars as starting points and calculate area of all rectangles starting with every bar. Finally return maximum of all possible areas. Time complexity of this solution would be O(n^2).<br/>
+A simple solution is to one by one consider all bars as starting points and calculate area of all rectangles starting with every bar. Finally return maximum of all possible areas. Time complexity of this solution would be $$O(n^2).$$<br/>
+
 We can use Divide and Conquer to solve this in O(nLogn) time. The idea is to find the minimum value in the given array. Once we have index of the minimum value, the max area is maximum of following three values. <br/>
 a) Maximum area in left side of minimum value (Not including the min value) 
 b) Maximum area in right side of minimum value (Not including the min value) 
@@ -157,19 +158,15 @@ def max_area_histogram(hist):
   
   try:
     # try except block is generally used in this way to suppress all type of exceptions raised.
-    
+
     def fun(left,right):
-      
     # this function "fun" calculates area recursively between indices left and right
-      
       nonlocal area
-      
       # global area won't work here as variable area is defined inside function not in main().
       
       if left==right:
         return
       # the recursion has reached end
-      
       
       index = RMQ(hist,st, len(hist), left, right-1)
       # RMQ function returns index of minimum value in the range of [left,right-1]
@@ -200,8 +197,8 @@ print("Maximum area is",
 ~~~
 
 ## 2. More efficient solution
-
-We have discussed a Divide and Conquer based O(nLogn) solution for this problem. In this post, O(n) time solution is discussed. Like the previous post, width of all bars is assumed to be 1 for simplicity. For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the rectangle. If we calculate such area for every bar ‘x’ and find the maximum of all areas, our task is done. How to calculate area with ‘x’ as smallest bar? We need to know index of the first smaller (smaller than ‘x’) bar on left of ‘x’ and index of first smaller bar on right of ‘x’. Let us call these indexes as ‘left index’ and ‘right index’ respectively. <br/>
+---
+Divide-and-conquer based solution has the time complexity of $$O(nlogn)$$, but there is a way to reduce it to $$O(n)$$. Like the previous post, width of all bars is assumed to be 1 for simplicity. For every bar ‘x’, we calculate the area with ‘x’ as the smallest bar in the rectangle. If we calculate such area for every bar ‘x’ and find the maximum of all areas, our task is done. How to calculate area with ‘x’ as smallest bar? We need to know index of the first smaller (smaller than ‘x’) bar on left of ‘x’ and index of first smaller bar on right of ‘x’. Let us call these indexes as ‘left index’ and ‘right index’ respectively. <br/>
 We traverse all bars from left to right, maintain a stack of bars. Every bar is pushed to stack once. A bar is popped from stack when a bar of smaller height is seen. When a bar is popped, we calculate the area with the popped bar as smallest bar. How do we get left and right indexes of the popped bar – the current index tells us the ‘right index’ and index of previous item in stack is the ‘left index’. Following is the complete algorithm.<br/>
 1) Create an empty stack.<br/>
 2) Start from first bar, and do following for every bar ‘hist[i]’ where ‘i’ varies from 0 to n-1. <br/>

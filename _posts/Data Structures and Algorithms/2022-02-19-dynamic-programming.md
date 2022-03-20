@@ -11,11 +11,11 @@ related_posts:
   - _posts/Coding Test/2022-02-03-sudoku.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Paul-Signac/La Cité Paris, 1934, Paul Signac.png') center/cover 
+  background: url('/assets/img/background/Paul-Signac/The Golden Horn. Morning, 1907, Paul Signac.png') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-La Cité Paris, 1934, Paul Signac
+The Golden Horn. Morning, 1907, Paul Signac.png
 {:.figure}
 
 * toc
