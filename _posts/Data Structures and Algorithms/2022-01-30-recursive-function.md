@@ -11,11 +11,11 @@ related_posts:
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Paul-Signac/Paimpol Le Fanny Crossfield, Paul Signac.jpg') center/cover 
+  background: url('/assets/img/background/Paul-Signac/Comblat-le-Château, the Meadow Le Pré, Opus 161, 1887, Paul Signac.jpg') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-Paimpol Le Fanny Crossfield, Paul Signac
+Comblat-le-Château, the Meadow Le Pré, Opus 161, 1887, Paul Signac
 {:.figure}
 
 * toc

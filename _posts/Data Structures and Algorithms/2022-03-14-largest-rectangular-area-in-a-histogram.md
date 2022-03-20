@@ -11,7 +11,7 @@ related_posts:
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Paul-Signac/Terrasse De Meudon, 1899, Paul Signac.jpg') center/cover 
+  background: url('/assets/img/background/Paul-Signac/Terrasse De Meudon, 1899, Paul Signac.png') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
