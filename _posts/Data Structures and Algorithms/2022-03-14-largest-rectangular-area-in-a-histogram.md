@@ -5,7 +5,7 @@ subtitle: 'Largest Rectangular Area in a Histogram'
 category: data-structures-and-algorithms
 tags:     range-query divide-and-conquer
 image: 
-  path: /assets/img/data-structures-and-algorithms/largest-rectangular-area-in-a-histogram_main.png
+  path: /assets/img/data-structures-and-algorithms/largest-rectangular-area-in-a-histogram/largest-rectangular-area-in-a-histogram_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-03-12-range-query.md
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md

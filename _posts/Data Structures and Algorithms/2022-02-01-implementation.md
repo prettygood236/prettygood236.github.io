@@ -5,7 +5,7 @@ subtitle: 'Implementation'
 category: data-structures-and-algorithms
 tags:     implementation
 image: 
-  path: /assets/img/data-structures-and-algorithms/implementation_main.jpg
+  path: /assets/img/data-structures-and-algorithms/implementation/implementation_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
   - _posts/Data Structures and Algorithms/2022-02-05-dfs-and-bfs.md
