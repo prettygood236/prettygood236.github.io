@@ -5,17 +5,17 @@ subtitle: 'Recursive Function'
 category: data-structures-and-algorithms
 tags:     recursive-function
 image: 
-  path: /assets/img/data-structures-and-algorithms/recursive-function/recursive-function.png
+  path: /assets/img/data-structures-and-algorithms/recursive-function/recursive-function_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-05-dfs-and-bfs.md
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
-accent_color: rgba(250,113,205,1)
-accent_image:
-  background: rgba(223,191,166,1)
+accent_color: rgba(0,174,239,1)
+accent_image: 
+  background: url('/assets/img/background/Paul-Signac/Paimpol Le Fanny Crossfield, Paul Signac.jpg') center/cover 
   overlay: false
-theme_color: rgba(223,191,166,1)
+theme_color: rgba(27,10,58,1)
 ---
-image from https://realpython.com/
+Paimpol Le Fanny Crossfield, Paul Signac
 {:.figure}
 
 * toc

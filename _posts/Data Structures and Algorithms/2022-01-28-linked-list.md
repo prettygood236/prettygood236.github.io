@@ -11,11 +11,11 @@ related_posts:
   - _posts/Data Structures and Algorithms/2022-02-28-linked-list.md
 accent_color: rgba(0,174,239,1)
 accent_image: 
-  background: url('/assets/img/background/Claude-Monet/Claude Monet, The Cabin at Saint-Adresse.png') center/cover 
+  background: url('/assets/img/background/Claude-Monet/The Cabin at Saint-Adresse, 1876, Claude Monet.png') center/cover 
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-Claude Monet, The Cabin at Saint-Adresse
+The Cabin at Saint-Adresse, 1876, Claude Monet 
 {:.figure}
 
 * toc

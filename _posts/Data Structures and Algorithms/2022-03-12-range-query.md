@@ -9,12 +9,14 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-01-22-tree.md
   - _posts/Data Structures and Algorithms/2022-01-30-recursive-function.md
-accent_color: rgba(38,38,42,1)
-accent_image:
-  background: linear-gradient(0deg, rgba(22,18,22,1) 0%, rgba(38,38,42,1) 100%);
+accent_color: rgba(0,174,239,1)
+accent_image: 
+  background: url('/assets/img/background/Paul-Signac/The Port of Rotterdam, 1907, Paul Signac.jpg') center/cover 
   overlay: false
-theme_color: rgba(22,18,22,1)
+theme_color: rgba(27,10,58,1)
 ---
+The Port of Rotterdam, 1907, Paul Signac
+{:.figure}
 
 * toc
 {:toc .large-only}
@@ -77,13 +79,12 @@ Once the tree is constructed, how to get the sum using the constructed segment t
 /* Algorithm to get the sum of elements */
 int getSum(node, l, r) 
 {
-   if the range of the node is within l and r
-        return value in the node
-   else if the range of the node is completely outside l and r
-        return 0
-   else
-    return getSum(node's left child, l, r) + 
-           getSum(node's right child, l, r)
+  if the range of the node is within l and r
+    return value in the node
+  else if the range of the node is completely outside l and r
+    return 0
+  else
+    return getSum(node's left child, l, r) + getSum(node's right child, l, r)
 }
 ~~~
 
@@ -106,7 +107,7 @@ from math import ceil, log2;
 
 # A utility function to get the middle index from corner indexes.
 def getMid(s, e) :
-	return s + (e -s) // 2;
+  return s + (e -s) // 2;
 
 """ A recursive function to get the sum of values in the given range of the array. 
 The following are parameters for this function.
@@ -117,20 +118,19 @@ ss & se --> Starting and ending indexes of the segment represented by current no
 qs & qe --> Starting and ending indexes of query range """
 def getSumUtil(st, ss, se, qs, qe, si) :
 
-	# If segment of this node is a part of given range,
-	# then return the sum of the segment
-	if (qs <= ss and qe >= se) :
-		return st[si];
+  # If segment of this node is a part of given range, then return the sum of the segment
+  if (qs <= ss and qe >= se) :
+    return st[si];
 
-	# If segment of this node is outside the given range
-	if (se < qs or ss > qe) :
-		return 0;
+  # If segment of this node is outside the given range
+  if (se < qs or ss > qe) :
+    return 0;
 
-	# If a part of this segment overlaps with the given range
-	mid = getMid(ss, se);
-	
-	return getSumUtil(st, ss, mid, qs, qe, 2 * si + 1) +
-		getSumUtil(st, mid + 1, se, qs, qe, 2 * si + 2);
+  # If a part of this segment overlaps with the given range
+  mid = getMid(ss, se);
+  
+  return getSumUtil(st, ss, mid, qs, qe, 2 * si + 1) +
+    getSumUtil(st, mid + 1, se, qs, qe, 2 * si + 2);
 
 """ A recursive function to update the nodes which have the given index in their range.
 The following are parameters st, si, ss and se are same as getSumUtil()
@@ -138,115 +138,108 @@ i --> index of the element to be updated. This index is in the input array.
 diff --> Value to be added to all nodes which have i in range """
 def updateValueUtil(st, ss, se, i, diff, si) :
 
-	# Base Case: If the input index lies outside the range of this segment
-	if (i < ss or i > se) :
-		return;
+  # Base Case: If the input index lies outside the range of this segment
+  if (i < ss or i > se) :
+    return;
 
-	# If the input index is in range of this node,
-	# then update the value of the node and its children
-	st[si] = st[si] + diff;
-	
-	if (se != ss) :
-	
-		mid = getMid(ss, se);
-		updateValueUtil(st, ss, mid, i,
-						diff, 2 * si + 1);
-		updateValueUtil(st, mid + 1, se, i,
-						diff, 2 * si + 2);
+  # If the input index is in range of this node, then update the value of the node and its children
+  st[si] = st[si] + diff;
+  
+  if (se != ss) :
+  
+    mid = getMid(ss, se);
+    updateValueUtil(st, ss, mid, i, diff, 2 * si + 1);
+    updateValueUtil(st, mid + 1, se, i, diff, 2 * si + 2);
 
-	# The function to update a value in input array and segment tree
-	# It uses updateValueUtil() to update the value in segment tree
+  # The function to update a value in input array and segment tree
+  # It uses updateValueUtil() to update the value in segment tree
 def updateValue(arr, st, n, i, new_val) :
 
-	# Check for erroneous input index
-	if (i < 0 or i > n - 1) :
-		
-		print("Invalid Input", end = "");
-		return;
+  # Check for erroneous input index
+  if (i < 0 or i > n - 1) :
+    
+    print("Invalid Input", end = "");
+    return;
 
-	# Get the difference between new value and old value
-	diff = new_val - arr[i];
+  # Get the difference between new value and old value
+  diff = new_val - arr[i];
 
-	# Update the value in array
-	arr[i] = new_val;
+  # Update the value in array
+  arr[i] = new_val;
 
-	# Update the values of nodes in segment tree
-	updateValueUtil(st, 0, n - 1, i, diff, 0);
+  # Update the values of nodes in segment tree
+  updateValueUtil(st, 0, n - 1, i, diff, 0);
 
 # Return sum of elements in range from index qs (query start) to qe (query end)
 # It mainly uses getSumUtil()
 def getSum(st, n, qs, qe) :
 
-	# Check for erroneous input values
-	if (qs < 0 or qe > n - 1 or qs > qe) :
+  # Check for erroneous input values
+  if (qs < 0 or qe > n - 1 or qs > qe) :
 
-		print("Invalid Input", end = "");
-		return -1;
-	
-	return getSumUtil(st, 0, n - 1, qs, qe, 0);
+    print("Invalid Input", end = "");
+    return -1;
+  
+  return getSumUtil(st, 0, n - 1, qs, qe, 0);
 
 # A recursive function that constructs Segment Tree for array[ss..se].
 # si is index of current node in segment tree st
 def constructSTUtil(arr, ss, se, st, si) :
 
-	# If there is one element in array,
-	# store it in current node of segment tree and return
-	if (ss == se) :
-	
-		st[si] = arr[ss];
-		return arr[ss];
-	
-	# If there are more than one elements,
-	# then recur for left and right subtrees and store the sum of values in this node
-	mid = getMid(ss, se);
-	
-	st[si] = constructSTUtil(arr, ss, mid, st, si * 2 + 1) +
-			constructSTUtil(arr, mid + 1, se, st, si * 2 + 2);
-	
-	return st[si];
+  # If there is one element in array, store it in current node of segment tree and return
+  if (ss == se) :
+  
+    st[si] = arr[ss];
+    return arr[ss];
+  
+  # If there are more than one elements, then recur for left and right subtrees and store the sum of values in this node
+  mid = getMid(ss, se);
+  
+  st[si] = constructSTUtil(arr, ss, mid, st, si * 2 + 1) + constructSTUtil(arr, mid + 1, se, st, si * 2 + 2);
+  
+  return st[si];
 
 """ Function to construct segment tree from given array. 
 This function allocates memory for segment tree and 
 calls constructSTUtil() to fill the allocated memory """
 def constructST(arr, n) :
 
-	# Allocate memory for the segment tree
+  # Allocate memory for the segment tree
 
-	# Height of segment tree
-	x = (int)(ceil(log2(n)));
+  # Height of segment tree
+  x = (int)(ceil(log2(n)));
 
-	# Maximum size of segment tree
-	max_size = 2 * (int)(2**x) - 1;
-	
-	# Allocate memory
-	st = [0] * max_size;
+  # Maximum size of segment tree
+  max_size = 2 * (int)(2**x) - 1;
+  
+  # Allocate memory
+  st = [0] * max_size;
 
-	# Fill the allocated memory st
-	constructSTUtil(arr, 0, n - 1, st, 0);
+  # Fill the allocated memory st
+  constructSTUtil(arr, 0, n - 1, st, 0);
 
-	# Return the constructed segment tree
-	return st;
+  # Return the constructed segment tree
+  return st;
 
 # Driver Code
 if __name__ == "__main__" :
 
-	arr = [1, 3, 5, 7, 9, 11];
-	n = len(arr);
+  arr = [1, 3, 5, 7, 9, 11];
+  n = len(arr);
 
-	# Build segment tree from given array
-	st = constructST(arr, n);
+  # Build segment tree from given array
+  st = constructST(arr, n);
 
-	# Print sum of values in array from index 1 to 3
-	print("Sum of values in given range = ",
-					getSum(st, n, 1, 3));
+  # Print sum of values in array from index 1 to 3
+  print("Sum of values in given range = ",
+          getSum(st, n, 1, 3));
 
-	# Update: set arr[1] = 10 and update corresponding segment tree nodes
-	updateValue(arr, st, n, 1, 10);
+  # Update: set arr[1] = 10 and update corresponding segment tree nodes
+  updateValue(arr, st, n, 1, 10);
 
-	# Find sum after the value is updated
-	print("Updated sum of values in given range = ",
-					getSum(st, n, 1, 3), end = "");
-	
+  # Find sum after the value is updated
+  print("Updated sum of values in given range = ", getSum(st, n, 1, 3), end = "");
+  
 ~~~
 
 #### 1.3.2 Efficient implementation  
@@ -281,72 +274,72 @@ tree = [0] * (2 * N);
 # function to build the tree
 def build(arr) :
  
-    # insert leaf nodes in tree
-    for i in range(n) :
-        tree[n + i] = arr[i];
+  # insert leaf nodes in tree
+  for i in range(n) :
+    tree[n + i] = arr[i];
      
-    # build the tree by calculating parents
-    for i in range(n - 1, 0, -1) :
-        tree[i] = tree[i << 1] + tree[i <<br 1 | 1];
+  # build the tree by calculating parents
+  for i in range(n - 1, 0, -1) :
+    tree[i] = tree[i << 1] + tree[i <<br 1 | 1];
  
 # function to update a tree node
 def updateTreeNode(p, value) :
      
-    # set value at position p
-    tree[p + n] = value;
-    p = p + n;
+  # set value at position p
+  tree[p + n] = value;
+  p = p + n;
+    
+  # move upward and update parents
+  i = p;
      
-    # move upward and update parents
-    i = p;
-     
-    while i > 1 :
-         
-        tree[i >> 1] = tree[i] + tree[i ^ 1];
-        i >>= 1;
+  while i > 1 :
+       
+    tree[i >> 1] = tree[i] + tree[i ^ 1];
+    i >>= 1;
  
 # function to get sum on interval [l, r)
 def query(l, r) :
  
-    res = 0;
+  res = 0;
+	
+  # loop to find the sum in the range
+  l += n;
+  r += n;
+  
+  while l <br r :
      
-    # loop to find the sum in the range
-    l += n;
-    r += n;
+    if (l & 1) :
+      res += tree[l];
+      l += 1
      
-    while l <br r :
-     
-        if (l & 1) :
-            res += tree[l];
-            l += 1
-     
-        if (r & 1) :
-            r -= 1;
-            res += tree[r];
+    if (r & 1) :
+      r -= 1;
+      res += tree[r];
              
-        l >>= 1;
-        r >>= 1
+      l >>= 1;
+      r >>= 1
      
     return res;
  
 # Driver Code
 if __name__ == "__main__" :
  
-    a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
+  a = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
  
-    # n is global
-    n = len(a);
+  # n is global
+  n = len(a);
      
-    # build tree
-    build(a);
+  # build tree
+  build(a);
      
-    # print the sum in range(1,2) index-based
-    print(query(1, 3));
+  # print the sum in range(1,2) index-based
+  print(query(1, 3));
      
-    # modify element at 2nd index
-    updateTreeNode(2, 1);
+  # modify element at 2nd index
+  updateTreeNode(2, 1);
      
-    # print the sum in range(1,2) index-based
-    print(query(1, 3));
+  # print the sum in range(1,2) index-based
+  print(query(1, 3));
 
 # Output: 
 # 5
@@ -393,142 +386,114 @@ Once the tree is constructed, how to do range minimum query using the constructe
 // qs --> query start index, qe --> query end index
 int RMQ(node, qs, qe) 
 {
-   if range of node is within qs and qe
-        return value in node
-   else if range of node is completely outside qs and qe
-        return INFINITE
-   else
+  if range of node is within qs and qe
+    return value in node
+  else if range of node is completely outside qs and qe
+    return INFINITE
+  else
     return min( RMQ(node's left child, qs, qe), RMQ(node's right child, qs, qe) )
 }
 ~~~
 
 ~~~py
 # title : 'RangeMinumumQuerySegmentTree.py'
-# Python3 program for range minimum
-# query using segment tree
 import sys;
 from math import ceil,log2;
 
 INT_MAX = sys.maxsize;
 
-# A utility function to get
-# minimum of two numbers
+# A utility function to get minimum of two numbers
 def minVal(x, y) :
-	return x if (x < y) else y;
+  return x if (x < y) else y;
 
-# A utility function to get the
-# middle index from corner indexes.
+# A utility function to get the middle index from corner indexes.
 def getMid(s, e) :
-	return s + (e - s) // 2;
+  return s + (e - s) // 2;
 
-""" A recursive function to get the
-minimum value in a given range
-of array indexes. The following
-are parameters for this function.
+""" A recursive function to get the minimum value in a given range of array indexes. 
+The following are parameters for this function.
 
-	st --> Pointer to segment tree
-	index --> Index of current node in the
-		segment tree. Initially 0 is
-		passed as root is always at index 0
-	ss & se --> Starting and ending indexes
-				of the segment represented
-				by current node, i.e., st[index]
-	qs & qe --> Starting and ending indexes of query range """
+  st --> Pointer to segment tree
+  index --> Index of current node in the segment tree. Initially 0 is passed as root is always at index 0
+  ss & se --> Starting and ending indexes of the segment represented by current node, i.e., st[index]
+  qs & qe --> Starting and ending indexes of query range """
 def RMQUtil( st, ss, se, qs, qe, index) :
 
-	# If segment of this node is a part
-	# of given range, then return
-	# the min of the segment
-	if (qs <= ss and qe >= se) :
-		return st[index];
+  # If segment of this node is a part of given range, then return the min of the segment
+  if (qs <= ss and qe >= se) :
+    return st[index];
 
-	# If segment of this node
-	# is outside the given range
-	if (se < qs or ss > qe) :
-		return INT_MAX;
+  # If segment of this node is outside the given range
+  if (se < qs or ss > qe) :
+    return INT_MAX;
 
-	# If a part of this segment
-	# overlaps with the given range
-	mid = getMid(ss, se);
-	return minVal(RMQUtil(st, ss, mid, qs,
-						qe, 2 * index + 1),
-				RMQUtil(st, mid + 1, se,
-						qs, qe, 2 * index + 2));
+  # If a part of this segment overlaps with the given range
+  mid = getMid(ss, se);
+  return minVal(RMQUtil(st, ss, mid, qs, qe, 2 * index + 1), RMQUtil(st, mid + 1, se, qs, qe, 2 * index + 2));
 
-# Return minimum of elements in range
-# from index qs (query start) to
-# qe (query end). It mainly uses RMQUtil()
+# Return minimum of elements in range from index qs (query start) to qe (query end). It mainly uses RMQUtil()
 def RMQ( st, n, qs, qe) :
 
-	# Check for erroneous input values
-	if (qs < 0 or qe > n - 1 or qs > qe) :
-	
-		print("Invalid Input");
-		return -1;
-	
-	return RMQUtil(st, 0, n - 1, qs, qe, 0);
+  # Check for erroneous input values
+  if (qs < 0 or qe > n - 1 or qs > qe) :
+  
+    print("Invalid Input");
+    return -1;
+  
+  return RMQUtil(st, 0, n - 1, qs, qe, 0);
 
-# A recursive function that constructs
-# Segment Tree for array[ss..se].
+# A recursive function that constructs Segment Tree for array[ss..se].
 # si is index of current node in segment tree st
 def constructSTUtil(arr, ss, se, st, si) :
 
-	# If there is one element in array,
-	# store it in current node of
-	# segment tree and return
-	if (ss == se) :
+  # If there is one element in array, store it in current node of segment tree and return
+  if (ss == se) :
 
-		st[si] = arr[ss];
-		return arr[ss];
+    st[si] = arr[ss];
+    return arr[ss];
 
-	# If there are more than one elements,
-	# then recur for left and right subtrees
+  # If there are more than one elements, then recur for left and right subtrees 
 	# and store the minimum of two values in this node
-	mid = getMid(ss, se);
-	st[si] = minVal(constructSTUtil(arr, ss, mid,
-									st, si * 2 + 1),
-					constructSTUtil(arr, mid + 1, se,
-									st, si * 2 + 2));
-	
-	return st[si];
+  mid = getMid(ss, se);
+  st[si] = minVal(constructSTUtil(arr, ss, mid, st, si * 2 + 1), constructSTUtil(arr, mid + 1, se, st, si * 2 + 2));
+  
+  return st[si];
 
-"""Function to construct segment tree
-from given array. This function allocates
-memory for segment tree and calls constructSTUtil()
-to fill the allocated memory """
+"""Function to construct segment tree from given array. This function allocates
+memory for segment tree and calls constructSTUtil() to fill the allocated memory """
 def constructST( arr, n) :
 
-	# Allocate memory for segment tree
+  # Allocate memory for segment tree
 
-	# Height of segment tree
-	x = (int)(ceil(log2(n)));
+  # Height of segment tree
+  x = (int)(ceil(log2(n)));
 
-	# Maximum size of segment tree
-	max_size = 2 * (int)(2**x) - 1;
+  # Maximum size of segment tree
+  max_size = 2 * (int)(2**x) - 1;
 
-	st = [0] * (max_size);
+  st = [0] * (max_size);
 
-	# Fill the allocated memory st
-	constructSTUtil(arr, 0, n - 1, st, 0);
+  # Fill the allocated memory st
+  constructSTUtil(arr, 0, n - 1, st, 0);
 
-	# Return the constructed segment tree
-	return st;
+  # Return the constructed segment tree
+  return st;
 
 # Driver Code
 if __name__ == "__main__" :
 
-	arr = [1, 3, 2, 7, 9, 11];
-	n = len(arr);
+  arr = [1, 3, 2, 7, 9, 11];
+  n = len(arr);
 
-	# Build segment tree from given array
-	st = constructST(arr, n);
+  # Build segment tree from given array
+  st = constructST(arr, n);
 
-	qs = 1; # Starting index of query range
-	qe = 5; # Ending index of query range
+  qs = 1; # Starting index of query range
+  qe = 5; # Ending index of query range
 
-	# Print minimum value in arr[qs..qe]
-	print("Minimum of values in range [", qs,
-		",", qe, "]", "is =", RMQ(st, n, qs, qe));
+  # Print minimum value in arr[qs..qe]
+  print("Minimum of values in range [", qs,
+    ",", qe, "]", "is =", RMQ(st, n, qs, qe));
 ~~~
 
 ### 1.5 Lazy Propagation
@@ -568,218 +533,169 @@ Since we have changed update to postpone its operations, there may be problems i
 # title: 'LazyPropagtionInSegmentTree.py'
 MAX = 1000
 
-# Ideally, we should not use global variables
-# and large constant-sized arrays, we have
-# done it here for simplicity.
+# Ideally, we should not use global variables and large constant-sized arrays, 
+# we have done it here for simplicity.
 tree = [0] * MAX; # To store segment tree
 lazy = [0] * MAX; # To store pending updates
 
-""" si -> index of current node in segment tree
-	ss and se -> Starting and ending indexes of elements
-				for which current nodes stores sum.
-	us and ue -> starting and ending indexes of update query
-	diff -> which we need to add in the range us to ue """
+""" si -> index of current node in segment tree 
+ss and se -> Starting and ending indexes of elements for which current nodes stores sum.
+  us and ue -> starting and ending indexes of update query
+  diff -> which we need to add in the range us to ue """
 def updateRangeUtil(si, ss, se, us, ue, diff) :
 
-	# If lazy value is non-zero for current node
-	# of segment tree, then there are some
-	# pending updates. So we need to make sure
-	# that the pending updates are done before
-	# making new updates. Because this value may be
-	# used by parent after recursive calls
-	# (See last line of this function)
-	if (lazy[si] != 0) :
-		
-		# Make pending updates using value
-		# stored in lazy nodes
-		tree[si] += (se - ss + 1) * lazy[si];
+  # If lazy value is non-zero for current node of segment tree, then there are some pending updates. 
+	# So we need to make sure that the pending updates are done before making new updates. 
+	# Because this value may be used by parent after recursive calls (See last line of this function)
+  if (lazy[si] != 0) :
+    
+    # Make pending updates using value stored in lazy nodes
+    tree[si] += (se - ss + 1) * lazy[si];
 
-		# checking if it is not leaf node because if
-		# it is leaf node then we cannot go further
-		if (ss != se) :
-		
-			# We can postpone updating children we don't
-			# need their new values now.
-			# Since we are not yet updating children of si,
-			# we need to set lazy flags for the children
-			lazy[si * 2 + 1] += lazy[si];
-			lazy[si * 2 + 2] += lazy[si];
-		
-		# Set the lazy value for current node
-		# as 0 as it has been updated
-		lazy[si] = 0;
-	
-	# out of range
-	if (ss > se or ss > ue or se < us) :
-		return ;
+    # checking if it is not leaf node because if it is leaf node then we cannot go further
+    if (ss != se) :
+    
+      # We can postpone updating children we don't # need their new values now.
+      # Since we are not yet updating children of si, # we need to set lazy flags for the children
+      lazy[si * 2 + 1] += lazy[si];
+      lazy[si * 2 + 2] += lazy[si];
+    
+    # Set the lazy value for current node # as 0 as it has been updated
+    lazy[si] = 0;
+  
+  # out of range
+  if (ss > se or ss > ue or se < us) :
+    return ;
 
-	# Current segment is fully in range
-	if (ss >= us and se <= ue) :
-		
-		# Add the difference to current node
-		tree[si] += (se - ss + 1) * diff;
+  # Current segment is fully in range
+  if (ss >= us and se <= ue) :
+    
+    # Add the difference to current node
+    tree[si] += (se - ss + 1) * diff;
 
-		# same logic for checking leaf node or not
-		if (ss != se) :
-		
-			# This is where we store values in lazy nodes,
-			# rather than updating the segment tree itself
-			# Since we don't need these updated values now
-			# we postpone updates by storing values in lazy[]
-			lazy[si * 2 + 1] += diff;
-			lazy[si * 2 + 2] += diff;
-		
-		return;
+    # same logic for checking leaf node or not
+    if (ss != se) :
+    
+      # This is where we store values in lazy nodes, rather than updating the segment tree itself
+      # Since we don't need these updated values now we postpone updates by storing values in lazy[]
+      lazy[si * 2 + 1] += diff;
+      lazy[si * 2 + 2] += diff;
+    
+    return;
 
-	# If not completely in rang, but overlaps,
-	# recur for children,
-	mid = (ss + se) // 2;
-	updateRangeUtil(si * 2 + 1, ss,
-					mid, us, ue, diff);
-	updateRangeUtil(si * 2 + 2, mid + 1,
-					se, us, ue, diff);
+  # If not completely in rang, but overlaps, recur for children,
+  mid = (ss + se) // 2;
+  updateRangeUtil(si * 2 + 1, ss, mid, us, ue, diff);
+  updateRangeUtil(si * 2 + 2, mid + 1, se, us, ue, diff);
 
-	# And use the result of children calls
-	# to update this node
-	tree[si] = tree[si * 2 + 1] + \
-			tree[si * 2 + 2];
+  # And use the result of children calls to update this node
+  tree[si] = tree[si * 2 + 1] + tree[si * 2 + 2];
 
-# Function to update a range of values
-# in segment tree
+# Function to update a range of values in segment tree
 
-''' us and eu -> starting and ending indexes
-				of update query
-	ue -> ending index of update query
-	diff -> which we need to add in the range us to ue '''
+''' us and eu -> starting and ending indexes of update query
+  ue -> ending index of update query
+  diff -> which we need to add in the range us to ue '''
 def updateRange(n, us, ue, diff) :
-	updateRangeUtil(0, 0, n - 1, us, ue, diff);
+  updateRangeUtil(0, 0, n - 1, us, ue, diff);
 
-''' A recursive function to get the sum of values
-	in given range of the array. The following are
-	parameters for this function.
-	si --> Index of current node in the segment tree.
-		Initially 0 is passed as root is always at'
-		index 0
-	ss & se --> Starting and ending indexes of the
-				segment represented by current node,
-				i.e., tree[si]
-	qs & qe --> Starting and ending indexes of query
-				range '''
+''' A recursive function to get the sum of values in given range of the array. 
+  The following are parameters for this function.
+  si --> Index of current node in the segment tree. Initially 0 is passed as root is always at'index 0
+  ss & se --> Starting and ending indexes of the segment represented by current node, i.e., tree[si]
+  qs & qe --> Starting and ending indexes of query range '''
 def getSumUtil(ss, se, qs, qe, si) :
 
-	# If lazy flag is set for current node
-	# of segment tree, then there are
-	# some pending updates. So we need to
-	# make sure that the pending updates are
-	# done before processing the sub sum query
-	if (lazy[si] != 0) :
-	
-		# Make pending updates to this node.
-		# Note that this node represents sum of
-		# elements in arr[ss..se] and all these
-		# elements must be increased by lazy[si]
-		tree[si] += (se - ss + 1) * lazy[si];
+  # If lazy flag is set for current node of segment tree, then there are some pending updates. 
+	# So we need to make sure that the pending updates are done before processing the sub sum query
+  if (lazy[si] != 0) :
+  
+    # Make pending updates to this node. Note that this node represents sum of
+    # elements in arr[ss..se] and all these elements must be increased by lazy[si]
+    tree[si] += (se - ss + 1) * lazy[si];
 
-		# checking if it is not leaf node because if
-		# it is leaf node then we cannot go further
-		if (ss != se) :
-		
-			# Since we are not yet updating children os si,
-			# we need to set lazy values for the children
-			lazy[si * 2 + 1] += lazy[si];
-			lazy[si * 2 + 2] += lazy[si];
+    # checking if it is not leaf node because if it is leaf node then we cannot go further
+    if (ss != se) :
+    
+      # Since we are not yet updating children os si, we need to set lazy values for the children
+      lazy[si * 2 + 1] += lazy[si];
+      lazy[si * 2 + 2] += lazy[si];
 
-		# unset the lazy value for current node
-		# as it has been updated
-		lazy[si] = 0;
+    # unset the lazy value for current node as it has been updated
+    lazy[si] = 0;
 
-	# Out of range
-	if (ss > se or ss > qe or se < qs) :
-		return 0;
+  # Out of range
+  if (ss > se or ss > qe or se < qs) :
+    return 0;
 
-	# At this point we are sure that
-	# pending lazy updates are done for
-	# current node. So we can return value
-	# (same as it was for query in our previous post)
+  # At this point we are sure that pending lazy updates are done for current node. 
+	# So we can return value (same as it was for query in our previous post)
 
-	# If this segment lies in range
-	if (ss >= qs and se <= qe) :
-		return tree[si];
+  # If this segment lies in range
+  if (ss >= qs and se <= qe) :
+    return tree[si];
 
-	# If a part of this segment overlaps
-	# with the given range
-	mid = (ss + se) // 2;
-	return (getSumUtil(ss, mid, qs, qe, 2 * si + 1) +
-			getSumUtil(mid + 1, se, qs, qe, 2 * si + 2));
+  # If a part of this segment overlaps with the given range
+  mid = (ss + se) // 2;
+  return (getSumUtil(ss, mid, qs, qe, 2 * si + 1) +
+      getSumUtil(mid + 1, se, qs, qe, 2 * si + 2));
 
-# Return sum of elements in range from
-# index qs (query start) to qe (query end).
+# Return sum of elements in range from index qs (query start) to qe (query end).
 # It mainly uses getSumUtil()
 def getSum(n, qs, qe) :
-	
-	# Check for erroneous input values
-	if (qs < 0 or qe > n - 1 or qs > qe) :
-		print("Invalid Input");
-		return -1;
+  
+  # Check for erroneous input values
+  if (qs < 0 or qe > n - 1 or qs > qe) :
+    print("Invalid Input");
+    return -1;
 
-	return getSumUtil(0, n - 1, qs, qe, 0);
+  return getSumUtil(0, n - 1, qs, qe, 0);
 
-# A recursive function that constructs
-# Segment Tree for array[ss..se].
-# si is index of current node in segment
-# tree st.
+# A recursive function that constructs Segment Tree for array[ss..se].
+# si is index of current node in segment tree st.
 def constructSTUtil(arr, ss, se, si) :
 
-	# out of range as ss can never be
-	# greater than se
-	if (ss > se) :
-		return ;
+  # out of range as ss can never be greater than se
+  if (ss > se) :
+    return ;
 
-	# If there is one element in array,
-	# store it in current node of
-	# segment tree and return
-	if (ss == se) :
-	
-		tree[si] = arr[ss];
-		return;
-	
-	# If there are more than one elements,
-	# then recur for left and right subtrees
-	# and store the sum of values in this node
-	mid = (ss + se) // 2;
-	constructSTUtil(arr, ss, mid, si * 2 + 1);
-	constructSTUtil(arr, mid + 1, se, si * 2 + 2);
+  # If there is one element in array, store it in current node of segment tree and return
+  if (ss == se) :
+  
+    tree[si] = arr[ss];
+    return;
+  
+  # If there are more than one elements, then recur for left and right subtrees and store the sum of values in this node
+  mid = (ss + se) // 2;
+  constructSTUtil(arr, ss, mid, si * 2 + 1);
+  constructSTUtil(arr, mid + 1, se, si * 2 + 2);
 
-	tree[si] = tree[si * 2 + 1] + tree[si * 2 + 2];
+  tree[si] = tree[si * 2 + 1] + tree[si * 2 + 2];
 
-''' Function to construct segment tree
-from given array. This function allocates memory
-for segment tree and calls constructSTUtil()
-to fill the allocated memory '''
+''' Function to construct segment tree from given array. This function allocates memory
+    for segment tree and calls constructSTUtil() to fill the allocated memory '''
 def constructST(arr, n) :
-	
-	# Fill the allocated memory st
-	constructSTUtil(arr, 0, n - 1, 0);
-	
+  
+  # Fill the allocated memory st
+  constructSTUtil(arr, 0, n - 1, 0);
+  
 # Driver Code
 if __name__ == "__main__" :
 
-	arr = [1, 3, 5, 7, 9, 11];
-	n = len(arr);
+  arr = [1, 3, 5, 7, 9, 11];
+  n = len(arr);
 
-	# Build segment tree from given array
-	constructST(arr, n);
+  # Build segment tree from given array
+  constructST(arr, n);
 
-	# Print sum of values in array from index 1 to 3
-	print("Sum of values in given range =",
-						getSum(n, 1, 3));
+  # Print sum of values in array from index 1 to 3
+  print("Sum of values in given range =", getSum(n, 1, 3));
 
-	# Add 10 to all nodes at indexes from 1 to 5.
-	updateRange(n, 1, 5, 10);
+  # Add 10 to all nodes at indexes from 1 to 5.
+  updateRange(n, 1, 5, 10);
 
-	# Find sum after the value is updated
-	print("Updated sum of values in given range =",
-								getSum( n, 1, 3));
+  # Find sum after the value is updated
+  print("Updated sum of values in given range =", getSum( n, 1, 3));
 
 # Output:
 # Sum of values in given range = 15

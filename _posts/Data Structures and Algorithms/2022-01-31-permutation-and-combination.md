@@ -9,12 +9,14 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-01-22-tree.md
   - _posts/Data Structures and Algorithms/2022-02-01-greedy.md
-accent_color: rgba(38,38,42,1)
-accent_image:
-  background: linear-gradient(0deg, rgba(22,18,22,1) 0%, rgba(38,38,42,1) 100%);
+accent_color: rgba(0,174,239,1)
+accent_image: 
+  background: url('/assets/img/background/Paul-Signac/Comblat-le-Château, the Meadow Le Pré, Opus 161, 1887, Paul Signac') center/cover 
   overlay: false
-theme_color: rgba(22,18,22,1)
+theme_color: rgba(27,10,58,1)
 ---
+Comblat-le-Château, the Meadow Le Pré, Opus 161, 1887, Paul Signac
+{:.figure}
 
 
 * toc

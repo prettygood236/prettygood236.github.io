@@ -9,12 +9,14 @@ image:
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-15-binary-search.md
   - _posts/Coding Test/2022-02-03-sudoku.md
-accent_color: rgba(247,179,53,1)
-accent_image:
-  background: rgba(247,179,53,1)
+accent_color: rgba(0,174,239,1)
+accent_image: 
+  background: url('/assets/img/background/Paul-Signac/La Cité Paris, 1934, Paul Signac.jpg') center/cover 
   overlay: false
-theme_color: rgba(247,179,53,1)
+theme_color: rgba(27,10,58,1)
 ---
+La Cité Paris, 1934, Paul Signac
+{:.figure}
 
 * toc
 {:toc .large-only}
