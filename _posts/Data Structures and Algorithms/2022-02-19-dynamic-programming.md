@@ -34,23 +34,70 @@ A big problem can be divided into small problems, and the big problem can be sol
 <span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br>
 You have to solve the same small problem over and over again.*
 
-## 2 What is Memoization?
+## 2.  Tabulation vs Memoization
+
+### 2.1 Tabulation in Bottom-Up 
 ---
-
-Memoization is a technique of <span style='font-size:1.1em; background-color: #FFF39B'>*memoizing the result once calculated in the memory space.*</span>
-- If you call the same problem again, you get the result you noted.
-- Also called <span style='background-color: #E0FFC4'>***Caching***</span> in that it records a value.
-<br>
-<br>
-
 In general, Dynamic programming can be implemented in two ways:  <span style='background-color: #FFDFF6'>***Top-down***</span> and <span style='background-color: #FFDFF6'>***Bottom-up.***</span> 
-- <span style='background-color: #E0FFC4'>***Memoization***</span> enables *<u>Top-down</u>* dynamic programming.
-- A classic form of dynamic programming is the *<u>Bottom-up</u>* approach. 
-  - The list for storing the results is called the DP table.
 
-## 3 Fibonacci Sequence Implementation
+Tabulation is a <u>bottom-up</u> method for solving DP problems. <br/>
+As the name itself suggests starting from the bottom and accumulating answers to the top. 
+
+Let’s describe a state for our DP problem to be dp[x] with dp[0] as base state and dp[n] as our destination state. So,  we need to find the value of destination state i.e dp[n]. <br/>
+If we start our transition from our base state i.e dp[0] and follow our state transition relation to reach our destination state dp[n], we call it the Bottom-Up approach as it is quite clear that we started our transition from the bottom base state and reached the topmost desired state. 
+
+~~~
+// Tabulated version to find factorial x.
+int dp[MAXN];
+
+// base case
+int dp[0] = 1;
+for (int i = 1; i< =n; i++)
+{
+    dp[i] = dp[i-1] * i;
+}
+~~~
+
+The above code clearly follows the bottom-up approach as it starts its transition from the bottom-most base case dp[0] and reaches its destination state dp[n]. Here, we may notice that the DP table is being populated sequentially and we are ***directly accessing the calculated states from the table*** itself and hence, we call it the tabulation method. 
+
+### 2.2 Memoization in Top-down
 ---
+Memoization is a technique of ***memoizing the result once calculated in the memory space.***
+- If you call the same problem again, you get the result you noted.
+- Also called ***Caching*** in that it records a value.
 
+If we need to find the value for some state say dp[n] and instead of starting from the base state that i.e dp[0] we ask our answer from the states that can reach the destination state dp[n] following the state transition relation, then it is the top-down fashion of DP. 
+
+Here, we start our journey from the top most destination state and compute its answer by taking in count the values of states that can reach the destination state, till we reach the bottom-most base state. 
+
+~~~
+// Memoized version to find factorial x.
+// To speed up we store the values
+// of calculated states
+
+// initialized to -1
+int dp[MAXN]
+
+// return fact x!
+int solve(int x)
+{
+    if (x==0)
+        return 1;
+    if (dp[x]!=-1)
+        return dp[x];
+    return (dp[x] = x * solve(x-1));
+}
+~~~
+
+As we can see we are storing the most recent cache up to a limit so that if next time we got a call from the same state we simply return it from the memory. So, this is why we call it memoization as we are storing the most recent state values. 
+
+In this case, the memory layout is linear that’s why it may seem that the memory is being filled in a sequential manner like the tabulation method, but you may consider any other top-down DP having 2D memory layout like Min Cost Path, here the memory is not filled in a sequential manner. 
+
+![Tabulation-vs-Memoization_0](/assets/img/data-structures-and-algorithms/dynamic-programming/Tabulation-vs-Memoization_0.png){:width="100%"}
+
+
+## 3 Fibonacci Sequence using Dynamic Programming
+---
 The Fibonacci Sequence is a sequence of the following form, and can be effectively calculated with dynamic programming.
 
 $$
@@ -72,6 +119,25 @@ f(6)can be solved by finding f(5) and f(4) as above. -> <span style='background-
 Also, You can see that f(2) is <u>called multiple times</u> -> <span style='background-color: #E0FFC4'>***2. Overlapping Subproblem***</span>
 
 *<u>Therefore, the Fibonacci sequence can be implemented with dynamic programming!.</u>*
+
+**Fibonacci Sequence: Bottom-Up Dynamic Programming**
+
+~~~py
+# title : 'FibonacciBottomUp.py'
+# Initialize the DP table to save the previously calculated result.
+d = [0] * 100
+
+# Reset the first and second Fibonacci numbers to 1.
+d[1] = 1
+d[2] = 1
+n = 99
+
+# Fibonacci Function implemented as a loop (bottom-up dynamic programming).
+for i in range(3, n+1): #3 to nth
+     d[i] = d[i-1] + d[i-2] # Calculate all Fibonacci numbers, find each term in turn, start with the small problem.
+
+print(d[n]) # 218922995834555169026
+~~~
 
 **Fibonacci Sequence: Top-Down Dynamic Programming**
 
@@ -95,26 +161,8 @@ def fibo(x):
 print(fibo(99)) # 218922995834555169026
 ~~~
 
-**Fibonacci Sequence: Bottom-Up Dynamic Programming**
 
-~~~py
-# title : 'FibonacciBottomUp.py'
-# Initialize the DP table to save the previously calculated result.
-d = [0] * 100
-
-# Reset the first and second Fibonacci numbers to 1.
-d[1] = 1
-d[2] = 1
-n = 99
-
-# Fibonacci Function implemented as a loop (bottom-up dynamic programming).
-for i in range(3, n+1): #3 to nth
-     d[i] = d[i-1] + d[i-2] # Calculate all Fibonacci numbers, find each term in turn, start with the small problem.
-
-print(d[n]) # 218922995834555169026
-~~~
-
-If the already calculated result is memozied in memory, <u>only the colored node is actually called</u> and visited as follows. -> The time complexity is O(N).
+If the already calculated result is memozied in memory, <u>only the colored node is actually called</u> and visited as follows. -> The time complexity is $$O(N)$$.
 
 ![Fibonacci_example2](/assets/img/coding-test/fibonacci_example2.png)
 {:.figure}

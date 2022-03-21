@@ -46,7 +46,7 @@ The longest increasing subsequence is {3, 7, 40, 80}
 
 ### 1.2 Dynamic Programming based solution
 ---
-This problem has *<u>Obtimal Substructure</u>* property and *<u>Overlapping Subproblem</u>* can be avoided by either using Memoization or Tabulation. => [Dynamic Programming](/data-structures-and-algorithms/dynamic-programming.html)
+This problem has *<u>Obtimal Substructure</u>* property and *<u>Overlapping Subproblem</u>* It can be avoided by either using Memoization or Tabulation. => [Dynamic Programming](/data-structures-and-algorithms/dynamic-programming.html)
 
 The simulation of approach will make things clear:   
 ~~~
@@ -69,7 +69,6 @@ We can avoid recomputation of subproblems by using tabulation as shown in the be
 # title: 'LIS.py'
 
 # lis returns length of the longest increasing subsequence in arr of size n
-
 def lis(arr):
   n = len(arr)
 
@@ -107,7 +106,7 @@ print ("Length of lis is", lis(arr))
 \- Use of any array to store LIS values at each index.
 
 The time complexity of the above Dynamic Programming (DP) solution is $$O(n^2)$$ and there is a $$O(NlogN)$$ solution for the LIS problem. See below link for the solution. <br/>
-[Longest Increasing Subsequence Size (N log N)](https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/){:target="_blank"}
+[Longest Increasing Subsequence ($$\underline{NlogN}$$)](https://www.geeksforgeeks.org/longest-monotonically-increasing-subsequence-size-n-log-n/){:target="_blank"}
 
 ## 2. Longest Common Subsequence
 
