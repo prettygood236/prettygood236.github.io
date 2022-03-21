@@ -55,12 +55,12 @@ LIS[] = {1, 1, 1, 1} (initially)
 ~~~
 Iteration-wise simulation : 
 ~~~
-arr[2] > arr[1] {LIS[2] = max(LIS [2], LIS[1]+1)=2}
-arr[3] < arr[1] {No change}
-arr[3] < arr[2] {No change}
-arr[4] > arr[1] {LIS[4] = max(LIS [4], LIS[1]+1)=2}
-arr[4] > arr[2] {LIS[4] = max(LIS [4], LIS[2]+1)=3}
-arr[4] > arr[3] {LIS[4] = max(LIS [4], LIS[3]+1)=3}
+arr[0] < arr[1] {TEMP = LIS[0], LIS[1] = LIS[1] + TEMP = 2}
+arr[0] > arr[2] {No change}
+arr[1] > arr[2] {No change}
+arr[0] < arr[3] {TEMP = LIS[0]}
+arr[1] < arr[3] {TEMP = max(TEMP, LIS[1]) = 2}
+arr[2] < arr[3] {TEMP = max(TEMP, LIS[2]) = 3, LIS[3] = LIS[3] + TEMP}
 ~~~
 
 We can avoid recomputation of subproblems by using tabulation as shown in the below code: 
@@ -77,9 +77,11 @@ def lis(arr):
 
   # Compute optimized LIS values in bottom up manner
   for i in range(1, n):
+    temp_max = 0
     for j in range(0, i):
-      if arr[i] > arr[j] and lis[i] < lis[j] + 1:
-        lis[i] = lis[j]+1
+      if arr[j] < arr[i] and max < lis[j]:
+        max = lis[j]
+    lis[i] = lis[i] + max 
 
   # Initialize maximum to 0 to get the maximum of all LIS
   maximum = 0
@@ -156,31 +158,29 @@ Initialise a table
 **[Step 2]** <br/>
 Fill each cell of the table using the following logic.
 
-**[Step 3]** <br/>
 If the character correspoding to the current row and current column are matching, then fill the current cell by adding one to the diagonal element. Point an arrow to the diagonal cell.
 
-**[Step 4]** <br/>
 Else take the maximum value from the previous column and previous row element for filling the current cell. Point an arrow to the cell with maximum value. If they are equal, point to any of them.
 
 ![Fill the values](/assets/img/data-structures-and-algorithms/longest-subsequence/lcs-Table-2.png){:width='50%'} <br/> 
 Fill the values
 {:.figure}
 
-**[Step 5]** <br/>
+**[Step 3]** <br/>
 **Step 2** is repeated until the table is filled.
 
 ![Fill the values](/assets/img/data-structures-and-algorithms/longest-subsequence/lcs-Table-3.png){:width='50%'} <br/> 
 Fill the values
 {:.figure}
 
-**[Step 6]** <br/>
+**[Step 4]** <br/>
 The value in the last row and the last column is the length of the longest common subsequence.
 
 ![The bottom right corner is the length of the LCS](/assets/img/data-structures-and-algorithms/longest-subsequence/lcs-Table-4.png){:width='50%'} <br/> 
 The bottom right corner is the length of the LCS
 {:.figure}
 
-**[Step 7]** <br/>
+**[Step 5]** <br/>
 In order to find the longest common subsequence, start from the last element and follow the direction of the arrow. The elements corresponding to () symbol form the longest common subsequence.
 
 ![Create a path according to the arrows](/assets/img/data-structures-and-algorithms/longest-subsequence/lcs-Table-5.png){:width='100%'} <br/> 
@@ -217,29 +217,27 @@ Compare X[i] and Y[j]
 
 # Function to find lcs_algo
 def lcs(X, Y):
-    # find the length of the strings
-    m = len(X)
-    n = len(Y)
+  # find the length of the strings
+  m = len(X)
+  n = len(Y)
  
-    # declaring the array for storing the dp values
-    L = [[None]*(n+1) for i in range(m+1)]
+  # declaring the array for storing the dp values
+  L = [[None]*(n+1) for i in range(m+1)]
  
-    """Following steps build L[m+1][n+1] in bottom up fashion
-    Note: L[i][j] contains length of LCS of X[0..i-1]
-    and Y[0..j-1]"""
-    for i in range(m+1):
-        for j in range(n+1):
-            if i == 0 or j == 0 :
-                L[i][j] = 0
-            elif X[i-1] == Y[j-1]:
-                L[i][j] = L[i-1][j-1]+1
-            else:
-                L[i][j] = max(L[i-1][j] , L[i][j-1])
+  """Following steps build L[m+1][n+1] in bottom up fashion
+  Note: L[i][j] contains length of LCS of X[0..i-1] and Y[0..j-1]"""
+  for i in range(m+1):
+    for j in range(n+1):
+      if i == 0 or j == 0 :
+        L[i][j] = 0
+      elif X[i-1] == Y[j-1]:
+        L[i][j] = L[i-1][j-1]+1
+      else:
+        L[i][j] = max(L[i-1][j] , L[i][j-1])
  
-    # L[m][n] contains the length of LCS of X[0..n-1] & Y[0..m-1]
-    return L[m][n]
+  # L[m][n] contains the length of LCS of X[0..n-1] & Y[0..m-1]
+  return L[m][n]
 #end of function lcs
- 
  
 # Driver program to test the above function
 X = "AGGTAB"
