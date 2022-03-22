@@ -46,7 +46,7 @@ The longest increasing subsequence is {3, 7, 40, 80}
 
 ### 1.2 Dynamic Programming based solution
 ---
-This problem has *<u>Obtimal Substructure</u>* property and *<u>Overlapping Subproblem</u>* It can be avoided by either using Memoization or Tabulation. => [Dynamic Programming](/data-structures-and-algorithms/dynamic-programming.html)
+This problem has *<u>Obtimal Substructure</u>* property and *<u>Overlapping Subproblem</u>*.It can be avoided by either using Memoization or Tabulation. => [Dynamic Programming](/data-structures-and-algorithms/dynamic-programming.html)
 
 The simulation of approach will make things clear:   
 ~~~
@@ -79,9 +79,9 @@ def lis(arr):
   for i in range(1, n):
     temp_max = 0
     for j in range(0, i):
-      if arr[j] < arr[i] and max < lis[j]:
-        max = lis[j]
-    lis[i] = lis[i] + max 
+      if arr[j] < arr[i] and temp_max < lis[j]:
+        temp_max = lis[j]
+    lis[i] = lis[i] + temp_max 
 
   # Initialize maximum to 0 to get the maximum of all LIS
   maximum = 0
