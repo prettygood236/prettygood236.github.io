@@ -43,7 +43,7 @@ Input: arr[] = {50, 3, 10, 7, 40, 80}
 Output: Length of LIS = 4
 The longest increasing subsequence is {3, 7, 40, 80}
 ~~~
-
+  
 ### 1.2 Dynamic Programming based solution
 ---
 This problem has *<u>Obtimal Substructure</u>* property and *<u>Overlapping Subproblem</u>*.It can be avoided by either using Memoization or Tabulation. => [Dynamic Programming](/data-structures-and-algorithms/dynamic-programming.html)

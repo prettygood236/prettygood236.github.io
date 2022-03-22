@@ -5,7 +5,7 @@ subtitle:  'uglyNumbers'
 category:   coding-test 
 tags:       dynamic-programming binary-search coding-test
 image: 
-  path: /assets/img/coding-test/uglyNumbers_main.png
+  path: /assets/img/coding-test/uglynumbers_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-15-binary-search.md
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
