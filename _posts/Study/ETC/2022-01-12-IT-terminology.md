@@ -30,9 +30,9 @@ Let's understand and memorize one line so that additional explanations can be ma
 
 # DOM 
 
-**<span style='background-color:#fff39b; font-size:1.1em'>DOM(Document Object Model)은 HTML이나 XML 를 나타내기 위한 API이다.</span>** (MDN)
+**<span style='background-color:#fff39b; font-size:1.1em'>Document(HTML, XML)을 Object(Javascript등의 객체를 쓰는 스크립트 언어)가 이해할 수 있도록 해주는 Model이다.</span>** (MDN)
 
-즉, Document(HTML, XML)을 Object(Javascript등의 객체를 쓰는 스크립트 언어)가 이해할 수 있도록 해주는 Model이라는 뜻이다. 
+즉, DOM(Document Object Model)은 HTML이나 XML 를 나타내기 위한 API라고 할 수 있다.
 DOM을 브라우저가 내장하고 있기에, HTML을 Javascript를 통해 실체로 나타낼 수 있다.
 
 브라우저는 CSS를 Object가 이해할 수 있도록 하는 API또한 가지고 있으며 DOM 트리와 CSSOM 트리를 융합해서 우리가 보는 화면을 나타낸다. 

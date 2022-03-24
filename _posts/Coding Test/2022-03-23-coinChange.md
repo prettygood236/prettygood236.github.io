@@ -52,17 +52,17 @@ number 타입을 리턴
 
 **입출력 예시**
 ~~~js
-let S = [1, 5];
+let S = [1, 2, 3];
 let m = S.length
-let n = 10;
+let n = 4;
 let output = coinChange(S, m, n);
-console.log(output); // --> 3
-
-S = [1, 2, 3];
-m = S.length
-n = 4;
-output = coinChange(S, m, n);
 console.log(output); // --> 4 ([1, 1, 1, 1], [1, 1, 2], [2, 2], [1, 3])
+
+S = [2, 3, 5, 6];
+m = S.length
+n = 10;
+output = coinChange(S, m, n);
+console.log(output); // -> 5
 ~~~
 
 ## Solution
@@ -100,10 +100,6 @@ const coinChange = function (S, m, n){
  
   return table[n];
 }
-// const n = 10;
-// const S = [2, 3, 5, 6];
-// output = coinChange(S, S.length, n);
-// console.log(output); // -> 5
 ~~~
 
 ### TopDown Dynamic Programming
