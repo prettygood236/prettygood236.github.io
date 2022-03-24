@@ -5,16 +5,15 @@ subtitle:  'closestPairOfPoints'
 category:   coding-test 
 tags:       coding-test
 image: 
-  path: /assets/img/coding-test/uglynumbers_main.png
+  path: /assets/img/coding-test/closestPairOfPoints_main.jpg
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-15-binary-search.md
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
-accent_color: rgba(220,240,246,1)
+accent_color: rgba(0,210,255,1)
 accent_image: 
-  background: url('/assets/img/background/pastel-watercolor.png') center/cover 
+  background: linear-gradient(to left, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
   overlay: false
-invert_sidebar: true
-theme_color: rgba(208,121,229,1)
+theme_color: rgba(58,123,213,1)
 ---
 
 * toc
