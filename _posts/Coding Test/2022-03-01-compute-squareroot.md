@@ -17,6 +17,7 @@ theme_color: rgba(30, 19, 12, 1)
 {:toc .large-only}
 
 ## Problem
+---
 
 수를 입력받아 제곱근 값을 소수점 두 자리까지 리턴해야 한다.
 
@@ -46,6 +47,7 @@ console.log(output); // --> 2.45
 ## Solution
 
 ### 바빌로니아 법(The Babylonian Method)
+---
 
  3000년도 더 된 기원전에 탄생한 바빌로니아 법(Babylonian method) 또는 헤론법(Heron's method)은제곱근에 대한 근사값을 구하는 알고리즘이다.<br> 
 뉴턴-랩슨 방법의 제곱근버전이라고 할 수 있다고 한다. 아이디어는 다음과 같다.

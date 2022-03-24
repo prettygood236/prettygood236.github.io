@@ -21,6 +21,7 @@ theme_color: rgba(208,121,229,1)
 {:toc .large-only}
 
 ## Problem
+---
 
 다양한 동전들을 가지고 특정 금액을 만들 수 있는 모든 경우의 수를 리턴해야 한다.
 
@@ -47,7 +48,6 @@ number 타입을 리턴
 
 **주의사항** <br/>
 동전의 금액은 다양하게 주어진다. <br/>
-S는 오름차순으로 정렬되어 있다.  <br/>
 각 동전의 개수는 무수히 많다고 가정한다.
 
 **입출력 예시**
@@ -65,37 +65,51 @@ output = coinChange(S, m, n);
 console.log(output); // --> 4 ([1, 1, 1, 1], [1, 1, 2], [2, 2], [1, 3])
 ~~~
 
-<br/>
-
-
 ## Solution
 
 ### BottomUp Dynamic Programming 
+---
+
+시간복잡도는 $$O(mn)$$, <br/>
+보조공간은 $$O(n)$$만큼 필요하다. <br/>
+또한 다음의 알고리즘은 동전의 정렬 순서와는 관계 없다. 
 
 ~~~js
 // file:'coinChange_bottomUp.js'
 const coinChange = function (S, m, n){
 
-  // table[i]는 값 i에 대한 솔루션의 수를 저장
+  // table[i]는 값 i를 만들 수 있는 경우의 수를 저장한다.
   // 상향식(bottom-up)으로 구성되므로 n+1개의 행이 필요
   let table = Array(n+1).fill(0)
 
-  // Base case (주어진 값이 0인 경우)
+  // Base case (0원을 만들 수 있는 경우의 수는 오직 1개이다.)
   table[0] = 1;
  
-  // 모든 코인을 하나씩 선택하고 선택된 코인의 값보다 크거나 같은 인덱스 뒤에 table[] 값을 업데이트
+  // 모든 동전을 하나씩 선택하고 선택된 동전의 값보다 크거나 같은 인덱스 뒤에 table[] 값을 업데이트한다.
   for(let i = 0; i < m; i++)
+    // 선택된 동전은 반드시 사용, 이전 동전들은 선택적 사용으로 만들 수 있는 금액(table[i])에 그 경우의 수를 업데이트 한다 .
+
+    // 예를 들어  S = [2, 3, 5, 6], m = 4, n = 10이다.
+    // 먼저 2원으로 만들 수 있는 금액은 2,4,6,8,10이므로 table[2],table[4]...table[10]을 업데이트 한다.
+    // 다음으로 3원은 반드시 사용, 2원은 선택적으로 사용한다. 이 때 만들 수 있는 금액 및 그 경우의 수(3:1, 5:1, 6:1, 7:1, 8:1, 9:2, 10:1) 를 table에 업데이트 한다. 
+    // 다음으로 5원은 반드시 사용, 2,3원은 선택적으로 사용한다. 이 떄 만들 수 있는 금액 및 그 경우의 수(5:1, 7:1, 8:1, 9:1, 10:2) 를 table에 업데이트 한다. 
+    // 다음으로 6원은 반드시 사용, 2,3,5원은 선택적으로 사용한다. 이 떄 만들 수 있는 금액 및 그 경우의 수(6:1, 8:1, 9:1, 10:1) 를 table에 업데이트 한다. 
+
     for(let j = S[i]; j <= n; j++)
       table[j] += table[j - S[i]];
  
   return table[n];
 }
+// const n = 10;
+// const S = [2, 3, 5, 6];
+// output = coinChange(S, S.length, n);
+// console.log(output); // -> 5
 ~~~
 
-시간복잡도는 $$O(mn)$$, <br/>
-보조공간은 $$O(n)$$만큼 필요하다.
+### TopDown Dynamic Programming
+---
 
-### TopDown Dynamic Programming 
+시간복잡도는 $$O(mn)$$이다.
 
 ~~~js
 const coinChange = function (S, m, n) {
@@ -126,7 +140,6 @@ const coinChange = function (S, m, n) {
 };
 ~~~
 
-시간복잡도는 $$O(mn)$$이다.
 
 
 <br/>
@@ -135,5 +148,4 @@ const coinChange = function (S, m, n) {
 <br/>
 
 [https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
 {:.note title="reference"}

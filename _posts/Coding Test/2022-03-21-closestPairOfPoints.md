@@ -20,6 +20,7 @@ theme_color: rgba(58,123,213,1)
 {:toc .large-only}
 
 ## Problem
+---
 
 아래와 같이 정의된 ugly numbers 중 n번째 수를 리턴해야 한다.
 
@@ -50,6 +51,7 @@ console.log(result); // --> 3
 ## Solution
 
 ### 1. Dynamic Programming
+---
 
 모든 숫자는 2, 3, 5로만 나눌 수 있으므로 수열을 세 그룹으로 나눌 수 있다.
 ~~~
@@ -130,6 +132,7 @@ const uglyNumbers = function (n) {
 보조공간이 $$O(N)$$만큼 필요하다.
 
 ### 2. Binary Search
+---
 
 1. no는 x=pow(2,p)*pow(3,q)*pow(5,r) 형식이다.
 2. 1부터 Number.MAX_SAFE_INTEGER 사이에 n번째 uglyNumber가 있을것이다.
