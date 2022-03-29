@@ -3,9 +3,9 @@ layout:     post
 title:     'coinChange'
 subtitle:  'coinChange'
 category:   coding-test 
-tags:       dynamic-programming
+tags:       dynamic-programming coding-test
 image: 
-  path: /assets/img/coding-test/coinChange_main
+  path: /assets/img/coding-test/coinChange_main.png
 related_posts: 
   - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
   - _posts/Coding Test/2022-03-19-uglynumbers.md
@@ -142,6 +142,3 @@ const coinChange = function (S, m, n) {
 <br/>
 <br/>
 <br/>
-
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-{:.note title="reference"}

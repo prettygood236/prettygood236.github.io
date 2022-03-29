@@ -6,11 +6,11 @@ category: study
 tags:     cli
 image: 
   path: /assets/img/cli/linux-command-line-ls-output.jpg
-accent_color: rgba(0,174,239,1)
-accent_image:
-  background: linear-gradient(225deg, rgba(27,10,58,1) 0%, rgba(0,174,239,1) 80%)
+accent_color: rgba(43,65,98,1)
+accent_image: 
+  background: linear-gradient(55deg, rgba(43,65,98,1) 0%, rgba(18,16,14,1) 74%);
   overlay: false
-theme_color: rgba(27,10,58,1)
+theme_color: rgba(18,16,14,1)
 ---
 
 Unix was an operating system developed at Bell Labs in the mid 1960's. <br>

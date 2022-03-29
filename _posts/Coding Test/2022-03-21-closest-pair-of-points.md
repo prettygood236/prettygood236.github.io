@@ -3,12 +3,12 @@ layout:     post
 title:     'closestPairOfPoints'
 subtitle:  'closestPairOfPoints'
 category:   coding-test 
-tags:       coding-test
+tags:       divide-and-conquer coding-test
 image: 
   path: /assets/img/coding-test/closestPairOfPoints_main.jpg
 related_posts: 
-  - _posts/Data Structures and Algorithms/2022-02-15-binary-search.md
-  - _posts/Data Structures and Algorithms/2022-02-19-dynamic-programming.md
+  - _posts/Data Structures and Algorithms/2022-02-03-divide-and-conquer.md
+  - _posts/Coding Test/2022-03-25-decompression.md
 accent_color: rgba(0,210,255,1)
 accent_image: 
   background: linear-gradient(to left, rgba(0,210,255,1) 0%, rgba(58,123,213,1) 100%);
