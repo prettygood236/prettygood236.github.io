@@ -22,177 +22,193 @@ theme_color: rgba(58,123,213,1)
 ## Problem
 ---
 
-아래와 같이 정의된 ugly numbers 중 n번째 수를 리턴해야 한다.
-
-\-ugly number는 2, 3, 5로만 나누어 떨어지는 수이다. <br/>
-\-1은 1번째 ugly number 이다. <br/>
-\-1, 2, 3, 4, 5, 6, 8, 9, 10, 12, 15, 16, ..
+좌표평면 상의 다양한 점들을 입력받아 가장 가까운 두 점 사이의 거리를 리턴해야 한다.
 
 
 **입력** <br/>
-인자 1 : n <br/>
-\- number 타입의 자연수 (n >= 1) <br/>
+인자 1 : `points` <br/>
+\-배열을 요소로 갖는 배열 <br/>
+\-`points.length`는 40,000 이하 <br/>
+\-`points[i]`는 number 타입을 요소로 갖는 배열 <br/>
+\-`points[i].length`는 2 <br/>
+\-`points[i]`의 요소는 차례대로 좌표평면 위의 y좌표, x좌표 <br/>
+\-`points[i][j]`는 0 이상 10,000 이하의 정수 <br/>
 
 **출력** <br/>
 number 타입을 리턴
 
 **주의사항** <br/>
-ugly numbers를 배열에 저장했을 때, n번째 ugly number의 위치는 인덱스 n-1 이다. <br/>
+points는 y좌표나 x좌표 등으로 정렬되어 있지 않다.
+소수점 계산을 피하기 위해 두 점 사이의 거리에 100을 곱한 후 반올림하여 정수 부분만 취할 수 있다.
 
 **입출력 예시**
 ~~~js
-let result = uglyNumbers(1);
-console.log(result); // --> 1
+let points = [
+  [0, 0],
+  [1, 3],
+  [2, 2],
+];
+let output = closestPairOfPoints(points);
+console.log(output); // --> 141 ([1, 3], [2, 2])
+/*
+3 |  x
+2 |     x
+1 |       
+0 | x 
+------------
+    0 1 2 3 
+*/
 
-result = uglyNumbers(3);
-console.log(result); // --> 3
+points = [
+  [0, 0],
+  [0, 1],
+  [0, 3],
+  [0, 5],
+];
+output = closestPairOfPoints(points);
+console.log(output); // --> 100 ([0, 0], [0, 1])
+/*
+5 | x
+4 | 
+3 | x
+2 |     
+1 | x     
+0 | x 
+------------
+    0 1 2 3 
+*/
 ~~~
 
 ## Solution
-
-### 1. Dynamic Programming
 ---
 
-모든 숫자는 2, 3, 5로만 나눌 수 있으므로 수열을 세 그룹으로 나눌 수 있다.
-~~~
-(1) 1×2, 2×2, 3×2, 4×2, 5×2, …
-(2) 1×3, 2×3, 3×3, 4×3, 5×3, …
-(3) 1×5, 2×5, 3×5, 4×5, 5×5, …
-~~~
-모든 부분 수열은 기존에 구한 uglyNumber (1, 2, 3, 4, 5, …) 곱하기 2, 3, 5이다. 따라서 [merge sort](/data-structures-and-algorithms/sort.html#7-merge-sort)의 병합 방법처럼 세 부분 수열에서 uglyNumber를 구한다. 모든 단계에서 가장 작은 것을 선택하고 한 단계씩 이동한다.
+Brute Force(완전 탐색)를 통한 해결은 $$O(n^2)$$이다.
+시간복잡도를 줄이기 위해 Divide and Conquer (분할 정복) 방식을 이용하면 $$O(nlogn)$$ 까지 줄일 수 있다. 
 
-1. ugly numbers를 담을 배열 선언: ugly[n] <br/>
-2. 첫 번째 uglyNumber를 초기화한다.: ugly[0] = 1 <br/>
-3. 세 개의 배열 인덱스 변수 i2, i3, i5를 초기화한다.
-  uglyNumber 배열의 첫 번째 요소:
-    i2 = i3 = i5 = 0;
-4. 다음 ugly number에 대해 3가지 선택 항목을 초기화한다.
-  nextMultipleOf2 = ugly[i2]*2;
-  nextMultipleOf3 = ugly[i3]*3
-  nextMultipleOf5 = ugly[i5]*5;
-5. 이제 n까지 모든 ugly number를 채우기 위해 루프로 이동한다.
+~~~js
+// file:'closestPairOfPoints.js'
 
-~~~
-for (i = 1; i < n; i++ ) {
-  nextUglyNo = Min(nextMultipleOf2, nextMultipleOf3, nextMultipleOf5);
-  ugly[i] = nextUglyNo
-
-  if (nextUglyNo == nextMultipleOf2){
-    i2 = i2 + 1;
-    nextMultipleOf2 = ugly[i2]*2;
-  }
-  if (nextUglyNo == nextMultipleOf3){
-    i3 = i3 + 1;
-    nextMultipleOf3 = ugly[i3]*3;
-  }
-  if (nextUglyNo == nextMultipleOf5){
-    i5 = i5 + 1;
-    nextMultipleOf5 = ugly[i5]*5;
-  }    
+// 좌표평면 위의 두 점 사이의 거리를 계산하는 함수
+function calculateDistance(p1, p2) {
+  const yDiffSquared = Math.pow(p2[0] - p1[0], 2);
+  const xDiffSquared = Math.pow(p2[1] - p1[1], 2);
+  const dist = Math.sqrt(yDiffSquared + xDiffSquared);
+  return Math.round(dist * 100);
 }
-~~~
 
-6\. nextUglyNo를 리턴한다.
+const merge = function (left, right, comparator = (item) => item) {
+  let merged = [];
+  let leftIdx = 0,
+    rightIdx = 0;
+  const size = left.length + right.length;
 
-~~~js
-// file:'uglyNumbers_DynamicProgramming.js'
-const uglyNumbers = function (n) {
-  let ugly = Array(n).fill(0)
-  let i2 = 0, i3 = 0, i5 = 0;
-  let nextMultipleOf2 = 2;
-  let nextMultipleOf3 = 3;
-  let nextMultipleOf5 = 5;
-  let nextUglyNo = 1;
- 
-  ugly[0] = 1;
- 
-  for (i = 1; i < n; i++){
-    nextUglyNo = Math.min(nextMultipleOf2, Math.min(nextMultipleOf3, nextMultipleOf5));
- 
-    ugly[i] = nextUglyNo;
-    if (nextUglyNo == nextMultipleOf2){
-      i2 = i2 + 1;
-      nextMultipleOf2 = ugly[i2] * 2;
-    }
-    if (nextUglyNo == nextMultipleOf3){
-      i3 = i3 + 1;
-      nextMultipleOf3 = ugly[i3] * 3;
-    }
-    if (nextUglyNo == nextMultipleOf5){
-      i5 = i5 + 1;
-      nextMultipleOf5 = ugly[i5] * 5;
+  for (let i = 0; i < size; i++) {
+    if (leftIdx >= left.length) {
+      merged.push(right[rightIdx]);
+      rightIdx++;
+    } else if (
+      rightIdx >= right.length ||
+      comparator(left[leftIdx]) <= comparator(right[rightIdx])
+    ) {
+      merged.push(left[leftIdx]);
+      leftIdx++;
+    } else {
+      merged.push(right[rightIdx]);
+      rightIdx++;
     }
   }
-  return nextUglyNo;
-  }
-}; 
-~~~
 
-시간복잡도는 $$O(N)$$이며, <br/>
-보조공간이 $$O(N)$$만큼 필요하다.
-
-### 2. Binary Search
----
-
-1. no는 x=pow(2,p)*pow(3,q)*pow(5,r) 형식이다.
-2. 1부터 Number.MAX_SAFE_INTEGER 사이에 n번째 uglyNumber가 있을것이다.
-3. 따라서 Binary Search를 한다. mid에 있다고 가정하고 mid보다 작은 uglyNumber의 총 개수를 찾고 그에 따라 조건을 설정한다.
-
-~~~js
-// file:'uglyNumbers_Binary Search.js'
-const uglyNumbers = function (n) {
-
-  let pow = Array(40).fill(1);
-	  
-  //Math.pow(2,0)에서 Math.pow(2,30)까지 2의 거듭제곱을 저장
-	for (i = 1; i <= 30; ++i){
-		pow[i] = pow[i - 1] * 2;
-  }
-  // 낮은 값과 높은 값 초기화
-	let l = 1, r = Number.MAX_SAFE_INTEGER;
-
-	let ans = -1;
-  
-  // 이진 검색 적용
-	while (l <= r) {
-		let mid = l + parseInt((r - l) / 2); 
-		let count = 0; // count는 mid보다 작은 uglyNumber의 총 개수를 저장한다.
-    // 1에서 mid까지 반복
-		for (i = 1; i <= mid; i *= 5){
-      // mid보다 작은 i의 거듭제곱을 찾는다.
-			for (j = 1; j * i <= mid; j *= 3){
-        // 3과 5의 곱이 mid보다 작은 3과 5의 거듭제곱.
-        // 2의 거듭제곱 배열(pow)을 사용하여 i*j*power 2가 mid보다 작은 2의 최대 거듭제곱을 찾는다.
-	  		count += upperBound(pow, 0, 31, parseInt( (mid / (i * j))));
-			}
-		}
-    //mid보다 작은 uglyNumbers의 총 수가 n보다 작으면 l을 업데이트한다.
-		if (count < n)
-			l = mid + 1;
-		else {
-      // mid보다 작은 uglyNumbers의 총 수가 n보다 크면 r과 ans를 동시에 업데이트한다.
-			r = mid - 1;
-			ans = mid;
-		}
-	}
-	return ans;
+  return merged;
 };
-function upperBound(a , low , high , element) {
-	while (low < high) {
-		let middle = low + parseInt((high - low) / 2);
-		if (a[middle] > element)
-			high = middle;
-		else
-			low = middle + 1;
-	}
-	return low;
-}
+
+const mergeSort = function (arr, comparator) {
+  const aux = (start, end) => {
+    if (start >= end) return [arr[start]];
+    const mid = Math.floor((start + end) / 2);
+    const left = aux(start, mid);
+    const right = aux(mid + 1, end);
+    return merge(left, right, comparator);
+  };
+  return aux(0, arr.length - 1);
+};
+
+// divide and conquer: O(N * logN)
+const closestPairOfPoints = function (points) {
+  const bruteForce = (start, end, sorted) => {
+    // 모든 쌍을 비교한다. 3개 이하에 대해서만 호출되므로 크게 비효율적이지 않다.
+    let min = Number.MAX_SAFE_INTEGER;
+    for (let src = start; src <= end; src++) {
+      for (let dst = src + 1; dst <= end; dst++) {
+        const dist = calculateDistance(sorted[src], sorted[dst]);
+        min = Math.min(min, dist);
+      }
+    }
+    return min;
+  };
+
+  const closestCrossing = (mid, sorted, min) => {
+    // 가운데(mid)를 기준으로
+    const strip = [];
+    const midX = sorted[mid][1];
+    let lIdx = mid - 1;
+    let rIdx = mid + 1;
+
+    // 왼쪽과 오른쪽 부분에서 가장 가까운 두 점 사이의 거리가 min으로 주어진다.
+    // 가운데를 기준으로 오직 x좌표만을 기준으로 min보다 가까운 좌표만 고려한다.
+    // y좌표가 같다고 가정하면, 최소한 이 조건(x좌표 기준 min 이하)을 만족해야하기 때문이다.
+    // y좌표가 같을 경우 두 점 사이의 거리는 x축 좌표 간의 거리다.
+    // 단, 소수점 계산을 피하기 위해 두 점 사이의 거리에 100을 곱하고 있으므로 동일한 기준을 적용해야 한다.
+
+    // sorted는 x축을 기준으로 정렬되어 있기 때문에,
+    // mid를 기준으로 가까운 거리부터 최소 기준(min보다는 가까워야 함)을 만족할 때까지만 탐색을 하면 된다.
+    while (
+      rIdx < sorted.length &&
+      Math.abs(midX - sorted[rIdx][1]) * 100 < min
+    ) {
+      rIdx++;
+    }
+    while (lIdx >= 0 && Math.abs(midX - sorted[lIdx][1]) * 100 < min) {
+      lIdx--;
+    }
+
+    // while 탈출하기 위한 조건을 보면,
+    // lIdx는 1을 더해야 하고, rIdx는 1을 줄여야 한다.
+    // 아래 구간에 대해서 brute force를 적용한다.
+    for (let i = lIdx + 1; i < rIdx; i++) {
+      for (let j = i + 1; j < rIdx; j++) {
+        min = Math.min(min, calculateDistance(sorted[i], sorted[j]));
+      }
+    }
+    return min;
+  };
+
+  const closestFrom = (start, end, size, sorted) => {
+    if (size <= 3) {
+      // 최소 두 개 이상의 점이 있어야 거리를 계산할 수 있다.
+      //  1) 모든 점의 개수가 4개일 경우, 각각 2개로 나눌 수 있다.
+      //  2) 모든 점의 개수가 5개일 경우, 각각 2, 3개로 나눌 수 있다. 3개인 경우 더 나눌 수 없다.
+      return bruteForce(start, end, sorted);
+    }
+    // 가운데를 기준으로 분할한 뒤 재귀적으로 문제를 해결한다.
+    const mid = Math.floor((start + end) / 2);
+    // 왼쪽, 오른쪽으로 나뉜 부분에서 각각 가장 가까운 두 점 사이의 거리를 구한다.
+    const minLeft = closestFrom(start, mid, mid - start + 1, sorted);
+    const minRight = closestFrom(mid + 1, end, end - mid, sorted);
+
+    // 전체 영역에서 가장 가까운 두 점 사이의 거리는 아래 중 하나다.
+    //  1) 위에서 구한 두 거리(minLeft, minRight)
+    //  2) 가운데를 가로지르는 두 점 사이의 거리
+    // 먼저 1)중에서 더 짧은 거리를 구한다. 최종 정답은 이보다 작거나 같아야 한다.
+    let min = Math.min(minLeft, minRight);
+    return closestCrossing(mid, sorted, min);
+  };
+
+  // x좌표를 기준으로 정렬한다.
+  const sorted = mergeSort(points.slice(0), (item) => item[1]);
+  return closestFrom(0, sorted.length - 1, sorted.length, sorted);
+};
 ~~~
 
-시간복잡도는 $$O(logN)$$ (따라서 n이 클 때 적합하다), <br/>
-보조공간은 $$O(1)$$만큼 필요하다.
-
-
 
 
 <br/>
@@ -200,6 +216,5 @@ function upperBound(a , low , high , element) {
 <br/>
 <br/>
 
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
+[https://codestates.com/](https://codestates.com/){:target="_blank"}<br>
 {:.note title="reference"}

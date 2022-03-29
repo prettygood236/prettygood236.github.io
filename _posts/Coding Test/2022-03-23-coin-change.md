@@ -30,21 +30,21 @@ theme_color: rgba(208,121,229,1)
 
 
 **입력** <br/>
-인자 1 : S <br/>
+인자 1 : `S `<br/>
 \-사용할 수 있는 동전 금액  <br/>
-\-number 타입을 요소로 갖는 배열 <br/>
-\-S[i]는 20 이하의 양의 정수
+\-`number` 타입을 요소로 갖는 배열 <br/>
+\-`S[i]`는 20 이하의 양의 정수
 
 인자 1 : m <br/>
-\-총 동전의 가지수(S.length) <br/>
+\-총 동전의 가지수(`S.length`) <br/>
 \-10,000 이하의 정수
 
 인자 1 : n <br/>
 \-동전들을 가지고 만들 특정 금액  <br/>
-\-number 타입의 자연수 
+\-`number` 타입의 자연수 
 
 **출력** <br/>
-number 타입을 리턴
+`number` 타입을 리턴
 
 **주의사항** <br/>
 동전의 금액은 다양하게 주어진다. <br/>
@@ -142,3 +142,7 @@ const coinChange = function (S, m, n) {
 <br/>
 <br/>
 <br/>
+
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
+[https://codestates.com/](https://codestates.com/){:target="_blank"}<br>
+{:.note title="reference"}
