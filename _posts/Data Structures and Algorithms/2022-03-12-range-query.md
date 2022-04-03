@@ -255,6 +255,7 @@ A simple solution is to run a loop from l to r and calculate the sum of elements
 Another solution is to create another array and store the sum from start to i at the ith index in this array. The sum of a given range can now be calculated in O(1) time, but the update operation takes O(n) time now. This works well if the number of query operations is large and there are very few updates. <br/>
 What if the number of queries and updates are equal? Can we perform both the operations in O(log n) time once given the array? We can use a Segment Tree to do both operations in O(logn) time. We have discussed the complete implementation of segment trees in our previous post. In this post, we will discuss the easier and yet efficient implementation of segment trees than in the previous post.  <br/>
 Consider the array and segment tree as shown below:  
+
 ![Segment Tree](/assets/img/data-structures-and-algorithms/range-query/segment-tree_2.png){:width="100%"} <br/> 
 {:.figure}  
 
@@ -280,7 +281,7 @@ def build(arr) :
      
   # build the tree by calculating parents
   for i in range(n - 1, 0, -1) :
-    tree[i] = tree[i << 1] + tree[i <<br 1 | 1];
+    tree[i] = tree[i << 1] + tree[i << 1 | 1];
  
 # function to update a tree node
 def updateTreeNode(p, value) :
@@ -306,7 +307,7 @@ def query(l, r) :
   l += n;
   r += n;
   
-  while l <br r :
+  while l < r :
      
     if (l & 1) :
       res += tree[l];
