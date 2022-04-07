@@ -32,22 +32,6 @@ theme_color: rgba(52,52,52,1)
 
 ## 2.  Ownerheler and Tokenlock 구현
 ---
-- ICO는 CHANCHANCHAN(CHCHCH)이라는 자체 토큰과 교환하여 ETH를 받는 스마트 컨트랙트가 될 것이다. 
-- CHCHCH 토큰은 완전히 호환되는 ERC20 토큰이며 ICO 시간에 생성된다.
-- 투자자는 ETH를 ICO 계약 주소로 보내고 그 대가로 일정량의 CHCHCH를 받는다.
-- ICO 계약으로 전송된 ETH를 자동으로 받는 입금 주소(EOA 계정)가 있다.
-- wei단위 CHCHCH 토큰 가격은 다음과 같다. 1CHCHCH = 0.001Eth = 10**15 wei, 1Eth = 1000 CHCHCH);
-- 최소 투자 금액은 0.01 ETH이고 최대 투자 금액은 5 ETH이다.
-- ICO 하드캡은 300 ETH이다.
-- ICO에는 ICO 시작 및 종료 시간을 지정하는 관리자가 있다.
-- ICO는 하드캡 또는 종료 시간에 도달하면 종료된다(둘 중 먼저 도래하는 시점).
-- CCH 토큰은 가격 폭락을 막기위해 일정기간 잠그어 관리자가 설정한 특정 시간 후에만 거래할 수 있다.
-- 긴급 상황의 경우 관리자는 ICO를 중지할 수 있으며 손상될 경우 예금 주소를 변경할 수 있다.
-- ICO는 다음 상태 중 하나이다. beforeStart, running, afterEnd, halted;
-- 또한 ICO에서 판매되지 않은 토큰은 소각할 수 있도록 구현한다.
-- ICO 투자 후 Invest 이벤트가 발생한다.
-
-### 2.2 전체 코드
 
 github repo : [https://github.com/prettygood236/ownerhelper_and_tokenlock](https://github.com/prettygood236/ownerhelper_and_tokenlock)
 
