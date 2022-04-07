@@ -3,7 +3,7 @@ layout:     post
 title:     'countIslands'
 subtitle:  'countIslands'
 category:   coding-test 
-tags:       recursive-function coding-test
+tags:       dfs-and-bfs coding-test
 image: 
   path: /assets/img/coding-test/countIslands_main.jpg
 related_posts: 
