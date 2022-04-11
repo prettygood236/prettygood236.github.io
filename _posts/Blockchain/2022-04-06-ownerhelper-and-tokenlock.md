@@ -35,7 +35,7 @@ theme_color: rgba(52,52,52,1)
 
 github repo : [https://github.com/prettygood236/ownerhelper_and_tokenlock](https://github.com/prettygood236/ownerhelper_and_tokenlock)
 
-contract address : 
+contract address : 0x2a2474a6bfdb8b4b7ea08b5327a2c98c9c6139f6
 
 ~~~go
 // file: 'ChanChanChanICO_erc20.sol'
