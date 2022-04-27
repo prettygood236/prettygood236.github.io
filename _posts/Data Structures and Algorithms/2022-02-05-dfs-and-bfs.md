@@ -46,19 +46,19 @@ Insert the starting node '1' into the stack and set it visited.<br/>
 ![DFS_1](/assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs_1.png){:width="80%"}
 <br/>
 
-**[Step 2]** <br>
+**[Step 2]** <br/>
 There are unvisited adjacent nodes 2, 3, and 8 at '1', which is the top node of the stack.
 Among them, 2, the smallest node, is put on the stack and set visited.<br/>
 ![DFS_2](/assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs_2.png){:width="80%"}
 <br/>
 
-**[Step 3]** <br>
+**[Step 3]** <br/>
 There is an unvisited adjacent node 7 at the top node 2 of the stack.
 Therefore, we put node 7 on the stack and set visited.<br/>
 ![DFS_3](/assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs_3.png){:width="80%"}
 <br/>
 
-**[Step 4]** <br>
+**[Step 4]** <br/>
 There are unvisited adjacent nodes 6 and 8 in 7, which is the top node of the stack.
 Among them, 6, the smallest node, is put on the stack and set visited.<br/>
 ![DFS_4](/assets/img/data-structures-and-algorithms/dfs-and-bfs/dfs_4.png){:width="80%"}
@@ -143,17 +143,17 @@ Remove node 1 from the queue, insert unvisited adjacent nodes 2, 3, and 8 into t
 ![BFS_2](/assets/img/data-structures-and-algorithms/dfs-and-bfs/bfs_2.png){:width="80%"}
 <br/>
 
-**[Step 3]** <br>
+**[Step 3]** <br/>
 Remove node 2 from the queue, insert unvisited adjacent node 7 into the queue, and set visited.(1 is visited nodes.)<br/>
 ![BFS_3](/assets/img/data-structures-and-algorithms/dfs-and-bfs/bfs_3.png){:width="80%"}
 <br/>
 
-**[Step 4]** <br>
+**[Step 4]** <br/>
 Remove node 3 from the queue, insert unvisited adjacent nodes 4 and 5 into the queue, and set visited.<br/>
 ![BFS_4](/assets/img/data-structures-and-algorithms/dfs-and-bfs/bfs_4.png){:width="80%"}
 <br/>
 
-**[Step 5]** <br>
+**[Step 5]** <br/>
 Remove node 8 from the queue and ignore it as there are no unvisited adjacent nodes.<br/>
 ![BFS_5](/assets/img/data-structures-and-algorithms/dfs-and-bfs/bfs_5.png){:width="80%"}
 <br/>
@@ -214,10 +214,10 @@ bfs(graph, 1, visited)
 ### 3.1 Problem : Freezing drinks
 ---
 
-There is an ice frame of size N X M. Areas with holes are marked with 0, and areas with partitions are marked with 1.<br>
-If the parts with holes are attached to each other in the top, bottom, left, and right directions, it is considered to be connected to each other.<br>
-At this time, write a program to find the total number of ice creams generated when the shape of the ice mold is given.<br>
-In the following 4 X 5 ice mold example, a total of 3 ice creams are created.<br>
+There is an ice frame of size N X M. Areas with holes are marked with 0, and areas with partitions are marked with 1.<br/>
+If the parts with holes are attached to each other in the top, bottom, left, and right directions, it is considered to be connected to each other.<br/>
+At this time, write a program to find the total number of ice creams generated when the shape of the ice mold is given.<br/>
+In the following 4 X 5 ice mold example, a total of 3 ice creams are created.<br/>
 ![Freezing Drinks_1](/assets/img/coding-test/freezing-drinks_1.png)
 
 Finding a connected element, connected_component is also a problem.
@@ -225,12 +225,12 @@ Finding a connected element, connected_component is also a problem.
 **Difficulty: 1.5 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line gives the vertical length N and the horizontal length M of the ice frame. (1 <= N, M <= 1,000) Total ice frame space: 1 million or less.<br>
-From the second row to the N+1 row, the shape of the ice frame is given.<br>
+**Input conditions** <br/>
+The first line gives the vertical length N and the horizontal length M of the ice frame. (1 <= N, M <= 1,000) Total ice frame space: 1 million or less.<br/>
+From the second row to the N+1 row, the shape of the ice frame is given.<br/>
 In this case, the open part is 0, and the closed part is 1.
 
-**Output conditions** <br>
+**Output conditions** <br/>
 Prints the number of ice creams that can be made at one time.
 
 ### 3.2 Solution : Freezing drinks
@@ -287,43 +287,43 @@ print(result) #print the correct answer
 ### 3.3 Problem : Maze Escape
 ---
 
-Chan was trapped in a maze in the shape of a rectangle of size N X M. There are several monsters in the maze, and chan have to escape from them.<br>
+Chan was trapped in a maze in the shape of a rectangle of size N X M. There are several monsters in the maze, and chan have to escape from them.<br/>
 The position of chan is (1, 1) and the exit of the maze is at the position of (N, M), and it can move one space at a time.
-In this case, the area with monsters is marked with 0, and the area without monsters is marked with 1. The maze comes out in a form that must be escaped. <br>
+In this case, the area with monsters is marked with 0, and the area without monsters is marked with 1. The maze comes out in a form that must be escaped. <br/>
 At this time, find the minimum number of squares that chan must move to escape. When counting cells, both the start cell and the end cell are counted.
 
 **Difficulty: 1.5 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line gives two integers N, M(4 <= N, M <= 200). <br>
+**Input conditions** <br/>
+The first line gives two integers N, M(4 <= N, M <= 200). <br/>
 In each of the next N lines, M number of integers (0 or 1) are given the information of the maze. Each number is presented as input, concatenated without spaces. The first and last cells are always 1.
 
-**Output conditions** <br>
+**Output conditions** <br/>
 Print the minimum number of moving cells on the first line.
 
 ### 3.4 Solution : Maze Escape
 ---
 
-BFS searches all the nodes in the graph in order, starting with the node closest to the starting point.<br>
-The distance to all nodes connected to the top, bottom, left, and right is equal to 1.<br>
+BFS searches all the nodes in the graph in order, starting with the node closest to the starting point.<br/>
+The distance to all nodes connected to the top, bottom, left, and right is equal to 1.<br/>
 Therefore, it can be solved by performing BFS from the point (1, 1) and recording the shortest distance values ​​of all nodes.
 
-**[Step 1]** <br> 
-Start at position (1, 1). <br>
+**[Step 1]** <br/> 
+Start at position (1, 1). <br/>
 ![Maze Escape_1](/assets/img/coding-test/maze-escape_1.png)
 
-**[Step 2]** <br> 
+**[Step 2]** <br/> 
 If you search up, down, left, and right from the (1, 1) coordinates, you will visit the node at the (1, 2) position, which is the next node,
-the value of the newly visited (1, 2) node is changed to 2. <br>
+the value of the newly visited (1, 2) node is changed to 2. <br/>
 ![Maze Escape_2](/assets/img/coding-test/maze-escape_2.png)
 
 Reason: Distance is 2. This is because the shortest path must be recorded. This node will also be queued.
 After taking this node out again, it searches up, down, left and right, and then visits the adjacent node.
 Each time you visit a new point, add +1 distance to the previous point.
 
-**[Step 3]** <br> 
-Similarly, if BFS is continuously performed, as a result, the values ​​of the shortest path are changed to increase by one as follows. <br>
+**[Step 3]** <br/> 
+Similarly, if BFS is continuously performed, as a result, the values ​​of the shortest path are changed to increase by one as follows. <br/>
 ![Maze Escape_3](/assets/img/coding-test/maze-escape_3.png)
 
 
@@ -370,17 +370,17 @@ dy = [0, 0, -1, 1]
 # Output the result of performing BFS
 print(bfs(0, 0))
 ~~~
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br/>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

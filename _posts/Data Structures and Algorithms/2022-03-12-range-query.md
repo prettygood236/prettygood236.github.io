@@ -21,7 +21,7 @@ The Port of Rotterdam, 1907, Paul Signac
 * toc
 {:toc .large-only}
 
-We have an array arr[0 . . . n-1]. We should be able to efficiently *<span style='font-size:1.1em'><u>find the value(min,max or sum etc) from index qs (query start) to qe (query end)</u></span>* where 0 <= qs <= qe <= n-1. <br>
+We have an array arr[0 . . . n-1]. We should be able to efficiently *<span style='font-size:1.1em'><u>find the value(min,max or sum etc) from index qs (query start) to qe (query end)</u></span>* where 0 <= qs <= qe <= n-1. <br/>
 There are many ways.
 
 ## 1. Segment Tree
@@ -40,7 +40,7 @@ A segment tree is a data structure with the following characteristics.
 **Segment tree look in memory** <br/>
 
 ---
-Like [Heap](/data-structures-and-algorithms/tree.html#14-heap), the segment tree is also represented as an array. <br>
+Like [Heap](/data-structures-and-algorithms/tree.html#14-heap), the segment tree is also represented as an array. <br/>
 The difference here is, it is not a complete binary tree. It is rather a full binary tree (every node has 0 or 2 children) and all levels are filled except possibly the last level. Unlike Heap, the last level may have gaps between nodes. Below are the values in the segment tree array for the above diagram. 
 
 ~~~
@@ -723,5 +723,5 @@ Updating an element : $$O(logn)$$.
 <br/>
 <br/>
 
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
 {:.note title="reference"}

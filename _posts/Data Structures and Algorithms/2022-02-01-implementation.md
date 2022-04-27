@@ -39,20 +39,20 @@ There are many similarities between the type ***Simulation*** , ***Implementatio
 ### 2.1 Problem : Left, Right, Up, Down
 ---
 
-Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. <br>
-The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). <br>
+Traveler A stands on a square space of size N × N. This space is divided into squares of size 1 × 1. <br/>
+The upper-left coordinate corresponds to (1, 1), and the lower-right coordinate corresponds to (N, N). <br/>
 Traveler A can move up, down, left and right, and the starting coordinate is always (1, 1). In front of us is a plan with traveler A's plans to move.
 
 In the plan, one letter of L, R, U, and D is repeatedly written on one line based on space.
 The meaning of each character is as follows.
 
-L: move one space to the left <br>
-R: move one space to the right <br>
-U: move up one space <br>
-D: move down one space <br>
+L: move one space to the left <br/>
+R: move one space to the right <br/>
+U: move up one space <br/>
+D: move down one space <br/>
 
-In this case, the movement of traveler A outside the square space of size N × N is ignored. <br>
-For example, if L or U is encountered at position (1, 1), it is ignored. <br>
+In this case, the movement of traveler A outside the square space of size N × N is ignored. <br/>
+For example, if L or U is encountered at position (1, 1), it is ignored. <br/>
 
 ![left-right-up-down_example](/assets/img/coding-test/left-right-up-down_example.png)
 the map and plan for N = 5
@@ -61,11 +61,11 @@ the map and plan for N = 5
 **Difficulty: 1 \| Solving Time: 15 minutes \| Timeout: 2 seconds \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line is given an N indicating the size of the space. (1<=N<=100) <br>
+**Input conditions** <br/>
+The first line is given an N indicating the size of the space. (1<=N<=100) <br/>
 In the second line, the contents of the travel plan for traveler A are given. (1<=Number of moves<=100)
 
-**Output conditions** <br>
+**Output conditions** <br/>
 In the first line, print the number written on the card selected according to the rules of the game.
 
 | Input Example | Output Example|
@@ -118,16 +118,16 @@ express from a to h.
 
 ![Royal Knight](/assets/img/coding-test/royal-knight.png){:width="50%"}
 
-There are 6 possible moves when in c2.<br>
+There are 6 possible moves when in c2.<br/>
 There are 2 possible moves when in a1.
 
 **Difficulty: 1 \| Solving Time: 20 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
+**Input conditions** <br/>
 In the first line, a two-character string representing the coordinates of where the knight is currently located on the 8x8 coordinate plane is entered. Input characters consist of columns and rows, like a1.
 
-**Output conditions** <br>
+**Output conditions** <br/>
 In the first line, print the number of times a knight can move.
 
 | Input Example | Output Example|
@@ -136,7 +136,7 @@ In the first line, print the number of times a knight can move.
 ### 2.4 Solution : Royal Knight
 ---
 
-Check the 8 paths of the knight one by one and check if it is possible to move to each location. <br>
+Check the 8 paths of the knight one by one and check if it is possible to move to each location. <br/>
 Using the list, define direction vectors for 8 directions.
 
 ~~~py
@@ -165,9 +165,9 @@ print(result)
 
 
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br/>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

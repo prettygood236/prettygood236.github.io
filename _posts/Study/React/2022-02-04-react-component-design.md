@@ -13,7 +13,7 @@ accent_image:
 theme_color: rgba(27,10,58,1)
 ---
 
-레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발<br>
+레고처럼 **조립해 나갈 수 있는 부품 단위**로 UI 컴포넌트를 만들어 나가는 개발<br/>
 
 * this undordered seed list will be replaced by the toc
 {:toc .large-only}
@@ -21,7 +21,7 @@ theme_color: rgba(27,10,58,1)
 **Component Driven Development**
 ![Component Driven Development](/assets/img/react/react-component-design/component-driven-development.png)
 * CDD 방법을 활용하여 UI 를 구축하는 사이트 :　[BBC](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}　[UN](https://5d28eb5ee163f6002046d6fb-steqdibxdq.chromatic.com/?path=/story/components-brand--without-brand-link){:target="_blank"}
-<br>
+<br/>
 
 
 ## 1. Design System
@@ -41,7 +41,7 @@ theme_color: rgba(27,10,58,1)
 * ⚛️ [리액트(React)](https://reactjs.org/){:.target="_blank"}: 선언 중심 컴포넌트 UI(create-react-app)를 사용
 * 💅 [스타일 컴포넌트(Styled-components)](https://styled-components.com/){:.target="_blank"}: 컴포넌트 단위의 스타일링에 사용
 * ✨ [프리티어(Prettier)](https://prettier.io/){:.target="_blank"}: 자동화된 코드 포맷팅에 사용
-<br>
+<br/>
 
 ### 1.2 Storybook
 
@@ -58,10 +58,10 @@ UI 개발 즉, **Component Driven Development**를 하기 위한 도구
 * 컴포넌트 변화를 Stories로 저장하기
 * 핫 모듈 재 로딩과 같은 개발 툴 경험을 제공하기
 * 리액트를 포함한 다양한 뷰 레이어 지원하기 
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## 2. CSS 방법론
 
@@ -79,7 +79,7 @@ CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스�
 * 즉, CSS를 만들어주는 언어로서 자바스크립트처럼 특정 속성(ex. color, margin, width 등)의 값(ex. #ffffff, 25rem, 100px 등)을 변수로 선언하여 필요한 곳에 선언된 변수를 적용할 수도 있고, 반복되는 코드를 한 번의 선언으로 여러 곳에서 재사용할 수 있다.
 * SCSS 코드를 읽어서 전처리한 다음 컴파일해서 전역 CSS 번들 파일을 만들어 주는 전처리기(preprocessor)
 * 스타일이 겹치는 문제를 해결하기 위해 단순히 계층 구조를 만들어 내는 것에 의지하며, 그 결과 컴파일된 CSS의 용량은 어마어마하게 커지는 치명적인 단점이 있다.
-<br>
+<br/>
 
 ### 2.3 CSS 방법론
 방법론의 지향점은 다음과 같다. 
@@ -95,19 +95,19 @@ CSS 전처리기 중에서 가장 유명한 SASS는 CSS를 확장해 주는 스�
 * Block, Element, Modifier 각각은 —와 __로 구분
 * 클래스명은 BEM 방식의 이름을 여러 번 반복하여 재사용할 수 있도록 하며 HTML/CSS/SASS 파일에서도 더 일관된 코딩 구조를 만들어 준다.
 * 클래스명 선택자가 장황해지고, 이런 긴 클래스명 때문에 마크업이 불필요하게 커지며, 재사용하려고 할 때마다 모든 UI 컴포넌트를 명시적으로 확장해야는 단점이 있다.
-<br>
+<br/>
 
 ### 2.5 각 CSS 방법론의 특징과 장, 단점
 ![CSS-Methlogy](/assets/img/react/react-component-design/css-methlogy.png)
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
 
 ## 3. Styled-Component
 ![Styled-Component](/assets/img/react/react-component-design/styled-component.png)
 
-SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. <br><br>
+SASS와 BEM도 고치지 못했던 몇 가지 문제들은 언어 로직 상에 진정한 캡슐화의 개념이 없다는 것이었고, 이로 인해 개발자들이 유일한 클래스명을 선택하는 것에 의존할 수밖에 없었다. <br/><br/>
 Styled-Component는 **캡슐화(encapsulation : 객체의 속성과 행위를 하나로 묶고 실제 구현 내용 일부를 외부에 감추어 은닉하는 개념)**를 가능하게 한다.
 * 가장 인기있는 CSS-in-JS 관련 React 라이브러리
 * 기능적(Functional) 혹은 상태를 가진 컴포넌트들로부터 UI를 완전히 분리해 사용할 수 있는 아주 단순한 패턴을 제공 
@@ -127,25 +127,25 @@ Styled Component 를 이용한 Button 생성
 
 ### 3.1 Styled Component의 특징
 
-**Automatic critical CSS**<br>
+**Automatic critical CSS**<br/>
 * 화면에 어떤 컴포넌트가 렌더링 되었는지 추적해서 해당하는 컴포넌트에 대한 스타일을 자동으로 삽입한다. 
 * 따라서 코드를 적절히 분배해 놓으면 사용자가 어플리케이션을 사용할 때 최소한의 코드만으로 화면이 띄워지도록 할 수 있다.
 
-**No class name bugs**<br>
+**No class name bugs**<br/>
 * 스스로 유니크한 className 을 생성하여 className 의 중복이나 오타로 인한 버그를 줄여준다.
 
-**Easier deletion of CSS**<br>
+**Easier deletion of CSS**<br/>
 * 모든 스타일 속성이 특정 컴포넌트와 연결되어 있기 때문에 만약 컴포넌트를 더 이상 사용하지 않아 삭제할 경우 이에 대한 스타일 속성도 함께 삭제된다.
 
-**Simple dynamic styling**<br>
+**Simple dynamic styling**<br/>
 * className을 일일이 수동으로 관리할 필요 없이 React 의 props 나 전역 속성을 기반으로 컴포넌트에 스타일 속성을 부여하기 때문에 간단하고 직관적이다.
 
-**Painless maintenance**<br>
+**Painless maintenance**<br/>
 * 컴포넌트에 스타일을 상속하는 속성을 찾아 다른 CSS 파일들을 검색하지 않아도 되기 때문에 코드의 크기가 커지더라도 유지보수가 어렵지 않다.
 
-**Automatic vendor prefixing**<br>
+**Automatic vendor prefixing**<br/>
 * 개별 컴포넌트마다 기존의 CSS 를 이용하여 스타일 속성을 정의하면 이외의 것들은 Styled Component 가 알아서 처리해 준다.
-<br>
+<br/>
 
 ### 3.2 Getting Started
 
@@ -176,16 +176,16 @@ export default function App() {
 ~~~
 `<Title>`과 `<Wrapper>` 라는 컴포넌트에 스타일 속성을 정의한 후 React 에서 컴포넌트를 사용하는 것과 동일하게 리턴문 안에서 해당 컴포넌트들을 사용하고 있으며, `<h1>` tag 의 스타일 속성은 styled.h1 , `<section>` tag 의 스타일 속성은 styled.section 를 사용하고 있다. 
 {:.figure}
-<br>
+<br/>
 
-![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width="600" height="600"} <br>
+![Getting Started](/assets/img/react/react-component-design/getting-started.png){: width="600" height="600"} <br/>
 결과
 {:.figure}
-<br>
+<br/>
 
 ### 3.3 Adapting based on props & Extending Styles
 
-Styled Component 는 **스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용**할 수도 있다. <br>
+Styled Component 는 **스타일 속성을 지닌 컴포넌트를 정의할 때에 함수를 전달하고, 그 함수 안에서 props 를 사용**할 수도 있다. <br/>
 또한 **같은 스타일 속성을 지닌 여러개의 컴포넌트들 중 몇 개의 컴포넌트에 약간의 변화를 주고 싶은 때**에는 상속받고자 하는 스타일 속성을 지닌 컴포넌트를 `styled()` 로 감싼 뒤, 변경하고 싶은 속성만 새로 정의해 주면 기존 속성을 확장하여 사용할 수 있다. 
 
 ~~~js
@@ -221,17 +221,17 @@ export default function App() {
 }
 ~~~
 
-`<Button>` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. <br> 
+`<Button>` 컴포넌트의 background 와 color 속성은 primary 라는 props 의 전달 여부에 따라 컬러값을 정의하고 있다. <br/> 
 기존의 Button 컴포넌트에 Tomato 컴포넌트만을 위한 새로운 속성을 추가한 것이다.
 {:.figure}
-<br>
+<br/>
 
 
 
-![Adapting based on props & Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width="600" height="600"} <br>
+![Adapting based on props & Extending Styles](/assets/img/react/react-component-design/adapting-based-on-props-and-extending-styles.png){: width="600" height="600"} <br/>
 결과
 {:.figure}
-<br>
+<br/>
 
 ### 3.4 Passed props
 
@@ -263,12 +263,12 @@ export default function App() {
 ~~~
 props 로 color 속성이 전달된 Input 컴포넌트는 해당 color 속성이 글자색에 적용되고, props 가 전달되지 않은 Input 컴포넌트는 기본 색상(여기서는 빨간색)이 적용된 것을 확인할 수 있다. 
 {:.figure}
-<br>
+<br/>
 ![Passed props](/assets/img/react/react-component-design/passed-props
-.png){: width="600" height="600"} <br>
+.png){: width="600" height="600"} <br/>
 결과
 {:.figure}
-<br>
+<br/>
 
 ## 4. DOM reference를 잘 활용할 수 있는 useRef
 
@@ -312,13 +312,13 @@ function TextInputWithFocusButton() {
 {:.figure}
 
 제시된 상황을 제외한 대부분의 경우 기본 리액트 문법을 벗어나 useRef를 남용하는 것은 부적절하고, React의 특징이자 장점인 선언적 프로그래밍 원칙과 배치되기 때문에, 조심해서 사용해야 한다.
-<br>
+<br/>
 
 
 ### 4.2 useRef 활용 예시 
 
 [Action Item 1 : focus](https://codesandbox.io/s/patient-worker-3kzhd?from-embed=&file=/src/App.js){:.target="_blank"}
-<br>
+<br/>
 
 [Action Item 2 : media playback](https://codesandbox.io/s/priceless-sanderson-kx77s?from-embed){:.target="_blank"}
 
@@ -327,5 +327,5 @@ Next　[[React] Sprint - React Custom Component](2022-02-04-react-sprint-custom-
 {:.read-more} 
 
 
-[https://www.codestates.com/](https://www.codestates.com/){:target="_blank"}<br>
+[https://www.codestates.com/](https://www.codestates.com/){:target="_blank"}<br/>
 {:.note title="reference"}

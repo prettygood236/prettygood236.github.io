@@ -143,6 +143,6 @@ const coinChange = function (S, m, n) {
 <br/>
 <br/>
 
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://codestates.com/](https://codestates.com/){:target="_blank"}<br>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://codestates.com/](https://codestates.com/){:target="_blank"}<br/>
 {:.note title="reference"}

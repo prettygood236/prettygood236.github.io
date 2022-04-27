@@ -28,13 +28,13 @@ The Cabin at Saint-Adresse, 1876, Claude Monet
 
 **Linked List insert operation**
 
-![Linked List insering operation](/assets/img/data-structures-and-algorithms/linked-list/linkedlist_inserting.gif){:width="600"} <br>
-<br>
+![Linked List insering operation](/assets/img/data-structures-and-algorithms/linked-list/linkedlist_inserting.gif){:width="600"} <br/>
+<br/>
 
 **Linked List append operation**
 
-![Linked List appending operation](/assets/img/data-structures-and-algorithms/linked-list/linkedlist_appending.gif){:width="600"} <br>
-<br>
+![Linked List appending operation](/assets/img/data-structures-and-algorithms/linked-list/linkedlist_appending.gif){:width="600"} <br/>
+<br/>
 
 
 ## 2. Linked List Implementation
@@ -176,12 +176,12 @@ console.log(conga.size()); // 4
 
 <!-- Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
-<br> -->
+<br/> -->
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br>
-[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br>
-[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br>
-[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br/>
+[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br/>
+[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br/>
+[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
 {:.note title="reference"}

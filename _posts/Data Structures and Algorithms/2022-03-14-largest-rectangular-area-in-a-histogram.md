@@ -299,5 +299,5 @@ print("maxArea = ", getMaxArea(hist))
 <br/>
 <br/>
 
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
 {:.note title="reference"}

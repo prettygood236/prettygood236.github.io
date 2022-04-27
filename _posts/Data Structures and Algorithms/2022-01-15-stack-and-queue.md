@@ -18,8 +18,8 @@ theme_color: rgba(27,10,58,1)
 Shadows on the Sea The Cliffs at Pourville, 1882, Claude Monet
 {:.figure}
 
-Data structure is a storage that is used to store and organize data. <br>
-It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br>
+Data structure is a storage that is used to store and organize data. <br/>
+It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br/>
 
 ![Data Structures](/assets/img/data-structures-and-algorithms/stack-and-queue/data-structures.png)
 
@@ -32,10 +32,10 @@ It is <span style='font-size:1em'>***a way of arranging data***</span> on a comp
 ### 1.1 What is Stack?
 ---
 
-If you make a stack of block, The last block stacks are of last in first out type of service.<br>
-<span style='background-color: #FFF39B;'>*The last block you put on top of a stack would be the first block.*</span><br>
+If you make a stack of block, The last block stacks are of last in first out type of service.<br/>
+<span style='background-color: #FFF39B;'>*The last block you put on top of a stack would be the first block.*</span><br/>
 
-![Stack](/assets/img/data-structures-and-algorithms/stack-and-queue/stack.gif) <br>
+![Stack](/assets/img/data-structures-and-algorithms/stack-and-queue/stack.gif) <br/>
 
 ### 1.2 Using an array as a stack 
 ---
@@ -119,11 +119,11 @@ console.log(myStack.size()); // 1
 ### 2.1 What is Queue?
 ---
 
-Queue example is a print queue when a lot of people are printing documents at the same printer.<br>
+Queue example is a print queue when a lot of people are printing documents at the same printer.<br/>
  The documents are printed <span style='background-color: #FFF39B;'>*in the order(first in first out)*</span>. They were sent to the print queue.
  
 ![Queue](/assets/img/data-structures-and-algorithms/stack-and-queue/queue.gif){: width="650"}
-<br>
+<br/>
 
 ### 2.2 Queue Implementation
 ---
@@ -163,12 +163,12 @@ q.front(); // b
 #### 2.3.1 What is Priority Queue?
 ---
 
-In a priority queue not only pass the element into the queue <span style='background-color: #FFF39B;'>*but also pass the priority of the element.*</span><br>
+In a priority queue not only pass the element into the queue <span style='background-color: #FFF39B;'>*but also pass the priority of the element.*</span><br/>
 
 So if all the priorities are the same number it's going to behave just like a normal queue. 
 
 But when you pass in elements at different priorities the elements that are passed in with a higher priority are sent to the beginning of the queue.
-<br>
+<br/>
 
 #### 2.3.2 Priority Queue Implementation
 ---
@@ -231,12 +231,12 @@ pq.printCollection() // [['WannaBe', 2], ['CodingMaster', 3]]
 
 <!-- Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
-<br> -->
+<br/> -->
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br>
-[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br>
-[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br>
-[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br/>
+[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br/>
+[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br/>
+[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
 {:.note title="reference"}

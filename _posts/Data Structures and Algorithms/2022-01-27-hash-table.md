@@ -110,12 +110,12 @@ ht.print();
 
 <!-- Next to [Fundamentals of Algorithms](2022-02-19-fundamentals-of-algorithms.md){:.heading.flip-title}
 {:.read-more} 
-<br> -->
+<br/> -->
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br>
-[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br>
-[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br>
-[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.codesdope.com/](https://www.codesdope.com/){:target="_blank"}<br/>
+[https://algorithmtutor.com/](https://algorithmtutor.com/){:target="_blank"}<br/>
+[https://blog.penjee.com/learnprogramming/programming-gifs/](https://blog.penjee.com/learnprogramming/programming-gifs/){:target="_blank"}<br/>
+[https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5](https://dev.to/abdisalan_js/4-ways-to-traverse-binary-trees-with-animations-5bi5){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
 {:.note title="reference"}

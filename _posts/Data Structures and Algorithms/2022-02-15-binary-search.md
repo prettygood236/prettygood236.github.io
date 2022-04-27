@@ -125,7 +125,7 @@ else:
 ## 4. Python Binary Search Library
 ---
 
-**bisect_left( a, x )**: returns the leftmost index at which to insert x into array a while maintaining sorted order <br>
+**bisect_left( a, x )**: returns the leftmost index at which to insert x into array a while maintaining sorted order <br/>
 **bisect_right( a, x )**: returns the rightmost index at which to insert x into array a while maintaining sorted order
 
 ~~~py
@@ -188,12 +188,12 @@ Write <u>a program to find the maximum value of the height that can be set in th
 **Difficulty: 2 \| Solving Time: 40 minutes \| Timeout: 2 seconds \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-In the first line, the number of loaves N and the requested length M are given. (1 <=N <=1,000,000, 1 <=M <=2,000,000,000 ) <br>
-In the second row, the individual heights of the rice cakes are given. Since the sum of the heights of rice cakes is always greater than M, the customer can buy as many rice cakes as they need. <br>
+**Input conditions** <br/>
+In the first line, the number of loaves N and the requested length M are given. (1 <=N <=1,000,000, 1 <=M <=2,000,000,000 ) <br/>
+In the second row, the individual heights of the rice cakes are given. Since the sum of the heights of rice cakes is always greater than M, the customer can buy as many rice cakes as they need. <br/>
 The height is a positive integer less than or equal to one billion, or zero.
 
-**Output conditions** <br>
+**Output conditions** <br/>
 Prints the maximum value of the height that can be set on the cutter to take home at least M rice cakes.
 
 ### 6.2 Solution : Making tteokbokki rice cakes
@@ -210,19 +210,19 @@ The height of the cutter is an integer from 0 to 1 billion.
 **[Step 1]** Start point: 0, End point: 19, Mid point: 9 (=H, cutting height)
 ![Making tteokbokki rice cakes_1](/assets/img/coding-test/making-tteokbokki-rice-cakes_1.png)
 
-At this time, the required size of the rice cake: M = 6, so the length of the cut rice cake 25 satisfies the minimum. -> **Save result** <br>
+At this time, the required size of the rice cake: M = 6, so the length of the cut rice cake 25 satisfies the minimum. -> **Save result** <br/>
 Move the starting point behind the midpoint.
 
 **[Step 2]** Start Point: 10, End Point: 19, Mid Point: 14 (=H, Cutting Height)
 ![Making tteokbokki rice cakes_2](/assets/img/coding-test/making-tteokbokki-rice-cakes_2.png)
 
-At this time, the required size of the rice cake: M = 6, so the length of the cut rice cake 9 satisfies the minimum. -> **Save result** <br>
+At this time, the required size of the rice cake: M = 6, so the length of the cut rice cake 9 satisfies the minimum. -> **Save result** <br/>
 Move the starting point behind the midpoint. (midpoint+1)
 
 **[Step 3]** Start Point: 15, End Point: 19, Mid Point: 17 (=H, Cutting Height)
 ![Making tteokbokki rice cakes_3](/assets/img/coding-test/making-tteokbokki-rice-cakes_3.png)
  
-At this time, the required size of rice cake: M = 6, so the length of the cut rice cake 2 does not satisfy the minimum. -> **Do not save results** <br>
+At this time, the required size of rice cake: M = 6, so the length of the cut rice cake 2 does not satisfy the minimum. -> **Do not save results** <br/>
 Move the endpoint before the midpoint (midpoint -1).
 
 **[Step 4]** Start Point: 15, End Point: 16, Mid Point: 15
@@ -279,12 +279,12 @@ However, if the algorithm is not designed with a time complexity of $$O(logN)$$,
 **Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB \|Previous: Zoho interview****
 {:.message}
 
-**Input conditions** <br>
-In the first line, N and x are entered in the form of integers separated by spaces. <br>
-(1 <= N<=1,000,000), (-109 <= x <=109 ) <br>
-In the second line, N elements are entered in the form of integers separated by spaces.<br>
+**Input conditions** <br/>
+In the first line, N and x are entered in the form of integers separated by spaces. <br/>
+(1 <= N<=1,000,000), (-109 <= x <=109 ) <br/>
+In the second line, N elements are entered in the form of integers separated by spaces.<br/>
 
-**Output conditions** <br>
+**Output conditions** <br/>
 Outputs the number of elements whose value is x among the elements of a sequence. However, if there is no element with the value x, -1 is output.
 
 ### 6.4 Solution : Count a specific number in a sorted array
@@ -325,9 +325,9 @@ else:
 ~~~
 
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br/>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

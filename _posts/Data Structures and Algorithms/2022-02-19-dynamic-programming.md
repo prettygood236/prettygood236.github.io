@@ -29,9 +29,9 @@ It saves <span style='font-size:1.1em; background-color: #FFF39B'>*already calcu
 
 Dynamic programming can be used when the problem satisfies the following two conditions.
 
-*<span style='background-color: #E0FFC4'>**1. Obtimal Substructure :**</span> <br>
-A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br>
-<span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br>
+*<span style='background-color: #E0FFC4'>**1. Obtimal Substructure :**</span> <br/>
+A big problem can be divided into small problems, and the big problem can be solved by collecting the answers to the divided small problems. <br/>
+<span style='background-color: #E0FFC4'>**2. Overlapping Subproblem :**</span>  <br/>
 You have to solve the same small problem over and over again.*
 
 ## 2.  Tabulation vs Memoization
@@ -103,19 +103,19 @@ The Fibonacci Sequence is a sequence of the following form, and can be effective
 $$
 1,1,2,3,5,8,13,21,34,55,89,...
 $$
-A recurrence relation means a relational expression between adjacent identities. <br>
+A recurrence relation means a relational expression between adjacent identities. <br/>
 The Fibonacci sequence can be expressed as an recurrence relation as follows:
 
 $$
 a_n = a_{n-1} + a_{n-2},\quad a_1 = 1, \quad a_2 = 1
 $$
 
-Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. (The time complexity is too high.)<br>
+Solving the Fibonacci sequence with a simple recursive function has exponential time complexity. (The time complexity is too high.)<br/>
 
 ![Fibonacci_example](/assets/img/coding-test/fibonacci_example.png){:width="80%"}
 {:.figure}
 
-f(6)can be solved by finding f(5) and f(4) as above. -> <span style='background-color: #E0FFC4'>***1. Optimal Substructure***</span> <br>
+f(6)can be solved by finding f(5) and f(4) as above. -> <span style='background-color: #E0FFC4'>***1. Optimal Substructure***</span> <br/>
 Also, You can see that f(2) is <u>called multiple times</u> -> <span style='background-color: #E0FFC4'>***2. Overlapping Subproblem***</span>
 
 *<u>Therefore, the Fibonacci sequence can be implemented with dynamic programming!.</u>*
@@ -202,8 +202,8 @@ In a dynamic approach, `mem` stores the result of each subproblem.
 --|:--:|:--:|
 <span style='background-color=#e0ffc4'>*2. Overlapping Subproblem*</span> | O | **X**
 
-Let's look at a typical example of divide-and-conquer, *quick sort*. <br>
-Once the pivot element changes its position, the position of the pivot element does not change. <br>
+Let's look at a typical example of divide-and-conquer, *quick sort*. <br/>
+Once the pivot element changes its position, the position of the pivot element does not change. <br/>
 The subproblem of re-processing the pivot after splitting is not called.
 
 ![Divide-and-conquer-example](/assets/img/coding-test/divide-and-conquer-example.png)
@@ -215,25 +215,25 @@ The subproblem of re-processing the pivot after splitting is not called.
 ### 5.1 Problem : Ant warrior
 ---
 
-The ant warrior secretly attacks the food warehouse of the grasshopper village to make up for the shortage of food. There are several food warehouses in grasshopper Village, which are connected in a straight line.<br>
-Each food warehouse stores a fixed number of food, and the ant warriors will selectively plunder the food warehouse to steal food. At this time, the grasshopper scouts can immediately detect when adjacent food warehouses are attacked among the food warehouses that exist in a straight line.<br>
+The ant warrior secretly attacks the food warehouse of the grasshopper village to make up for the shortage of food. There are several food warehouses in grasshopper Village, which are connected in a straight line.<br/>
+Each food warehouse stores a fixed number of food, and the ant warriors will selectively plunder the food warehouse to steal food. At this time, the grasshopper scouts can immediately detect when adjacent food warehouses are attacked among the food warehouses that exist in a straight line.<br/>
 Therefore, in order for the ant warrior to loot the food warehouse without being detected by the scouts, it must loot the food warehouse at least one square away.
 
-For example, suppose there are 4 food depots as follows.<br>
-{1, 3, 1, 5} <br>
+For example, suppose there are 4 food depots as follows.<br/>
+{1, 3, 1, 5} <br/>
 
-At this time, the ant warrior can steal a total of 8 food, the maximum value when selecting the second and fourth food warehouses.<br>
-The ant warrior wants to get as much food as possible when the food warehouse is in such a straight line.<br>
-Write a program to *find the maximum amount of food* that can be obtained for an ant warrior given information about N food warehouses.<br>
+At this time, the ant warrior can steal a total of 8 food, the maximum value when selecting the second and fourth food warehouses.<br/>
+The ant warrior wants to get as much food as possible when the food warehouse is in such a straight line.<br/>
+Write a program to *find the maximum amount of food* that can be obtained for an ant warrior given information about N food warehouses.<br/>
 
 **Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line gives the number N of food depots. (3 <=N <=100 ) <br>
+**Input conditions** <br/>
+The first line gives the number N of food depots. (3 <=N <=100 ) <br/>
 In the second line, the number K of food stored in each food warehouse is given, based on spaces. (0 <=K <= 1,000)
 
-**Output conditions** <br>
+**Output conditions** <br/>
 In the first line, print the maximum amount of food an ant warrior can get.
 
 | Input Example | Output Example|
@@ -298,12 +298,12 @@ Write a program that prints the minimum number of currencies to make M won.
 **Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line is given N, M ( 1<= N <=100, 1<= M <= 10,000 ) <br>
+**Input conditions** <br/>
+The first line is given N, M ( 1<= N <=100, 1<= M <= 10,000 ) <br/>
 The next N lines are given the value of each currency. The value of money is a natural number less than or equal to 10,000.
 
-**Output conditions** <br>
-Print the minimum number of currencies on the first line. <br>
+**Output conditions** <br/>
+Print the minimum number of currencies on the first line. <br/>
 If not possible, -1 is output.
 
 | Input Example 1 | Output Example 1 |
@@ -320,31 +320,31 @@ If not possible, -1 is output.
 ### 5.4 Solution : Minimum number of currencies
 ---
 
-$$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) <br>
-k = unit of each currency <br>
+$$a_{i}$$ = the minimum number of currencies that can make the amount i (the goal is to make the amount M, but solve the small problem first.) <br/>
+k = unit of each currency <br/>
 Recurrence relation type: Each currency unit, k, is checked one by one.
 - If there is a way to make $$a_{i-k}$$, $$a_{i}$$ = min($$a_{i}$$, $$a_{i-k+1}$$) is updated with a smaller value.
 - If there is no way to create $$a_{i-k}$$, $$a_i$$ = INF.
 
 Let's check if N = 3, M = 7, and the units of each currency are 2, 3, 5.
 
-[Step 0] <br>
-First, set the value of INF (infinite) to the value corresponding to each index.<br>
-INF means that it is not possible to construct a currency that can create a specific amount. <br>
+[Step 0] <br/>
+First, set the value of INF (infinite) to the value corresponding to each index.<br/>
+INF means that it is not possible to construct a currency that can create a specific amount. <br/>
 In this problem, 10,001 can be used.
 ![Minimum number of currencies_step0](/assets/img/coding-test/minimum-number-of-currencies_1.png){:width="80%"}
 
-[Step 1] <br>
+[Step 1] <br/>
 Check the first monetary unit, 2. (If you can make i-2, you can also make amount i.)
 According to the recurrence relation, the list is updated as follows.
 ![Minimum number of currencies_step1](/assets/img/coding-test/minimum-number-of-currencies_2.png){:width="80%"}
 
-[Step 2] <br>
+[Step 2] <br/>
 Check the second monetary unit, 3.
 According to the recurrence relation, the list is updated as follows.
 ![Minimum number of currencies_step2](/assets/img/coding-test/minimum-number-of-currencies_3.png){:width="80%"}
 
-[Step 3] <br>
+[Step 3] <br/>
 The third monetary unit, 5, is identified.
 According to the recurrence relation, the list is finally updated as follows.
 ![Minimum number of currencies_step3](/assets/img/coding-test/minimum-number-of-currencies_4.png){:width="80%"}
@@ -379,8 +379,8 @@ else: # Print if exists
 ### 5.5 Problem : Gold Mine
 ---
 
-There is a gold mine measuring n x m. The gold mine is divided into 1 x 1 squares, each of which contains a certain size of gold. <br>
-Miners start with the first row and start digging for gold. You can start from any row in the first column. <br>
+There is a gold mine measuring n x m. The gold mine is divided into 1 x 1 squares, each of which contains a certain size of gold. <br/>
+Miners start with the first row and start digging for gold. You can start from any row in the first column. <br/>
 After that, it must move to one of three positions: upper right, lower right, and lower right each time over m-1 times.
 
 Write a program that outputs the maximum amount of gold that a miner can obtain as a result.
@@ -390,12 +390,12 @@ Write a program that outputs the maximum amount of gold that a miner can obtain 
 **Difficulty: 2 \| Solving Time: 30 minutes \| Timeout: 1 second \| Memory limit: 128 MB**
 {:.message}
 
-**Input conditions** <br>
-Test case T is entered in the first line (1<= T <= 1000) Test case: starting number. <br>
-In the first line of each test case, n and m are entered separated by spaces. (1<= n,m <= 20) <br>
+**Input conditions** <br/>
+Test case T is entered in the first line (1<= T <= 1000) Test case: starting number. <br/>
+In the first line of each test case, n and m are entered separated by spaces. (1<= n,m <= 20) <br/>
 In the second line, the number of gold buried at n x m locations is entered, separated by spaces. (1 <= number of gold buried at each location <=100)
 
-**Output conditions** <br>
+**Output conditions** <br/>
 For each test case, we print the maximum amount of gold that a miner can obtain. Each test case is separated by a line break.
 
 | Input Example | Output Example|
@@ -410,8 +410,8 @@ For each test case, we print the maximum amount of gold that a miner can obtain.
 
 For all locations of gold mines, only the following three things need to be considered.
 
-*1. If it comes from the top left.* <br>
-*2. Coming from the lower left.* <br>
+*1. If it comes from the top left.* <br/>
+*2. Coming from the lower left.* <br/>
 *3. If you are coming from the left.* 
 
 The problem is solved by updating the table with the case with the most gold among the three cases.
@@ -425,12 +425,12 @@ The recurrence relation is as follows.
 
 $$
 dp[i][j] = array[i][j] + max(dp[i-1][j-1], dp[i][j-1], dp[i+1][j-1])
-$$ <br>
+$$ <br/>
 #current amount of gold #top-left position #left position #bottom-left position
 
-In this case, whenever you access the table, you need to check whether it is outside the range of the list.<br>
-For convenience, there is no need to use a variable array containing initial data.<br>
-You can apply dynamic programming by putting the initial data in the DP table.<br>
+In this case, whenever you access the table, you need to check whether it is outside the range of the list.<br/>
+For convenience, there is no need to use a variable array containing initial data.<br/>
+You can apply dynamic programming by putting the initial data in the DP table.<br/>
 Check out the process of solving the gold mining problem with dynamic programming.
 
 Initialize the DP table → Put the initial value in the first column → Check the DP table one by one and update the DP table
@@ -476,15 +476,15 @@ for tc in range(int( input( ))):
 ### 5.7 Problem : Deploying soldiers
 ---
 
-N soldiers are randomly listed. Each soldier has a certain value of combat power. When deploying soldiers, we want to arrange them in descending order so that the soldiers with higher combat power are in the front.<br>
-In other words, the combat power of the soldier in the front must always be higher than that of the soldier in the back.<Br>
-Also, in the deployment process, a method of alienating soldiers in a specific position is used.<br>
-Still, I want to maximize the number of remaining soldiers.<Br>
+N soldiers are randomly listed. Each soldier has a certain value of combat power. When deploying soldiers, we want to arrange them in descending order so that the soldiers with higher combat power are in the front.<br/>
+In other words, the combat power of the soldier in the front must always be higher than that of the soldier in the back.<br/>
+Also, in the deployment process, a method of alienating soldiers in a specific position is used.<br/>
+Still, I want to maximize the number of remaining soldiers.<br/>
 
 For example, it is assumed that the combat power of the listed soldiers when N=7 is as follows.
 ![Deploying Soldiers_1](/assets/img/coding-test/deploying_soldiers_1.png){:width="80%"}
 
-At this time, if the 3rd and 6th soldiers are excluded, the number of remaining soldiers will be in descending order as follows, and the number will be 5.<BR>
+At this time, if the 3rd and 6th soldiers are excluded, the number of remaining soldiers will be in descending order as follows, and the number will be 5.<br/>
 This is a way to maximize the number of remaining soldiers.
 ![Deploying Soldiers_2](/assets/img/coding-test/deploying_soldiers_2.png){:width="60%"}
 
@@ -493,13 +493,13 @@ Write a program that, given information about soldiers, prints the number of sol
 **Difficulty: 1.5 \| Solving Time: 40 minutes \| Timeout: 1 second \| Memory limit: 356 MB**
 {:.message}
 
-**Input conditions** <br>
-The first line is given N. (1<= N <=2,000) <br>
-In the second line, the combat power of each soldier is given in turn, separated by spaces. <br>
+**Input conditions** <br/>
+The first line is given N. (1<= N <=2,000) <br/>
+In the second line, the combat power of each soldier is given in turn, separated by spaces. <br/>
 Each soldier's Combat Strength is a natural number less than or equal to 10,000,000.
 
-**Output conditions** <br>
-The number of soldiers remaining in the first row. <br>
+**Output conditions** <br/>
+The number of soldiers remaining in the first row. <br/>
 Outputs the number of soldiers that must be excluded to maximize.
 
 ### 5.8 Solution : Deploying soldiers
@@ -507,21 +507,21 @@ Outputs the number of soldiers that must be excluded to maximize.
 
 The basic idea of ​​this problem is the same as that of a classic dynamic programming problem known as <span style='background-color:#e0ffc4'>***Longest Increasing Subsequence (LIS)***<span>
 
-For example, let's say we have a single sequence array = {4, 2, 5, 8, 4, 11, 15}.<Br> The longest increasing subsequence of this sequence is {4, 5, 8, 11, 15}. 
+For example, let's say we have a single sequence array = {4, 2, 5, 8, 4, 11, 15}.<br/> The longest increasing subsequence of this sequence is {4, 5, 8, 11, 15}. 
 
 Since this problem can be replaced with the problem of finding the longest decreasing subsequence, the correct answer can be derived by applying the LIS algorithm with a slight modification.
 
-Let's check the longest increasing subsequence (LIS) algorithm. <br>
-*We define D[i] = the maximum length of a subsequence with array[i] as the last element.*<br>
+Let's check the longest increasing subsequence (LIS) algorithm. <br/>
+*We define D[i] = the maximum length of a subsequence with array[i] as the last element.*<br/>
 The recurrence relation is as follows.
 
-For all 0 <= j < i , elements i, j <br>
+For all 0 <= j < i , elements i, j <br/>
 D[i] = max(D[i], D[j]+1 ) Update according to the recurrence relation (the larger of the current value vs. the previous value+1)
 
 if array[j] < array[i] if the preceding element (j) is less than the following element (i) (increasing form)
 ![Deploying Soldiers_3](/assets/img/coding-test/deploying_soldiers_3.png){:width="80%"}
 
-Reverses the order of the soldier information input first.<br>
+Reverses the order of the soldier information input first.<br/>
 The correct answer is derived by performing the longest increasing subsequence (LIS) algorithm.
 
 ~~~py
@@ -548,9 +548,9 @@ print(n - max(dp)) # Subtract the value from all n
 
 
 
-[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br>
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
+[https://www.freecodecamp.org/](https://www.freecodecamp.org/){:target="_blank"}<br/>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br/>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

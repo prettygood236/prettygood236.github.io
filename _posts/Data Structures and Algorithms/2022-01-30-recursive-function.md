@@ -45,7 +45,7 @@ When a function is called recursively, the function is repeatedly stacked on the
 ## 2. Exit condition for Recursive Function
 ---
 
-In problem solving, <span style='background-color:#fff39b; font-size:1.1em'>***the exit condition(base case)** of the recursive function must be specified.*</span><br>
+In problem solving, <span style='background-color:#fff39b; font-size:1.1em'>***the exit condition(base case)** of the recursive function must be specified.*</span><br/>
 If the exit condition is not properly specified, it is called indefinitely.
 
 Example of a recursive function with an exit condition.
@@ -139,20 +139,20 @@ print(gcd(192, 162))
 # 6
 ~~~
 
-All <u>recursive functions can implement the same function by using a loop.</u> <br>
+All <u>recursive functions can implement the same function by using a loop.</u> <br/>
 In some cases, recursive functions are more advantageous than loops, and in other cases, they are disadvantageous.
 
-When a computer calls a function successively, it is stacked on a stack frame inside the computer's memory. <br>
+When a computer calls a function successively, it is stacked on a stack frame inside the computer's memory. <br/>
 So, When we need to use the stack, *<u>recursive functions are often used instead of the stack library</u>* for implementation purposes.
  ex. DFS is sometimes implemented as a recursive function.
-<br>
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
+<br/>
 
 
-[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br>
-[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br>
-[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br>
+[https://www.programiz.com/](https://www.programiz.com/){:target="_blank"}<br/>
+[https://www.geeksforgeeks.org/](https://www.geeksforgeeks.org/){:target="_blank"}<br/>
+[https://blog.naver.com/PostList.naver?blogId=ndb796](https://blog.naver.com/PostList.naver?blogId=ndb796){:target="_blank"}<br/>
 이것이 코딩테스트다,2020,나동빈,한빛미디어
 {:.note title="reference"}

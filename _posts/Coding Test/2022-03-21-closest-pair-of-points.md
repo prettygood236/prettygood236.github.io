@@ -216,5 +216,5 @@ const closestPairOfPoints = function (points) {
 <br/>
 <br/>
 
-[https://codestates.com/](https://codestates.com/){:target="_blank"}<br>
+[https://codestates.com/](https://codestates.com/){:target="_blank"}<br/>
 {:.note title="reference"}

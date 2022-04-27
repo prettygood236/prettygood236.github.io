@@ -11,6 +11,6 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-  Algorithms + Data Structures = Programs. <br>
+  Algorithms + Data Structures = Programs. <br/>
   So, learning data structures and algorithms allow us to write efficient and optimized computer programs.
 ---

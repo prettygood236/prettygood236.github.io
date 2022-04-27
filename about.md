@@ -13,28 +13,28 @@ theme_color: rgba(27,10,58,1)
 ---
 
 ## Hello, World!
-<br>
+<br/>
 My name is Byungchan Park, who dreams of becoming a blockchain developer.
-<br>
+<br/>
 
 If you can't explain it simply, you don't understand it well enough. 　　　　　　　　　　　　　　　　　　　　　　　&nbsp;&nbsp;- Albert Einstein
 {:.lead}
 This is why I started this blog.
-<br>
+<br/>
 
 Let's do it. _Like the beginning, now, always and forever!_ :)
-<br>
-<br>
+<br/>
+<br/>
 
 <!--posts_list-->
 
 ---
 <!--author-->
-Blog created by Byungchan Park on January 12. 2022 in Seoul.<br>
+Blog created by Byungchan Park on January 12. 2022 in Seoul.<br/>
 
 ---
 
-**[EMAIL]** <br>
+**[EMAIL]** <br/>
 **[WEBSITE]**
 
 

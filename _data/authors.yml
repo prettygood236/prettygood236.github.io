@@ -8,7 +8,7 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:          |
-        To be Blockchain Developer <br>
+        To be Blockchain Developer <br/>
         Byungchan Park
   # This photo will be used in the about section
   picture:

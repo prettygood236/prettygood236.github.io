@@ -28,7 +28,7 @@ Paimpol Le Fanny Crossfield, Paul Signac
 
 A permutation is <span style='background-color: #FFF39B;'>the choice of <u>r</u> things from a set of <u>n</u> things without replacement and where</span> <span style='background-color: #FFDFF6;'>***the order matters.***</span>
 
-It is denoted by $$_nP_r$$. <br>
+It is denoted by $$_nP_r$$. <br/>
 
 $$_nP_r=\frac{n!}{(n-r)!}$$
 
@@ -69,7 +69,7 @@ const getPermutations = function (arr, selectNumber) {
 
 A Combination is <span style='background-color: #FFF39B;'>the choice of <u>r</u> things from a set of <u>n</u> things without replacement and where</span> <span style='background-color: #FFDFF6;'>***the order does not matter.***</span>
 
-It is denoted by $$_nC_r$$. <br>
+It is denoted by $$_nC_r$$. <br/>
 
 $$_nC_r=\frac{_nP_r}{r!}=\frac{n!}{r!(n-r)!}$$
 

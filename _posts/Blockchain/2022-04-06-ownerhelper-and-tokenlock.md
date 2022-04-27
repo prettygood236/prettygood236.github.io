@@ -295,6 +295,6 @@ contract SimpleToken is ERC20Interface, OwnerHelper {
 ---
 특수한 상황에 대한 예외처리를 더 생각해야겠다.
 
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>

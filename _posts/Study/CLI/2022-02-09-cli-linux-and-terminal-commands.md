@@ -13,41 +13,41 @@ accent_image:
 theme_color: rgba(18,16,14,1)
 ---
 
-Unix was an operating system developed at Bell Labs in the mid 1960's. <br>
-Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**<br>
+Unix was an operating system developed at Bell Labs in the mid 1960's. <br/>
+Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**<br/>
 
 * this unordered seed list will be replaced by the toc
 {:toc}
 
 ## Introduction to Linux and shells
 
-### Unix <br>
+### Unix <br/>
 
-![Operating Systems](/assets/img/cli/operating-systems-timeline-and-family-tree.png){:width=100%} <br><br>
-Operating Systems: Timeline and Family Tree <br>
+![Operating Systems](/assets/img/cli/operating-systems-timeline-and-family-tree.png){:width=100%} <br/><br/>
+Operating Systems: Timeline and Family Tree <br/>
 [See the entire tree here.](https://eylenburg.github.io/os_familytree.htm){:target="_blank"}
 {:.figure}
 
-Everything in red here is considered in some way related uh or indebted to **Unix**.<br>
+Everything in red here is considered in some way related uh or indebted to **Unix**.<br/>
 That includes things like linux, unbuntu, macOS.
 
-Unix was an operating system developed at Bell Labs in the mid 1960's. <br>
-Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**<br>
+Unix was an operating system developed at Bell Labs in the mid 1960's. <br/>
+Many of the innovations and design choices the original Unix team have lived on 50+ years later, including the idea of **multi-user operating systems and hierarchical file systems.**<br/>
 
 Unix is the "grandfather" of many modern operating systems that we frequently use today. 
 
 Even these days most operating systems can be grouped into two families:
 - The Microsoft NT descendants including Windows, Xbox OS, and Windows Phone/Mobile
 - Pretty much everything else has lineage going back to **Unix**, including Mac OS, Linux, Android, Chrome OS, and even the PS4 OS.
-<br>
+<br/>
 
 <!--more-->
 
-### Linux <br>
+### Linux <br/>
 
-**GNU**  <br>
+**GNU**  <br/>
 
-![Unix_history-simple](/assets/img/cli/Unix_history-simple.png){:width=100%} <br><br>
+![Unix_history-simple](/assets/img/cli/Unix_history-simple.png){:width=100%} <br/><br/>
 Unix_history going back to 1969 early unix versions
 {:.figure}
 
@@ -63,9 +63,9 @@ alternatives to Unix.
 
 In 1984 he began work on the GNU Project, with the goal of creating an operating system that included "everything useful that normally comes with a Unix system so that one could get along without any software that is not free".
 
-**The Linux Kernel**  <br>
+**The Linux Kernel**  <br/>
 
-![Kernel_Layout](/assets/img/cli/Kernel_Layout.png){:width="600"} <br><br>
+![Kernel_Layout](/assets/img/cli/Kernel_Layout.png){:width="600"} <br/><br/>
 Kernel Layout
 {:.figure}
 
@@ -73,7 +73,7 @@ Another developer, Linus Torvalds, was working on creating his own kernel known 
 
 At the time, many GNU "pieces" were complete, but it lacked a kernel. Torvalds combined his kernel with the existing GNU components to create a full operating system. This is called Linux
 
-**GNU/Linux** <br>
+**GNU/Linux** <br/>
 
 Linux is an operating system, like macOS or Windows.
 
@@ -107,15 +107,15 @@ If you use a Mac, try opening your Mac terminal. By default it runs ZSH (or, pre
 You can set up your system to run any kind of shell.
 
 Each single shell has its own unique features and advanced usage, but they all share a common functionality: they can let you execute programs, and they can be programmed.
-<br>
+<br/>
 
 ## 1. `man` command
 
-![man](/assets/img/cli/man_command-1.png){:width="600"} <br>
+![man](/assets/img/cli/man_command-1.png){:width="600"} <br/>
 `man ls` result 
 {:.figure}
 
-Every time we don't know how to use a command, We can type `man <command>` to get the manual.<br>
+Every time we don't know how to use a command, We can type `man <command>` to get the manual.<br/>
 Then you can use the `man` page to explore all the different options and parameters you can use on a command.
 
 
@@ -123,7 +123,7 @@ Then you can use the `man` page to explore all the different options and paramet
 
 When need to learn a command quickly we can use this site called tldr pages: [https://tldr.sh](https://tldr.sh/) {:target=_"blank"} (Is tldr an abbreviation for Too Long Don't Read? lol)
 
-![man](/assets/img/cli/man_command-2.png){:width="600"} <br>
+![man](/assets/img/cli/man_command-2.png){:width="600"} <br/>
 `tldr ls` result 
 {:.figure}
 
@@ -136,7 +136,7 @@ You can create a new command, for example I like to call it ls -al to ll, You ca
 ```bash
 alias ll='ls -al'
 ```
-![alias](/assets/img/cli/alias_command-1.png){:width="600"} <br>
+![alias](/assets/img/cli/alias_command-1.png){:width="600"} <br/>
 `alias ll` result 
 {:.figure}
 
@@ -155,7 +155,7 @@ It shows you the content stored inside a file, in a nice and interactive UI.
 
 Usage: `less <filename>`
 
-![less](/assets/img/cli/less_command-1.png){:width="600"} <br>
+![less](/assets/img/cli/less_command-1.png){:width="600"} <br/>
 
 Once you are inside a `less` session, you can quit by pressing `q`.
 
@@ -206,21 +206,21 @@ For example here's how we can find the occurences of the document.getElementById
 ```bash
 grep -n document.getElementById index.md
 ```
-![grep](/assets/img/cli/grep_command-1.png){:width="600"} <br>
+![grep](/assets/img/cli/grep_command-1.png){:width="600"} <br/>
 
 Using the `-n` option it will show the line numbers:
 
 ```bash
 grep -n document.getElementById index.md
 ```
-![grep](/assets/img/cli/grep_command-2.png){:width="600"} <br>
+![grep](/assets/img/cli/grep_command-2.png){:width="600"} <br/>
 
 One very useful thing is to tell grep to print 2 lines before and 2 lines after the matched line to give you more context. That's done using the `-C` option, which accepts a number of lines:
 
 ```bash
 grep -nC 2 document.getElementById index.md
 ```
-![grep](/assets/img/cli/grep_command-3.png){:width="600"} <br>
+![grep](/assets/img/cli/grep_command-3.png){:width="600"} <br/>
 
 Search is case sensitive by default. Use the `-i` flag to make it insensitive.
 
@@ -229,13 +229,13 @@ As mentioned, you can use grep to filter the output of another command. We can r
 ```bash
 less index.md | grep -n document.getElementById
 ```
-![grep](/assets/img/cli/grep_command-4.png){:width="600"} <br>
+![grep](/assets/img/cli/grep_command-4.png){:width="600"} <br/>
 
 The search string can be a regular expression, and this makes `grep` very powerful.
 
 Another thing you might find very useful is to invert the result, excluding the lines that match a particular string, using the `-v` option:
-<br><br>
+<br/><br/>
 
-[The Most Popular Linux & Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&t=196s){:target="_blank"}<br>
+[The Most Popular Linux & Terminal Commands](https://www.youtube.com/watch?v=ZtqBQ68cfJc&t=196s){:target="_blank"}<br/>
 [The 40 Most-Used Linux Commands You Should Know](https://kinsta.com/blog/linux-commands/#:~:text=A%20Linux%20command%20is%20a,abstraction%20of%20command-line%20programs.){:target="_blank"}
 {:.note title="reference"}

@@ -222,9 +222,9 @@ A16.
 
 
 
-<br>
-<br>
-<br>
+<br/>
+<br/>
+<br/>
 
-[https://www.codestates.com/](https://www.codestates.com/){:target="_blank"}<br>
+[https://www.codestates.com/](https://www.codestates.com/){:target="_blank"}<br/>
 {:.note title="reference"}
