@@ -3,7 +3,7 @@ layout:    post
 title:    'IT Terminology'
 subtitle: 'About IT and Development Terminology'
 category: study
-tags:     IT etc
+tags:     it-etc
 image: 
   path: /assets/img/IT/IT-Terminology_main.jpg
 accent_color: rgba(104,192,189,1)

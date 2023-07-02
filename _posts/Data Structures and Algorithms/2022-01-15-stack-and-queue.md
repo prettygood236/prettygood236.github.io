@@ -15,8 +15,8 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 ---
-Shadows on the Sea The Cliffs at Pourville, 1882, Claude Monet
-{:.figure}
+Shadows on the Sea The Cliffs at Pourville, 1882, **Claude** Monet
+{:.figure}****
 
 Data structure is a storage that is used to store and organize data. <br/>
 It is <span style='font-size:1em'>***a way of arranging data***</span> on a computer so that it can be accessed and updated efficiently.<br/>

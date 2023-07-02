@@ -11,5 +11,5 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-  난 그릴 것이 참 많은 새하얀 도화지.
+  I am a blank white canvas with so many things to draw.
 ---
