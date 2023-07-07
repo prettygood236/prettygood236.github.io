@@ -1,8 +1,8 @@
 ---
 layout: tag-list
 type: tag
-title: Next.js
-slug: next-js
+title: Markdown
+slug: markdown
 category: study
 sidebar: true
 accent_color: rgba(0,174,239,1)
@@ -11,5 +11,5 @@ accent_image:
   overlay: false
 theme_color: rgba(27,10,58,1)
 description: >
-  Study about Next.js
+  Study about Markdown
 ---
